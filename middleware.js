@@ -8,27 +8,27 @@ export function middleware(req) {
   const url = req.nextUrl.clone()
 
   if (hostname === "cv.nileshnama.com") {
-    url.pathname = "/__cv"
+    url.pathname = "/cv"
     return NextResponse.rewrite(url)
   }
 
   if (hostname === "books.nileshnama.com") {
-    url.pathname = "/__books"
+    url.pathname = "/books"
     return NextResponse.rewrite(url)
   }
 
   if (hostname === "media.nileshnama.com") {
-    url.pathname = "/__media"
+    url.pathname = "/media"
     return NextResponse.rewrite(url)
   }
 
   if (hostname === "projects.nileshnama.com") {
-    url.pathname = "/__projects"
+    url.pathname = "/projects"
     return NextResponse.rewrite(url)
   }
 
   if (hostname === "research.nileshnama.com") {
-    url.pathname = "/__research"
+    url.pathname = "/research"
     return NextResponse.rewrite(url)
   }
 
