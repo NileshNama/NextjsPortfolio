@@ -5,33 +5,31 @@ export function middleware(req) {
   if (!host) return NextResponse.next()
 
   const hostname = host.split(":")[0]
-
-  if (hostname === "books.nileshnama.com") {
-    return NextResponse.rewrite(new URL("/", req.url))
-  }
+  const url = req.nextUrl.clone()
 
   if (hostname === "cv.nileshnama.com") {
-    return NextResponse.rewrite(new URL("/", req.url))
+    url.pathname = "/__cv"
+    return NextResponse.rewrite(url)
+  }
+
+  if (hostname === "books.nileshnama.com") {
+    url.pathname = "/__books"
+    return NextResponse.rewrite(url)
   }
 
   if (hostname === "media.nileshnama.com") {
-    return NextResponse.rewrite(new URL("/", req.url))
+    url.pathname = "/__media"
+    return NextResponse.rewrite(url)
   }
 
   if (hostname === "projects.nileshnama.com") {
-    return NextResponse.rewrite(new URL("/", req.url))
+    url.pathname = "/__projects"
+    return NextResponse.rewrite(url)
   }
 
   if (hostname === "research.nileshnama.com") {
-    return NextResponse.rewrite(new URL("/", req.url))
-  }
-
-  // main site
-  if (
-    hostname === "nileshnama.com" ||
-    hostname === "www.nileshnama.com"
-  ) {
-    return NextResponse.next()
+    url.pathname = "/__research"
+    return NextResponse.rewrite(url)
   }
 
   return NextResponse.next()
