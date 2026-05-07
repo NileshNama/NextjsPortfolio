@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 const Header = () => {
   return (
     <section
-      id="top"
+      id="home"
       className="w-full min-h-screen flex items-center justify-center pt-28"
     >
       <div className="w-11/12 max-w-3xl text-center mx-auto flex flex-col items-center gap-4">

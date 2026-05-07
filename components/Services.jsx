@@ -110,7 +110,7 @@ const Services = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        id="services"
+        id="work"
         className="w-full px-[12%] py-10 scroll-mt-20"
       >
         <h4 className="text-center mb-2 text-lg font-Ovo">What I Build</h4>

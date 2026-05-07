@@ -19,6 +19,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
   return (
     <>
+    <div className="fixed top-0 left-0 w-full z-[60] bg-[#5A9B92] text-white">
+  <div className="max-w-7xl mx-auto px-3 py-2 text-[11px] sm:text-sm leading-tight text-center font-medium">
+    <span className="sm:hidden"> ✦ Explore NN Cohorts & VebSkills Programs </span>
+    <span className="hidden sm:inline"> ✦ Applications open for NN Cohorts & VebSkills Programs. For any enquiries please WhatsApp at
++91 9509923340 </span>
+  </div>
+</div>
       {/* Decorative background */}
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
@@ -26,7 +33,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       <nav
         className={`
-          fixed top-0 left-0 w-full z-50
+          fixed top-8 left-0 w-full z-50
           px-5 lg:px-8 xl:px-[8%] py-4
           flex items-center justify-between
           transition-all duration-300
@@ -38,7 +45,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         `}
       >
         {/* Logo */}
-        <a href="#top" className="flex items-center">
+        <a href="#home" className="flex items-center">
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Nilesh Nama"
@@ -59,10 +66,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             }
           `}
         >
-          <li><a className={navLinkClass} href="#top">Home</a></li>
+          <li><a className={navLinkClass} href="#home">Home</a></li>
           <li><a className={navLinkClass} href="#about">About</a></li>
-          <li><a className={navLinkClass} href="#services">Work</a></li>
-          <li><a className={navLinkClass} href="#work">Books</a></li>
+          <li><a className={navLinkClass} href="#work">Work</a></li>
+          <li><a className={navLinkClass} href="#books">Books</a></li>
           <li><a className={navLinkClass} href="#cohorts">Cohorts</a></li>
           <li><a className={navLinkClass} href="#writing">Writing</a></li>
           <li><a className={navLinkClass} href="#talks">Talks</a></li>
@@ -137,10 +144,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <ul className="flex flex-col gap-5 pt-24 px-10 text-sm">
             {[
-              ['Home', '#top'],
+              ['Home', '#home'],
               ['About', '#about'],
-              ['Work', '#services'],
-              ['Books', '#work'],
+              ['Work', '#work'],
+              ['Books', '#books'],
               ['Cohorts', '#cohorts'],
               ['Writing', '#writing'],
               ['Talks', '#talks'],

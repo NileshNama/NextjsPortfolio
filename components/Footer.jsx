@@ -36,7 +36,7 @@ const Footer = ({ isDarkMode }) => {
       {/* Bottom bar */}
       <div className="text-center sm:flex items-center justify-between border-t border-gray-300/60 dark:border-white/10 mx-[10%] pt-8">
         <p className="text-sm text-gray-500">
-          © 2025–2026 Nilesh Nama. All rights reserved.
+          © Nilesh Nama. All rights reserved.
         </p>
 
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0 text-sm">
@@ -53,12 +53,12 @@ const Footer = ({ isDarkMode }) => {
 
           <li>
             <a
-              href="https://cohorts.nileshnama.com/app-blog"
+              href="https://www.youtube.com/@nileshnama"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline transition"
             >
-              Writing
+              YT
             </a>
           </li>
 
@@ -70,6 +70,16 @@ const Footer = ({ isDarkMode }) => {
               className="hover:underline transition"
             >
               LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://cohorts.nileshnama.com/app-blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline transition"
+            >
+              Writing
             </a>
           </li>
         </ul>
