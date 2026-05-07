@@ -45,7 +45,7 @@ const Header = () => {
           viewport={{ once: true }}
           className="text-lg text-gray-600 dark:text-gray-400 font-Ovo"
         >
-          Software Engineer · Systems Thinker
+          Software Engineer · Structured Learning Systems Architect
         </motion.h2>
 
         {/* Value Statement */}
@@ -56,7 +56,8 @@ const Header = () => {
           viewport={{ once: true }}
           className="max-w-xl mx-auto mt-5 text-gray-600 dark:text-gray-400 leading-relaxed font-Ovo"
         >
-        I design thinking-first systems that help engineers and serious learners reason clearly, make better decisions, and build durable understanding. <br /> Work spans competitive exam systems (GATE, BARC, ISRO), interview reasoning frameworks, and long-form technical reference writing.
+        I design thinking-first engineering systems focused on deep reasoning, structured problem-solving, and durable conceptual mastery. <br />
+My work spans competitive exam systems, technical interviews, and clarity-driven learning frameworks for engineers.
         </motion.p>
 
         {/* CTA Buttons */}

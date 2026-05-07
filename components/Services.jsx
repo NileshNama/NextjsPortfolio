@@ -17,8 +17,8 @@ const SERVICE_DETAILS = {
     ],
     closing:
       "This work spans internal tools, production websites, and long-lived platforms used by real users — not experimental demos.",
-    cta: "View selected engineering work →",
-    link: "https://projects.nileshnama.com",
+    cta: "VebGlitch",
+    link: "https://vebglitch.com",
   },
 
   "Education Systems": {
@@ -32,7 +32,7 @@ const SERVICE_DETAILS = {
     ],
     closing:
       "This includes NN Cohorts and structured learning programs designed as systems — not courses.",
-    cta: "Explore education systems →",
+    cta: "NN Cohorts",
     link: "https://cohorts.nileshnama.com",
   },
 
@@ -44,11 +44,12 @@ const SERVICE_DETAILS = {
       "Exam- and interview-oriented reasoning documentation",
       "System-level writing focused on trade-offs and design intent",
       "Clarity-driven content meant for long-term reuse",
+      "A structured, industry-oriented program designed to bridge the gap between academic learning and real-world execution at VebSkills.",
     ],
     closing:
       "This work prioritizes durability, explainability, and conceptual depth over short-form content.",
-    cta: "Read selected writing →",
-    link: "https://books.nileshnama.com",
+    cta: "Read Books",
+    link: "https://cohorts.nileshnama.com/books",
   },
 
   "Research & Systems Thinking": {
@@ -62,10 +63,26 @@ const SERVICE_DETAILS = {
     ],
     closing:
       "This work sits at the intersection of research, engineering, and education — focused on how decisions are actually made.",
+    cta: "Explore thinking frameworks",
+    link: "https://cohorts.nileshnama.com/app-blog",
+  },
+
+  "VebSkills": {
+    intro:
+      "I develop structured reasoning frameworks to analyze problems, decisions, and systems under constraints.",
+    bullets: [
+      "Question classification and decision-bucket frameworks",
+      "Mistake-pattern analysis and examiner psychology models",
+      "System decomposition and abstraction control techniques",
+      "Research-backed thinking tools for exams and engineering",
+    ],
+    closing:
+      "This work sits at the intersection of research, engineering, and education — focused on how decisions are actually made.",
     cta: "Explore thinking frameworks →",
-    link: "https://research.nileshnama.com",
+    link: "https://cohorts.nileshnama.com/app-blog",
   },
 }
+
 
 const Services = () => {
   const [activeService, setActiveService] = useState(null)
@@ -120,7 +137,7 @@ const Services = () => {
               </p>
 
               <div className="flex items-center gap-2 text-sm mt-5 underline">
-                View work
+                Explore
                 <Image src={assets.right_arrow} alt="" className="w-4" />
               </div>
             </motion.div>

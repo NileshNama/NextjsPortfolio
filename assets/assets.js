@@ -89,8 +89,8 @@ export const workData = [
       "Examples are used selectively to strengthen mental models, not to function as a question bank.",
       "Designed for GATE, BARC, ISRO, PSU-level interviews, and serious computer science learners seeking durable conceptual clarity.",,
     ],
-    purchaseLink: "https://cohorts.nileshnama.com/books",
-    sampleLink: "https://drive.google.com/drive/folders/1mLxkwqd_JhbDI3JYWw5rZafDO5OaIZgn?usp=sharing",
+    purchaseLink: "https://cohorts.nileshnama.com/books/3-operating-systems",
+    sampleLink: "https://drive.google.com/drive/folders/1BjsfOorCIvMoX1TNoZRCqL8iJRBWXqmc?usp=sharing",
     genre: "Standard Text",
     },
     {
@@ -106,8 +106,8 @@ export const workData = [
       "Designed for GATE, PSU exams, interviews, and engineers who work with real data systems.",
     ],
 
-    purchaseLink: "https://cohorts.nileshnama.com/books",
-    sampleLink: "https://drive.google.com/drive/folders/1mLxkwqd_JhbDI3JYWw5rZafDO5OaIZgn?usp=sharing",
+    purchaseLink: "https://cohorts.nileshnama.com/books/6-data-systems",
+    sampleLink: "https://drive.google.com/drive/folders/1xL-g0T8QBX7t1tSOABkaYuw3-VUhvhrT?usp=sharing",
         genre: "Standard Text",
 
     },
@@ -124,8 +124,8 @@ export const workData = [
       "Relevant for GATE, BARC, ISRO, PSUs, interviews, and engineers who want networking intuition that survives real systems.",
     ],
 
-    purchaseLink: "https://cohorts.nileshnama.com/books",
-    sampleLink: "https://drive.google.com/drive/folders/1mLxkwqd_JhbDI3JYWw5rZafDO5OaIZgn?usp=sharing",
+    purchaseLink: "https://cohorts.nileshnama.com/books/7-network-system",
+    sampleLink: "https://drive.google.com/drive/folders/1C0cEF2kTRgNVwBKmNnBCd4opdfQrxK05?usp=sharing",
         genre: "Standard Text",
 
     },
@@ -143,24 +143,25 @@ export const workData = [
     "Designed for GATE, BARC, ISRO, PSU exams, and learners who want to truly understand how programming languages are implemented.",
     ],
 
-    purchaseLink: "https://cohorts.nileshnama.com/books",
-    sampleLink: "https://drive.google.com/drive/folders/1mLxkwqd_JhbDI3JYWw5rZafDO5OaIZgn?usp=sharing",
+    purchaseLink: "https://cohorts.nileshnama.com/books/8-language-systems",
+    sampleLink: "https://drive.google.com/drive/folders/1mkiGJj-i12gc4kbL4i3yQLMSQINEeaqv?usp=sharing",
         genre: "Standard Text",
 
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Software Engineering', description: 'Building scalable software systems with clarity.  <br /> ', link: 'https://cohorts.nileshnama.com/books/4-nn-proframing-standard-reference-edition-physical-combo' },
+    { icon: assets.web_icon, title: 'Software Engineering', description: 'Building scalable software systems with clarity.', link: 'https://cohorts.nileshnama.com/books/4-nn-proframing-standard-reference-edition-physical-combo' },
     { icon: assets.mobile_icon, title: 'Education Systems', description: 'Thinking-first learning systems for serious aspirants.', link: 'https://cohorts.nileshnama.com' },
     { icon: assets.ui_icon, title: ' Author & Writing', description: ' Reference-level technical writing for long-term clarity.', link: '' },
     { icon: assets.graphics_icon, title: 'Research & Systems Thinking', description: 'Research-driven frameworks for structured reasoning.', link: '' },
+    
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Core Stack', description: 'HTML, CSS, JS, React, and Next.js — used to build scalable, maintainable, and user-centric systems with a strong emphasis on clarity and structure.' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Formal Education', description: 'B.Tech in Computer Science, with a strong focus on foundational subjects and system-level understanding rather than surface-level tooling.' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Work Focus', description: 'Building long-term systems across software engineering, education design, and technical writing — not isolated, short-term projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Core Stack', description: 'Full stack engineering across React, Next.js, Node.js, and AI-driven systems — focused on building scalable, maintainable, and clarity-first digital products.' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Formal Education', description: 'Trained in Computer Science with a strong focus on first-principles thinking, system-level architecture, and durable technical understanding.' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Work Focus', description: 'Designing scalable, long-term systems across software engineering, education design, and technical writing — beyond short-term execution.' }
 ];
 
 export const toolsData = [
@@ -169,11 +170,11 @@ export const toolsData = [
 
 export const cohortsData = [
     {
-        title: 'NQuestions CORE',
+        title: 'PYQ Core',
         description: 'Foundational thinking',
         bgImage: '/NileshN.png',
-        videoId: "NT9gPei0QZ8",
-  longDescription: "NQuestions Core trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
+        videoId: "vjUQmoPP8xs",
+  longDescription: "GATE–BARC PYQ Core Program trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
   points: [
     "How to identify question intent within the first 5–10 seconds",
     "Elimination-driven reasoning and option analysis",
@@ -181,30 +182,30 @@ export const cohortsData = [
     "Concept reconstruction instead of formula recall",
     "Mistake pattern awareness and correction",
   ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/5-nquestions-practice-cohort-core-track-2026-2027",
+  enrollLink: "https://cohorts.nileshnama.com/new-courses/5-nn-gate-barc-pyq-core-program",
     },
     {
-        title: 'NQuestions PRO',
-        description: 'Advanced application',
+        title: 'Concepts Pro',
+        description: 'Advanced Understanding',
         bgImage: '/NileshN.png',
-        videoId: "NT9gPei0QZ8",
-  longDescription: "NQuestions Pro is designed for aspirants who already understand basic question approaches but struggle with consistency, depth, and examiner-level traps. This cohort moves beyond surface techniques and trains structured, high-reliability decision systems used in difficult and deceptive exam questions.",
+        videoId: "X5ePwv6SnbA",
+  longDescription: "GATE–BARC Concepts Pro Program is designed for aspirants who already understand fundamental concepts and standard problem-solving approaches but struggle with consistency, depth, and handling examiner-level twists. This program moves beyond surface-level preparation and develops structured, high-reliability conceptual thinking systems required to solve difficult, deceptive, and multi-layered GATE and BARC questions.",
   points: [
-    "Advanced option analysis and elimination hierarchies",
-    "Handling deceptive and multi-layered questions",
-    "Identifying false confidence and premature conclusions",
-    "Balancing speed, accuracy, and cognitive load",
-    "Second-pass decision strategies for tough papers",
-    "Refining judgment under uncertainty",
+    "Advanced conceptual interpretation and structured problem-solving frameworks",
+    "Handling deceptive, multi-concept, and examiner-twisted questions",
+    "Identifying false assumptions and premature conclusions during solving",
+    "Balancing speed, accuracy, and mental clarity under pressure",
+    "Second-pass optimization strategies for lengthy and difficult papers",
+    "Refining technical judgment and decision-making under uncertainty",
   ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/6-nquestions-practice-cohort-pro-track-2026-2027",
+  enrollLink: "https://cohorts.nileshnama.com/new-courses/11-nn-gate-barc-concepts-pro-program",
     },
     {
-        title: 'NQuestions Final Sprint',
-        description: 'Exam execution',
+        title: '1:1 Mentorship',
+        description: 'Exam execution guide',
         bgImage: '/NileshN.png',
-        videoId: "NT9gPei0QZ8",
-  longDescription: "Final Sprint is a pressure-oriented cohort designed for aspirants who already know the syllabus but struggle with execution under exam conditions. The focus is not revision, but converting existing knowledge into correct decisions during the final phase.",
+        videoId: "debmYlOTdpM",
+  longDescription: "1:1 Mentorship Cohort is a pressure-oriented mentorship program designed for aspirants who already know the syllabus but struggle to execute effectively under real exam conditions. The focus is not on revision alone, but on transforming existing knowledge into accurate decisions, disciplined thinking, and stable performance during the final phase of GATE, BARC, and technical examinations.",
   points: [
     "Question-first training focused on attempt vs skip decisions",
     "Time-pressure handling and elimination-heavy problem solving",
@@ -212,22 +213,22 @@ export const cohortsData = [
     "Second-pass optimization and risk control strategies",
     "Daily thinking drills instead of passive revision",
   ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/7-nquestions-practice-cohort-final-sprint-track-2026-2027",
+  enrollLink: "https://cohorts.nileshnama.com/new-courses/4-nn-gate-barc-rank-accelerator-program",
     },
     {
-        title: 'NConcepts Scientist',
-        description: 'Interview depth',
+        title: 'Full Stack + AI',
+        description: 'Industry-Based Training',
         bgImage: '/NileshN.png',
-        videoId: "NT9gPei0QZ8",
-  longDescription: "The Scientist Track is designed for aspirants targeting BARC, ISRO, DRDO, and PSU scientist interviews. It focuses on depth, conceptual compression, and multi-layer reasoning rather than speed alone.",
+        videoId: "3ZeZxQCNdns",
+  longDescription: "VebSkills Cohort: Full Stack + AI Training + Industry Internship is designed for students and aspiring developers who want to build strong industry-ready skills through practical development, AI integration, and real project execution. The program focuses on structured learning, problem-solving depth, production-level thinking, and hands-on industry experience rather than theory-only training.",
   points: [
-    "Reverse and backward reasoning techniques",
-    "Boundary and extreme-case testing",
-    "Multi-concept integration questions",
-    "Oral thinking and explanation clarity",
-    "Interview-style follow-up handling",
+    "Building real-world full stack projects with production-oriented workflows",
+    "AI-assisted development, automation, and modern engineering practices",
+    "Integrating frontend, backend, databases, APIs, and deployment systems",
+    "Improving communication, debugging, and technical explanation clarity",
+    "Handling industry-style tasks, reviews, collaboration, and internship workflows",
   ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/3-nconcepts-interview-cohort-2026-2027",
+  enrollLink: "https://cohorts.nileshnama.com/new-courses/19-vebskills-summer-cohort-2026-full-stack-ai-training-industry-internship",
     },
 ]
 export const writingData = [
@@ -302,7 +303,7 @@ export const writingData = [
       "- Learners aiming for conceptual clarity",
 
       "---",
-      "_This reasoning-first approach underpins the NN DBMS reference material._",
+      "This reasoning-first approach underpins the NN DBMS reference material.",
     ],
 
     link: "https://cohorts.nileshnama.com/app-blog/dbms-reasoning",
@@ -343,7 +344,7 @@ export const writingData = [
       "- Interview candidates tested on system behavior",
 
       "---",
-      "_This article aligns with the NN Computer Networks conceptual framework._",
+      "This article aligns with the NN Computer Networks conceptual framework.",
     ],
 
     link: "https://cohorts.nileshnama.com/app-blog/network-conceptual",
@@ -381,7 +382,7 @@ export const writingData = [
       "- Engineers curious about language implementation",
 
       "---",
-      "_This thinking-first approach drives the NN Compiler Design reference text._",
+      "This thinking-first approach drives the NN Compiler Design reference text.",
     ],
 
     link: "https://cohorts.nileshnama.com/app-blog/compiler-design",
@@ -395,7 +396,7 @@ export const podcastsData = [
   meta: "Podcast · YouTube",
   type: "Podcast",
   description: "...",
-  link: "https://media.nileshnama.com/exam-thinking-interviews",
+  link: "https://cohorts.nileshnama.com/app-blog/3",
     },
     {
        id: "exam-thinking-interviews",
@@ -403,7 +404,7 @@ export const podcastsData = [
   meta: "Podcast · YouTube",
   type: "Podcast",
   description: "...",
-  link: "https://media.nileshnama.com/exam-thinking-interviews",
+  link: "https://cohorts.nileshnama.com/app-blog/5",
     },
     {
       id: "exam-thinking-interviews",
@@ -411,7 +412,7 @@ export const podcastsData = [
   meta: "Podcast · YouTube",
   type: "Podcast",
   description: "...",
-  link: "https://media.nileshnama.com/exam-thinking-interviews",
+  link: "https://cohorts.nileshnama.com/app-blog/4",
     },
     {
         id: "exam-thinking-interviews",
@@ -419,7 +420,7 @@ export const podcastsData = [
   meta: "Podcast · YouTube",
   type: "Podcast",
   description: "...",
-  link: "https://media.nileshnama.com/exam-thinking-interviews",
+  link: "https://cohorts.nileshnama.com/app-blog/6-why-most-aspirants-misread-questions?page=0",
     },
 ]
 export const researchData = [

@@ -42,12 +42,12 @@ const Footer = ({ isDarkMode }) => {
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0 text-sm">
           <li>
             <a
-              href="https://cv.nileshnama.com"
+              href="https://cohorts.nileshnama.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline transition"
             >
-              Resume
+              Cohorts
             </a>
           </li>
 

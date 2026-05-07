@@ -16,7 +16,7 @@ const AudienceFilter = () => {
         </h3>
 
         <p className="text-gray-600 dark:text-gray-400 font-Ovo leading-relaxed">
-          This site is not for people looking for shortcuts, hacks, or surface-level learning.
+          NN Cohorts is not for people looking for shortcuts, hacks, or surface-level learning.
           <br /><br />
           I don’t optimize for speed without understanding, or content without structure.
           <br /><br />

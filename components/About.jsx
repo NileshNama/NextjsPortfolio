@@ -58,9 +58,7 @@ const About = ({ isDarkMode }) => {
           className='flex-1'
         >
           <p className='mb-10 max-w-2xl font-Ovo'>
-            I am a frontend-focused software engineer and systems builder,
-            working across engineering, product thinking, and structured learning
-            to design clarity-driven solutions in both code and education.
+            Full stack engineer building AI-powered systems, scalable products, and structured learning platforms with a focus on clarity, reasoning, and real-world impact.
           </p>
 
           {/* Info Cards */}

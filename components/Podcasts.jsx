@@ -11,28 +11,28 @@ const podcastData = [
     meta: "Podcast · YouTube",
     description:
       "How interviewers evaluate reasoning, decision clarity, and follow-up depth in high-stakes technical interviews.",
-    link: "https://media.nileshnama.com/exam-thinking-interviews",
+    link: "https://cohorts.nileshnama.com/app-blog/3",
   },
   {
     title: "How Interviewers Evaluate Depth",
     meta: "Seminar · Live Session",
     description:
       "A breakdown of how depth is probed beyond surface answers during scientist and PSU interviews.",
-    link: "https://media.nileshnama.com/interviewer-depth",
+    link: "https://cohorts.nileshnama.com/app-blog/5",
   },
   {
     title: "Systems Thinking in Competitive Exams",
     meta: "Talk · Recorded",
     description:
       "Why exam problems reward system-level thinking over isolated topic preparation.",
-    link: "https://media.nileshnama.com/systems-thinking-exams",
+    link: "https://cohorts.nileshnama.com/app-blog/4",
   },
   {
     title: "Why Most Aspirants Misread Questions",
     meta: "Podcast · Discussion",
     description:
       "Common interpretation failures in exams and how examiners design questions to trigger them.",
-    link: "https://media.nileshnama.com/misreading-questions",
+    link: "https://cohorts.nileshnama.com/app-blog/6-why-most-aspirants-misread-questions?page=0",
   },
 ]
 
@@ -120,7 +120,7 @@ const Podcasts = ({ isDarkMode }) => {
         {/* CTA — unchanged */}
         <div className="flex justify-center mt-20">
           <a
-            href="https://media.nileshnama.com"
+            href="https://cohorts.nileshnama.com/app-blog/7-podcasts--seminars?page=0"
             target="_blank"
             className="
               w-max flex items-center justify-center gap-2
