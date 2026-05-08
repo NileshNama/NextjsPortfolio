@@ -43,15 +43,16 @@ const Impact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full px-[12%] py-20"
+      className="w-full px-[12%] py-24 md:py-32 bg-[#111827] text-white"
     >
       {/* Heading */}
       <div className="text-center mb-14">
-        <p className="text-sm text-gray-500 mb-2">Impact</p>
-        <h2 className="text-4xl font-Ovo mb-4">
+        <p className="text-sm text-[#5A9B92] uppercase tracking-[0.2em] font-medium mb-3">Impact</p>
+        <p className="section-label mb-3">FIELD NOTES</p>
+        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5 text-white">
           Proof of Work & Outcomes
         </h2>
-        <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 font-Ovo">
+        <p className="max-w-2xl mx-auto text-gray-300 font-Ovo">
           Systems, platforms, and learning frameworks built and used in real contexts.
         </p>
       </div>
@@ -63,23 +64,33 @@ const Impact = () => {
             key={index}
             whileHover={{ y: -4 }}
             transition={{ duration: 0.2 }}
-            className="border border-gray-200 dark:border-white/10 rounded-xl p-6 bg-white dark:bg-darkTheme"
+            className="
+border border-white/10
+rounded-3xl
+p-7
+bg-white/5
+backdrop-blur-sm
+transition-all duration-300
+hover:-translate-y-1
+hover:border-[#5A9B92]/40
+hover:shadow-[0_18px_60px_rgba(90,155,146,0.18)]
+"
           >
-            <h3 className="text-lg font-semibold mb-2">
+            <h3 className="text-2xl font-semibold font-Ovo mb-4 text-white">
               {item.title}
             </h3>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+            <p className="text-sm text-gray-300 leading-relaxed mb-3">
               {item.description}
             </p>
 
             {/* Micro-impact signal */}
-            <p className="text-xs text-gray-500 mb-3">
+            <p className="text-sm text-[#5A9B92] mb-4 font-medium">
               {item.signal}
             </p>
 
             {/* Meta label */}
-            <p className="text-xs text-gray-500">
+            <p className="text-xs uppercase tracking-[0.15em] text-white/50">
               {item.meta}
             </p>
           </motion.div>

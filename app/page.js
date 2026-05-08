@@ -15,6 +15,20 @@ import Impact from "../components/Impact"
 import Philosophy from "../components/Philosophy"
 import Journey from "../components/Journey"
 import AudienceFilter from "../components/AudienceFilter"
+import Outcomes from "../components/Outcomes"
+import Struggles from "../components/Struggles"
+import StudentProof from "../components/StudentProof"
+import NNSessions from "../components/NNSessions"
+import WhoThrives from "../components/WhoThrives"
+import QuestionFramework from "../components/QuestionFramework"
+import BeliefSection from "../components/BeliefSection"
+import StudentTestimonial from "../components/StudentTestimonial"
+
+
+
+
+
+
 
 
 
@@ -44,9 +58,17 @@ export default function Home() {
     <>
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
     <Header isDarkMode={isDarkMode} />
+    <Outcomes isDarkMode={isDarkMode} />
+    <Struggles isDarkMode={isDarkMode} />
+    <BeliefSection isDarkMode={isDarkMode}  />
+    <StudentProof isDarkMode={isDarkMode} />
+    <NNSessions isDarkMode={isDarkMode} />
+    <StudentTestimonial isDarkMode={isDarkMode}  />
+    <WhoThrives isDarkMode={isDarkMode}  />
+    <AudienceFilter isDarkMode={isDarkMode} />
+    <QuestionFramework isDarkMode={isDarkMode} />
     <About isDarkMode={isDarkMode} />
     <Philosophy isDarkMode={isDarkMode} />
-    <AudienceFilter isDarkMode={isDarkMode} />
     <Journey isDarkMode={isDarkMode} />
     <Services isDarkMode={isDarkMode} />
     <Work isDarkMode={isDarkMode} />

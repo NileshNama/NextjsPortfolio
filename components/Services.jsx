@@ -83,17 +83,14 @@ const SERVICE_DETAILS = {
   },
 }
 
-
 const Services = () => {
   const [activeService, setActiveService] = useState(null)
 
-  /* 🔒 Lock background scroll */
   useEffect(() => {
     document.body.style.overflow = activeService ? "hidden" : ""
     return () => (document.body.style.overflow = "")
   }, [activeService])
 
-  /* ESC close */
   useEffect(() => {
     const esc = (e) => e.key === "Escape" && setActiveService(null)
     window.addEventListener("keydown", esc)
@@ -106,73 +103,198 @@ const Services = () => {
   return (
     <>
       {/* MAIN */}
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
         id="work"
-        className="w-full px-[12%] py-10 scroll-mt-20"
+        className="w-full px-6 md:px-[12%] py-24 md:py-28 scroll-mt-20"
       >
-        <h4 className="text-center mb-2 text-lg font-Ovo">What I Build</h4>
-        <h2 className="text-center text-5xl font-Ovo">Work</h2>
+        <motion.h4
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-2 text-sm uppercase tracking-[0.22em] text-[#5A9B92] font-medium"
+        >
+          What I Build
+        </motion.h4>
+        <motion.h4
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-2 text-sm uppercase tracking-[0.22em] text-[#5A9B92] font-medium"
+        >
+          <p className="section-label mb-3">SYSTEMS</p>
+        </motion.h4>
+      
+        <motion.h2
+          initial={{ y: -20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.35, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center text-4xl sm:text-5xl font-semibold font-Ovo"
+        >
+          Work
+        </motion.h2>
 
-        <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center max-w-3xl mx-auto mt-5 mb-14 font-Ovo text-gray-600 dark:text-gray-300 leading-relaxed"
+        >
           A snapshot of the systems I build and lead across engineering,
           education, and technical writing. Each category represents a long-term
           body of work, not a client service.
-        </p>
+        </motion.p>
 
-        <div className="grid grid-cols-auto gap-6 my-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.65, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10"
+        >
           {serviceData.map((service, index) => (
-            <motion.div
+            <motion.button
               key={index}
-              whileHover={{ scale: 1.05 }}
+              type="button"
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               onClick={() => setActiveService(service)}
-              className="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500"
+              className="
+                group
+                relative
+                text-left
+                overflow-hidden
+                rounded-[2rem]
+                border border-black/10 dark:border-white/10
+                bg-white dark:bg-[#111827]
+                p-8
+                cursor-pointer
+                transition-all duration-300 ease-out
+                shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+                hover:shadow-[0_25px_80px_rgba(90,155,146,0.18)]
+                hover:border-[#5A9B92]/40
+                transform-gpu
+                will-change-transform
+              "
             >
-              <Image src={service.icon} alt="" className="w-10" />
-              <h3 className="text-lg my-4">{service.title}</h3>
-              <p className="text-sm text-gray-600 leading-5">
-                {service.description}
-              </p>
+              {/* Glow Accent */}
+              <div className="
+                absolute
+                top-0
+                right-0
+                w-40
+                h-40
+                bg-[#5A9B92]/10
+                blur-3xl
+                opacity-0
+                group-hover:opacity-100
+                transition-opacity duration-500
+                pointer-events-none
+              " />
 
-              <div className="flex items-center gap-2 text-sm mt-5 underline">
-                Explore
-                <Image src={assets.right_arrow} alt="" className="w-4" />
+              {/* Thumbnail / Preview block */}
+              <div className="
+                relative
+                overflow-hidden
+                rounded-2xl
+                mb-6
+                border border-black/5 dark:border-white/10
+                bg-[#f5f7f6] dark:bg-white/5
+                h-40
+                flex items-center justify-center
+              ">
+                <Image
+                  src={service.icon}
+                  alt=""
+                  className="
+                    w-16
+                    transition-transform duration-500 ease-out
+                    group-hover:scale-110
+                  "
+                />
+
+                <div className="
+                  absolute inset-0
+                  bg-gradient-to-br
+                  from-[#5A9B92]/8
+                  to-transparent
+                  pointer-events-none
+                " />
               </div>
-            </motion.div>
+
+              {/* Content */}
+              <div className="relative z-10">
+                <h3 className="text-2xl font-semibold font-Ovo mb-4 text-gray-900 dark:text-white">
+                  {service.title}
+                </h3>
+
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <div className="
+                  flex items-center gap-2
+                  text-sm
+                  mt-7
+                  text-[#5A9B92]
+                  font-medium
+                ">
+                  Explore
+                  <Image
+                    src={assets.right_arrow}
+                    alt=""
+                    className="
+                      w-4
+                      transition-transform duration-300
+                      group-hover:translate-x-1
+                    "
+                  />
+                </div>
+              </div>
+            </motion.button>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </motion.section>
 
       {/* MODAL */}
       {activeService && details && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center px-6"
+          className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center px-6"
           onClick={() => setActiveService(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative shadow-xl"
+            className="bg-white dark:bg-[#111827] rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative shadow-2xl border border-black/10 dark:border-white/10"
           >
             <button
               onClick={() => setActiveService(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition"
             >
               ✕
             </button>
 
-            <h3 className="text-2xl font-Ovo mb-4">{activeService.title}</h3>
+            <h3 className="text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
+              {activeService.title}
+            </h3>
 
-            <p className="text-gray-700 mb-5 font-Ovo">{details.intro}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-5 font-Ovo leading-relaxed">
+              {details.intro}
+            </p>
 
-            <ul className="list-disc ml-5 space-y-2 text-sm text-gray-600">
+            <ul className="list-disc ml-5 space-y-2 text-sm text-gray-600 dark:text-gray-400">
               {details.bullets.map((b) => (
                 <li key={b}>{b}</li>
               ))}
             </ul>
 
-            <p className="mt-5 text-sm text-gray-600 font-Ovo">
+            <p className="mt-5 text-sm text-gray-600 dark:text-gray-400 font-Ovo leading-relaxed">
               {details.closing}
             </p>
 
@@ -180,7 +302,7 @@ const Services = () => {
               href={details.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-6 text-sm font-Ovo underline"
+              className="inline-flex items-center justify-center gap-2 mt-8 rounded-full bg-[#509187] text-white py-3 px-6 text-sm font-medium hover:opacity-95 transition-transform hover:scale-[1.02]"
             >
               {details.cta}
             </a>

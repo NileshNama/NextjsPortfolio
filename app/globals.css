@@ -5,3 +5,30 @@
 *{
   font-family: Outfit;
 }
+p {
+  font-weight: 500;
+  line-height: 1.85;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+.body-text {
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.soft-text {
+  color: rgba(255,255,255,0.72);
+}
+.section-label {
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #5A9B92;
+  opacity: 0.95;
+}

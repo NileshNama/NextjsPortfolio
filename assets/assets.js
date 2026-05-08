@@ -78,9 +78,10 @@ export const assets = {
 
 export const workData = [
     {
-        title: '',
-        description: 'System Design',
+        title: 'Operating Systems',
+        description: 'Concept-driven reference text for OS fundamentals.',
         bgImage: '/work-1.png',
+        volumeLabel: "Volume I",
         details: [
       "This book approaches Operating Systems as a collection of trade-offs, constraints, and architectural decisions — not a checklist of algorithms or definitions.",
       "Every major concept (processes, memory, scheduling, concurrency, file systems) is explained through the lens of why it was designed that way and what problems it solves.",
@@ -94,9 +95,10 @@ export const workData = [
     genre: "Standard Text",
     },
     {
-        title: '',
-        description: 'Data Systems',
+        title: 'DBMS',
+        description: 'Structured reference text for database systems.',
         bgImage: '/work-2.png',
+         volumeLabel: "Volume I",
         details: [
       "This book frames DBMS as a system balancing consistency, performance, durability, and usability — not as isolated SQL commands.",
       "Concepts like normalization, indexing, transactions, and concurrency control are explained through decision-making lenses.",
@@ -111,28 +113,12 @@ export const workData = [
         genre: "Standard Text",
 
     },
-    {
-        title: '',
-        description: 'Network Systems',
-        bgImage: '/work-3.png',
-        details: [
-      "This book treats Computer Networks as an interconnected system of design decisions — from physical transmission to application-layer protocols.",
-      "Instead of rote protocol descriptions, it focuses on why protocols exist, what constraints shaped them, and where they fail in practice.",
-      "Heavy attention is given to TCP/IP behavior, congestion control intuition, routing decisions, and protocol layering rationale.",
-      "Examiner psychology is addressed explicitly — including why certain questions are framed deceptively and how options are constructed.",
-      "Designed to help learners reason about packet flow, failures, delays, and system-level behavior rather than recalling port numbers.",
-      "Relevant for GATE, BARC, ISRO, PSUs, interviews, and engineers who want networking intuition that survives real systems.",
-    ],
 
-    purchaseLink: "https://cohorts.nileshnama.com/books/7-network-system",
-    sampleLink: "https://drive.google.com/drive/folders/1C0cEF2kTRgNVwBKmNnBCd4opdfQrxK05?usp=sharing",
-        genre: "Standard Text",
-
-    },
     {
-        title: '',
-        description: 'Language Systems',
+        title: 'Compiler Design',
+        description: 'Reference series for deeper conceptual understanding.',
         bgImage: '/work-4.png',
+        volumeLabel: "Volume I",
         details: [
       "This book approaches Compiler Design as an end-to-end transformation system — not as disconnected phases like lexical analysis, parsing, or code generation.",
     "Each stage of the compiler is explained in terms of why it exists, what constraints it solves, and what trade-offs are involved in its design.",
@@ -170,8 +156,8 @@ export const toolsData = [
 
 export const cohortsData = [
     {
-        title: 'PYQ Core',
-        description: 'Foundational thinking',
+        title: 'GATE–BARC PYQ Core Program',
+        description: 'Learn how to decode and approach PYQs systematically.',
         bgImage: '/NileshN.png',
         videoId: "vjUQmoPP8xs",
   longDescription: "GATE–BARC PYQ Core Program trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
@@ -186,7 +172,7 @@ export const cohortsData = [
     },
     {
         title: 'Concepts Pro',
-        description: 'Advanced Understanding',
+        description: 'Build system-level conceptual depth for interviews and difficult questions.',
         bgImage: '/NileshN.png',
         videoId: "X5ePwv6SnbA",
   longDescription: "GATE–BARC Concepts Pro Program is designed for aspirants who already understand fundamental concepts and standard problem-solving approaches but struggle with consistency, depth, and handling examiner-level twists. This program moves beyond surface-level preparation and develops structured, high-reliability conceptual thinking systems required to solve difficult, deceptive, and multi-layered GATE and BARC questions.",
@@ -202,7 +188,7 @@ export const cohortsData = [
     },
     {
         title: '1:1 Mentorship',
-        description: 'Exam execution guide',
+        description: 'GATE–BARC Exam execution Rank Accelerator Program guide',
         bgImage: '/NileshN.png',
         videoId: "debmYlOTdpM",
   longDescription: "1:1 Mentorship Cohort is a pressure-oriented mentorship program designed for aspirants who already know the syllabus but struggle to execute effectively under real exam conditions. The focus is not on revision alone, but on transforming existing knowledge into accurate decisions, disciplined thinking, and stable performance during the final phase of GATE, BARC, and technical examinations.",
@@ -272,7 +258,7 @@ export const writingData = [
 
     
     {
-        title: 'DBMS Questions That Test Reasoning',
+        title: 'DBMS Questions Test Reasoning',
         description: 'Transactions, isolation, and intent',
         bgImage: '',
         details: [
@@ -311,7 +297,7 @@ export const writingData = [
 
     {
         title: 'Why Network Problems Are Conceptual',
-        description: 'Protocols, layers, and interpretation',
+        description: 'Protocols and interpretation',
         bgImage: '',
         details: [
       "**Author:** Nilesh Nama",
@@ -352,7 +338,7 @@ export const writingData = [
 
     {
         title: 'Compiler Design Beyond Grammar',
-        description: 'Parsing as decision-making',
+        description: 'Parsing and SDT as decision-making',
         bgImage: '',
         details: [
       "**Author:** Nilesh Nama",

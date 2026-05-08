@@ -1,82 +1,106 @@
-import { motion } from "motion/react"
+import React from 'react'
+import { motion } from 'motion/react'
 
-const journeySteps = [
+const journey = [
   {
-    title: "Engineering Foundation",
-    description:
-      "Built strong fundamentals in computer science, problem-solving, and system-level thinking.",
+    title: 'Engineering Foundation',
+    desc: 'Built strong fundamentals in computer science, problem-solving, and system-level thinking.',
   },
   {
-    title: "Competitive Exams & Deep Reasoning",
-    description:
-      "Years of exam preparation revealed a gap between content and thinking — leading to structured reasoning systems.",
+    title: 'Competitive Exams & Deep Reasoning',
+    desc: 'Years of exam preparation revealed a gap between content and thinking — leading to structured reasoning systems.',
   },
   {
-    title: "NN Cohorts — Applied Education Systems",
-    description:
-      "Designed cohort-based learning systems focused on clarity, decision-making, and exam-oriented thinking.",
+    title: 'NN Cohorts — Applied Education Systems',
+    desc: 'Designed cohort-based learning systems focused on clarity, decision-making, and exam-oriented thinking.',
   },
   {
-    title: "Software × Learning Infrastructure",
-    description:
-      "Now working at the intersection of software engineering and learning systems — building scalable, explainable systems that survive real-world constraints.",
+    title: 'Software × Learning Infrastructure',
+    desc: 'Now working at the intersection of software engineering and learning systems — building scalable, explainable systems that survive real-world constraints.',
   },
 ]
 
-const Journey = () => {
+const JourneyTimeline = () => {
   return (
-    <motion.section
+    <section
       id="journey"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="w-full px-[12%] py-24"
+      className="w-full px-[8%] py-24 scroll-mt-20"
     >
-      {/* Heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-Ovo mb-4">
-          Journey (Condensed)
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-20"
+      >
+        <p className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3">
+          Journey
+        </p>
+
+        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+          A Non-Linear Path
         </h2>
-        <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400 font-Ovo leading-relaxed">
-          A non-linear path — intentionally shaped by systems, reasoning,
+
+        <p className="max-w-3xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg">
+          Intentionally shaped by systems, reasoning,
           and long-term thinking.
         </p>
-      </div>
+      </motion.div>
 
-      {/* Timeline */}
-      <div className="max-w-3xl mx-auto space-y-10">
-        {journeySteps.map((step, index) => (
-          <motion.div
-            key={index}
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.4 }}
-            viewport={{ once: true }}
-            className="flex gap-6"
-          >
-            {/* Marker */}
-            <div className="flex flex-col items-center">
-              <span className="w-3 h-3 rounded-full bg-[#509187]" />
-              {index !== journeySteps.length - 1 && (
-                <span className="w-px h-full bg-gray-300 dark:bg-white/20 mt-2" />
-              )}
-            </div>
+      <div className="max-w-5xl mx-auto relative">
 
-            {/* Content */}
-            <div className="pb-8">
-              <h3 className="text-lg font-semibold font-Ovo mb-1">
-                {step.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 font-Ovo leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          </motion.div>
-        ))}
+        {/* Vertical Line */}
+        <div className="absolute left-5 top-0 bottom-0 w-px bg-gradient-to-b from-[#5A9B92]/40 via-[#5A9B92]/20 to-transparent hidden sm:block" />
+
+        <div className="flex flex-col gap-12">
+
+          {journey.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true }}
+              className="relative flex gap-6 items-start"
+            >
+
+              {/* Timeline Dot */}
+              <div className="hidden sm:flex relative z-10 w-10 h-10 rounded-2xl bg-[#5A9B92]/10 border border-[#5A9B92]/20 items-center justify-center text-[#5A9B92] font-semibold shrink-0">
+                0{index + 1}
+              </div>
+
+              {/* Card */}
+              <div
+                className="
+                  group flex-1
+                  rounded-3xl
+                  border border-gray-200
+                  bg-white/75
+                  backdrop-blur-sm
+                  p-8
+                  shadow-sm
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-[#5A9B92]/40
+                  hover:shadow-[0_18px_50px_rgba(90,155,146,0.12)]
+                "
+              >
+                <h3 className="text-2xl font-semibold font-Ovo mb-4 text-gray-900 dark:text-gray-100">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg">
+                  {item.desc}
+                </p>
+              </div>
+
+            </motion.div>
+          ))}
+
+        </div>
       </div>
-    </motion.section>
+    </section>
   )
 }
 
-export default Journey
+export default JourneyTimeline

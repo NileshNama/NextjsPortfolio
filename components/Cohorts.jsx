@@ -8,13 +8,11 @@ import { motion } from "motion/react"
 const Cohorts = ({ isDarkMode }) => {
   const [activeCohort, setActiveCohort] = useState(null)
 
-  // Lock background scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = activeCohort ? "hidden" : ""
     return () => (document.body.style.overflow = "")
   }, [activeCohort])
 
-  // Close on ESC
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") setActiveCohort(null)
@@ -26,113 +24,192 @@ const Cohorts = ({ isDarkMode }) => {
   return (
     <>
       {/* MAIN SECTION */}
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
         id="cohorts"
-        className="w-full px-[12%] py-10 scroll-mt-20"
+        className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 overflow-hidden"
       >
-        <motion.h4
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-center mb-2 text-lg font-Ovo"
-        >
-          Cohorts
-        </motion.h4>
+        <div className="text-center mb-16 md:mb-20">
+          <motion.p
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="section-label mb-3"
+          >
+            SYSTEMS
+          </motion.p>
 
-        <motion.h2
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-center text-5xl font-Ovo"
-        >
-          Curated Learning Systems
-        </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: -16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl font-semibold font-Ovo"
+          >
+            Curated Learning Systems
+          </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
-        >
-          A focused set of thinking-first cohorts designed for serious computer
-          science aspirants.
-        </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-300 font-medium leading-8"
+          >
+            A focused set of thinking-first cohorts designed for serious computer science aspirants.
+          </motion.p>
+        </div>
 
+        {/* Cards */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-auto my-10 gap-5 dark:text-black"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10"
         >
           {cohortsData.map((cohort, index) => (
-            <motion.div
+            <motion.button
               key={index}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              type="button"
               onClick={() => setActiveCohort(cohort)}
-              className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-              style={{ backgroundImage: `url(${cohort.bgImage})` }}
+              whileHover={{ y: -6, scale: 1.01 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="
+                group
+                relative
+                overflow-hidden
+                rounded-[2rem]
+                border border-black/10 dark:border-white/10
+                bg-white dark:bg-[#111827]
+                text-left
+                cursor-pointer
+                shadow-[0_10px_40px_rgba(0,0,0,0.06)]
+                hover:shadow-[0_25px_80px_rgba(90,155,146,0.16)]
+                hover:border-[#5A9B92]/35
+                transition-all duration-300
+                transform-gpu
+                will-change-transform
+              "
             >
-              <div className="pointer-events-none bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <div>
-                  <h2 className="font-semibold">{cohort.title}</h2>
-                  <p className="text-sm text-gray-700">
-                    {cohort.description}
-                  </p>
+              {/* Glow */}
+              <div className="
+                absolute
+                top-0
+                right-0
+                w-40
+                h-40
+                bg-[#5A9B92]/10
+                blur-3xl
+                opacity-0
+                group-hover:opacity-100
+                transition-opacity duration-500
+                pointer-events-none
+              " />
+
+              {/* Visual */}
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={cohort.bgImage}
+                  alt={cohort.title}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#5A9B92]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Top badge */}
+                <div className="absolute top-4 left-4">
+                  <span className="inline-flex items-center rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-white/90 backdrop-blur-md">
+                    COHORT
+                  </span>
                 </div>
-                <div className="pointer-events-auto border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-[#509187] transition">
-                  <Image src={assets.send_icon} alt="open" className="w-5" />
+
+                {/* Bottom panel */}
+                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/30 dark:border-white/10">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-gray-900 dark:text-white text-lg leading-snug">
+                        {cohort.title}
+                      </h3>
+                      <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 leading-relaxed">
+                        {cohort.description}
+                      </p>
+                    </div>
+
+                    <div className="shrink-0 rounded-full border border-black/15 dark:border-white/15 w-10 h-10 flex items-center justify-center bg-[#509187] text-white shadow-[0_8px_20px_rgba(80,145,135,0.35)] transition-transform duration-300 group-hover:translate-x-1">
+                      <Image src={assets.send_icon} alt="open" className="w-5" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.button>
           ))}
         </motion.div>
 
+        {/* CTA */}
         <motion.a
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 0.5 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
           href="https://cohorts.nileshnama.com"
           target="_blank"
-          className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover"
+          rel="noopener noreferrer"
+          className="
+            w-max
+            flex items-center justify-center gap-2
+            px-8 py-3
+            mt-16 md:mt-20 mx-auto
+            rounded-full
+            border border-gray-300 dark:border-white/20
+            text-gray-700 dark:text-white
+            bg-white/80 dark:bg-white/5
+            backdrop-blur-sm
+            hover:bg-lightHover dark:hover:bg-white/10
+            hover:scale-[1.02]
+            transition-all duration-300
+            shadow-sm
+          "
         >
           Explore cohorts
           <Image
             src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
             alt="Right arrow"
-            className="w-4"
+            className="w-4 transition-transform duration-300 group-hover:translate-x-1"
           />
         </motion.a>
-      </motion.div>
+      </motion.section>
 
       {/* MODAL */}
       {activeCohort && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center px-6"
+          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center px-4"
           onClick={() => setActiveCohort(null)}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white dark:bg-darkTheme rounded-xl max-w-3xl w-full shadow-xl overflow-hidden"
+            className="bg-white dark:bg-[#111827] rounded-3xl max-w-3xl w-full shadow-2xl overflow-hidden border border-black/10 dark:border-white/10"
           >
             <div className="max-h-[80vh] overflow-y-auto p-8 relative">
               <button
                 onClick={() => setActiveCohort(null)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition"
               >
                 ✕
               </button>
 
-              <h3 className="text-2xl font-Ovo mb-4">
+              <h3 className="text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
                 {activeCohort.title}
               </h3>
 
-              {/* FIXED YOUTUBE EMBED */}
               {activeCohort.videoId && (
-                <div className="w-full aspect-video mb-6 rounded-lg overflow-hidden">
+                <div className="w-full aspect-video mb-6 rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
                   <iframe
                     className="w-full h-full"
                     src={`https://www.youtube-nocookie.com/embed/${activeCohort.videoId}`}
@@ -161,7 +238,16 @@ const Cohorts = ({ isDarkMode }) => {
                   <a
                     href={activeCohort.enrollLink}
                     target="_blank"
-                    className="inline-flex items-center justify-center gap-2 w-full rounded-lg bg-black text-white py-3 text-sm hover:opacity-90 transition"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex items-center justify-center gap-2
+                      w-full rounded-full
+                      bg-[#509187] text-white
+                      py-3 text-sm font-medium
+                      hover:opacity-95
+                      hover:scale-[1.01]
+                      transition-all duration-300
+                    "
                   >
                     Enroll in this cohort →
                   </a>
@@ -170,6 +256,7 @@ const Cohorts = ({ isDarkMode }) => {
                 <a
                   href="https://cohorts.nileshnama.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Visit cohorts portal

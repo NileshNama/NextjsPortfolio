@@ -45,7 +45,7 @@ export default function CVPage() {
   const current = ROLE_CONTENT[role]
 
   return (
-    <main className="w-full bg-white text-black font-Ovo px-6 sm:px-[12%] py-20">
+    <main className="w-full bg-white text-black font-Ovo px-6 sm:px-[12%] py-24 md:py-28">
 
       {/* ROLE TOGGLE */}
       <section className="max-w-4xl mx-auto mb-14">

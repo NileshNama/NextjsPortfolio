@@ -1,94 +1,153 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from "motion/react"
+import { motion } from 'motion/react'
 
 const Header = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-28"
+      className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-28 overflow-hidden"
     >
-      <div className="w-11/12 max-w-3xl text-center mx-auto flex flex-col items-center gap-4">
+      <div className="w-11/12 max-w-4xl text-center mx-auto flex flex-col items-center gap-2 sm:gap-3 relative">
+
+        {/* Soft background glow */}
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/10 blur-3xl -z-10" />
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[20rem] h-[20rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
         {/* Profile Image */}
         <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
           viewport={{ once: true }}
-          className="mb-4"
+          className="relative flex items-center justify-center mb-0"
         >
+          <div className="absolute w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-[#5A9B92]/20 blur-3xl -z-10" />
           <Image
             src={assets.profile_img}
             alt="Nilesh Nama"
-            className="rounded-full w-28 md:w-32"
+            className="rounded-full w-32 sm:w-40 md:w-48 relative z-10 shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
           />
         </motion.div>
 
         {/* Name */}
         <motion.h1
-          initial={{ y: -20, opacity: 0 }}
+          initial={{ y: -18, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.12 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo"
+          className="text-4xl sm:text-5xl md:text-6xl font-semibold font-Ovo tracking-tight"
         >
           NILESH NAMA
         </motion.h1>
 
         {/* Primary Identity */}
         <motion.h2
-          initial={{ y: -20, opacity: 0 }}
+          initial={{ y: -14, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-lg text-gray-600 dark:text-gray-400 font-Ovo"
+          className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-Ovo"
         >
           Software Engineer · Structured Learning Systems Architect
         </motion.h2>
 
-        {/* Value Statement */}
+        {/* Main line */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mt-1 text-gray-600 dark:text-gray-300 leading-7 font-medium text-sm sm:text-base"
+        >
+          <p>
+            Beyond memorization. Build clarity under pressure.
+          </p>
+
+          <motion.div
+            whileHover={{ y: -2 }}
+            transition={{ duration: 0.2 }}
+            className="inline-flex items-center gap-2 mt-1 px-4 py-2 rounded-full border border-[#5A9B92]/25 bg-[#5A9B92]/8 backdrop-blur-sm text-sm font-semibold text-[#3f7d74] dark:text-[#8fd1c8] shadow-sm"
+          >
+            <span className="text-[#5A9B92]">✓</span>
+            Used by serious GATE, BARC, ISRO & PSU aspirants.
+          </motion.div>
+        </motion.div>
+
+        {/* Proof Badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-0"
+        >
+          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
+            5+ Years Exam Reasoning Research
+          </div>
+
+          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
+            Systems-Based Learning Frameworks
+          </div>
+
+          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
+            GATE • BARC • PSU Focused
+          </div>
+        </motion.div>
+
+        {/* Emotional line */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
-          className="max-w-xl mx-auto mt-5 text-gray-600 dark:text-gray-400 leading-relaxed font-Ovo"
+          className="mt-1 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium text-center"
         >
-        I design thinking-first engineering systems focused on deep reasoning, structured problem-solving, and durable conceptual mastery. <br />
-My work spans competitive exam systems, technical interviews, and clarity-driven learning frameworks for engineers.
+          Designed for deep thinkers, not passive learners.
         </motion.p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-2 sm:mt-1">
 
           {/* PRIMARY CTA */}
           <motion.a
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.45, delay: 0.6 }}
             viewport={{ once: true }}
             href="https://cohorts.nileshnama.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-10 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 hover:opacity-90 transition"
+            className="group px-9 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300"
           >
-            Explore NN Cohorts
-            <Image src={assets.right_arrow_white} alt="" className="w-4" />
+            Explore The System
+            <Image
+              src={assets.right_arrow_white}
+              alt=""
+              className="w-4 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </motion.a>
 
           {/* SECONDARY CTA */}
           <motion.a
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.85 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.45, delay: 0.75 }}
             viewport={{ once: true }}
-            href="#contact"
-            className="px-7 py-2.5 rounded-full border border-gray-500 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-darkHover transition"
+            href="#nn-sessions"
+            className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300"
           >
-            Collaborate with me
-            <Image src={assets.right_arrow_bold} alt="" className="w-4" />
+            See NN Sessions
+            <Image
+              src={assets.right_arrow_bold}
+              alt=""
+              className="w-4 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </motion.a>
 
         </div>

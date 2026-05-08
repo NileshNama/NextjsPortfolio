@@ -33,7 +33,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       <nav
         className={`
-          fixed top-8 left-0 w-full z-50
+          fixed top-5 left-0 w-full z-50
           px-5 lg:px-8 xl:px-[8%] py-4
           flex items-center justify-between
           transition-all duration-300
@@ -77,17 +77,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {/* Right controls */}
         <div className="flex items-center gap-4">
-          {/* Theme toggle */}
-          <button
-            onClick={() => setIsDarkMode(prev => !prev)}
-            className="opacity-80 hover:opacity-100 transition"
-          >
-            <Image
-              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
-              alt="Toggle theme"
-              className="w-6"
-            />
-          </button>
+          
 
           {/* LMS Login (NEW) */}
           <a
