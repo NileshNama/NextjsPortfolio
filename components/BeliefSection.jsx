@@ -120,8 +120,7 @@ const BeliefSection = () => {
             body-text soft-text
           "
         >
-          NN Cohorts is designed to build calm reasoning,
-          interpretation clarity, and decision-making under constraints.
+          NN Cohorts is built to change that.
         </motion.p>
 
         {/* Bottom Divider */}

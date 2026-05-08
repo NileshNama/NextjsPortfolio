@@ -49,9 +49,7 @@ const Outcomes = () => {
         </h2>
 
         <p className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-          NN Cohorts trains structured thinking, reasoning clarity, and
-          decision-making frameworks for serious aspirants preparing for
-          high-pressure technical exams and interviews.
+          What Students Learn to Do
         </p>
       </motion.div>
 

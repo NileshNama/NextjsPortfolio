@@ -53,29 +53,7 @@ const Header = () => {
           Software Engineer · Structured Learning Systems Architect
         </motion.h2>
 
-        {/* Main line */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto mt-1 text-gray-600 dark:text-gray-300 leading-7 font-medium text-sm sm:text-base"
-        >
-          <p>
-            Beyond memorization. Build clarity under pressure.
-          </p>
-
-          <motion.div
-            whileHover={{ y: -2 }}
-            transition={{ duration: 0.2 }}
-            className="inline-flex items-center gap-2 mt-1 px-4 py-2 rounded-full border border-[#5A9B92]/25 bg-[#5A9B92]/8 backdrop-blur-sm text-sm font-semibold text-[#3f7d74] dark:text-[#8fd1c8] shadow-sm"
-          >
-            <span className="text-[#5A9B92]">✓</span>
-            Used by serious GATE, BARC, ISRO & PSU aspirants.
-          </motion.div>
-        </motion.div>
-
-        {/* Proof Badges */}
+         {/* Proof Badges */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -96,16 +74,31 @@ const Header = () => {
           </div>
         </motion.div>
 
-        {/* Emotional line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+        
+
+        {/* Main line */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-1 text-sm sm:text-base text-gray-600 dark:text-gray-300 font-medium text-center"
+          className="max-w-2xl mx-auto mt-1 text-gray-600 dark:text-gray-300 leading-7 font-medium text-sm sm:text-base"
         >
-          Designed for deep thinkers, not passive learners.
-        </motion.p>
+          <p>
+            Structured reasoning for high-pressure exams and interviews. <br /> Train your mind to think clearly under pressure.
+          </p>
+
+          <motion.div
+            whileHover={{ y: -2 }}
+            transition={{ duration: 0.2 }}
+            className="inline-flex items-center gap-2 mt-1 px-4 py-2 rounded-full border border-[#5A9B92]/25 bg-[#5A9B92]/8 backdrop-blur-sm text-sm font-semibold text-[#3f7d74] dark:text-[#8fd1c8] shadow-sm"
+          >
+            <span className="text-[#5A9B92]">✓</span>
+            Built from years of exam reasoning research and live teaching sessions.
+          </motion.div>
+        </motion.div>
+
+       
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-2 sm:mt-1">

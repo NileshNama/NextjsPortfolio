@@ -42,8 +42,7 @@ const Struggles = () => {
         </h2>
 
         <p className="max-w-2xl mx-auto mt-6 text-gray-300 dark:text-gray-400 leading-relaxed">
-          The problem is not effort. The problem is that most preparation systems reward volume
-          instead of clarity, interpretation, and decision-making.
+          The problem is not effort. The problem is unclear thinking under pressure.
         </p>
       </motion.div>
 

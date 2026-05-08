@@ -30,9 +30,7 @@ const WhoThrives = () => {
         </h2>
 
         <p className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
-          NN Cohorts is designed for students who want structured thinking,
-          deeper understanding, and calm reasoning under pressure — not
-          shortcut-driven preparation.
+          NN Cohorts is designed for students who want deeper understanding, calm reasoning, and structured thinking under pressure.
         </p>
       </motion.div>
 
