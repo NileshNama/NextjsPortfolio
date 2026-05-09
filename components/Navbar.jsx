@@ -33,7 +33,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
       <nav
         className={`
-          fixed top-5 left-0 w-full z-50
+          fixed top-7 left-0 w-full z-50
           px-5 lg:px-8 xl:px-[8%] py-4
           flex items-center justify-between
           transition-all duration-300
