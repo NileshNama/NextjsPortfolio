@@ -147,7 +147,142 @@ const NNSessions = () => {
         </div>
 
       </div>
+
+      {/* YouTube Channels CTA */}
+<div className="flex flex-wrap items-center justify-center gap-4 mt-14">
+
+  <a
+    href="https://www.youtube.com/@nileshnama"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group
+      px-6 py-3
+      rounded-full
+      border border-white/10
+      bg-white/5
+      backdrop-blur-sm
+      text-white
+      font-medium
+      hover:bg-[#5A9B92]
+      hover:border-[#5A9B92]
+      hover:-translate-y-1
+      transition-all duration-300
+      shadow-sm
+    "
+  >
+    Written Mastery
+    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+  <a
+    href="https://www.youtube.com/@about_interviewers"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group
+      px-6 py-3
+      rounded-full
+      border border-white/10
+      bg-white/5
+      backdrop-blur-sm
+      text-white
+      font-medium
+      hover:bg-[#5A9B92]
+      hover:border-[#5A9B92]
+      hover:-translate-y-1
+      transition-all duration-300
+      shadow-sm
+    "
+  >
+    Interview
+    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+  <a
+    href="https://www.youtube.com/@numericcore"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group
+      px-6 py-3
+      rounded-full
+      border border-white/10
+      bg-white/5
+      backdrop-blur-sm
+      text-white
+      font-medium
+      hover:bg-[#5A9B92]
+      hover:border-[#5A9B92]
+      hover:-translate-y-1
+      transition-all duration-300
+      shadow-sm
+    "
+  >
+    Numeric Core
+    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+  <a
+    href="https://www.youtube.com/@gateailab"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group
+      px-6 py-3
+      rounded-full
+      border border-white/10
+      bg-white/5
+      backdrop-blur-sm
+      text-white
+      font-medium
+      hover:bg-[#5A9B92]
+      hover:border-[#5A9B92]
+      hover:-translate-y-1
+      transition-all duration-300
+      shadow-sm
+    "
+  >
+    GATE AI Data Lab
+    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+  <a
+    href="https://cohorts.nileshnama.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      group
+      px-6 py-3
+      rounded-full
+      border border-white/10
+      bg-white/5
+      backdrop-blur-sm
+      text-white
+      font-medium
+      hover:bg-[#5A9B92]
+      hover:border-[#5A9B92]
+      hover:-translate-y-1
+      transition-all duration-300
+      shadow-sm
+    "
+  >
+    Explore NN Cohorts
+    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+      →
+    </span>
+  </a>
+
+</div>
     </motion.section>
+    
   )
 }
 

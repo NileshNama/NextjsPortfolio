@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import { motion } from "motion/react"
 
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false)
@@ -80,24 +81,49 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           
 
           {/* LMS Login (NEW) */}
-          <a
-            href="https://cohorts.nileshnama.com/login"
-            target="_blank"
-            className="
-              hidden lg:flex items-center gap-2
-              px-8 py-2.5 rounded-full text-sm font-Ovo
-              border border-gray-500
-              hover:bg-lightHover hover:text-white
-              transition dark:border-white/40
-            "
-          >
-            Login
-            <Image
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
-              alt=""
-              className="w-3"
-            />
-          </a>
+          <motion.a
+  whileHover={{
+    scale: 1.03,
+    y: -2,
+  }}
+  whileTap={{ scale: 0.98 }}
+  transition={{ duration: 0.25 }}
+  href="https://cohorts.nileshnama.com/login"
+  target="_blank"
+  rel="noopener noreferrer"
+  className=" hidden sm:flex
+    group
+    flex
+    items-center
+    gap-2
+    px-6
+    py-2.5
+    rounded-full
+    border border-gray-400/70
+    bg-white/70
+    backdrop-blur-xl
+    text-gray-700
+    font-medium
+    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+    hover:shadow-[0_18px_45px_rgba(80,145,135,0.16)]
+    hover:border-[#5A9B92]/40
+    transition-all duration-300
+  "
+>
+  Login
+
+  <Image
+    src={assets.arrow_icon}
+    alt=""
+    className="
+      w-4
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+      group-hover:-translate-y-1
+    "
+  />
+</motion.a>
 
           {/* Mobile menu button */}
           <button

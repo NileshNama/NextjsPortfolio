@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-28 overflow-hidden"
+      className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-12 overflow-hidden"
     >
       <div className="w-11/12 max-w-4xl text-center mx-auto flex flex-col items-center gap-2 sm:gap-3 relative">
 
@@ -50,31 +50,74 @@ const Header = () => {
           viewport={{ once: true }}
           className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-Ovo"
         >
-          Software Engineer · Structured Learning Systems Architect
+          Software Engineer • Systems Educator
         </motion.h2>
 
          {/* Proof Badges */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-0"
-        >
-          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
-            GATE • BARC • PSU Focused
-          </div>
-          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
-            5+ Years Exam Reasoning Research
-          </div>
+<motion.div
+  initial={{ opacity: 0, y: 8 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.4 }}
+  viewport={{ once: true }}
+  className="flex flex-wrap items-center justify-center gap-3 mt-1"
+>
+  <div
+    className="
+      min-w-[220px]
+      px-5 py-3
+      rounded-2xl
+      border border-gray-300/80
+      bg-white/80
+      backdrop-blur-sm
+      text-sm font-medium text-gray-700
+      shadow-sm
+      hover:-translate-y-1
+      hover:shadow-md
+      transition-all duration-300
+      text-center
+    "
+  >
+    GATE • BARC • PSU Focused
+  </div>
 
-          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
-            Systems-Based Learning Frameworks
-          </div>
-          
-        </motion.div>
+  <div
+    className="
+      min-w-[240px]
+      px-5 py-3
+      rounded-2xl
+      border border-gray-300/80
+      bg-white/80
+      backdrop-blur-sm
+      text-sm font-medium text-gray-700
+      shadow-sm
+      hover:-translate-y-1
+      hover:shadow-md
+      transition-all duration-300
+      text-center
+    "
+  >
+    5+ Years Exam Reasoning Research
+  </div>
 
-        
+  <div
+    className="
+      min-w-[240px]
+      px-5 py-3
+      rounded-2xl
+      border border-gray-300/80
+      bg-white/80
+      backdrop-blur-sm
+      text-sm font-medium text-gray-700
+      shadow-sm
+      hover:-translate-y-1
+      hover:shadow-md
+      transition-all duration-300
+      text-center
+    "
+  >
+    Systems-Based Learning Frameworks
+  </div>
+</motion.div>
 
         {/* Main line */}
         <motion.div
@@ -88,14 +131,17 @@ const Header = () => {
             Structured reasoning for high-pressure exams and interviews. <br /> Train your mind to think clearly under pressure.
           </p>
 
-          <motion.div
-            whileHover={{ y: -2 }}
-            transition={{ duration: 0.2 }}
-            className="inline-flex items-center gap-2 mt-1 px-4 py-2 rounded-full border border-[#5A9B92]/25 bg-[#5A9B92]/8 backdrop-blur-sm text-sm font-semibold text-[#3f7d74] dark:text-[#8fd1c8] shadow-sm"
-          >
-            <span className="text-[#5A9B92]">✓</span>
-            Built from years of exam reasoning research and live teaching sessions.
-          </motion.div>
+          {/* Trust Badge */}
+<motion.div
+  initial={{ opacity: 0, y: 8 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm font-medium shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-white/10"
+>
+  <div className="w-2.5 h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
+  Trusted by 5K Aspirants
+</motion.div>
         </motion.div>
 
        

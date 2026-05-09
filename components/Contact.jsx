@@ -1,6 +1,8 @@
-import { assets } from '@/assets/assets'
-import Image from 'next/image'
-import React, { useState } from 'react'
+"use client"
+
+import { assets } from "@/assets/assets"
+import Image from "next/image"
+import React, { useState } from "react"
 import { motion } from "motion/react"
 
 const Contact = () => {
@@ -9,14 +11,21 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault()
     setResult("Sending...")
+
     const formData = new FormData(event.target)
 
-    formData.append("access_key", "33b90cef-ca93-4461-a6ef-5050e561e1e3")
+    formData.append(
+      "access_key",
+      "33b90cef-ca93-4461-a6ef-5050e561e1e3"
+    )
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData
-    })
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
 
     const data = await response.json()
 
@@ -29,123 +38,282 @@ const Contact = () => {
   }
 
   return (
-    <motion.section
+    <section
       id="contact"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="w-full px-6 sm:px-[12%] py-24 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
+      className="
+        relative overflow-hidden
+        w-full
+        px-[7%] sm:px-[10%] lg:px-[12%]
+        py-24 md:py-32
+        scroll-mt-24
+      "
     >
-      {/* Heading */}
-      <div className="text-center max-w-2xl mx-auto">
-        <motion.h4
-          initial={{ y: -10, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-sm font-Ovo mb-3"
-        >
-          Collaborate with me
-        </motion.h4>
 
-        <motion.h2
-          initial={{ y: -15, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.35 }}
-          className="text-4xl sm:text-5xl font-Ovo mb-4"
-        >
-          Start a conversation
-        </motion.h2>
+      {/* Background Glow */}
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#5A9B92]/10 blur-3xl rounded-full"></div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="text-gray-600 dark:text-gray-400 font-Ovo"
-        >
-          I value thoughtful discussions around systems, learning, and decision-making.
-        </motion.p>
-      </div>
-
-      {/* Intent Block — MOBILE FIXED */}
+      {/* HEADING */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.65 }}
-        className="max-w-xl mx-auto mt-12 mb-14 px-2"
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center relative z-10"
       >
-        <p className="text-sm text-gray-500 mb-6 text-center font-Ovo">
-          This is a good fit if you want to discuss:
+
+        <p className="text-sm tracking-[4px] uppercase text-[#5A9B92] font-semibold mb-4">
+          Contact
         </p>
 
-        <ul className="space-y-5 font-Ovo">
-          {[
-            "Collaboration on systems-oriented or learning projects",
-            "Speaking, mentoring, or serious academic conversations",
-            "Thoughtful questions related to NN Cohorts or Interviewers",
-          ].map((text, index) => (
-            <li key={index} className="flex gap-3">
-              <span className="mt-[7px] w-2 h-2 shrink-0 rounded-full bg-[#509187]" />
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {text}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <h2 className="text-4xl sm:text-5xl font-semibold mb-6">
+          Start a Conversation
+        </h2>
+
+        <p className="max-w-3xl mx-auto text-gray-600 leading-8 text-base sm:text-lg">
+          Thoughtful discussions around systems, learning,
+          interview reasoning, structured thinking, and long-term execution.
+        </p>
       </motion.div>
 
-      {/* Contact Form */}
-      <motion.form
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        onSubmit={onSubmit}
-        className="max-w-2xl mx-auto"
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name"
-            required
-            className="p-3 border border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 outline-none"
-          />
+      {/* MAIN GRID */}
+      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 mt-16 relative z-10">
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email"
-            required
-            className="p-3 border border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 outline-none"
-          />
-        </div>
-
-        <textarea
-          rows="6"
-          name="message"
-          placeholder="Briefly describe what you're thinking about, building, or struggling with."
-          required
-          className="w-full p-4 border border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 outline-none mb-6"
-        />
-
-        <button
-          type="submit"
-          className="mx-auto flex items-center gap-2 px-8 py-3 rounded-full bg-black text-white hover:bg-black/90 transition shadow-sm"
+        {/* LEFT SIDE */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          className="
+            rounded-[32px]
+            border border-gray-200/70
+            bg-white/70
+            backdrop-blur-xl
+            p-8 sm:p-10
+            shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+          "
         >
-          Send message
-          <Image src={assets.right_arrow_white} alt="" className="w-4" />
-        </button>
 
-        <p className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400 font-Ovo">
-          I read every message personally. Replies may take time, but they will be thoughtful.
-        </p>
+          {/* Mini Badge */}
+          <div className="
+            inline-flex items-center gap-2
+            px-4 py-2 rounded-full
+            bg-[#5A9B92]/10
+            border border-[#5A9B92]/20
+            mb-8
+          ">
+            <div className="w-2 h-2 rounded-full bg-[#5A9B92]"></div>
 
-        {result && (
-          <p className="mt-4 text-center text-sm text-gray-500">
-            {result}
+            <span className="text-sm font-medium text-[#3E7E76]">
+              Open for thoughtful collaborations
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h3 className="text-3xl font-semibold leading-tight mb-6">
+            Best suited for people building seriously.
+          </h3>
+
+          <p className="text-gray-600 leading-8 mb-10">
+            If you're working on systems, deep learning products,
+            education infrastructure, interview preparation,
+            or reasoning-focused initiatives — this is probably a good fit.
           </p>
-        )}
-      </motion.form>
-    </motion.section>
+
+          {/* Intent Cards */}
+          <div className="space-y-5">
+
+            {[
+              "Collaboration on systems-oriented products or learning platforms",
+              "Speaking sessions, mentorship, or serious academic conversations",
+              "Deep questions around NN Cohorts, interviews, or reasoning systems",
+              "Research, content, or long-term educational infrastructure discussions",
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ x: 4 }}
+                className="
+                  flex items-start gap-4
+                  rounded-2xl
+                  border border-gray-200
+                  bg-white/70
+                  px-5 py-5
+                  transition-all duration-300
+                  hover:border-[#5A9B92]/30
+                  hover:bg-white
+                "
+              >
+
+                <div className="
+                  w-10 h-10 shrink-0
+                  rounded-xl
+                  bg-[#5A9B92]/10
+                  flex items-center justify-center
+                ">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#509187]"></div>
+                </div>
+
+                <p className="text-gray-700 leading-7 text-[15px]">
+                  {item}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Bottom Quote */}
+          <div className="
+            mt-10 pt-8
+            border-t border-gray-100
+          ">
+            <p className="text-sm leading-7 text-gray-500">
+              “I value thoughtful conversations over volume.
+              Depth matters more than speed.”
+            </p>
+          </div>
+        </motion.div>
+
+        {/* RIGHT SIDE FORM */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.55 }}
+          viewport={{ once: true }}
+          className="
+            rounded-[32px]
+            border border-gray-200/70
+            bg-white/75
+            backdrop-blur-xl
+            p-8 sm:p-10
+            shadow-[0_10px_40px_rgba(0,0,0,0.04)]
+          "
+        >
+
+          {/* Form Badge */}
+          <div className="
+            inline-flex items-center gap-2
+            px-4 py-2 rounded-full
+            bg-black text-white
+            text-sm font-medium
+            mb-8
+          ">
+            <div className="w-2 h-2 rounded-full bg-[#5A9B92]"></div>
+            Direct Contact
+          </div>
+
+          <form onSubmit={onSubmit}>
+
+            {/* Inputs */}
+            <div className="grid sm:grid-cols-2 gap-5 mb-5">
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                className="
+                  w-full
+                  rounded-2xl
+                  border border-gray-200
+                  bg-white/80
+                  px-5 py-4
+                  outline-none
+                  transition
+                  focus:border-[#509187]
+                  focus:ring-4 focus:ring-[#509187]/10
+                "
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+                className="
+                  w-full
+                  rounded-2xl
+                  border border-gray-200
+                  bg-white/80
+                  px-5 py-4
+                  outline-none
+                  transition
+                  focus:border-[#509187]
+                  focus:ring-4 focus:ring-[#509187]/10
+                "
+              />
+            </div>
+
+            {/* Textarea */}
+            <textarea
+              rows="8"
+              name="message"
+              placeholder="Describe what you're building, thinking about, or struggling with..."
+              required
+              className="
+                w-full
+                rounded-3xl
+                border border-gray-200
+                bg-white/80
+                px-5 py-5
+                outline-none
+                resize-none
+                transition
+                focus:border-[#509187]
+                focus:ring-4 focus:ring-[#509187]/10
+              "
+            />
+
+            {/* CTA */}
+            <motion.button
+              whileHover={{
+                scale: 1.03,
+              }}
+              whileTap={{
+                scale: 0.98,
+              }}
+              type="submit"
+              className="
+                mt-8
+                group
+                w-full
+                rounded-2xl
+                bg-[#509187]
+                text-white
+                py-4
+                font-medium
+                flex items-center justify-center gap-3
+                hover:shadow-[0_10px_30px_rgba(80,145,135,0.35)]
+                transition-all duration-300
+              "
+            >
+              Send Message
+
+              <span className="group-hover:translate-x-1 transition">
+                →
+              </span>
+            </motion.button>
+
+            {/* Result */}
+            {result && (
+              <p className="mt-5 text-center text-sm text-gray-500">
+                {result}
+              </p>
+            )}
+
+            {/* Footer */}
+            <p className="
+              mt-8
+              text-center
+              text-sm
+              leading-7
+              text-gray-500
+            ">
+              I read every message personally.
+              Replies may take time, but they will be thoughtful.
+            </p>
+          </form>
+        </motion.div>
+      </div>
+    </section>
   )
 }
 

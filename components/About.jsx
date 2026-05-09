@@ -21,7 +21,7 @@ const About = ({ isDarkMode }) => {
           viewport={{ once: true }}
           className="section-label mb-3"
         >
-          FIELD NOTES
+          Who I AM
         </motion.p>
 
         <motion.h2
@@ -52,8 +52,68 @@ const About = ({ isDarkMode }) => {
               alt="user"
               className="w-full object-cover transition-transform duration-700 hover:scale-105"
             />
+            {/* Achievement Tags Block */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="
+    mt-6
+    rounded-[2rem]
+    border border-black/10 dark:border-white/10
+    bg-white dark:bg-[#111827]
+    p-6
+    shadow-[0_10px_40px_rgba(0,0,0,0.06)]
+    hover:shadow-[0_20px_60px_rgba(90,155,146,0.12)]
+    transition-all duration-300
+  "
+>
+
+  {/* Label */}
+  <p className="text-xs uppercase tracking-[0.22em] text-[#5A9B92] font-semibold mb-5">
+    NILESH NAMA
+  </p>
+
+  {/* Tags */}
+  <div className="flex flex-wrap gap-3">
+
+    <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
+      <span className="font-bold text-red-500">AIR 202</span> in GATE CS 2022
+    </div>
+
+    <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
+      <span className="font-bold text-red-500">AIR 1932</span> in GATE CS 2020
+    </div>
+
+    <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
+      <span className="font-bold text-red-500">AIR 12</span> in BARC OCES 2022
+    </div>
+
+    <a
+      href="https://www.linkedin.com/in/nileshnama/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        px-4 py-2
+        rounded-full
+        bg-[#5A9B92]
+        text-white
+        text-sm
+        font-medium
+        hover:scale-105
+        transition-all duration-300
+      "
+    >
+      LinkedIn Profile →
+    </a>
+
+  </div>
+</motion.div>
           </div>
         </motion.div>
+
+        
 
         {/* Right content */}
         <motion.div
@@ -75,7 +135,7 @@ const About = ({ isDarkMode }) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <motion.li
@@ -89,7 +149,7 @@ const About = ({ isDarkMode }) => {
                   rounded-[1.75rem]
                   border border-black/10 dark:border-white/10
                   bg-white dark:bg-[#111827]
-                  p-7
+                  p-6 min-h-[260px]
                   cursor-pointer
                   transition-all duration-300 ease-out
                   shadow-[0_10px_40px_rgba(0,0,0,0.06)]
@@ -111,7 +171,7 @@ const About = ({ isDarkMode }) => {
                   {title}
                 </h3>
 
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-7 font-medium relative z-10">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-7 font-medium relative z-10">
                   {description}
                 </p>
               </motion.li>
