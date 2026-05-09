@@ -160,7 +160,9 @@ const Writing = ({ isDarkMode }) => {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#5A9B92]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
+                {/* Mobile background glow */}
+                <div className="absolute inset-0 opacity-20 sm:hidden bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-[#56b7a5]/20 blur-3xl sm:hidden" />
                 {/* Tag */}
                 <div className="absolute top-4 left-4">
                   <span className="inline-flex items-center rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-white/90 backdrop-blur-md">

@@ -62,16 +62,16 @@ const Header = () => {
           className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-0"
         >
           <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
+            GATE • BARC • PSU Focused
+          </div>
+          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
             5+ Years Exam Reasoning Research
           </div>
 
           <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
             Systems-Based Learning Frameworks
           </div>
-
-          <div className="px-4 py-2 rounded-full border border-gray-300/80 bg-white/75 backdrop-blur-sm text-sm font-medium text-gray-700 shadow-sm">
-            GATE • BARC • PSU Focused
-          </div>
+          
         </motion.div>
 
         

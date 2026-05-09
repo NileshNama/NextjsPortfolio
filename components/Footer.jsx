@@ -76,9 +76,9 @@ const Footer = ({ isDarkMode }) => {
             leading-[1.08]
             tracking-tight
           ">
-            Deep thinking wins
-            <br className="hidden sm:block" />
-            under pressure.
+            Deep thinking wins{" "} 
+             <br className="hidden sm:block" />
+             under pressure.
           </h2>
 
           <p className="
