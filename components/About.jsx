@@ -78,6 +78,11 @@ const About = ({ isDarkMode }) => {
   {/* Tags */}
   <div className="flex flex-wrap gap-3">
 
+
+    <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
+      <span className="font-bold text-red-500">AIR 12</span> in BARC OCES 2022
+    </div>
+
     <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
       <span className="font-bold text-red-500">AIR 202</span> in GATE CS 2022
     </div>
@@ -87,8 +92,11 @@ const About = ({ isDarkMode }) => {
     </div>
 
     <div className="px-4 py-2 rounded-full border border-black/10 dark:border-white/10 bg-[#5A9B92]/8 text-sm font-medium">
-      <span className="font-bold text-red-500">AIR 12</span> in BARC OCES 2022
+      <span className="font-bold text-black-500">📩 hello</span>@nileshnama.com
     </div>
+    
+
+    
 
     <a
       href="https://www.linkedin.com/in/nileshnama/"
