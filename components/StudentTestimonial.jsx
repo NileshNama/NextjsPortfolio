@@ -119,7 +119,7 @@ const StudentTestimonial = () => {
           </h2>
 
           <p className="max-w-2xl mx-auto text-white/75 font-medium leading-8">
-            Real student stories reveal how thinking changes under pressure.
+            Real student stories reveal how thinking changes under pressure. <br /> Visuals are AI-generated recreations.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ const StudentTestimonial = () => {
 
                 <div className="flex flex-col gap-3 sm:items-end">
                   <a
-                    href="https://cohorts.nileshnama.com/"
+                    href="https://cohorts.nileshnama.com/new-courses/12-nn-gate-barc-thinking-program-all-access"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -212,11 +212,11 @@ const StudentTestimonial = () => {
                       transition-all duration-300
                     "
                   >
-                    NN Cohorts →
+                    Enrolled Cohort →
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/new-courses/12-nn-gate-barc-thinking-program-all-access"
+                    href="https://cohorts.nileshnama.com/app-blog/1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -229,7 +229,7 @@ const StudentTestimonial = () => {
                       transition-all duration-300
                     "
                   >
-                    Enrolled Cohort →
+                    The NN Approach →
                   </a>
                 </div>
               </div>
@@ -300,7 +300,7 @@ const StudentTestimonial = () => {
             </h3>
 
             <p className="max-w-2xl mx-auto text-white/70 font-medium leading-8">
-              Short reflections inspired by real NN cohort learner experiences. Visuals are AI-generated recreations.
+              Short reflections inspired by real NN cohort learner experiences. <br /> Visuals are AI-generated recreations.
             </p>
           </div>
 
