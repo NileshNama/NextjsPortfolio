@@ -6,25 +6,25 @@ const reelTestimonials = [
     name: "Rahul Sharma",
     role: "GATE Aspirant",
     video: "/videos/reel-1.mp4",
-    linkedin: "https://linkedin.com/nileshnama",
+    linkedin: "https://cohorts.nileshnama.com/",
   },
   {
     name: "Ankit Verma",
     role: "BARC Aspirant",
     video: "/videos/reel-2.mp4",
-    linkedin: "https://linkedin.com/nileshnama",
+    linkedin: "https://cohorts.nileshnama.com/",
   },
   {
     name: "Priya Nair",
     role: "PSU Candidate",
     video: "/videos/reel-3.mp4",
-    linkedin: "https://linkedin.com/nileshnama",
+    linkedin: "https://cohorts.nileshnama.com/",
   },
   {
     name: "Aditya Rao",
     role: "ISRO Aspirant",
     video: "/videos/reel-4.mp4",
-    linkedin: "https://linkedin.com/nileshnama",
+    linkedin: "https://cohorts.nileshnama.com/",
   },
 ]
 
@@ -199,7 +199,7 @@ const StudentTestimonial = () => {
 
                 <div className="flex flex-col gap-3 sm:items-end">
                   <a
-                    href="https://www.linkedin.com/"
+                    href="https://cohorts.nileshnama.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -212,11 +212,11 @@ const StudentTestimonial = () => {
                       transition-all duration-300
                     "
                   >
-                    LinkedIn Profile →
+                    NN Cohorts →
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com"
+                    href="https://cohorts.nileshnama.com/new-courses/12-nn-gate-barc-thinking-program-all-access"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -229,7 +229,7 @@ const StudentTestimonial = () => {
                       transition-all duration-300
                     "
                   >
-                    Cohort Journey →
+                    Enrolled Cohort →
                   </a>
                 </div>
               </div>
@@ -300,7 +300,7 @@ const StudentTestimonial = () => {
             </h3>
 
             <p className="max-w-2xl mx-auto text-white/70 font-medium leading-8">
-              Short, raw student reflections from real NN cohort learners.
+              Short reflections inspired by real NN cohort learner experiences. Visuals are AI-generated recreations.
             </p>
           </div>
 
@@ -382,7 +382,7 @@ const StudentTestimonial = () => {
                           "
                           onClick={(e) => e.stopPropagation()}
                         >
-                          LinkedIn Profile →
+                          NN Cohorts →
                         </a>
                       </div>
                     </div>
