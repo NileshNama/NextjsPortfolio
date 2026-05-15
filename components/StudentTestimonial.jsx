@@ -69,7 +69,7 @@ const reelTestimonials = [
 
 const studentReviews = [
   {
-    name: "Kuldeep gaur",
+    name: "Kuldeep hada",
     rating: 5,
     review:
       "NN changed how I interpret questions under pressure.",
@@ -179,7 +179,7 @@ const StudentTestimonial = () => {
           </h2>
 
           <p className="max-w-2xl mx-auto text-white/75 font-medium leading-8">
-            Real student stories reveal how thinking changes under pressure. <br /> Visuals are AI-generated recreations.
+            Real student stories reveal how thinking changes under pressure. <br /> Some Visuals are AI-generated recreations.
           </p>
         </div>
 
@@ -360,7 +360,7 @@ const StudentTestimonial = () => {
             </h3>
 
             <p className="max-w-2xl mx-auto text-white/70 font-medium leading-8">
-              Short reflections inspired by real NN cohort learner experiences. <br /> Visuals are AI-generated recreations.
+              Short reflections inspired by real NN cohort learner experiences. <br />  Some Visuals are AI-generated recreations.
             </p>
           </div>
 
