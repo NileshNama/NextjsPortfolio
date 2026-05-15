@@ -6,7 +6,7 @@ const reelTestimonials = [
     type: "video",
     name: "Rahul Sharma",
     role: "GATE Aspirant",
-    video: "/videos/reel-1.mp4",
+    src: "/videos/reel-1.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
@@ -20,7 +20,7 @@ const reelTestimonials = [
     type: "video",
     name: "Ankit Verma",
     role: "BARC Aspirant",
-    video: "/videos/reel-2.mp4",
+    src: "/videos/reel-2.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
@@ -34,7 +34,7 @@ const reelTestimonials = [
     type: "video",
     name: "Priya Nair",
     role: "PSU Candidate",
-    video: "/videos/reel-3.mp4",
+    src: "/videos/reel-3.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
@@ -48,7 +48,7 @@ const reelTestimonials = [
     type: "video",
     name: "Aditya Rao",
     role: "ISRO Aspirant",
-    video: "/videos/reel-4.mp4",
+    src: "/videos/reel-4.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
@@ -62,7 +62,7 @@ const reelTestimonials = [
     type: "video",
     name: "Ravina singh",
     role: "GATE Aspirant",
-    video: "/videos/reel-5.mp4",
+    src: "/videos/reel-5.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
 ]
