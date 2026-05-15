@@ -45,6 +45,13 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "image",
+    name: "Cohort 2025",
+    role: "NN Student",
+    src: "/videos/ss-5.jpg",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
+  {
     type: "video",
     name: "Aditya Rao",
     role: "ISRO Aspirant",
@@ -76,7 +83,7 @@ const studentReviews = [
   },
   {
     name: "Bharat goel",
-    rating: 5,
+    rating: 4.5,
     review:
       "I became calmer and more structured during mocks.",
   },
