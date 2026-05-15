@@ -408,7 +408,12 @@ const StudentTestimonial = () => {
                       </div>
                     </div>
                   </div>
-                  {/* Review Cards */}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+        {/* Review Cards */}
 <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
   {studentReviews.map((review, index) => (
     <motion.div
@@ -453,11 +458,6 @@ const StudentTestimonial = () => {
     </motion.div>
   ))}
 </div>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
       </div>
     </motion.section>
   )
