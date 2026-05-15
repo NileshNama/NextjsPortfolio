@@ -45,13 +45,6 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
-    type: "image",
-    name: "Cohort 2025",
-    role: "NN Student",
-    src: "/videos/ss-5.jpg",
-    linkedin: "https://cohorts.nileshnama.com/",
-  },
-  {
     type: "video",
     name: "Aditya Rao",
     role: "ISRO Aspirant",
