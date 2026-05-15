@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 
 const reelTestimonials = [
   {
+    type: "video",
     name: "Rahul Sharma",
     role: "GATE Aspirant",
     video: "/videos/reel-1.mp4",
@@ -16,6 +17,7 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "video",
     name: "Ankit Verma",
     role: "BARC Aspirant",
     video: "/videos/reel-2.mp4",
@@ -29,6 +31,7 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "video",
     name: "Priya Nair",
     role: "PSU Candidate",
     video: "/videos/reel-3.mp4",
@@ -42,6 +45,7 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "video",
     name: "Aditya Rao",
     role: "ISRO Aspirant",
     video: "/videos/reel-4.mp4",
@@ -55,6 +59,7 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "video",
     name: "Ravina singh",
     role: "GATE Aspirant",
     video: "/videos/reel-5.mp4",
@@ -93,7 +98,7 @@ const StudentTestimonial = () => {
   const loopedReels = useMemo(() => {
     return [...reelTestimonials, ...reelTestimonials].map((item, index) => ({
       ...item,
-      uid: `${item.name}-${item.video}-${index}`,
+      uid: `${item.name}-${item.src}-${index}`,
     }))
   }, [])
 
@@ -391,30 +396,35 @@ const StudentTestimonial = () => {
                     "
                   >
                     <div
-                      className="relative aspect-[9/16] overflow-hidden bg-black cursor-pointer"
-                      onClick={() => toggleReelVideo(item.uid)}
-                    >
-                      <video
-                        ref={(el) => {
-                          if (el) reelVideoRefs.current[item.uid] = el
-                        }}
-                        className="
-                          w-full h-full
-                          object-cover
-                          transition-transform duration-700
-                          group-hover:scale-105
-                        "
-                        playsInline
-                        preload="metadata"
-                        onEnded={() => setActiveReelId(null)}
-                        onPause={() => {
-                          if (activeReelId === item.uid) {
-                            setActiveReelId(null)
-                          }
-                        }}
-                      >
-                        <source src={item.video} type="video/mp4" />
-                      </video>
+  className="relative aspect-[9/16] overflow-hidden bg-black cursor-pointer"
+  onClick={() => {
+    if (item.type === "video") {
+      toggleReelVideo(item.uid)
+    }
+  }}
+>
+  {item.type === "image" ? (
+    <img
+      src={item.src}
+      alt={item.name}
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+  ) : (
+    <video
+      ref={(el) => {
+        if (el) reelVideoRefs.current[item.uid] = el
+      }}
+      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      playsInline
+      preload="metadata"
+      onEnded={() => setActiveReelId(null)}
+      onPause={() => {
+        if (activeReelId === item.uid) setActiveReelId(null)
+      }}
+    >
+      <source src={item.src} type="video/mp4" />
+    </video>
+  )}
 
                       <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
                         <h4 className="text-lg font-semibold text-white mb-2">
