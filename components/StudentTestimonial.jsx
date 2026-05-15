@@ -25,7 +25,7 @@ const reelTestimonials = [
     type: "image",
     name: "Vicky Nagar",
     role: "NN Student",
-    src: "/videos/ss-2.jpg",
+    src: "/videos/ss-2.png",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
