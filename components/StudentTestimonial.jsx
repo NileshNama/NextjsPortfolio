@@ -76,13 +76,13 @@ const studentReviews = [
   },
   {
     name: "Bharat goel",
-    rating: 4.5,
+    rating: 5,
     review:
       "I became calmer and more structured during mocks.",
   },
   {
     name: "Shrikant giri",
-    rating: 4,
+    rating: 5,
     review:
       "My thinking clarity improved more than just scores.",
   },
