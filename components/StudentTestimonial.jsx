@@ -26,6 +26,12 @@ const reelTestimonials = [
     video: "/videos/reel-4.mp4",
     linkedin: "https://cohorts.nileshnama.com/",
   },
+  {
+    name: "Ravina singh",
+    role: "GATE Aspirant",
+    video: "/videos/reel-5.mp4",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
 ]
 
 const studentReviews = [
