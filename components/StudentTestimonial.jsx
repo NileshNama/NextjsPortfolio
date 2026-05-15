@@ -367,7 +367,7 @@ const StudentTestimonial = () => {
             </h3>
 
             <p className="max-w-2xl mx-auto text-white/70 font-medium leading-8">
-              Short reflections inspired by real NN cohort learner experiences.
+              Short reflections inspired by real NN cohort learner real time experiences.
             </p>
           </div>
 
