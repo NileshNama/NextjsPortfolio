@@ -36,19 +36,19 @@ const reelTestimonials = [
 
 const studentReviews = [
   {
-    name: "Rahul Sharma",
+    name: "Kuldeep gaur",
     rating: 5,
     review:
       "NN changed how I interpret questions under pressure.",
   },
   {
-    name: "Priya Nair",
+    name: "Bharat goel",
     rating: 5,
     review:
       "I became calmer and more structured during mocks.",
   },
   {
-    name: "Aditya Rao",
+    name: "Shrikant giri",
     rating: 4,
     review:
       "My thinking clarity improved more than just scores.",
