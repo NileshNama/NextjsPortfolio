@@ -28,6 +28,27 @@ const reelTestimonials = [
   },
 ]
 
+const studentReviews = [
+  {
+    name: "Rahul Sharma",
+    rating: 5,
+    review:
+      "NN changed how I interpret questions under pressure.",
+  },
+  {
+    name: "Priya Nair",
+    rating: 5,
+    review:
+      "I became calmer and more structured during mocks.",
+  },
+  {
+    name: "Aditya Rao",
+    rating: 4,
+    review:
+      "My thinking clarity improved more than just scores.",
+  },
+]
+
 const StudentTestimonial = () => {
   const mainVideoRef = useRef(null)
   const reelVideoRefs = useRef({})
@@ -387,6 +408,51 @@ const StudentTestimonial = () => {
                       </div>
                     </div>
                   </div>
+                  {/* Review Cards */}
+<div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  {studentReviews.map((review, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="
+        rounded-[1.8rem]
+        border border-white/10
+        bg-white/5
+        backdrop-blur-sm
+        p-6
+        hover:border-[#5A9B92]/35
+        hover:-translate-y-1
+        transition-all duration-300
+      "
+    >
+      {/* Stars */}
+      <div className="flex gap-1 mb-4 text-yellow-400 text-lg">
+        {[...Array(review.rating)].map((_, i) => (
+          <span key={i}>★</span>
+        ))}
+      </div>
+
+      {/* Review */}
+      <p className="text-white/75 leading-7 font-medium mb-5">
+        “{review.review}”
+      </p>
+
+      {/* Name */}
+      <div>
+        <h4 className="text-white font-semibold">
+          {review.name}
+        </h4>
+
+        <p className="text-sm text-[#5A9B92] mt-1">
+          NN Cohort Student
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
                 </div>
               ))}
             </motion.div>
