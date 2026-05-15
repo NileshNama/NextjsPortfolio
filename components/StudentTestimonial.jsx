@@ -9,9 +9,23 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "image",
+    name: "Vishal Sankhla",
+    role: "NN Student",
+    src: "/videos/ss-1.jpg",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
+  {
     name: "Ankit Verma",
     role: "BARC Aspirant",
     video: "/videos/reel-2.mp4",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
+  {
+    type: "image",
+    name: "Vicky Nagar",
+    role: "NN Student",
+    src: "/videos/ss-2.jpg",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
@@ -21,9 +35,23 @@ const reelTestimonials = [
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
+    type: "image",
+    name: "Deepika Naruka",
+    role: "NN Student",
+    src: "/videos/ss-3.jpg",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
+  {
     name: "Aditya Rao",
     role: "ISRO Aspirant",
     video: "/videos/reel-4.mp4",
+    linkedin: "https://cohorts.nileshnama.com/",
+  },
+  {
+    type: "image",
+    name: "Ranu Chodhary",
+    role: "NN Student",
+    src: "/videos/ss-4.jpg",
     linkedin: "https://cohorts.nileshnama.com/",
   },
   {
