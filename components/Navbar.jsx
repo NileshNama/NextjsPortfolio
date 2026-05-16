@@ -22,22 +22,48 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     <>
     <div className="fixed top-0 left-0 w-full z-[60] bg-[#5A9B92] text-white">
   <div className="max-w-7xl mx-auto px-3 py-2 text-[11px] sm:text-sm leading-tight text-center font-medium">
-    <span className="sm:hidden"> ✦ Explore NN Cohorts & VebSkills Programs. <a
-    href="https://nileshnama.notion.site/schedule"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="underline underline-offset-4 hover:opacity-80 mx-2 font-semibold"
-  >
-    Curriculum
-  </a> </span>
-    <span className="hidden sm:inline"> ✦ Enrollments Now Open for NN Cohorts & VebSkills Programs. <a
-    href="https://nileshnama.notion.site/schedule"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="underline underline-offset-4 hover:opacity-80 mx-2 font-semibold"
-  >
-    Curriculum
-  </a> • For any enquiries please WhatsApp at +91 9509923340. </span>
+    <span className="sm:hidden"> ✦ Explore NN Cohorts & VebSkills Programs. 
+    <a
+  href="https://nileshnama.notion.site/schedule"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    mx-2
+    px-3
+    py-1
+    rounded-full
+    bg-black
+    text-white
+    hover:bg-black/80
+    transition-all
+    duration-300
+    font-semibold
+  "
+>
+  Curriculum
+</a>
+    </span>
+    <span className="hidden sm:inline"> ✦ Enrollments Now Open for NN Cohorts & VebSkills Programs. 
+      <a
+  href="https://nileshnama.notion.site/schedule"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    mx-2
+    px-3
+    py-1
+    rounded-full
+    bg-black
+    text-white
+    hover:bg-black/80
+    transition-all
+    duration-300
+    font-semibold
+  "
+>
+  Curriculum
+</a>
+      • For any enquiries please WhatsApp at +91 9509923340. </span>
   </div>
 </div>
       {/* Decorative background */}
