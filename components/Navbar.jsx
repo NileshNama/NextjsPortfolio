@@ -34,6 +34,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     rounded-full
     bg-black
     text-white
+    text-[12px]
     hover:bg-black/80
     transition-all
     duration-300
