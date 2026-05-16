@@ -29,8 +29,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   rel="noopener noreferrer"
   className="
     mx-2
-    px-3
-    py-1
+    px-2.5
+    py-0.5
     rounded-full
     bg-black
     text-white
