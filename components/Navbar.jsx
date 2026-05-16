@@ -28,18 +28,19 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   target="_blank"
   rel="noopener noreferrer"
   className="
-    mx-2
-    px-2.5
-    py-0.5
-    rounded-full
-    bg-black
-    text-white
-    text-[12px]
-    hover:bg-black/80
-    transition-all
-    duration-300
-    font-semibold
-  "
+  mx-2
+  px-2.5
+  py-0.5
+  rounded-full
+  bg-black
+  text-white
+  text-[12px]
+  font-semibold
+  transition-all
+  duration-300
+  hover:bg-black/90
+  hover:shadow-[0_0_18px_rgba(0,0,0,0.28)]
+"
 >
   Curriculum
 </a>
