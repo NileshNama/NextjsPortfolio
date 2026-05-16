@@ -63,7 +63,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 >
   Curriculum
 </a>
-      • For enquiries WhatsApp at <span className="text-gray-900 font-semibold ml-1"">
+      • For enquiries WhatsApp at <span className="text-gray-900 font-semibold ml-1">
   +91 9509923340.
 </span> </span>
   </div>
