@@ -22,8 +22,22 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     <>
     <div className="fixed top-0 left-0 w-full z-[60] bg-[#5A9B92] text-white">
   <div className="max-w-7xl mx-auto px-3 py-2 text-[11px] sm:text-sm leading-tight text-center font-medium">
-    <span className="sm:hidden"> ✦ Explore NN Cohorts & VebSkills Programs </span>
-    <span className="hidden sm:inline"> ✦ Enrollments Now Open for NN Cohorts & VebSkills Programs. For any enquiries please WhatsApp at
+    <span className="sm:hidden"> ✦ Explore NN Cohorts & VebSkills Programs <a
+    href="https://your-schedule-link.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline underline-offset-4 hover:opacity-80 mx-2 font-semibold"
+  >
+    Schedule a Call
+  </a> </span>
+    <span className="hidden sm:inline"> ✦ Enrollments Now Open for NN Cohorts & VebSkills Programs. <a
+    href="https://your-schedule-link.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline underline-offset-4 hover:opacity-80 mx-2 font-semibold"
+  >
+    Schedule a Call
+  </a> For any enquiries please WhatsApp at
 +91 9509923340 </span>
   </div>
 </div>
