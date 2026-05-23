@@ -121,22 +121,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {/* Right controls */}
         <div className="flex items-center gap-4">
-       
-          {/* ADD THIS NEW EXPLORE CTA HERE */}   
-          <div className="flex flex-col items-start leading-tight">
-  <span className="flex items-center gap-2">
-    Explore
-    <Image
-      src={assets.arrow_icon}
-      alt=""
-      className="w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-    />
-  </span>
-
-  <span className="text-[10px] opacity-60 tracking-wide ml-0.5">
-    nquestions.xyz
-  </span>
-</div>
 
           {/* LMS Login (NEW) */}
           <motion.a
