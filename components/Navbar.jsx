@@ -121,7 +121,41 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {/* Right controls */}
         <div className="flex items-center gap-4">
-          
+       
+          {/* ADD THIS NEW EXPLORE CTA HERE */}   
+          <motion.a
+  whileHover={{ scale: 1.03, y: -2 }}
+  whileTap={{ scale: 0.98 }}
+  transition={{ duration: 0.25 }}
+  href="https://nquestions.xyz"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden sm:flex
+    group
+    items-center
+    gap-2
+    px-5
+    py-2.5
+    rounded-full
+    border border-gray-400/70
+    bg-white/70
+    backdrop-blur-xl
+    text-gray-700
+    font-medium
+    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
+    hover:shadow-[0_18px_45px_rgba(80,145,135,0.16)]
+    hover:border-[#5A9B92]/40
+    transition-all duration-300
+  "
+>
+  Explore
+  <span className="text-[11px] opacity-70">nquestions.xyz</span>
+  <Image
+    src={assets.arrow_icon}
+    alt=""
+    className="w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  />
+</motion.a>
 
           {/* LMS Login (NEW) */}
           <motion.a
