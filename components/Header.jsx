@@ -74,7 +74,7 @@ const Header = () => {
   </div>
 
   <div
-    className="w-full max-w-[280px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
+    className="w-full max-w-[280px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center"
   >
     Systems-Based Learning Frameworks
   </div>
