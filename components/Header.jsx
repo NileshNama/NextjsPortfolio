@@ -59,25 +59,19 @@ const Header = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.4 }}
   viewport={{ once: true }}
-  className="flex flex-wrap items-center justify-center gap-3 mt-1"
+  className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-1"
 >
-  <div
-    className="w-full max-w-[280px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
-  >
+  <div className="w-full sm:w-auto sm:min-w-[220px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
     GATE • BARC • PSU Focused
   </div>
 
-  <div
-    className="w-full max-w-[280px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
-  >
+  <div className="w-full sm:w-auto sm:min-w-[240px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
     5+ Years Exam Reasoning Research
   </div>
 
-  <div
-  className="w-full max-w-[280px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center"
->
-  Systems-Based Learning Frameworks
-</div>
+  <div className="w-full sm:w-auto sm:min-w-[240px] px-4 py-2 rounded-2xl border border-gray-300/80 bg-white/80 backdrop-blur-sm text-[12px] sm:text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 text-center">
+    Systems-Based Learning Frameworks
+  </div>
 </motion.div>
 
         {/* Main line */}
