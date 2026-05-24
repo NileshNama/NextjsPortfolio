@@ -100,7 +100,7 @@ const Header = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <div className="flex flex-col items-center justify-center mt-4">
+        <div className="flex flex-col items-center justify-center mt-2">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
             {/* PRIMARY CTA */}
             <motion.a
@@ -152,7 +152,7 @@ const Header = () => {
             href="https://nquestions.xyz"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center gap-1.5 text-[12px] sm:text-sm font-semibold tracking-tight text-[#64748B] transition-all duration-300"
+            className="mt-2 inline-flex items-center justify-center gap-1.5 text-[12px] sm:text-sm font-semibold tracking-tight text-[#64748B] transition-all duration-300"
           >
             <span className="text-[#FF6B5E]">↗</span>
             <span className="opacity-70">Built on</span>
