@@ -212,7 +212,6 @@ const Header = () => {
     PRO
   </span>
 </motion.a>
-</div>
         </div>
       </div>
     </section>
