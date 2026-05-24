@@ -188,6 +188,19 @@ const Header = () => {
               className="w-4 transition-transform duration-300 group-hover:translate-x-1"
             />
           </motion.a>
+           {/* NQuestions Link */}
+  <motion.a
+    initial={{ opacity: 0, y: 8 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.9 }}
+    viewport={{ once: true }}
+    href="https://nquestions.xyz"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-5 text-sm font-medium tracking-wide text-gray-500 hover:text-[#509187] transition-all duration-300"
+  >
+    ↗ Built on NQuestions.xyz
+  </motion.a>
 
         </div>
       </div>
