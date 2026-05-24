@@ -203,11 +203,11 @@ const Header = () => {
   <span>Built on</span>
 
   <span className="text-[#1E293B]">
-    NQuestions
+    NQuestions.XYZ
   </span>
 
   <span className="text-[#FF6B5E] text-[11px] font-bold border border-[#FFB4AD] px-1.5 py-[1px] rounded-full leading-none">
-    XYZ
+    PRO
   </span>
 </motion.a>
 </div>
