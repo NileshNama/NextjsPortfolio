@@ -143,52 +143,51 @@ const Header = () => {
   Trusted by 5K Aspirants
 </motion.div>
         </motion.div>
+{/* CTA Section */}
+<div className="flex flex-col items-center justify-center mt-2 sm:mt-1">
+  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
+    {/* PRIMARY CTA */}
+    <motion.a
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.45, delay: 0.6 }}
+      viewport={{ once: true }}
+      href="https://cohorts.nileshnama.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group px-9 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300"
+    >
+      Explore The System
+      <Image
+        src={assets.right_arrow_white}
+        alt=""
+        className="w-4 transition-transform duration-300 group-hover:translate-x-1"
+      />
+    </motion.a>
 
-       
+    {/* SECONDARY CTA */}
+    <motion.a
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ duration: 0.45, delay: 0.75 }}
+      viewport={{ once: true }}
+      href="#nn-sessions"
+      className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300"
+    >
+      See NN Sessions
+      <Image
+        src={assets.right_arrow_bold}
+        alt=""
+        className="w-4 transition-transform duration-300 group-hover:translate-x-1"
+      />
+    </motion.a>
+  </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mt-2 sm:mt-1">
-
-          {/* PRIMARY CTA */}
-          <motion.a
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.45, delay: 0.6 }}
-            viewport={{ once: true }}
-            href="https://cohorts.nileshnama.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group px-9 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300"
-          >
-            Explore The System
-            <Image
-              src={assets.right_arrow_white}
-              alt=""
-              className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </motion.a>
-
-          {/* SECONDARY CTA */}
-          <motion.a
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.45, delay: 0.75 }}
-            viewport={{ once: true }}
-            href="#nn-sessions"
-            className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300"
-          >
-            See NN Sessions
-            <Image
-              src={assets.right_arrow_bold}
-              alt=""
-              className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </motion.a>
-           {/* NQuestions Link */}
+  {/* NQuestions Link */}
   <motion.a
     initial={{ opacity: 0, y: 8 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -197,12 +196,14 @@ const Header = () => {
     href="https://nquestions.xyz"
     target="_blank"
     rel="noopener noreferrer"
-    className="mt-5 text-sm font-medium tracking-wide text-gray-500 hover:text-[#509187] transition-all duration-300"
+    className="mt-5 block w-full text-center text-sm font-medium tracking-wide text-gray-500 hover:text-[#509187] transition-all duration-300"
   >
     ↗ Built on NQuestions.xyz
   </motion.a>
+</div>
+       
 
-        </div>
+        
       </div>
     </section>
   )
