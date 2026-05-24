@@ -200,13 +200,10 @@ const Header = () => {
     className="mt-5 block w-full text-center text-[13px] font-medium tracking-wide text-gray-500 hover:text-[#509187] transition-all duration-300"
   > 
     <span className="text-[#FF6B5E]">↗</span>
-  <span className="text-[#FF6B5E] text-[11px] font-bold border border-[#FFB4AD] px-1.5 py-[1px] rounded-full leading-none">
-    ↗ 
-  </span>
-  <span>Built on</span>
+  <span>Built on </span>
 
   <span className="text-[#1E293B]">
-    NQuestions.XYZ
+    NQuestions.XYZ 
   </span>
 
   <span className="text-[#FF6B5E] text-[11px] font-bold border border-[#FFB4AD] px-1.5 py-[1px] rounded-full leading-none">
