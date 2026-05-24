@@ -189,17 +189,27 @@ const Header = () => {
 
   {/* NQuestions Link */}
   <motion.a
-    initial={{ opacity: 0, y: 8 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 0.9 }}
-    viewport={{ once: true }}
-    href="https://nquestions.xyz"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-5 block w-full text-center text-sm font-medium tracking-wide text-gray-500 hover:text-[#509187] transition-all duration-300"
-  >
-    ↗ Built on NQuestions.xyz
-  </motion.a>
+  initial={{ opacity: 0, y: 8 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.9 }}
+  viewport={{ once: true }}
+  href="https://nquestions.xyz"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 flex items-center justify-center gap-1.5 text-[13px] font-semibold tracking-tight text-[#1E293B] hover:opacity-80 transition-all duration-300"
+>
+  <span className="text-[#FF6B5E]">↗</span>
+
+  <span>Built on</span>
+
+  <span className="text-[#1E293B]">
+    NQuestions
+  </span>
+
+  <span className="text-[#FF6B5E] text-[11px] font-bold border border-[#FFB4AD] px-1.5 py-[1px] rounded-full leading-none">
+    XYZ
+  </span>
+</motion.a>
 </div>
        
 
