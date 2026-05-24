@@ -201,9 +201,7 @@ const Header = () => {
   >
     ↗ Built on NQuestions.xyz
   </motion.a>
-</div>
 
-        
         </div>
       </div>
     </section>
