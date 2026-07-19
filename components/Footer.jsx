@@ -181,7 +181,7 @@ const Footer = ({ isDarkMode }) => {
           ">
             <li>
               <a
-                href="https://www.nquestions.xyz"
+                href="https://www.nquestions.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
