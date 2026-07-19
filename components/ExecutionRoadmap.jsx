@@ -153,7 +153,7 @@ function MilestoneCard({ item, theme, isFinal }) {
     >
       <div
         className={`
-          relative min-h-[166px] rounded-[22px] border bg-white p-4
+          relative min-h-[166px] rounded-[22px] border dark:border-white/10 bg-white dark:bg-darkTheme p-4
           transition-all duration-300 hover:-translate-y-1 hover:shadow-xl
           ${theme.border}
           ${theme.glow}
@@ -165,21 +165,21 @@ function MilestoneCard({ item, theme, isFinal }) {
           />
 
           {isFinal ? (
-            <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
+            <span className="rounded-full bg-slate-100 dark:bg-white/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-gray-400">
               End
             </span>
           ) : null}
         </div>
 
-        <h4 className="mt-4 text-[15px] font-semibold leading-tight text-slate-900">
+        <h4 className="mt-4 text-[15px] font-semibold leading-tight text-slate-900 dark:text-white">
           {item.title}
         </h4>
 
-        <p className="mt-1.5 text-sm leading-snug text-slate-500">
+        <p className="mt-1.5 text-sm leading-snug text-slate-500 dark:text-gray-400">
           {item.desc}
         </p>
 
-        <div className="absolute bottom-4 left-4 right-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+        <div className="absolute bottom-4 left-4 right-4 h-1.5 overflow-hidden rounded-full bg-slate-100 dark:bg-white/10">
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: '100%' }}
@@ -198,14 +198,14 @@ function CohortRow({ cohort, index }) {
   const timelineWidth = months.length * MONTH_WIDTH + 60
 
   return (
-    <div className="grid grid-cols-1 gap-4 border-b border-slate-100 p-4 sm:p-5 lg:grid-cols-[280px_minmax(0,1fr)]">
+    <div className="grid grid-cols-1 gap-4 border-b border-slate-100 dark:border-white/5 p-4 sm:p-5 lg:grid-cols-[280px_minmax(0,1fr)]">
       {/* LEFT PANEL */}
       <motion.div
         initial={{ opacity: 0, x: -12 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.45 }}
-        className={`self-start rounded-3xl border bg-white p-4 sm:p-5 ${theme.border} ${theme.glow}`}
+        className={`self-start rounded-3xl border bg-white dark:bg-darkTheme p-4 sm:p-5 ${theme.border} dark:border-white/10 ${theme.glow}`}
       >
         <div className="flex items-start gap-3">
           <div
@@ -225,11 +225,11 @@ function CohortRow({ cohort, index }) {
               {index + 1}. {cohort.name}
             </h3>
 
-            <p className="mt-1 text-sm font-semibold text-slate-700">
+            <p className="mt-1 text-sm font-semibold text-slate-700 dark:text-gray-300">
               {cohort.subtitle}
             </p>
 
-            <p className="mt-1 text-sm text-slate-600">
+            <p className="mt-1 text-sm text-slate-600 dark:text-gray-400">
               Focus: {cohort.focus}
             </p>
           </div>
@@ -284,7 +284,7 @@ function CohortRow({ cohort, index }) {
       </motion.div>
 
       {/* RIGHT TIMELINE */}
-      <div className="hidden lg:block min-w-0 rounded-[28px] border border-slate-100 bg-gradient-to-b from-white to-slate-50/70 p-4">
+      <div className="hidden lg:block min-w-0 rounded-[28px] border border-slate-100 dark:border-white/10 bg-gradient-to-b from-white to-slate-50/70 dark:from-darkTheme dark:to-[#111827]/40 p-4">
         <div className="overflow-x-auto pb-2">
           <div style={{ width: timelineWidth }} className="relative">
             {/* MONTHS */}
@@ -296,7 +296,7 @@ function CohortRow({ cohort, index }) {
 
             {/* TIMELINE */}
             <div className="relative mt-5 h-[224px]">
-              <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-slate-200" />
+              <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-slate-200 dark:bg-white/10" />
 
               {cohort.milestones.map((item, idx) => (
                 <MilestoneCard
@@ -319,7 +319,7 @@ function CohortRow({ cohort, index }) {
 
 export default function ExecutionRoadmapPremium() {
   return (
-    <section id="cohorts" className="bg-[#f7fafb] py-20 sm:py-24">
+    <section id="cohorts" className="bg-[#f7fafb] dark:bg-darkTheme/40 py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
         <motion.div
@@ -333,20 +333,20 @@ export default function ExecutionRoadmapPremium() {
             EXECUTION ROADMAP
           </p>
 
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
             One Year. Four Paths. One System.
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-600 dark:text-gray-400">
             A structured cohort timeline for fixed intakes, exam milestones,
             and outcome tracking.
           </p>
         </motion.div>
 
         {/* MAIN CONTAINER */}
-        <div className="mt-10 overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
+        <div className="mt-10 overflow-hidden rounded-[32px] border border-slate-200 dark:border-white/10 bg-white dark:bg-darkTheme shadow-[0_20px_80px_rgba(15,23,42,0.08)]">
           {/* TOP INFO */}
-          <div className="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white px-4 py-4 sm:px-6">
+          <div className="border-b border-slate-100 dark:border-white/10 bg-gradient-to-r from-slate-50 to-white dark:from-[#111827] dark:to-darkTheme px-4 py-4 sm:px-6">
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm">
               {[
                 { label: 'Fixed intake', value: 'Plan your start' },
@@ -356,13 +356,13 @@ export default function ExecutionRoadmapPremium() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm"
+                  className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-darkTheme/60 px-4 py-3 shadow-sm"
                 >
-                  <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                  <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-gray-500">
                     {item.label}
                   </div>
 
-                  <div className="mt-1 font-semibold text-slate-800">
+                  <div className="mt-1 font-semibold text-slate-800 dark:text-white">
                     {item.value}
                   </div>
                 </div>
@@ -371,7 +371,7 @@ export default function ExecutionRoadmapPremium() {
           </div>
 
           {/* ROWS */}
-          <div className="divide-y divide-slate-100">
+          <div className="divide-y divide-slate-100 dark:divide-white/5">
             {cohorts.map((cohort, index) => (
               <CohortRow
                 key={cohort.name}
@@ -393,10 +393,10 @@ export default function ExecutionRoadmapPremium() {
             transition={{ duration: 0.25 }}
             className="
               group inline-flex items-center gap-3 rounded-full
-              border border-slate-300 bg-white px-8 py-3 text-sm
-              font-medium text-slate-700 shadow-sm transition-all
+              border border-slate-300 dark:border-white/20 bg-white dark:bg-darkTheme px-8 py-3 text-sm
+              font-medium text-slate-700 dark:text-white shadow-sm transition-all
               duration-300 hover:border-transparent hover:bg-[#5A9B92]
-              hover:text-white
+              hover:text-white dark:hover:bg-white/10
               hover:shadow-[0_18px_40px_rgba(90,155,146,0.22)]
             "
           >

@@ -74,8 +74,8 @@ const JourneyTimeline = () => {
                 className="
                   group flex-1
                   rounded-3xl
-                  border border-gray-200
-                  bg-white/75
+                  border border-gray-200 dark:border-white/10
+                  bg-white/75 dark:bg-white/5
                   backdrop-blur-sm
                   p-8
                   shadow-sm

@@ -121,6 +121,16 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {/* Right controls */}
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="p-2.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+          >
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt="Toggle Theme"
+              className="w-6"
+            />
+          </button>
 
           {/* LMS Login (NEW) */}
           <motion.a

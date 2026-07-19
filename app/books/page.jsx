@@ -113,19 +113,19 @@ const BooksPage = () => {
               className="aspect-square bg-cover bg-center rounded-lg relative cursor-pointer"
               style={{ backgroundImage: `url(${book.bgImage})` }}
             >
-              <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between">
+              <div className="bg-white dark:bg-black/90 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold">{book.title}</h3>
-                  <p className="text-sm text-gray-700">
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{book.title}</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
                     {book.description}
                   </p>
                 </div>
 
-                <div className="border border-black rounded-full w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000]">
+                <div className="border border-black dark:border-white/40 rounded-full w-9 aspect-square flex items-center justify-center bg-[#509187] text-white shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff]">
                   <Image
                     src={assets.send_icon}
                     alt="Open"
-                    className="w-5"
+                    className="w-5 dark:invert"
                   />
                 </div>
               </div>

@@ -86,8 +86,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="
             rounded-[32px]
-            border border-gray-200/70
-            bg-white/70
+            border border-gray-200/70 dark:border-white/10
+            bg-white/70 dark:bg-white/5
             backdrop-blur-xl
             p-8 sm:p-10
             shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -114,7 +114,7 @@ const Contact = () => {
             Best suited for people building seriously.
           </h3>
 
-          <p className="text-gray-600 leading-8 mb-10">
+          <p className="text-gray-600 dark:text-gray-400 leading-8 mb-10">
             If you're working on systems, deep learning products,
             education infrastructure, interview preparation,
             or reasoning-focused initiatives — this is probably a good fit.
@@ -135,12 +135,12 @@ const Contact = () => {
                 className="
                   flex items-start gap-4
                   rounded-2xl
-                  border border-gray-200
-                  bg-white/70
+                  border border-gray-200 dark:border-white/10
+                  bg-white/70 dark:bg-white/5
                   px-5 py-5
                   transition-all duration-300
                   hover:border-[#5A9B92]/30
-                  hover:bg-white
+                  hover:bg-white dark:hover:bg-white/10
                 "
               >
 
@@ -153,7 +153,7 @@ const Contact = () => {
                   <div className="w-2.5 h-2.5 rounded-full bg-[#509187]"></div>
                 </div>
 
-                <p className="text-gray-700 leading-7 text-[15px]">
+                <p className="text-gray-700 dark:text-gray-300 leading-7 text-[15px]">
                   {item}
                 </p>
               </motion.div>
@@ -163,9 +163,9 @@ const Contact = () => {
           {/* Bottom Quote */}
           <div className="
             mt-10 pt-8
-            border-t border-gray-100
+            border-t border-gray-100 dark:border-white/10
           ">
-            <p className="text-sm leading-7 text-gray-500">
+            <p className="text-sm leading-7 text-gray-500 dark:text-gray-400">
               “I value thoughtful conversations over volume.
               Depth matters more than speed.”
             </p>
@@ -180,8 +180,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="
             rounded-[32px]
-            border border-gray-200/70
-            bg-white/75
+            border border-gray-200/70 dark:border-white/10
+            bg-white/75 dark:bg-white/5
             backdrop-blur-xl
             p-8 sm:p-10
             shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -213,8 +213,8 @@ const Contact = () => {
                 className="
                   w-full
                   rounded-2xl
-                  border border-gray-200
-                  bg-white/80
+                  border border-gray-200 dark:border-white/10
+                  bg-white/80 dark:bg-white/5 dark:text-white
                   px-5 py-4
                   outline-none
                   transition
@@ -231,8 +231,8 @@ const Contact = () => {
                 className="
                   w-full
                   rounded-2xl
-                  border border-gray-200
-                  bg-white/80
+                  border border-gray-200 dark:border-white/10
+                  bg-white/80 dark:bg-white/5 dark:text-white
                   px-5 py-4
                   outline-none
                   transition
@@ -251,8 +251,8 @@ const Contact = () => {
               className="
                 w-full
                 rounded-3xl
-                border border-gray-200
-                bg-white/80
+                border border-gray-200 dark:border-white/10
+                bg-white/80 dark:bg-white/5 dark:text-white
                 px-5 py-5
                 outline-none
                 resize-none
@@ -305,7 +305,7 @@ const Contact = () => {
               text-center
               text-sm
               leading-7
-              text-gray-500
+              text-gray-500 dark:text-gray-400
             ">
               I read every message personally.
               Replies may take time, but they will be thoughtful.

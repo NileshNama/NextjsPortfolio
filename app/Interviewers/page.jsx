@@ -45,7 +45,7 @@ export default function CVPage() {
   const current = ROLE_CONTENT[role]
 
   return (
-    <main className="w-full bg-white text-black font-Ovo px-6 sm:px-[12%] py-24 md:py-28">
+    <main className="w-full bg-white dark:bg-darkTheme text-black dark:text-white font-Ovo px-6 sm:px-[12%] py-24 md:py-28">
 
       {/* ROLE TOGGLE */}
       <section className="max-w-4xl mx-auto mb-14">
@@ -57,8 +57,8 @@ export default function CVPage() {
               className={`px-4 py-2 rounded-full text-sm border transition
                 ${
                   role === key
-                    ? "bg-black text-white border-black"
-                    : "border-gray-300 text-gray-600 hover:bg-gray-100"
+                    ? "bg-black text-white border-black dark:bg-white dark:text-black dark:border-white"
+                    : "border-gray-300 text-gray-600 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-white/10"
                 }`}
             >
               {value.label}
@@ -81,15 +81,15 @@ export default function CVPage() {
               Nilesh Nama
             </h1>
 
-            <p className="text-gray-700 mt-1">
+            <p className="text-gray-700 dark:text-gray-300 mt-1">
               {current.title}
             </p>
 
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               India · Open to remote and hybrid roles
             </p>
 
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mt-3">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400 mt-3">
               <a
                 href="mailto:nileshnama1997@gmail.com"
                 className="hover:underline"
@@ -118,7 +118,7 @@ export default function CVPage() {
               <a
                 href="/NileshNama-Resume.pdf"
                 target="_blank"
-                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-400 rounded-md text-sm hover:bg-gray-100 transition"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-400 dark:border-white/20 rounded-md text-sm hover:bg-gray-100 dark:hover:bg-white/10 transition"
               >
                 Download CV (PDF)
                 <span>↓</span>
@@ -134,15 +134,15 @@ export default function CVPage() {
           Professional Summary
         </h2>
 
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
           {current.summary}
         </p>
 
-        <p className="text-gray-600 mt-3 text-sm">
+        <p className="text-gray-600 dark:text-gray-400 mt-3 text-sm">
           I prefer well-structured, readable systems over clever but fragile abstractions.
         </p>
 
-        <ul className="mt-4 list-disc ml-5 text-sm text-gray-600 space-y-1">
+        <ul className="mt-4 list-disc ml-5 text-sm text-gray-600 dark:text-gray-400 space-y-1">
           {current.emphasis.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -158,10 +158,10 @@ export default function CVPage() {
             <h3 className="font-semibold">
               Team Lead – Frontend Developer
             </h3>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               W3ITEXPERTS · May 2025 – Present
             </p>
-            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700">
+            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
               <li>Led frontend development using React and Tailwind CSS.</li>
               <li>Converted complex Figma designs into reusable UI systems.</li>
               <li>
@@ -174,10 +174,10 @@ export default function CVPage() {
 
           <div>
             <h3 className="font-semibold">Product Manager</h3>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               VEB · Aug 2020 – Present
             </p>
-            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700">
+            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
               <li>Owned product direction and execution strategy.</li>
               <li>Balanced scope, timelines, and technical trade-offs.</li>
             </ul>
@@ -188,7 +188,7 @@ export default function CVPage() {
       {/* PROJECTS */}
       <section className="max-w-4xl mx-auto mb-16">
         <h2 className="text-xl font-semibold mb-2">Projects</h2>
-        <p className="text-sm text-gray-600 mb-6">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
           Selected projects demonstrating architecture quality, performance,
           and real-world delivery.
         </p>
@@ -196,10 +196,10 @@ export default function CVPage() {
         <div className="space-y-10">
           <div>
             <h3 className="font-semibold">Shopify E-Commerce Theme</h3>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               Shopify · Liquid · JavaScript · Tailwind
             </p>
-            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700">
+            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
               <li>Built a production-ready, responsive Shopify theme.</li>
               <li>Implemented AJAX cart flows, filters, and SEO improvements.</li>
             </ul>
@@ -207,10 +207,10 @@ export default function CVPage() {
 
           <div>
             <h3 className="font-semibold">Health & Medical React Template</h3>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               React · Redux · REST APIs
             </p>
-            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700">
+            <ul className="list-disc ml-5 mt-3 space-y-2 text-gray-700 dark:text-gray-300">
               <li>Built reusable UI components for healthcare workflows.</li>
               <li>Implemented API-driven routing and state management.</li>
             </ul>
@@ -221,13 +221,13 @@ export default function CVPage() {
       {/* EDUCATION */}
       <section className="max-w-4xl mx-auto mb-20">
         <h2 className="text-xl font-semibold mb-4">Education</h2>
-        <p className="text-gray-700">
+        <p className="text-gray-700 dark:text-gray-300">
           B.Tech in Computer Science — Rajasthan Technical University (2020)
         </p>
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center border-t pt-8 text-sm text-gray-500">
+      <footer className="text-center border-t dark:border-white/10 pt-8 text-sm text-gray-500 dark:text-gray-400">
         cv.nileshnama.com
       </footer>
 

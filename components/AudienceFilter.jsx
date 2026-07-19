@@ -35,7 +35,7 @@ const WhoThisIsNotFor = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="rounded-3xl border border-gray-200 bg-white/75 backdrop-blur-sm p-8 sm:p-10 shadow-sm"
+          className="rounded-3xl border border-gray-200 dark:border-white/10 bg-white/75 dark:bg-white/5 backdrop-blur-sm p-8 sm:p-10 shadow-sm"
         >
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
             NN Cohorts is not for people looking for shortcuts, hacks, or surface-level learning.
@@ -45,7 +45,7 @@ const WhoThisIsNotFor = () => {
             {points.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-gray-200 bg-gray-50/80 p-5 text-sm sm:text-base text-gray-700 leading-relaxed"
+                className="rounded-2xl border border-gray-200 dark:border-white/10 bg-gray-50/80 dark:bg-white/5 p-5 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed"
               >
                 {item}
               </div>

@@ -45,8 +45,8 @@ const WhoThrives = () => {
             viewport={{ once: true }}
             className="
               rounded-3xl
-              border border-gray-200
-              bg-white/70
+              border border-gray-200 dark:border-white/10
+              bg-white/70 dark:bg-white/5
               backdrop-blur-sm
               p-7
               hover:shadow-xl
@@ -59,7 +59,7 @@ const WhoThrives = () => {
               ✓
             </div>
 
-            <p className="text-gray-700 text-base sm:text-lg leading-relaxed font-medium">
+            <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed font-medium">
               {item}
             </p>
           </motion.div>

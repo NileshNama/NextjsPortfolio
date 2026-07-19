@@ -66,8 +66,8 @@ const Outcomes = () => {
             className="
               group
               rounded-3xl
-              border border-gray-200
-              bg-white/70
+              border border-gray-200 dark:border-white/10
+              bg-white/70 dark:bg-white/5
               backdrop-blur-sm
               p-7
               hover:shadow-xl
@@ -81,12 +81,12 @@ const Outcomes = () => {
             </div>
 
             {/* Title */}
-            <h3 className="text-xl font-semibold mb-4 font-Ovo">
+            <h3 className="text-xl font-semibold mb-4 font-Ovo text-gray-900 dark:text-white">
               {item.title}
             </h3>
 
             {/* Description */}
-            <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
               {item.desc}
             </p>
           </motion.div>

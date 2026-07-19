@@ -98,8 +98,8 @@ const Podcasts = ({ isDarkMode }) => {
               className="
                 group cursor-pointer
                 rounded-3xl
-                border border-gray-200/70
-                bg-white/70
+                border border-gray-200/70 dark:border-white/10
+                bg-white/70 dark:bg-white/5
                 backdrop-blur-xl
                 p-8
                 shadow-[0_10px_40px_rgba(0,0,0,0.04)]
@@ -123,20 +123,20 @@ const Podcasts = ({ isDarkMode }) => {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-8 text-[15px]">
+              <p className="text-gray-600 dark:text-gray-400 leading-8 text-[15px]">
                 {item.description}
               </p>
 
               {/* Bottom */}
-              <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100">
+              <div className="flex items-center justify-between mt-10 pt-6 border-t border-gray-100 dark:border-white/10">
 
-                <span className="text-sm font-medium text-gray-500">
+                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
                   Open Session
                 </span>
 
                 <div className="
                   w-12 h-12 rounded-full
-                  border border-gray-300
+                  border border-gray-300 dark:border-white/20
                   flex items-center justify-center
                   group-hover:bg-[#5A9B92]
                   group-hover:border-[#5A9B92]
@@ -197,12 +197,13 @@ const Podcasts = ({ isDarkMode }) => {
             transition={{ duration: 0.25 }}
             onClick={(e) => e.stopPropagation()}
             className="
-              bg-white
+              bg-white dark:bg-[#111827]
               rounded-[32px]
               max-w-2xl
               w-full
               overflow-hidden
               shadow-[0_20px_80px_rgba(0,0,0,0.2)]
+              border border-black/10 dark:border-white/10
             "
           >
             <div className="p-8 sm:p-10 relative">
@@ -213,7 +214,7 @@ const Podcasts = ({ isDarkMode }) => {
                 className="
                   absolute top-6 right-6
                   w-10 h-10 rounded-full
-                  bg-gray-100 hover:bg-gray-200
+                  bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white
                   transition
                 "
               >
@@ -229,12 +230,12 @@ const Podcasts = ({ isDarkMode }) => {
               </div>
 
               {/* Title */}
-              <h3 className="text-3xl font-semibold leading-tight mb-6">
+              <h3 className="text-3xl font-semibold leading-tight mb-6 text-gray-900 dark:text-white">
                 {activeTalk.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 leading-8 text-[16px]">
+              <p className="text-gray-600 dark:text-gray-300 leading-8 text-[16px]">
                 {activeTalk.description}
               </p>
 
@@ -257,7 +258,7 @@ const Podcasts = ({ isDarkMode }) => {
               </a>
 
               {/* Footer */}
-              <div className="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-500 leading-7">
+              <div className="mt-8 pt-6 border-t border-gray-100 dark:border-white/10 text-sm text-gray-500 dark:text-gray-400 leading-7">
                 This discussion is part of ongoing work around structured
                 learning systems, interview reasoning, and exam thinking.
               </div>

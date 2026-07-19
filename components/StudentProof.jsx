@@ -45,8 +45,8 @@ const StudentProof = () => {
             viewport={{ once: true }}
             className="
               rounded-3xl
-              border border-gray-200
-              bg-white/80
+              border border-gray-200 dark:border-white/10
+              bg-white/80 dark:bg-white/5
               backdrop-blur-sm
               p-8
               shadow-sm
@@ -56,11 +56,11 @@ const StudentProof = () => {
             "
           >
             <div className="grid gap-4">
-              <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
-                <p className="text-xs uppercase tracking-[0.18em] text-gray-500 mb-2 font-medium">
+              <div className="rounded-2xl border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/5 p-5">
+                <p className="text-xs uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400 mb-2 font-medium">
                   Before
                 </p>
-                <p className="text-lg sm:text-xl font-medium text-gray-800 leading-relaxed">
+                <p className="text-lg sm:text-xl font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
                   “{item.before}”
                 </p>
               </div>
@@ -69,7 +69,7 @@ const StudentProof = () => {
                 <p className="text-xs uppercase tracking-[0.18em] text-[#5A9B92] mb-2 font-medium">
                   After
                 </p>
-                <p className="text-lg sm:text-xl font-medium text-gray-800 leading-relaxed">
+                <p className="text-lg sm:text-xl font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
                   “{item.after}”
                 </p>
               </div>
