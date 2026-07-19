@@ -186,7 +186,7 @@ const Footer = ({ isDarkMode }) => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
               >
-                NQuestions.XYZ
+                NQuestions.in
               </a>
             </li>
             
