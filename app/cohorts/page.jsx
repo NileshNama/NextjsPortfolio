@@ -44,26 +44,26 @@ const GraduationIcon = ({ className = "w-4 h-4 text-slate-500 dark:text-sky-300"
   </svg>
 )
 
-const BookIcon = ({ className = "w-5 h-5 text-[#3e6c65] dark:text-[#5A9B92]" }) => (
+const BookIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
   </svg>
 )
 
-const CogIcon = ({ className = "w-5 h-5 text-[#3e6c65] dark:text-[#5A9B92]" }) => (
+const CogIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>
 )
 
-const UsersIcon = ({ className = "w-5 h-5 text-[#3e6c65] dark:text-[#5A9B92]" }) => (
+const UsersIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
   </svg>
 )
 
-const HelpIcon = ({ className = "w-4 h-4 text-[#3e6c65] dark:text-[#5A9B92]" }) => (
+const HelpIcon = ({ className = "w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
@@ -204,7 +204,7 @@ const PROGRAMS_DATA = {
       price: "₹8,260/-",
       originalPrice: "₹9,999",
       badge: "Most Popular",
-      badgeColor: "bg-[#061d33] dark:bg-[#3e6c65]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
       scarcity: "84% Filled • Limited Seats Left",
       description: "Recorded + weekly live sessions focused on decoding examiner traps.",
       bullets: [
@@ -215,7 +215,7 @@ const PROGRAMS_DATA = {
         "Core GATE CS subject deep-dives"
       ],
       btnText: "Enroll Now",
-      btnStyle: "bg-[#3e6c65] text-white hover:bg-[#325752] shadow-md shadow-[#3e6c65]/20",
+      btnStyle: "bg-[#0f62fe] text-white hover:bg-[#0043ce] shadow-md shadow-[#0f62fe]/20",
       link: "https://cohorts.nileshnama.com/new-courses/5-nn-gate-barc-pyq-core-program"
     },
     {
@@ -223,7 +223,7 @@ const PROGRAMS_DATA = {
       price: "₹41,300/-",
       originalPrice: "₹49,999",
       badge: "Best Value",
-      badgeColor: "bg-[#061d33] dark:bg-[#3e6c65]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
       scarcity: "Only 4 early-bird seats left",
       description: "Advanced conceptual training with scientist-level depth.",
       bullets: [
@@ -254,7 +254,7 @@ const PROGRAMS_DATA = {
         "Risk mitigation & exam day strategies"
       ],
       btnText: "Join Waitlist",
-      btnStyle: "border border-[#3e6c65] dark:border-[#5A9B92] text-[#3e6c65] dark:text-[#5A9B92] hover:bg-[#3e6c65]/5",
+      btnStyle: "border border-[#0f62fe] dark:border-[#38bdf8] text-[#0f62fe] dark:text-[#38bdf8] hover:bg-[#0f62fe]/5",
       link: "https://cohorts.nileshnama.com/new-courses/4-nn-gate-barc-rank-accelerator-program"
     }
   ],
@@ -264,7 +264,7 @@ const PROGRAMS_DATA = {
       price: "₹14,800/-",
       originalPrice: "₹19,999",
       badge: "Long Term",
-      badgeColor: "bg-[#061d33] dark:bg-[#3e6c65]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
       scarcity: "Early pre-enrollment active",
       description: "Slow-paced fundamental conceptual build up over 24 months.",
       bullets: [
@@ -275,7 +275,7 @@ const PROGRAMS_DATA = {
         "Step-by-step programming modules"
       ],
       btnText: "Pre-Enroll",
-      btnStyle: "bg-[#3e6c65] text-white hover:bg-[#325752] shadow-md shadow-[#3e6c65]/20",
+      btnStyle: "bg-[#0f62fe] text-white hover:bg-[#0043ce] shadow-md shadow-[#0f62fe]/20",
       link: "https://cohorts.nileshnama.com"
     }
   ]
@@ -477,26 +477,26 @@ export default function CohortsPage() {
     if (quizStep === 3) {
       if (quizYear === "2028") {
         return {
-          title: <>Master GATE CS Over <span className="text-[#3e6c65] dark:text-[#5A9B92]">24 Months</span></>,
+          title: <>Master GATE CS Over <span className="text-[#0f62fe] dark:text-[#38bdf8]">24 Months</span></>,
           sub: "Learn systems reasoning & concept depth from BARC Scientists",
           desc: "A comprehensive, slow-paced study plan covering DBMS, OS, Compilers, and algorithms systematically over 2 years."
         }
       }
       if (quizPrep === "beginner") {
         return {
-          title: <>Master GATE CS Concepts from <span className="text-[#3e6c65] dark:text-[#5A9B92]">First Principles</span></>,
+          title: <>Master GATE CS Concepts from <span className="text-[#0f62fe] dark:text-[#38bdf8]">First Principles</span></>,
           sub: "Deep conceptual training designed for absolute clarity",
           desc: "Everything you need to master Operating Systems, DBMS, Compilers, and algorithms with 1:1 scientist-level strategy and doubt solving."
         }
       }
       return {
-        title: <>Decode Examiner Traps & <span className="text-[#3e6c65] dark:text-[#5A9B92]">Boost Your Rank</span></>,
+        title: <>Decode Examiner Traps & <span className="text-[#0f62fe] dark:text-[#38bdf8]">Boost Your Rank</span></>,
         sub: "Recorded + weekly live sessions focused on trap mitigation",
         desc: "Learn our trademark option elimination frameworks, time pressure execution, and detailed PYQ intention decoding."
       }
     }
     return {
-      title: <>India’s Trusted <span className="text-[#3e6c65] dark:text-[#5A9B92]">GATE CS</span> Preparation Platform</>,
+      title: <>India’s Trusted <span className="text-[#0f62fe] dark:text-[#38bdf8]">GATE CS</span> Preparation Platform</>,
       sub: "Learn from BARC Scientists & GATE Toppers",
       desc: "Master Operating Systems, DBMS, Compilers, and Core Computer Science with recorded + live classes, exam-tested roadmaps, and 1:1 mentorship."
     }
@@ -511,7 +511,7 @@ export default function CohortsPage() {
     <div className="min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
       
       {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#3e6c65] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#36605a] z-50 relative">
+      <div className="bg-[#0f62fe] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#0b4ec2] z-50 relative">
         <WhatsAppIcon className="w-4 h-4 text-[#e2f3f1]" />
         For any enquiries please WhatsApp at <a href="https://wa.me/919509923340" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-300 font-bold">+91 9509923340</a>
       </div>
@@ -532,28 +532,28 @@ export default function CohortsPage() {
         </a>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition">Tracks</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition">Programs</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition">Interviews</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition">Mentorship</a>
-          <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition">Test Series</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Tracks</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Programs</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Interviews</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Mentorship</a>
+          <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Test Series</a>
           
           {/* Custom Dropdown */}
           <div className="relative">
             <button
               onClick={() => setMoreOpen(!moreOpen)}
-              className="hover:text-[#3e6c65] dark:hover:text-[#5A9B92] transition flex items-center gap-1.5 font-semibold"
+              className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition flex items-center gap-1.5 font-semibold"
             >
               More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
             </button>
             {moreOpen && (
               <div className="absolute right-0 mt-3 w-48 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] py-2.5 shadow-lg z-50 text-xs font-semibold">
-                <a href="https://cohorts.nileshnama.com/practice" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">1. Practice</a>
-                <a href="https://cohorts.nileshnama.com/open-access" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">2. Open Access</a>
-                <a href="https://cohorts.nileshnama.com/resources" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">3. Resources</a>
-                <a href="https://cohorts.nileshnama.com/core-notes" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">4. Core Notes</a>
-                <a href="https://cohorts.nileshnama.com/pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">5. PYQs</a>
-                <a href="https://cohorts.nileshnama.com/interview-pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#3e6c65] dark:hover:text-[#5A9B92]">6. Interview PYQs</a>
+                <a href="https://cohorts.nileshnama.com/practice" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">1. Practice</a>
+                <a href="https://cohorts.nileshnama.com/open-access" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">2. Open Access</a>
+                <a href="https://cohorts.nileshnama.com/resources" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">3. Resources</a>
+                <a href="https://cohorts.nileshnama.com/core-notes" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">4. Core Notes</a>
+                <a href="https://cohorts.nileshnama.com/pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">5. PYQs</a>
+                <a href="https://cohorts.nileshnama.com/interview-pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">6. Interview PYQs</a>
               </div>
             )}
           </div>
@@ -561,7 +561,7 @@ export default function CohortsPage() {
 
         <a
           href="/"
-          className="bg-[#061d33] hover:bg-black text-white dark:bg-[#3e6c65] dark:hover:bg-[#5A9B92] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
+          className="bg-[#061d33] hover:bg-black text-white dark:bg-[#0f62fe] dark:hover:bg-[#38bdf8] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
         >
           Back to Home
         </a>
@@ -569,7 +569,7 @@ export default function CohortsPage() {
 
       {/* 3. HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-20 pb-24 text-center px-4 sm:px-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-[#3e6c65]/5 blur-3xl -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-[#0f62fe]/5 blur-3xl -z-10" />
 
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
@@ -594,7 +594,7 @@ export default function CohortsPage() {
               href="https://cohorts.nileshnama.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#3e6c65] hover:bg-[#325752] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#3e6c65]/20 w-full sm:w-auto text-center"
+              className="bg-[#0f62fe] hover:bg-[#0043ce] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#0f62fe]/20 w-full sm:w-auto text-center"
             >
               Start PYQ Core Program →
             </a>
@@ -603,7 +603,7 @@ export default function CohortsPage() {
               className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <span>Play Sample Class</span>
-              <PlayIcon className="w-4 h-4 text-[#3e6c65]" />
+              <PlayIcon className="w-4 h-4 text-[#0f62fe]" />
             </button>
           </div>
 
@@ -613,7 +613,7 @@ export default function CohortsPage() {
           </div>
           {/* 3.5 DIAGNOSTIC PROGRAM SELECTOR WIDGET */}
           <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0d1527]/70 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#3e6c65] dark:text-[#5A9B92]">Prep Matcher</span>
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#0f62fe] dark:text-[#38bdf8]">Prep Matcher</span>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-1">Find Your Ideal GATE Cohort</h3>
             <p className="text-xs text-slate-500 dark:text-sky-100/70 mt-1">Answer 2 simple questions to get your personalized learning path.</p>
 
@@ -695,7 +695,7 @@ export default function CohortsPage() {
                     </button>
                     <a
                       href={recommendation.anchor}
-                      className="px-6 py-2 rounded-xl bg-[#3e6c65] hover:bg-[#325752] text-white text-xs font-bold transition shadow shadow-[#3e6c65]/20"
+                      className="px-6 py-2 rounded-xl bg-[#0f62fe] hover:bg-[#0043ce] text-white text-xs font-bold transition shadow shadow-[#0f62fe]/20"
                     >
                       View Package
                     </a>
@@ -745,15 +745,15 @@ export default function CohortsPage() {
       <section className="py-20 px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/3 text-center md:text-left relative flex flex-col items-center gap-3 justify-center">
-            <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#3e6c65] to-[#3e6c65] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
+            <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#0f62fe] to-[#0f62fe] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
               <div className="w-full h-full bg-slate-900 dark:bg-[#070b15] rounded-2xl flex flex-col items-center justify-center text-white relative">
-                <span className="text-4xl font-extrabold text-[#3e6c65]">AIR 12</span>
+                <span className="text-4xl font-extrabold text-[#0f62fe]">AIR 12</span>
                 <span className="text-[10px] tracking-widest text-slate-400 font-bold uppercase mt-1">BARC Scientist</span>
-                <div className="absolute bottom-2 text-[9px] bg-[#3e6c65]/10 text-[#3e6c65] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
+                <div className="absolute bottom-2 text-[9px] bg-[#0f62fe]/10 text-[#0f62fe] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
                 
                 {/* Modal Play Overlay / Permanent Play Icon */}
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition duration-300 group-hover:bg-black/50">
-                  <div className="w-12 h-12 rounded-full bg-[#3e6c65] flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#0f62fe] flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-300">
                     <PlayIcon className="w-6 h-6 ml-0.5" />
                   </div>
                 </div>
@@ -761,13 +761,13 @@ export default function CohortsPage() {
             </div>
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="text-xs font-bold text-[#3e6c65] hover:text-[#5A9B92] hover:underline flex items-center gap-1.5 transition"
+              className="text-xs font-bold text-[#0f62fe] hover:text-[#38bdf8] hover:underline flex items-center gap-1.5 transition"
             >
               <span>Watch Sample Class Video</span>
             </button>
           </div>
           <div className="w-full md:w-2/3 space-y-4">
-            <span className="inline-block text-[#3e6c65] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
+            <span className="inline-block text-[#0f62fe] dark:text-[#38bdf8] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
             <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
               Learn Computer Science From a Former BARC Scientist
             </h2>
@@ -776,15 +776,15 @@ export default function CohortsPage() {
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#3e6c65] dark:text-[#5A9B92]">AIR 12</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0f62fe] dark:text-[#38bdf8]">AIR 12</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC Scientist Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#3e6c65] dark:text-[#5A9B92]">AIR 202</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0f62fe] dark:text-[#38bdf8]">AIR 202</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">GATE CS Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#3e6c65] dark:text-[#5A9B92]">99.9%</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0f62fe] dark:text-[#38bdf8]">99.9%</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">CS Conceptual Index</p>
               </div>
             </div>
@@ -795,7 +795,7 @@ export default function CohortsPage() {
       {/* 4.6 CURRICULUM EXPLORER */}
       <section id="curriculum" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#3e6c65] dark:text-[#5A9B92]">Deep Subject Depth</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0f62fe] dark:text-[#38bdf8]">Deep Subject Depth</span>
           <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white mt-1">
             Explore the Scientist-Built Curriculum
           </h2>
@@ -811,7 +811,7 @@ export default function CohortsPage() {
                 onClick={() => setActiveSyllabusIdx(idx)}
                 className={`w-full text-left px-5 py-4 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 border flex flex-col gap-1 whitespace-nowrap md:whitespace-normal
                   ${activeSyllabusIdx === idx
-                    ? "bg-[#3e6c65]/10 border-[#3e6c65] text-[#3e6c65] dark:text-[#5A9B92] dark:bg-[#3e6c65]/20"
+                    ? "bg-[#0f62fe]/10 border-[#0f62fe] text-[#0f62fe] dark:text-[#38bdf8] dark:bg-[#0f62fe]/20"
                     : "bg-white dark:bg-[#0d1527] border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-850"}`}
               >
                 <span>{item.subject}</span>
@@ -823,13 +823,13 @@ export default function CohortsPage() {
           {/* Details Content Box */}
           <div className="w-full md:w-2/3 bg-white dark:bg-[#0d1527] rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
             <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-6 bg-[#3e6c65] rounded-full" />
+              <span className="w-1.5 h-6 bg-[#0f62fe] rounded-full" />
               Detailed Modules for {CURRICULUM_DATA[activeSyllabusIdx].subject}
             </h4>
             <ul className="space-y-4">
               {CURRICULUM_DATA[activeSyllabusIdx].topics.map((topic, i) => (
                 <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600 dark:text-gray-300 text-left">
-                  <span className="w-5 h-5 rounded-full bg-[#3e6c65]/10 dark:bg-[#3e6c65]/20 text-[#3e6c65] dark:text-[#5A9B92] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full bg-[#0f62fe]/10 dark:bg-[#0f62fe]/20 text-[#0f62fe] dark:text-[#38bdf8] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
                     {i + 1}
                   </span>
                   <span className="leading-relaxed">{topic}</span>
@@ -843,7 +843,7 @@ export default function CohortsPage() {
       {/* 5.5 INTERACTIVE CS SANDBOX */}
       <section className="bg-slate-50 dark:bg-slate-900/40 py-20 px-4 sm:px-6 border-t border-b border-slate-200 dark:border-slate-800 scroll-mt-20">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#3e6c65]/20 bg-[#3e6c65]/5 dark:bg-[#3e6c65]/20 text-[#3e6c65] dark:text-[#5A9B92] text-[10px] font-bold shadow-sm mb-4">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#0f62fe]/20 bg-[#0f62fe]/5 dark:bg-[#0f62fe]/20 text-[#0f62fe] dark:text-[#38bdf8] text-[10px] font-bold shadow-sm mb-4">
             <span>Concept Sandbox</span>
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
@@ -898,7 +898,7 @@ export default function CohortsPage() {
               <div className="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 transition-all duration-300">
                 🎉 <strong>Perfect!</strong> Serializable isolation guarantees correct execution schedules by locking ranges. Ready to study in-depth DBMS concurrency schedules with BARC Scientist mentors? 
                 <div className="mt-3">
-                  <a href="#pricing" className="inline-flex items-center gap-1 bg-[#3e6c65] text-white hover:bg-[#325752] font-bold px-4 py-2 rounded-lg text-xs transition">
+                  <a href="#pricing" className="inline-flex items-center gap-1 bg-[#0f62fe] text-white hover:bg-[#0043ce] font-bold px-4 py-2 rounded-lg text-xs transition">
                     View Recommended Cohorts →
                   </a>
                 </div>
@@ -915,7 +915,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 5. MOVING STRIP (GREEN TEAL) */}
-      <div className="w-full bg-[#3e6c65] text-white overflow-hidden py-3 font-semibold text-xs tracking-wider select-none border-t border-b border-[#36605a] relative flex items-center">
+      <div className="w-full bg-[#0f62fe] text-white overflow-hidden py-3 font-semibold text-xs tracking-wider select-none border-t border-b border-[#0b4ec2] relative flex items-center">
         <div className="flex animate-marquee whitespace-nowrap gap-16">
           {[1, 2, 3, 4].map((n) => (
             <span key={n} className="flex items-center gap-16 shrink-0">
@@ -945,14 +945,14 @@ export default function CohortsPage() {
             <button
               onClick={() => setActiveYearTab("gate2027")}
               className={`px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300
-                ${activeYearTab === "gate2027" ? "bg-[#3e6c65] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
+                ${activeYearTab === "gate2027" ? "bg-[#0f62fe] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
             >
               2027 Courses
             </button>
             <button
               onClick={() => setActiveYearTab("gate2028")}
               className={`px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300
-                ${activeYearTab === "gate2028" ? "bg-[#3e6c65] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
+                ${activeYearTab === "gate2028" ? "bg-[#0f62fe] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
             >
               2028 Courses
             </button>
@@ -973,12 +973,12 @@ export default function CohortsPage() {
                   ${isRecommended 
                     ? "border-amber-500 ring-4 ring-amber-500/10 scale-[1.02] z-10"
                     : p.badge === "Most Popular" 
-                      ? "border-[#3e6c65] dark:border-[#3e6c65]/60 ring-2 ring-[#3e6c65]/10" 
+                      ? "border-[#0f62fe] dark:border-[#0f62fe]/60 ring-2 ring-[#0f62fe]/10" 
                       : "border-slate-200 dark:border-slate-800"}`}
               >
                 {/* Early Bird Ribbon */}
                 {p.originalPrice && (
-                  <div className="absolute top-[-10px] right-[-10px] bg-[#3e6c65] text-white text-[9px] font-bold px-2 py-2 rounded-full shadow shadow-[#3e6c65]/20 flex flex-col items-center justify-center leading-none w-10 h-10 border border-white z-10">
+                  <div className="absolute top-[-10px] right-[-10px] bg-[#0f62fe] text-white text-[9px] font-bold px-2 py-2 rounded-full shadow shadow-[#0f62fe]/20 flex flex-col items-center justify-center leading-none w-10 h-10 border border-white z-10">
                     <span>30%</span>
                     <span className="text-[7px]">OFF</span>
                   </div>
@@ -1008,7 +1008,7 @@ export default function CohortsPage() {
 
                 {/* Price tag */}
                 <div className="flex items-baseline gap-1.5 mt-3">
-                  <span className="text-2xl font-black text-[#3e6c65] dark:text-[#5A9B92]">{p.price}</span>
+                  <span className="text-2xl font-black text-[#0f62fe] dark:text-[#38bdf8]">{p.price}</span>
                   {p.originalPrice && (
                     <span className="text-xs text-slate-400 line-through font-semibold">{p.originalPrice}</span>
                   )}
@@ -1047,7 +1047,7 @@ export default function CohortsPage() {
       {/* 6.5 COMPARE PROGRAMS MATRIX */}
       <section className="py-20 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200 dark:border-slate-800">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#3e6c65] dark:text-[#5A9B92]">Choose Smartly</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0f62fe] dark:text-[#38bdf8]">Choose Smartly</span>
           <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white mt-1">
             Compare Cohort Offerings
           </h2>
@@ -1060,7 +1060,7 @@ export default function CohortsPage() {
               <tr>
                 <th className="p-4 sm:p-5 font-bold">Preparation Features</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Free Demo</th>
-                <th className="p-4 sm:p-5 font-bold text-center text-[#3e6c65] dark:text-[#5A9B92]">PYQ Core</th>
+                <th className="p-4 sm:p-5 font-bold text-center text-[#0f62fe] dark:text-[#38bdf8]">PYQ Core</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Concepts Pro</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Rank 1:1</th>
               </tr>
@@ -1155,7 +1155,7 @@ export default function CohortsPage() {
             </div>
 
             {/* CENTER FOCUS CARD */}
-            <div className="relative w-full max-w-xl min-h-[300px] rounded-3xl border border-[#3e6c65]/80 bg-[#0d172e] p-6 sm:p-8 shadow-2xl shadow-[#3e6c65]/5 transition-all duration-500 shrink-0 flex flex-col justify-between">
+            <div className="relative w-full max-w-xl min-h-[300px] rounded-3xl border border-[#0f62fe]/80 bg-[#0d172e] p-6 sm:p-8 shadow-2xl shadow-[#0f62fe]/5 transition-all duration-500 shrink-0 flex flex-col justify-between">
               {/* Top Right Watch Button */}
               {SUCCESS_STORIES[currIndex].watchVideoId && (
                 <button
@@ -1174,7 +1174,7 @@ export default function CohortsPage() {
 
               <div>
                 <div className="flex items-center gap-4 mb-5 text-left">
-                  <div className="w-14 h-14 rounded-full border-2 border-[#3e6c65] bg-[#3e6c65]/10 flex items-center justify-center text-[#5A9B92] font-black text-lg overflow-hidden shrink-0">
+                  <div className="w-14 h-14 rounded-full border-2 border-[#0f62fe] bg-[#0f62fe]/10 flex items-center justify-center text-[#38bdf8] font-black text-lg overflow-hidden shrink-0">
                     {SUCCESS_STORIES[currIndex].name.split(" ")[0][0]}
                   </div>
                   <div>
@@ -1236,13 +1236,13 @@ export default function CohortsPage() {
             {/* Circular Arrow Navigation Buttons */}
             <button
               onClick={handlePrevStory}
-              className="absolute left-2 md:left-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#3e6c65] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+              className="absolute left-2 md:left-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0f62fe] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
             >
               ←
             </button>
             <button
               onClick={handleNextStory}
-              className="absolute right-2 md:right-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#3e6c65] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+              className="absolute right-2 md:right-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0f62fe] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
             >
               →
             </button>
@@ -1410,7 +1410,7 @@ export default function CohortsPage() {
       {/* 8. FREE GATE CS RESOURCES */}
       <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
-          Free <span className="text-[#3e6c65] dark:text-[#5A9B92]">GATE CS</span> Resources
+          Free <span className="text-[#0f62fe] dark:text-[#38bdf8]">GATE CS</span> Resources
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-2xl mx-auto">
           Everything you need to understand the GATE Computer Science & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
@@ -1479,7 +1479,7 @@ export default function CohortsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
               href="#pricing"
-              className="bg-[#3e6c65] hover:bg-[#325752] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
+              className="bg-[#0f62fe] hover:bg-[#0043ce] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
             >
               Enroll Now →
             </a>
@@ -1523,7 +1523,7 @@ export default function CohortsPage() {
                 href="https://linkedin.com/in/nileshnama"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-[#3e6c65] text-white flex items-center justify-center transition"
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-[#0f62fe] text-white flex items-center justify-center transition"
                 title="LinkedIn"
               >
                 <LinkedInIcon />
@@ -1606,7 +1606,7 @@ export default function CohortsPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
           <div className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0d1527]">
-              <span className="text-xs sm:text-sm font-extrabold text-[#3e6c65] tracking-wider uppercase">Sample Lecture Preview</span>
+              <span className="text-xs sm:text-sm font-extrabold text-[#0f62fe] tracking-wider uppercase">Sample Lecture Preview</span>
               <button
                 onClick={() => setIsVideoModalOpen(false)}
                 className="text-slate-400 hover:text-white text-lg font-black transition"
