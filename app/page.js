@@ -24,6 +24,7 @@ import QuestionFramework from "../components/QuestionFramework"
 import BeliefSection from "../components/BeliefSection"
 import StudentTestimonial from "../components/StudentTestimonial"
 import ExecutionRoadmap from "../components/ExecutionRoadmap"
+import Faq from "../components/Faq"
 
 
 
@@ -74,6 +75,7 @@ export default function Home() {
     <Work isDarkMode={isDarkMode} />
     <Cohorts isDarkMode={isDarkMode} />
     <ExecutionRoadmap isDarkMode={isDarkMode} />
+    <Faq />
     <Impact isDarkMode={isDarkMode} />
     <Writing isDarkMode={isDarkMode} />
     <Podcasts isDarkMode={isDarkMode} />

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { motion } from "motion/react"
+import SubpageHeader from "@/components/SubpageHeader"
 
 /* =====================================================
    PROJECT DATA — EDIT ONLY THIS SECTION
@@ -96,7 +97,9 @@ export default function ProjectsPage() {
   }, [activeCategory, activeTech, search])
 
   return (
-    <section className="w-full px-6 sm:px-[12%] py-20">
+    <>
+      <SubpageHeader />
+      <section className="w-full px-6 sm:px-[12%] pt-32 pb-20">
 
       {/* HEADER */}
       <div className="max-w-2xl mx-auto text-center mb-12">
@@ -246,6 +249,7 @@ export default function ProjectsPage() {
 
       </footer>
 
-    </section>
+      </section>
+    </>
   )
 }

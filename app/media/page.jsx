@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react"
 import { motion } from "motion/react"
 import Image from "next/image"
+import SubpageHeader from "@/components/SubpageHeader"
 import { assets } from "@/assets/assets"
 
 const MEDIA_TYPES = [
@@ -92,8 +93,9 @@ const MediaPage = () => {
 
   return (
     <>
+      <SubpageHeader />
       {/* MAIN SECTION */}
-      <section className="w-full px-6 sm:px-[12%] py-20">
+      <section className="w-full px-6 sm:px-[12%] pt-32 pb-20">
 
         {/* HEADER */}
         <div className="text-center max-w-2xl mx-auto mb-12">

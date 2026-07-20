@@ -281,6 +281,26 @@ function CohortRow({ cohort, index }) {
             </span>
           </motion.a>
         </div>
+
+        {/* MOBILE TIMELINE */}
+        <div className="lg:hidden mt-6 pt-6 border-t border-slate-100 dark:border-white/5 space-y-4">
+          <h4 className={`text-xs font-bold uppercase tracking-[0.2em] ${theme.text} mb-3`}>
+            Program Milestones
+          </h4>
+          <div className="relative pl-4 border-l border-slate-200 dark:border-white/10 space-y-5">
+            {cohort.milestones.map((item, idx) => (
+              <div key={idx} className="relative">
+                <div className={`absolute left-[-21px] top-1.5 h-2.5 w-2.5 rounded-full ${theme.line} ring-4 ${theme.ring}`} />
+                <h5 className="text-sm font-semibold leading-tight text-slate-900 dark:text-white">
+                  {item.title}
+                </h5>
+                <p className="text-xs text-slate-500 dark:text-gray-400 mt-0.5">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </motion.div>
 
       {/* RIGHT TIMELINE */}
