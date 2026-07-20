@@ -548,13 +548,111 @@ export default function CohortsPage() {
               More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
             </button>
             {moreOpen && (
-              <div className="absolute right-0 mt-3 w-48 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] py-2.5 shadow-lg z-50 text-xs font-semibold">
-                <a href="https://cohorts.nileshnama.com/practice" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">1. Practice</a>
-                <a href="https://cohorts.nileshnama.com/open-access" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">2. Open Access</a>
-                <a href="https://cohorts.nileshnama.com/resources" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">3. Resources</a>
-                <a href="https://cohorts.nileshnama.com/core-notes" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">4. Core Notes</a>
-                <a href="https://cohorts.nileshnama.com/pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">5. PYQs</a>
-                <a href="https://cohorts.nileshnama.com/interview-pyqs" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-[#0f62fe] dark:hover:text-[#38bdf8]">6. Interview PYQs</a>
+              <div className="absolute right-0 mt-3 w-64 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-2 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 text-xs font-semibold flex flex-col gap-0.5">
+                
+                <a
+                  href="https://cohorts.nileshnama.com/practice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">Practice</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Daily coding & CS questions</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://cohorts.nileshnama.com/open-access"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">Open Access</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Free reference archives</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://cohorts.nileshnama.com/resources"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">Resources</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Guides, sheets & study links</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://cohorts.nileshnama.com/core-notes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">Core Notes</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Scientist-written summaries</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://cohorts.nileshnama.com/pyqs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.22" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">GATE PYQs</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Previous Year Questions database</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://cohorts.nileshnama.com/interview-pyqs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition-all duration-200 group text-left"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-[#0f62fe]/10 dark:bg-[#38bdf8]/10 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v14a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800 dark:text-white text-xs">Interview PYQs</h5>
+                    <p className="text-[10px] text-slate-400 font-medium mt-0.5">Systems & coding rounds prep</p>
+                  </div>
+                </a>
+
               </div>
             )}
           </div>
