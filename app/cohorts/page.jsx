@@ -537,6 +537,7 @@ export default function CohortsPage() {
           <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Interviews</a>
           <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Mentorship</a>
           <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Test Series</a>
+          <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">NQuestions</a>
           
           {/* Custom Dropdown */}
           <div className="relative">
@@ -560,10 +561,12 @@ export default function CohortsPage() {
         </nav>
 
         <a
-          href="/"
+          href="https://cohorts.nileshnama.com/new-courses?examId=1"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-[#061d33] hover:bg-black text-white dark:bg-[#0f62fe] dark:hover:bg-[#38bdf8] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
         >
-          Back to Home
+          Explore Programs
         </a>
       </header>
 
