@@ -112,23 +112,23 @@ const PlayIcon = ({ className = "w-6 h-6" }) => (
 const WHY_CHOOSE_ITEMS = [
   {
     iconType: "trophy",
-    title: "Former BARC Scientist",
-    desc: "Learn core CS systems directly from an expert who secured BARC AIR 12."
+    title: "GATE Toppers",
+    desc: "Learn from the best"
   },
   {
     iconType: "book",
-    title: "Deep Conceptual Focus",
-    desc: "First-principles explanations. No formula cramming, just pure reasoning."
+    title: "Clear Concepts",
+    desc: "No jargon, just clarity"
   },
   {
     iconType: "cog",
-    title: "Systems Thinking",
-    desc: "Operating Systems, DBMS, and Compilers explained through system design trade-offs."
+    title: "Systems CS",
+    desc: "Academia meets systems"
   },
   {
     iconType: "users",
-    title: "Focused 1:1 Mentorship",
-    desc: "Strictly limited intake sizes ensuring direct feedback and rank acceleration."
+    title: "Community",
+    desc: "Learn together, grow together"
   }
 ]
 
@@ -435,13 +435,13 @@ export default function CohortsPage() {
   const renderWhyChooseIcon = (type) => {
     switch (type) {
       case "trophy":
-        return <TrophyIcon className="w-6 h-6 text-[#3e6c65] dark:text-[#5A9B92]" />
+        return <TrophyIcon className="w-6 h-6 text-sky-400" />
       case "book":
-        return <BookIcon className="w-6 h-6 text-[#3e6c65] dark:text-[#5A9B92]" />
+        return <BookIcon className="w-6 h-6 text-sky-400" />
       case "cog":
-        return <CogIcon className="w-6 h-6 text-[#3e6c65] dark:text-[#5A9B92]" />
+        return <CogIcon className="w-6 h-6 text-sky-400" />
       case "users":
-        return <UsersIcon className="w-6 h-6 text-[#3e6c65] dark:text-[#5A9B92]" />
+        return <UsersIcon className="w-6 h-6 text-sky-400" />
       default:
         return null
     }
@@ -708,22 +708,36 @@ export default function CohortsPage() {
       </section>
 
       {/* 4. WHY CHOOSE SECTION */}
-      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
-          Why Choose <span className="text-[#3e6c65] dark:text-[#5A9B92]">Nilesh Nama</span> for GATE CS?
-        </h2>
-        <p className="text-xs sm:text-sm text-slate-400 mt-2 font-medium">We train you to think, apply, and conquer! India's most trusted CS coaching system.</p>
+      <section className="bg-[#0b1329] py-24 px-4 sm:px-6 border-t border-b border-slate-850">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Why Choose <span className="text-sky-400">Nilesh Nama</span> for GATE CS?
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-450 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS coaching platform.</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {WHY_CHOOSE_ITEMS.map((item, idx) => (
-            <div key={idx} className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] p-6 text-center hover:shadow-md transition duration-300">
-              <div className="w-12 h-12 rounded-full bg-[#3e6c65]/10 dark:bg-[#3e6c65]/20 flex items-center justify-center mx-auto mb-4">
-                {renderWhyChooseIcon(item.iconType)}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-center">
+            {WHY_CHOOSE_ITEMS.map((item, idx) => (
+              <div
+                key={idx}
+                className="rounded-3xl border border-slate-800/80 bg-[#0d172e]/50 p-6 hover:bg-[#0d172e] hover:border-slate-700/80 transition duration-300 shadow-sm"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-500/25 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-500/5">
+                  {renderWhyChooseIcon(item.iconType)}
+                </div>
+                <h4 className="font-extrabold text-sm sm:text-base text-white">{item.title}</h4>
+                <p className="text-[11px] text-slate-400 mt-1 leading-relaxed">{item.desc}</p>
               </div>
-              <h4 className="font-bold text-base text-slate-800 dark:text-white">{item.title}</h4>
-              <p className="text-xs text-slate-500 dark:text-gray-400 mt-2 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <a
+              href="#curriculum"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-sky-400 hover:text-sky-300 transition"
+            >
+              See the complete GATE CS curriculum →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -779,7 +793,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 4.6 CURRICULUM EXPLORER */}
-      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto">
+      <section id="curriculum" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#3e6c65] dark:text-[#5A9B92]">Deep Subject Depth</span>
           <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white mt-1">
