@@ -44,26 +44,26 @@ const GraduationIcon = ({ className = "w-4 h-4 text-slate-500 dark:text-sky-300"
   </svg>
 )
 
-const BookIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
+const BookIcon = ({ className = "w-5 h-5 text-[#0b3574] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
   </svg>
 )
 
-const CogIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
+const CogIcon = ({ className = "w-5 h-5 text-[#0b3574] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>
 )
 
-const UsersIcon = ({ className = "w-5 h-5 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
+const UsersIcon = ({ className = "w-5 h-5 text-[#0b3574] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
   </svg>
 )
 
-const HelpIcon = ({ className = "w-4 h-4 text-[#0f62fe] dark:text-[#38bdf8]" }) => (
+const HelpIcon = ({ className = "w-4 h-4 text-[#0b3574] dark:text-[#38bdf8]" }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
@@ -204,7 +204,7 @@ const PROGRAMS_DATA = {
       price: "₹8,260/-",
       originalPrice: "₹9,999",
       badge: "Most Popular",
-      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0b3574]",
       scarcity: "84% Filled • Limited Seats Left",
       description: "Recorded + weekly live sessions focused on decoding examiner traps.",
       bullets: [
@@ -215,7 +215,7 @@ const PROGRAMS_DATA = {
         "Core GATE CS subject deep-dives"
       ],
       btnText: "Enroll Now",
-      btnStyle: "bg-[#0f62fe] text-white hover:bg-[#0043ce] shadow-md shadow-[#0f62fe]/20",
+      btnStyle: "bg-[#0b3574] text-white hover:bg-[#07214a] shadow-md shadow-[#0b3574]/20",
       link: "https://cohorts.nileshnama.com/new-courses/5-nn-gate-barc-pyq-core-program"
     },
     {
@@ -223,7 +223,7 @@ const PROGRAMS_DATA = {
       price: "₹41,300/-",
       originalPrice: "₹49,999",
       badge: "Best Value",
-      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0b3574]",
       scarcity: "Only 4 early-bird seats left",
       description: "Advanced conceptual training with scientist-level depth.",
       bullets: [
@@ -254,7 +254,7 @@ const PROGRAMS_DATA = {
         "Risk mitigation & exam day strategies"
       ],
       btnText: "Join Waitlist",
-      btnStyle: "border border-[#0f62fe] dark:border-[#38bdf8] text-[#0f62fe] dark:text-[#38bdf8] hover:bg-[#0f62fe]/5",
+      btnStyle: "border border-[#0b3574] dark:border-[#38bdf8] text-[#0b3574] dark:text-[#38bdf8] hover:bg-[#0b3574]/5",
       link: "https://cohorts.nileshnama.com/new-courses/4-nn-gate-barc-rank-accelerator-program"
     }
   ],
@@ -264,7 +264,7 @@ const PROGRAMS_DATA = {
       price: "₹14,800/-",
       originalPrice: "₹19,999",
       badge: "Long Term",
-      badgeColor: "bg-[#061d33] dark:bg-[#0f62fe]",
+      badgeColor: "bg-[#061d33] dark:bg-[#0b3574]",
       scarcity: "Early pre-enrollment active",
       description: "Slow-paced fundamental conceptual build up over 24 months.",
       bullets: [
@@ -275,7 +275,7 @@ const PROGRAMS_DATA = {
         "Step-by-step programming modules"
       ],
       btnText: "Pre-Enroll",
-      btnStyle: "bg-[#0f62fe] text-white hover:bg-[#0043ce] shadow-md shadow-[#0f62fe]/20",
+      btnStyle: "bg-[#0b3574] text-white hover:bg-[#07214a] shadow-md shadow-[#0b3574]/20",
       link: "https://cohorts.nileshnama.com"
     }
   ]
@@ -477,26 +477,26 @@ export default function CohortsPage() {
     if (quizStep === 3) {
       if (quizYear === "2028") {
         return {
-          title: <>Master GATE CS Over <span className="text-[#0f62fe] dark:text-[#38bdf8]">24 Months</span></>,
+          title: <>Master GATE CS Over <span className="text-[#0b3574] dark:text-[#38bdf8]">24 Months</span></>,
           sub: "Learn systems reasoning & concept depth from BARC Scientists",
           desc: "A comprehensive, slow-paced study plan covering DBMS, OS, Compilers, and algorithms systematically over 2 years."
         }
       }
       if (quizPrep === "beginner") {
         return {
-          title: <>Master GATE CS Concepts from <span className="text-[#0f62fe] dark:text-[#38bdf8]">First Principles</span></>,
+          title: <>Master GATE CS Concepts from <span className="text-[#0b3574] dark:text-[#38bdf8]">First Principles</span></>,
           sub: "Deep conceptual training designed for absolute clarity",
           desc: "Everything you need to master Operating Systems, DBMS, Compilers, and algorithms with 1:1 scientist-level strategy and doubt solving."
         }
       }
       return {
-        title: <>Decode Examiner Traps & <span className="text-[#0f62fe] dark:text-[#38bdf8]">Boost Your Rank</span></>,
+        title: <>Decode Examiner Traps & <span className="text-[#0b3574] dark:text-[#38bdf8]">Boost Your Rank</span></>,
         sub: "Recorded + weekly live sessions focused on trap mitigation",
         desc: "Learn our trademark option elimination frameworks, time pressure execution, and detailed PYQ intention decoding."
       }
     }
     return {
-      title: <>India’s Trusted <span className="text-[#0f62fe] dark:text-[#38bdf8]">GATE CS</span> Preparation Platform</>,
+      title: <>India’s Trusted <span className="text-[#0b3574] dark:text-[#38bdf8]">GATE CS</span> Preparation Platform</>,
       sub: "Learn from BARC Scientists & GATE Toppers",
       desc: "Master Operating Systems, DBMS, Compilers, and Core Computer Science with recorded + live classes, exam-tested roadmaps, and 1:1 mentorship."
     }
@@ -508,51 +508,56 @@ export default function CohortsPage() {
   const nextIndex = (storyIndex + 1) % SUCCESS_STORIES.length
 
   return (
-    <div className="cohorts-page min-h-screen bg-[#070d19] text-white">
+    <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
       
       {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#0f62fe] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#0b4ec2] z-50 relative">
+      <div className="bg-[#0b3574] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#051836] z-50 relative">
         <WhatsAppIcon className="w-4 h-4 text-[#e2f3f1]" />
         For any enquiries please WhatsApp at <a href="https://wa.me/919509923340" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-300 font-bold">+91 9509923340</a>
       </div>
 
       {/* 2. CUSTOM NAVBAR */}
-      <header className="sticky top-0 z-40 bg-[#070d19]/90 backdrop-blur-md border-b border-slate-800/80 px-6 lg:px-[8%] py-4 flex items-center justify-between transition-all duration-300">
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#070b15]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 lg:px-[8%] py-4 flex items-center justify-between transition-all duration-300">
         <a href="/" className="flex items-center gap-2 shrink-0">
+          <Image
+            src={assets.logo}
+            alt="Nilesh Nama"
+            className="w-28 cursor-pointer dark:hidden"
+          />
           <Image
             src={assets.logo_dark}
             alt="Nilesh Nama"
-            className="w-28 cursor-pointer"
+            className="w-28 cursor-pointer hidden dark:block"
           />
         </a>
 
         <div className="flex items-center gap-6 lg:gap-8">
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-300">
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">Tracks</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">Programs</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">Interviews</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">Mentorship</a>
-            <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">Test Series</a>
-            <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#38bdf8] transition">NQuestions</a>
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">Tracks</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">Programs</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">Interviews</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">Mentorship</a>
+            <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">Test Series</a>
+            <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition">NQuestions</a>
             
             {/* Custom Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setMoreOpen(!moreOpen)}
-                className="hover:text-[#38bdf8] transition flex items-center gap-1.5 font-semibold"
+                className="hover:text-[#0b3574] dark:hover:text-[#38bdf8] transition flex items-center gap-1.5 font-semibold"
               >
                 More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
               </button>
               {moreOpen && (
-                <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-800 bg-[#0d172e]/95 backdrop-blur-md p-3 shadow-xl shadow-black/40 z-50 flex flex-col gap-1">
+                <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
                   
                   <a
                     href="https://cohorts.nileshnama.com/practice"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">Practice</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Daily coding & CS questions</p>
                   </a>
 
@@ -560,9 +565,9 @@ export default function CohortsPage() {
                     href="https://cohorts.nileshnama.com/open-access"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">Open Access</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Open Access</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Free reference archives</p>
                   </a>
 
@@ -570,9 +575,9 @@ export default function CohortsPage() {
                     href="https://cohorts.nileshnama.com/resources"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">Resources</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, sheets & study links</p>
                   </a>
 
@@ -580,9 +585,9 @@ export default function CohortsPage() {
                     href="https://cohorts.nileshnama.com/core-notes"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">Core Notes</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Scientist-written summaries</p>
                   </a>
 
@@ -590,9 +595,9 @@ export default function CohortsPage() {
                     href="https://cohorts.nileshnama.com/pyqs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">GATE PYQs</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions database</p>
                   </a>
 
@@ -600,9 +605,9 @@ export default function CohortsPage() {
                     href="https://cohorts.nileshnama.com/interview-pyqs"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-800/50 transition text-left"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
-                    <h5 className="font-bold text-white text-sm">Interview PYQs</h5>
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
                     <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Systems & coding rounds prep</p>
                   </a>
 
@@ -615,7 +620,7 @@ export default function CohortsPage() {
             href="https://cohorts.nileshnama.com/new-courses?examId=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#0f62fe] hover:bg-[#38bdf8] text-white font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
+            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#0b3574] dark:hover:bg-[#38bdf8] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
           >
             Explore Programs
           </a>
@@ -623,11 +628,11 @@ export default function CohortsPage() {
       </header>
 
       {/* 3. HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#070d19] via-[#091225] to-[#070d19] text-white pt-20 pb-24 text-center px-4 sm:px-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-[#0f62fe]/5 blur-3xl -z-10" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-20 pb-24 text-center px-4 sm:px-6">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-[#0b3574]/5 blur-3xl -z-10" />
 
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-800 bg-[#0d172e]/60 text-sky-200 text-xs font-semibold tracking-wide mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
             <GraduationIcon className="w-4 h-4" />
             <span>Founded by BARC AIR 12 & GATE Toppers</span>
           </div>
@@ -636,11 +641,11 @@ export default function CohortsPage() {
             {heroContent.title}
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl font-bold mt-5 text-sky-100 tracking-tight">
+          <p className="text-lg sm:text-xl md:text-2xl font-bold mt-5 text-[#061d33]/90 dark:text-sky-100 tracking-tight">
             {heroContent.sub}
           </p>
 
-          <p className="max-w-2xl mx-auto mt-4 text-xs sm:text-sm md:text-base text-slate-400 leading-relaxed font-normal">
+          <p className="max-w-2xl mx-auto mt-4 text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal">
             {heroContent.desc}
           </p>
 
@@ -649,40 +654,40 @@ export default function CohortsPage() {
               href="https://cohorts.nileshnama.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#0f62fe] hover:bg-[#0043ce] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#0f62fe]/20 w-full sm:w-auto text-center"
+              className="bg-[#0b3574] hover:bg-[#07214a] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#0b3574]/20 w-full sm:w-auto text-center"
             >
               Start PYQ Core Program →
             </a>
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="bg-[#0d172e] hover:bg-[#122042] text-white border border-slate-800/80 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
+              className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
             >
               <span>Play Sample Class</span>
-              <PlayIcon className="w-4 h-4 text-[#38bdf8]" />
+              <PlayIcon className="w-4 h-4 text-[#0b3574]" />
             </button>
           </div>
 
-          <div className="flex items-center justify-center gap-2 text-xs text-sky-200 mt-6 font-medium">
+          <div className="flex items-center justify-center gap-2 text-xs text-slate-400 dark:text-sky-200 mt-6 font-medium">
             <CheckIcon className="w-3.5 h-3.5 text-green-500" />
             <span>Trusted by Serious GATE Aspirants</span>
           </div>
           {/* 3.5 DIAGNOSTIC PROGRAM SELECTOR WIDGET */}
-          <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-800 bg-[#0d172e]/60 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#38bdf8]">Prep Matcher</span>
-            <h3 className="text-lg font-bold text-white mt-1">Find Your Ideal GATE Cohort</h3>
-            <p className="text-xs text-slate-400 mt-1">Answer 2 simple questions to get your personalized learning path.</p>
+          <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0d1527]/70 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#0b3574] dark:text-[#38bdf8]">Prep Matcher</span>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-1">Find Your Ideal GATE Cohort</h3>
+            <p className="text-xs text-slate-500 dark:text-sky-100/70 mt-1">Answer 2 simple questions to get your personalized learning path.</p>
 
-            <div className="mt-6 border-t border-slate-800 pt-6">
+            <div className="mt-6 border-t border-slate-200 dark:border-slate-800 pt-6">
               {quizStep === 1 && (
                 <div className="space-y-4">
-                  <p className="text-xs sm:text-sm font-semibold text-slate-300">1. Which GATE exam year are you targeting?</p>
+                  <p className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-gray-200">1. Which GATE exam year are you targeting?</p>
                   <div className="flex justify-center gap-3">
                     <button
                       onClick={() => {
                         setQuizYear("2027")
                         setQuizStep(2)
                       }}
-                      className="px-6 py-3 rounded-2xl bg-[#0d172e]/85 hover:bg-[#122042] text-xs sm:text-sm font-bold border border-slate-800 shadow-sm transition text-slate-200"
+                      className="px-6 py-3 rounded-2xl bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-750 text-xs sm:text-sm font-bold border border-slate-200 dark:border-slate-750 shadow-sm transition"
                     >
                       GATE 2027
                     </button>
@@ -691,7 +696,7 @@ export default function CohortsPage() {
                         setQuizYear("2028")
                         setQuizStep(3)
                       }}
-                      className="px-6 py-3 rounded-2xl bg-[#0d172e]/85 hover:bg-[#122042] text-xs sm:text-sm font-bold border border-slate-800 shadow-sm transition text-slate-200"
+                      className="px-6 py-3 rounded-2xl bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-750 text-xs sm:text-sm font-bold border border-slate-200 dark:border-slate-750 shadow-sm transition"
                     >
                       GATE 2028
                     </button>
@@ -701,14 +706,14 @@ export default function CohortsPage() {
 
               {quizStep === 2 && (
                 <div className="space-y-4">
-                  <p className="text-xs sm:text-sm font-semibold text-slate-300">2. What is your current preparation status?</p>
+                  <p className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-gray-200">2. What is your current preparation status?</p>
                   <div className="flex justify-center gap-3">
                     <button
                       onClick={() => {
                         setQuizPrep("beginner")
                         setQuizStep(3)
                       }}
-                      className="px-5 py-3 rounded-2xl bg-[#0d172e]/85 hover:bg-[#122042] text-xs sm:text-sm font-bold border border-slate-800 shadow-sm transition text-slate-200"
+                      className="px-5 py-3 rounded-2xl bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-750 text-xs sm:text-sm font-bold border border-slate-200 dark:border-slate-750 shadow-sm transition"
                     >
                       Need Full Concepts
                     </button>
@@ -717,7 +722,7 @@ export default function CohortsPage() {
                         setQuizPrep("advanced")
                         setQuizStep(3)
                       }}
-                      className="px-5 py-3 rounded-2xl bg-[#0d172e]/85 hover:bg-[#122042] text-xs sm:text-sm font-bold border border-slate-800 shadow-sm transition text-slate-200"
+                      className="px-5 py-3 rounded-2xl bg-white hover:bg-slate-50 dark:bg-slate-800 dark:hover:bg-slate-750 text-xs sm:text-sm font-bold border border-slate-200 dark:border-slate-750 shadow-sm transition"
                     >
                       Revision & Traps Practice
                     </button>
@@ -728,13 +733,13 @@ export default function CohortsPage() {
               {quizStep === 3 && (
                 <div className="space-y-4">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-500 text-[10px] font-bold animate-pulse">
-                     <CheckIcon className="w-3.5 h-3.5 text-emerald-500" />
-                     <span>Recommendation Ready</span>
+                    <CheckIcon className="w-3.5 h-3.5 text-emerald-500" />
+                    <span>Recommendation Ready</span>
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white mt-2">
+                  <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mt-2">
                     {recommendation.title}
                   </h4>
-                  <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+                  <p className="text-xs text-slate-500 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
                     {recommendation.desc}
                   </p>
                   <div className="flex justify-center gap-3 pt-2">
@@ -744,13 +749,13 @@ export default function CohortsPage() {
                         setQuizYear(null)
                         setQuizPrep(null)
                       }}
-                      className="px-4 py-2 rounded-xl border border-slate-800 hover:bg-white/5 text-xs font-bold transition text-slate-400"
+                      className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-white/5 text-xs font-bold transition text-slate-500"
                     >
                       Restart Quiz
                     </button>
                     <a
                       href={recommendation.anchor}
-                      className="px-6 py-2 rounded-xl bg-[#0f62fe] hover:bg-[#0043ce] text-white text-xs font-bold transition shadow shadow-[#0f62fe]/20"
+                      className="px-6 py-2 rounded-xl bg-[#0b3574] hover:bg-[#07214a] text-white text-xs font-bold transition shadow shadow-[#0b3574]/20"
                     >
                       View Package
                     </a>
@@ -763,12 +768,12 @@ export default function CohortsPage() {
       </section>
 
       {/* 4. WHY CHOOSE SECTION */}
-      <section className="bg-[#0b1329]/30 text-white py-24 px-4 sm:px-6 border-t border-b border-slate-800/80">
+      <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 border-t border-b border-slate-850">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Why Choose <span className="text-sky-400">Nilesh Nama</span> for GATE CS?
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS coaching platform.</p>
+          <p className="text-xs sm:text-sm text-slate-450 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS coaching platform.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-center">
             {WHY_CHOOSE_ITEMS.map((item, idx) => (
@@ -797,18 +802,18 @@ export default function CohortsPage() {
       </section>
 
       {/* 4.5 INSTRUCTOR SPOTLIGHT */}
-      <section className="py-20 px-4 sm:px-6 bg-transparent text-white border-t border-b border-slate-800/80">
+      <section className="py-20 px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/3 text-center md:text-left relative flex flex-col items-center gap-3 justify-center">
-            <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#0f62fe] to-[#0f62fe] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
-              <div className="w-full h-full bg-[#0d172e] rounded-2xl flex flex-col items-center justify-center text-white relative">
-                <span className="text-4xl font-extrabold text-[#0f62fe]">AIR 12</span>
+            <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#0b3574] to-[#0b3574] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
+              <div className="w-full h-full bg-slate-900 dark:bg-[#070b15] rounded-2xl flex flex-col items-center justify-center text-white relative">
+                <span className="text-4xl font-extrabold text-[#0b3574]">AIR 12</span>
                 <span className="text-[10px] tracking-widest text-slate-400 font-bold uppercase mt-1">BARC Scientist</span>
-                <div className="absolute bottom-2 text-[9px] bg-[#0f62fe]/10 text-[#0f62fe] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
+                <div className="absolute bottom-2 text-[9px] bg-[#0b3574]/10 text-[#0b3574] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
                 
                 {/* Modal Play Overlay / Permanent Play Icon */}
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition duration-300 group-hover:bg-black/50">
-                  <div className="w-12 h-12 rounded-full bg-[#0f62fe] flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#0b3574] flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-300">
                     <PlayIcon className="w-6 h-6 ml-0.5" />
                   </div>
                 </div>
@@ -816,30 +821,30 @@ export default function CohortsPage() {
             </div>
             <button
               onClick={() => setIsVideoModalOpen(true)}
-              className="text-xs font-bold text-[#0f62fe] hover:text-[#38bdf8] hover:underline flex items-center gap-1.5 transition"
+              className="text-xs font-bold text-[#0b3574] hover:text-[#38bdf8] hover:underline flex items-center gap-1.5 transition"
             >
               <span>Watch Sample Class Video</span>
             </button>
           </div>
           <div className="w-full md:w-2/3 space-y-4">
-            <span className="inline-block text-[#38bdf8] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white text-left leading-tight">
+            <span className="inline-block text-[#0b3574] dark:text-[#38bdf8] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
+            <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
               Learn Computer Science From a Former BARC Scientist
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed text-left">
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
               Hi, I'm Nilesh Nama. During my preparation journey, I secured **BARC AIR 12** and **GATE CS AIR 202**. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
             </p>
-            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-850 text-left">
+            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#38bdf8]">AIR 12</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0b3574] dark:text-[#38bdf8]">AIR 12</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC Scientist Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#38bdf8]">AIR 202</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0b3574] dark:text-[#38bdf8]">AIR 202</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">GATE CS Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#38bdf8]">99.9%</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0b3574] dark:text-[#38bdf8]">99.9%</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">CS Conceptual Index</p>
               </div>
             </div>
@@ -850,8 +855,8 @@ export default function CohortsPage() {
       {/* 4.6 CURRICULUM EXPLORER */}
       <section id="curriculum" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#38bdf8]">Deep Subject Depth</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b3574] dark:text-[#38bdf8]">Deep Subject Depth</span>
+          <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white mt-1">
             Explore the Scientist-Built Curriculum
           </h2>
           <p className="text-xs sm:text-sm text-slate-400 mt-2 font-medium">Click on the subjects below to inspect the topics taught in full depth.</p>
@@ -866,25 +871,25 @@ export default function CohortsPage() {
                 onClick={() => setActiveSyllabusIdx(idx)}
                 className={`w-full text-left px-5 py-4 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 border flex flex-col gap-1 whitespace-nowrap md:whitespace-normal
                   ${activeSyllabusIdx === idx
-                    ? "bg-[#0f62fe]/20 border-[#0f62fe] text-[#38bdf8]"
-                    : "bg-[#0d172e]/50 border-slate-800 text-slate-400 hover:bg-[#122042] hover:text-white"}`}
+                    ? "bg-[#0b3574]/10 border-[#0b3574] text-[#0b3574] dark:text-[#38bdf8] dark:bg-[#0b3574]/20"
+                    : "bg-white dark:bg-[#0d1527] border-slate-200 dark:border-slate-800 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-850"}`}
               >
                 <span>{item.subject}</span>
-                <span className="text-[10px] text-gray-500 font-medium">{item.lessons}</span>
+                <span className="text-[10px] text-slate-400 dark:text-gray-500 font-medium">{item.lessons}</span>
               </button>
             ))}
           </div>
 
           {/* Details Content Box */}
-          <div className="w-full md:w-2/3 bg-[#0d172e]/60 rounded-3xl border border-slate-800/80 p-6 sm:p-8 shadow-sm text-white">
-            <h4 className="text-base sm:text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-6 bg-[#0f62fe] rounded-full" />
+          <div className="w-full md:w-2/3 bg-white dark:bg-[#0d1527] rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
+            <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-white mb-4 flex items-center gap-2">
+              <span className="w-1.5 h-6 bg-[#0b3574] rounded-full" />
               Detailed Modules for {CURRICULUM_DATA[activeSyllabusIdx].subject}
             </h4>
             <ul className="space-y-4">
               {CURRICULUM_DATA[activeSyllabusIdx].topics.map((topic, i) => (
-                <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-350 text-left">
-                  <span className="w-5 h-5 rounded-full bg-[#0f62fe]/20 text-[#38bdf8] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
+                <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600 dark:text-gray-300 text-left">
+                  <span className="w-5 h-5 rounded-full bg-[#0b3574]/10 dark:bg-[#0b3574]/20 text-[#0b3574] dark:text-[#38bdf8] font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
                     {i + 1}
                   </span>
                   <span className="leading-relaxed">{topic}</span>
@@ -896,25 +901,25 @@ export default function CohortsPage() {
       </section>
 
       {/* 5.5 INTERACTIVE CS SANDBOX */}
-      <section className="bg-[#0b1329]/30 py-20 px-4 sm:px-6 border-t border-b border-slate-800/80 scroll-mt-20">
+      <section className="bg-slate-50 dark:bg-slate-900/40 py-20 px-4 sm:px-6 border-t border-b border-slate-200 dark:border-slate-800 scroll-mt-20">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#0f62fe]/20 bg-[#0f62fe]/10 text-[#38bdf8] text-[10px] font-bold shadow-sm mb-4">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#0b3574]/20 bg-[#0b3574]/5 dark:bg-[#0b3574]/20 text-[#0b3574] dark:text-[#38bdf8] text-[10px] font-bold shadow-sm mb-4">
             <span>Concept Sandbox</span>
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
             Test Your Concept Strength
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2 max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-lg mx-auto">
             Solve this real GATE-level DBMS question. Proves if you rely on shortcuts or understand first-principles reasoning.
           </p>
 
-          <div className="mt-8 bg-[#0d172e]/60 border border-slate-800 rounded-3xl p-6 sm:p-8 text-left shadow-sm">
+          <div className="mt-8 bg-white dark:bg-[#0d1527] border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 text-left shadow-sm">
             <div className="flex items-center justify-between gap-4 mb-4">
-              <span className="text-[10px] bg-[#122042] text-slate-400 px-2 py-0.5 rounded font-bold uppercase tracking-wider">DBMS • Concurrency</span>
+              <span className="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-500 px-2 py-0.5 rounded font-bold uppercase tracking-wider">DBMS • Concurrency</span>
               <span className="text-[10px] text-red-500 font-bold">Medium Difficulty</span>
             </div>
 
-            <p className="text-xs sm:text-sm font-semibold text-slate-200 leading-relaxed">
+            <p className="text-xs sm:text-sm font-semibold text-slate-800 dark:text-gray-100 leading-relaxed">
               Question: In a DBMS, which transaction isolation level guarantees complete prevention of all three read anomalies: Dirty Reads, Non-Repeatable Reads, and Phantom Reads?
             </p>
 
@@ -934,9 +939,9 @@ export default function CohortsPage() {
                   className={`w-full p-4 rounded-xl text-left border text-xs sm:text-sm transition-all duration-300 flex items-center justify-between
                     ${selectedOption === opt.key
                       ? opt.isCorrect
-                        ? "border-emerald-500 bg-emerald-500/5 text-emerald-300"
-                        : "border-red-500 bg-red-500/5 text-red-300"
-                      : "border-slate-800 hover:bg-[#122042] text-slate-300"
+                        ? "border-emerald-500 bg-emerald-500/5 text-emerald-700 dark:text-emerald-300"
+                        : "border-red-500 bg-red-500/5 text-red-700 dark:text-red-300"
+                      : "border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-white/5 text-slate-700 dark:text-gray-300"
                     }`}
                 >
                   <span><strong>{opt.key}.</strong> {opt.text}</span>
@@ -950,10 +955,10 @@ export default function CohortsPage() {
             </div>
 
             {sandboxAnswer === "correct" && (
-              <div className="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs sm:text-sm text-emerald-300 transition-all duration-300">
+              <div className="mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs sm:text-sm text-emerald-800 dark:text-emerald-300 transition-all duration-300">
                 🎉 <strong>Perfect!</strong> Serializable isolation guarantees correct execution schedules by locking ranges. Ready to study in-depth DBMS concurrency schedules with BARC Scientist mentors? 
                 <div className="mt-3">
-                  <a href="#pricing" className="inline-flex items-center gap-1 bg-[#0f62fe] text-white hover:bg-[#0043ce] font-bold px-4 py-2 rounded-lg text-xs transition">
+                  <a href="#pricing" className="inline-flex items-center gap-1 bg-[#0b3574] text-white hover:bg-[#07214a] font-bold px-4 py-2 rounded-lg text-xs transition">
                     View Recommended Cohorts →
                   </a>
                 </div>
@@ -961,7 +966,7 @@ export default function CohortsPage() {
             )}
 
             {sandboxAnswer === "incorrect" && (
-              <div className="mt-6 p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-xs sm:text-sm text-red-300 transition-all duration-300">
+              <div className="mt-6 p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-xs sm:text-sm text-red-800 dark:text-red-300 transition-all duration-300">
                 💡 <strong>Hint:</strong> The selected level allows anomalies. Recall that Repeatable Read locks rows but not index ranges, which leaves it vulnerable to Phantom Reads. Try choosing the strictest level!
               </div>
             )}
@@ -970,7 +975,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 5. MOVING STRIP (GREEN TEAL) */}
-      <div className="w-full bg-[#0f62fe] text-white overflow-hidden py-3 font-semibold text-xs tracking-wider select-none border-t border-b border-[#0b4ec2] relative flex items-center">
+      <div className="w-full bg-[#0b3574] text-white overflow-hidden py-3 font-semibold text-xs tracking-wider select-none border-t border-b border-[#051836] relative flex items-center">
         <div className="flex animate-marquee whitespace-nowrap gap-16">
           {[1, 2, 3, 4].map((n) => (
             <span key={n} className="flex items-center gap-16 shrink-0">
@@ -990,24 +995,24 @@ export default function CohortsPage() {
       {/* 6. ONLINE COURSES & PRICING CARDS */}
       <section id="pricing" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
             GATE CS Online Courses & Test Series
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">Choose the perfect course for your GATE CS journey</p>
+          <p className="text-xs sm:text-sm text-slate-500 mt-2">Choose the perfect course for your GATE CS journey</p>
           
           {/* Year Switch Tab */}
-          <div className="inline-flex p-1 rounded-full bg-[#0d172e]/80 border border-slate-800 mt-8 shadow-inner">
+          <div className="inline-flex p-1 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700/50 mt-8 shadow-inner">
             <button
               onClick={() => setActiveYearTab("gate2027")}
               className={`px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300
-                ${activeYearTab === "gate2027" ? "bg-[#0f62fe] text-white shadow-sm" : "text-slate-400"}`}
+                ${activeYearTab === "gate2027" ? "bg-[#0b3574] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
             >
               2027 Courses
             </button>
             <button
               onClick={() => setActiveYearTab("gate2028")}
               className={`px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300
-                ${activeYearTab === "gate2028" ? "bg-[#0f62fe] text-white shadow-sm" : "text-slate-400"}`}
+                ${activeYearTab === "gate2028" ? "bg-[#0b3574] text-white shadow-sm" : "text-slate-500 dark:text-gray-400"}`}
             >
               2028 Courses
             </button>
@@ -1024,16 +1029,16 @@ export default function CohortsPage() {
             return (
               <div
                 key={idx}
-                className={`relative rounded-3xl border flex flex-col justify-between p-6 shadow-sm hover:shadow-md transition duration-300
+                className={`relative rounded-3xl border flex flex-col justify-between bg-white dark:bg-[#0d1527] p-6 shadow-sm hover:shadow-md transition duration-300
                   ${isRecommended 
-                    ? "border-amber-500 ring-4 ring-amber-500/10 scale-[1.02] z-10 bg-[#0e1c3a]"
+                    ? "border-amber-500 ring-4 ring-amber-500/10 scale-[1.02] z-10"
                     : p.badge === "Most Popular" 
-                      ? "border-[#0f62fe] ring-2 ring-[#0f62fe]/10 bg-[#0d172e]" 
-                      : "border-slate-800/80 bg-[#0d172e]/60"}`}
+                      ? "border-[#0b3574] dark:border-[#0b3574]/60 ring-2 ring-[#0b3574]/10" 
+                      : "border-slate-200 dark:border-slate-800"}`}
               >
                 {/* Early Bird Ribbon */}
                 {p.originalPrice && (
-                  <div className="absolute top-[-10px] right-[-10px] bg-[#0f62fe] text-white text-[9px] font-bold px-2 py-2 rounded-full shadow shadow-[#0f62fe]/20 flex flex-col items-center justify-center leading-none w-10 h-10 border border-white z-10">
+                  <div className="absolute top-[-10px] right-[-10px] bg-[#0b3574] text-white text-[9px] font-bold px-2 py-2 rounded-full shadow shadow-[#0b3574]/20 flex flex-col items-center justify-center leading-none w-10 h-10 border border-white z-10">
                     <span>30%</span>
                     <span className="text-[7px]">OFF</span>
                   </div>
@@ -1051,7 +1056,7 @@ export default function CohortsPage() {
                     )}
                   </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white leading-snug">{p.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug">{p.title}</h3>
                 
                 {/* Scarcity Seat Limit Badge */}
                 {p.scarcity && (
@@ -1063,17 +1068,17 @@ export default function CohortsPage() {
 
                 {/* Price tag */}
                 <div className="flex items-baseline gap-1.5 mt-3">
-                  <span className="text-2xl font-black text-[#38bdf8]">{p.price}</span>
+                  <span className="text-2xl font-black text-[#0b3574] dark:text-[#38bdf8]">{p.price}</span>
                   {p.originalPrice && (
-                    <span className="text-xs text-slate-450 line-through font-semibold">{p.originalPrice}</span>
+                    <span className="text-xs text-slate-400 line-through font-semibold">{p.originalPrice}</span>
                   )}
                   {p.price !== "Free" && <span className="text-[9px] text-slate-400 font-medium">+ GST</span>}
                 </div>
 
-                <p className="text-xs text-slate-400 mt-2.5 leading-relaxed">{p.description}</p>
-                <div className="border-t border-slate-850 my-4" />
+                <p className="text-xs text-slate-500 dark:text-gray-400 mt-2.5 leading-relaxed">{p.description}</p>
+                <div className="border-t border-slate-100 my-4 dark:border-slate-800" />
 
-                <ul className="space-y-2.5 text-xs text-slate-300">
+                <ul className="space-y-2.5 text-xs text-slate-600 dark:text-gray-300">
                   {p.bullets.map((bullet, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <CheckIcon className="w-3.5 h-3.5 text-emerald-500 mt-0.5" />
@@ -1100,27 +1105,27 @@ export default function CohortsPage() {
       </section>
 
       {/* 6.5 COMPARE PROGRAMS MATRIX */}
-      <section className="py-20 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-800">
+      <section className="py-20 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200 dark:border-slate-800">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#38bdf8]">Choose Smartly</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mt-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#0b3574] dark:text-[#38bdf8]">Choose Smartly</span>
+          <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white mt-1">
             Compare Cohort Offerings
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">Find the right support level for your preparation goals.</p>
+          <p className="text-xs sm:text-sm text-slate-500 mt-2">Find the right support level for your preparation goals.</p>
         </div>
 
-        <div className="overflow-x-auto rounded-3xl border border-slate-800 bg-[#0d172e]/40 shadow-sm">
+        <div className="overflow-x-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] shadow-sm">
           <table className="w-full text-left text-xs sm:text-sm">
-            <thead className="bg-[#0d172e]/80 border-b border-slate-800 text-slate-300">
+            <thead className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-gray-200">
               <tr>
                 <th className="p-4 sm:p-5 font-bold">Preparation Features</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Free Demo</th>
-                <th className="p-4 sm:p-5 font-bold text-center text-[#38bdf8]">PYQ Core</th>
+                <th className="p-4 sm:p-5 font-bold text-center text-[#0b3574] dark:text-[#38bdf8]">PYQ Core</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Concepts Pro</th>
                 <th className="p-4 sm:p-5 font-bold text-center">Rank 1:1</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-850 text-slate-300">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-slate-600 dark:text-gray-300">
               <tr>
                 <td className="p-4 sm:p-5 font-semibold">Standard Recorded Lectures</td>
                 <td className="p-4 sm:p-5 text-center"><CheckIcon className="w-4 h-4 text-emerald-500 mx-auto" /></td>
@@ -1176,7 +1181,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 7. SUCCESS STORIES CAROUSEL */}
-      <section className="bg-transparent text-white py-24 px-4 sm:px-6 relative overflow-hidden border-t border-slate-800">
+      <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center scroll-mt-20" id="results">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             GATE CS Toppers & Success Stories
@@ -1210,7 +1215,7 @@ export default function CohortsPage() {
             </div>
 
             {/* CENTER FOCUS CARD */}
-            <div className="relative w-full max-w-xl min-h-[300px] rounded-3xl border border-[#0f62fe] bg-[#0d172e] p-6 sm:p-8 shadow-2xl shadow-[#0f62fe]/5 transition-all duration-500 shrink-0 flex flex-col justify-between">
+            <div className="relative w-full max-w-xl min-h-[300px] rounded-3xl border border-[#0b3574]/80 bg-[#0d172e] p-6 sm:p-8 shadow-2xl shadow-[#0b3574]/5 transition-all duration-500 shrink-0 flex flex-col justify-between">
               {/* Top Right Watch Button */}
               {SUCCESS_STORIES[currIndex].watchVideoId && (
                 <button
@@ -1229,7 +1234,7 @@ export default function CohortsPage() {
 
               <div>
                 <div className="flex items-center gap-4 mb-5 text-left">
-                  <div className="w-14 h-14 rounded-full border-2 border-[#0f62fe] bg-[#0f62fe]/10 flex items-center justify-center text-[#38bdf8] font-black text-lg overflow-hidden shrink-0">
+                  <div className="w-14 h-14 rounded-full border-2 border-[#0b3574] bg-[#0b3574]/10 flex items-center justify-center text-[#38bdf8] font-black text-lg overflow-hidden shrink-0">
                     {SUCCESS_STORIES[currIndex].name.split(" ")[0][0]}
                   </div>
                   <div>
@@ -1291,13 +1296,13 @@ export default function CohortsPage() {
             {/* Circular Arrow Navigation Buttons */}
             <button
               onClick={handlePrevStory}
-              className="absolute left-2 md:left-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0f62fe] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+              className="absolute left-2 md:left-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0b3574] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
             >
               ←
             </button>
             <button
               onClick={handleNextStory}
-              className="absolute right-2 md:right-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0f62fe] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+              className="absolute right-2 md:right-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#0b3574] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
             >
               →
             </button>
@@ -1317,14 +1322,14 @@ export default function CohortsPage() {
       </section>
 
       {/* LIVE ACTIVITY FEED */}
-      <div className="w-full bg-[#091122]/60 py-3 text-white border-t border-b border-slate-850 overflow-hidden relative flex items-center justify-center">
+      <div className="w-full bg-[#061d33] dark:bg-[#090f1d] py-3 text-white border-t border-b border-slate-800 overflow-hidden relative flex items-center justify-center">
         <div className="max-w-4xl mx-auto flex items-center gap-3 px-4 text-xs font-semibold select-none flex-wrap justify-center">
           <span className="inline-flex items-center gap-1 bg-red-500 text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full tracking-wider animate-pulse shrink-0">
             <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
             Live Activity
           </span>
           <div className="h-5 flex items-center justify-center min-w-[200px]">
-            <span className={`text-slate-200 text-[10px] sm:text-xs transition-opacity duration-300 ${fadeState ? "opacity-100" : "opacity-0"}`}>
+            <span className={`text-slate-200 dark:text-gray-350 text-[10px] sm:text-xs transition-opacity duration-300 ${fadeState ? "opacity-100" : "opacity-0"}`}>
               {activeActivity}
             </span>
           </div>
@@ -1332,9 +1337,9 @@ export default function CohortsPage() {
       </div>
 
       {/* YOUTUBE LECTURES SECTION */}
-      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-800">
+      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-200 dark:border-slate-800">
         <div className="flex flex-col items-center justify-center mb-10">
-          <h2 className="text-2xl sm:text-4xl font-bold text-white flex items-center justify-center gap-2.5 flex-wrap">
+          <h2 className="text-2xl sm:text-4xl font-bold  text-slate-900 dark:text-white flex items-center justify-center gap-2.5 flex-wrap">
             <span className="inline-flex items-center justify-center text-red-600">
               <svg className="w-8 h-8 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
                 <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -1342,7 +1347,7 @@ export default function CohortsPage() {
             </span>
             Watch Free <span className="text-red-600 font-extrabold">GATE DA Lectures</span> on YouTube
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-2">
+          <p className="text-xs sm:text-sm text-slate-500 mt-2">
             Free lectures, strategies, and insights — subscribe to stay ahead!
           </p>
         </div>
@@ -1355,9 +1360,9 @@ export default function CohortsPage() {
               setSelectedYoutubeId("xG2e1c9m6Yw")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-800 bg-[#0d172e]/60 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
-            <div className="relative aspect-video w-full overflow-hidden bg-[#0d172e]">
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
                 src="https://img.youtube.com/vi/xG2e1c9m6Yw/hqdefault.jpg"
                 alt="Why Write GATE DA? Scope & Career Benefits"
@@ -1369,12 +1374,12 @@ export default function CohortsPage() {
                 </div>
               </div>
             </div>
-            <div className="p-5 flex-1 flex flex-col justify-between text-white">
+            <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h4 className="font-bold text-xs sm:text-sm text-white group-hover:text-red-500 transition leading-snug">
+                <h4 className="font-bold text-xs sm:text-sm text-slate-800 dark:text-white group-hover:text-red-600 transition leading-snug">
                   Why Write GATE DA? Scope & Career Benefits
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-gray-400 mt-1.5 leading-relaxed line-clamp-2">
                   Scope, opportunities & career benefits of GATE DA...
                 </p>
               </div>
@@ -1387,9 +1392,9 @@ export default function CohortsPage() {
               setSelectedYoutubeId("6NtbCuU3TLy")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-800 bg-[#0d172e]/60 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
-            <div className="relative aspect-video w-full overflow-hidden bg-[#0d172e]">
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
                 src="https://img.youtube.com/vi/6NtbCuU3TLy/hqdefault.jpg"
                 alt="GATE DA Books, Resources & Syllabus"
@@ -1401,12 +1406,12 @@ export default function CohortsPage() {
                 </div>
               </div>
             </div>
-            <div className="p-5 flex-1 flex flex-col justify-between text-white">
+            <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h4 className="font-bold text-xs sm:text-sm text-white group-hover:text-red-500 transition leading-snug">
+                <h4 className="font-bold text-xs sm:text-sm text-slate-800 dark:text-white group-hover:text-red-600 transition leading-snug">
                   GATE DA Books, Resources & Syllabus
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-gray-400 mt-1.5 leading-relaxed line-clamp-2">
                   Complete preparation guide with books and resources
                 </p>
               </div>
@@ -1419,9 +1424,9 @@ export default function CohortsPage() {
               setSelectedYoutubeId("fmnOetlPwcg")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-800 bg-[#0d172e]/60 overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
-            <div className="relative aspect-video w-full overflow-hidden bg-[#0d172e]">
+            <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
                 src="https://img.youtube.com/vi/fmnOetlPwcg/hqdefault.jpg"
                 alt="GATE DA/CS 2027 Course Launch"
@@ -1433,12 +1438,12 @@ export default function CohortsPage() {
                 </div>
               </div>
             </div>
-            <div className="p-5 flex-1 flex flex-col justify-between text-white">
+            <div className="p-5 flex-1 flex flex-col justify-between">
               <div>
-                <h4 className="font-bold text-xs sm:text-sm text-white group-hover:text-red-500 transition leading-snug">
+                <h4 className="font-bold text-xs sm:text-sm text-slate-800 dark:text-white group-hover:text-red-600 transition leading-snug">
                   GATE DA/CS 2027 Course Launch
                 </h4>
-                <p className="text-[11px] sm:text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-gray-400 mt-1.5 leading-relaxed line-clamp-2">
                   Course launch details and updates for GATE DA 2027
                 </p>
               </div>
@@ -1464,48 +1469,48 @@ export default function CohortsPage() {
 
       {/* 8. FREE GATE CS RESOURCES */}
       <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">
-          Free <span className="text-[#38bdf8]">GATE CS</span> Resources
+        <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
+          Free <span className="text-[#0b3574] dark:text-[#38bdf8]">GATE CS</span> Resources
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 mt-2 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-2xl mx-auto">
           Everything you need to understand the GATE Computer Science & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
           {FREE_RESOURCES.map((res, i) => (
-            <div key={i} className="rounded-3xl border border-slate-800 bg-[#0d172e]/60 p-6 hover:shadow-md transition text-white">
-              <h4 className="font-bold text-sm sm:text-base text-white">{res.title}</h4>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">{res.desc}</p>
+            <div key={i} className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] p-6 hover:shadow-md transition">
+              <h4 className="font-bold text-sm sm:text-base text-slate-800 dark:text-white">{res.title}</h4>
+              <p className="text-xs text-slate-500 dark:text-gray-400 mt-2 leading-relaxed">{res.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* 9. FREQUENTLY ASKED QUESTIONS */}
-      <section className="bg-[#0b1329]/30 py-24 px-4 sm:px-6 border-t border-b border-slate-800/80">
+      <section className="bg-slate-50 dark:bg-slate-900/40 py-24 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-800 bg-[#0d172e]/80 text-[#38bdf8] text-[10px] font-bold shadow-sm mb-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-[10px] font-bold shadow-sm mb-4">
               <HelpIcon className="w-3.5 h-3.5" />
               <span>FAQs</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
               Frequently Asked Questions
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 mt-2">
+            <p className="text-xs sm:text-sm text-slate-500 mt-2">
               Everything you need to know about GATE CS preparation and our learning systems.
             </p>
           </div>
 
           <div className="space-y-4">
             {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-2xl border border-slate-800 bg-[#0d172e]/60 overflow-hidden transition">
+              <div key={i} className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden transition">
                 <button
                   onClick={() => toggleFaq(i)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-xs sm:text-sm text-white gap-4"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-xs sm:text-sm text-slate-800 dark:text-white gap-4"
                 >
                   <span className="flex items-center gap-3">
-                    <span className="text-[10px] bg-[#122042] text-slate-400 px-2 py-1 rounded">
+                    <span className="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-400 px-2 py-1 rounded">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {faq.q}
@@ -1514,7 +1519,7 @@ export default function CohortsPage() {
                 </button>
 
                 {openFaqIndex === i && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-350 leading-relaxed border-t border-slate-850">
+                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-50 dark:border-slate-800">
                     {faq.a}
                   </div>
                 )}
@@ -1534,7 +1539,7 @@ export default function CohortsPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
               href="#pricing"
-              className="bg-[#0f62fe] hover:bg-[#0043ce] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
+              className="bg-[#0b3574] hover:bg-[#07214a] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
             >
               Enroll Now →
             </a>
@@ -1578,7 +1583,7 @@ export default function CohortsPage() {
                 href="https://linkedin.com/in/nileshnama"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-[#0f62fe] text-white flex items-center justify-center transition"
+                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-[#0b3574] text-white flex items-center justify-center transition"
                 title="LinkedIn"
               >
                 <LinkedInIcon />
@@ -1661,7 +1666,7 @@ export default function CohortsPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
           <div className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0d1527]">
-              <span className="text-xs sm:text-sm font-extrabold text-[#0f62fe] tracking-wider uppercase">Sample Lecture Preview</span>
+              <span className="text-xs sm:text-sm font-extrabold text-[#0b3574] tracking-wider uppercase">Sample Lecture Preview</span>
               <button
                 onClick={() => setIsVideoModalOpen(false)}
                 className="text-slate-400 hover:text-white text-lg font-black transition"
