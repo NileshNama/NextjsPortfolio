@@ -289,6 +289,7 @@ const SUCCESS_STORIES = [
     college: "AI, IISc Bangalore",
     prevRank: "AIR 80, GATE 2025",
     verificationUrl: "https://linkedin.com",
+    watchVideoId: "xG2e1c9m6Yw",
     quote: "Securing a top rank was about how to think under pressure. The database transactions and query tuning framework helped me clear complex multi-layered questions in minutes. Nilesh's focus on structured problem-solving was the key game changer."
   },
   {
@@ -297,6 +298,7 @@ const SUCCESS_STORIES = [
     year: "GATE 2026",
     college: "IIT Bombay",
     verificationUrl: "https://linkedin.com",
+    watchVideoId: "6NtbCuU3TLy",
     quote: "Intuitively understanding the OS concepts rather than rote formulas saved me in the exam. Under Nilesh's guidance, I stopped memorizing scheduling and paging math, and started reasoning through the hardware constraints. The best program for core CS."
   },
   {
@@ -305,6 +307,7 @@ const SUCCESS_STORIES = [
     year: "GATE 2025",
     college: "IIT Bombay",
     verificationUrl: "https://linkedin.com",
+    watchVideoId: "fmnOetlPwcg",
     quote: "The mock interview practice and deep compiler design insights allowed me to excel. If you want raw depth in CS concepts instead of superficial formula tricks, this is the only prep program you should join."
   }
 ]
@@ -500,6 +503,9 @@ export default function CohortsPage() {
   }
 
   const heroContent = getPersonalizedHero()
+  const prevIndex = (storyIndex - 1 + SUCCESS_STORIES.length) % SUCCESS_STORIES.length
+  const currIndex = storyIndex
+  const nextIndex = (storyIndex + 1) % SUCCESS_STORIES.length
 
   return (
     <div className="min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
@@ -1101,74 +1107,142 @@ export default function CohortsPage() {
       </section>
 
       {/* 7. SUCCESS STORIES CAROUSEL */}
-      <section className="bg-slate-50 dark:bg-slate-900/40 py-24 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center scroll-mt-20" id="results">
-          <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
+      <section className="bg-[#0b1329] py-24 px-4 sm:px-6 relative overflow-hidden">
+        <div className="max-w-6xl mx-auto text-center scroll-mt-20" id="results">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             GATE CS Toppers & Success Stories
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-2">20+ toppers in GATE CS — hear directly from our students</p>
+          <p className="text-xs sm:text-sm text-slate-400 mt-2">20+ toppers in GATE CS — hear directly from our students</p>
 
-          <div className="relative mt-12 bg-white dark:bg-[#0d1527] rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-sm text-left max-w-2xl mx-auto flex flex-col justify-between min-h-[300px]">
-            <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
+          {/* Carousel Slider Row */}
+          <div className="relative mt-12 flex items-center justify-center gap-4 sm:gap-6 overflow-hidden py-4 w-full select-none">
+            
+            {/* LEFT PREVIEW CARD */}
+            <div
+              onClick={handlePrevStory}
+              className="hidden lg:flex flex-col justify-between w-80 h-72 rounded-3xl border border-slate-800/80 bg-[#0d172e]/40 p-6 opacity-35 scale-90 cursor-pointer transition-all duration-500 hover:opacity-50 shrink-0 select-none text-left"
+            >
+              <div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#3e6c65]/10 dark:bg-[#3e6c65]/20 flex items-center justify-center text-[#3e6c65] dark:text-[#5A9B92] font-bold text-sm">
-                    {SUCCESS_STORIES[storyIndex].name.split(" ")[0][0]}
+                  <div className="w-12 h-12 rounded-full border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-400 font-bold text-sm overflow-hidden shrink-0">
+                    {SUCCESS_STORIES[prevIndex].name.split(" ")[0][0]}
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white">{SUCCESS_STORIES[storyIndex].name}</h4>
-                    <p className="text-xs text-slate-400 dark:text-gray-500 mt-0.5">{SUCCESS_STORIES[storyIndex].college}</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-slate-300">{SUCCESS_STORIES[prevIndex].name}</h4>
+                    <p className="text-[11px] text-sky-400 font-semibold mt-0.5">{SUCCESS_STORIES[prevIndex].rank}</p>
+                    <p className="text-[10px] text-emerald-500/80 font-medium mt-0.5">{SUCCESS_STORIES[prevIndex].college}</p>
                   </div>
                 </div>
-                <div className="text-right flex flex-col items-end gap-1">
-                  <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-[#3e6c65]/10 dark:bg-[#3e6c65]/20 text-[#3e6c65] dark:text-[#5A9B92]">
-                    {SUCCESS_STORIES[storyIndex].rank}
-                  </span>
-                  {SUCCESS_STORIES[storyIndex].verificationUrl && (
-                    <a
-                      href={SUCCESS_STORIES[storyIndex].verificationUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[9px] font-bold text-blue-500 hover:underline flex items-center gap-0.5"
-                    >
-                      Verify Rank ✓
-                    </a>
-                  )}
-                  <p className="text-[10px] text-slate-400 mt-0.5">{SUCCESS_STORIES[storyIndex].year}</p>
+                <div className="text-sky-500/10 text-3xl font-black leading-none mt-2">“</div>
+                <p className="text-slate-400 text-xs mt-1 line-clamp-4 leading-relaxed">
+                  {SUCCESS_STORIES[prevIndex].quote}
+                </p>
+              </div>
+            </div>
+
+            {/* CENTER FOCUS CARD */}
+            <div className="relative w-full max-w-xl min-h-[300px] rounded-3xl border border-[#3e6c65]/80 bg-[#0d172e] p-6 sm:p-8 shadow-2xl shadow-[#3e6c65]/5 transition-all duration-500 shrink-0 flex flex-col justify-between">
+              {/* Top Right Watch Button */}
+              {SUCCESS_STORIES[currIndex].watchVideoId && (
+                <button
+                  onClick={() => {
+                    setSelectedYoutubeId(SUCCESS_STORIES[currIndex].watchVideoId)
+                    setIsYoutubeModalOpen(true)
+                  }}
+                  className="absolute top-6 right-6 inline-flex items-center gap-1 bg-red-600 hover:bg-red-500 text-white text-[10px] font-extrabold px-3 py-1.5 rounded-full shadow-lg hover:scale-105 transition-all duration-300"
+                >
+                  <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  <span>Watch</span>
+                </button>
+              )}
+
+              <div>
+                <div className="flex items-center gap-4 mb-5 text-left">
+                  <div className="w-14 h-14 rounded-full border-2 border-[#3e6c65] bg-[#3e6c65]/10 flex items-center justify-center text-[#5A9B92] font-black text-lg overflow-hidden shrink-0">
+                    {SUCCESS_STORIES[currIndex].name.split(" ")[0][0]}
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-sm sm:text-base text-white">{SUCCESS_STORIES[currIndex].name}</h4>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="text-xs font-black text-sky-400">{SUCCESS_STORIES[currIndex].rank}</span>
+                      <span className="text-[10px] text-slate-400 font-medium">({SUCCESS_STORIES[currIndex].year})</span>
+                    </div>
+                    <p className="text-xs text-emerald-400 font-semibold mt-0.5">{SUCCESS_STORIES[currIndex].college}</p>
+                  </div>
                 </div>
+
+                {/* Quote Mark */}
+                <div className="text-sky-500/20 text-4xl font-black leading-none mb-1 text-left">“</div>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-left -mt-2">
+                  {SUCCESS_STORIES[currIndex].quote}
+                </p>
               </div>
 
-              <p className="text-sm sm:text-base text-slate-700 dark:text-gray-300 leading-relaxed italic text-left">
-                “{SUCCESS_STORIES[storyIndex].quote}”
-              </p>
+              {/* LinkedIn Rank Verification Link */}
+              {SUCCESS_STORIES[currIndex].verificationUrl && (
+                <div className="mt-6 pt-4 border-t border-slate-850 text-left">
+                  <a
+                    href={SUCCESS_STORIES[currIndex].verificationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] font-bold text-sky-400 hover:underline flex items-center gap-1"
+                  >
+                    Verify Rank ✓
+                  </a>
+                </div>
+              )}
             </div>
 
-            <div className="flex items-center justify-between mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
-              <div className="flex gap-2">
-                {SUCCESS_STORIES.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setStoryIndex(i)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${storyIndex === i ? "bg-[#3e6c65] w-4" : "bg-slate-300 dark:bg-slate-700"}`}
-                  />
-                ))}
-              </div>
-
-              <div className="flex gap-3">
-                <button
-                  onClick={handlePrevStory}
-                  className="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-white/5 transition text-slate-600 dark:text-gray-400"
-                >
-                  ←
-                </button>
-                <button
-                  onClick={handleNextStory}
-                  className="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-white/5 transition text-slate-600 dark:text-gray-400"
-                >
-                  →
-                </button>
+            {/* RIGHT PREVIEW CARD */}
+            <div
+              onClick={handleNextStory}
+              className="hidden lg:flex flex-col justify-between w-80 h-72 rounded-3xl border border-slate-800/80 bg-[#0d172e]/40 p-6 opacity-35 scale-90 cursor-pointer transition-all duration-500 hover:opacity-50 shrink-0 select-none text-left"
+            >
+              <div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full border border-slate-800 bg-slate-900 flex items-center justify-center text-slate-400 font-bold text-sm overflow-hidden shrink-0">
+                    {SUCCESS_STORIES[nextIndex].name.split(" ")[0][0]}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xs sm:text-sm text-slate-300">{SUCCESS_STORIES[nextIndex].name}</h4>
+                    <p className="text-[11px] text-sky-400 font-semibold mt-0.5">{SUCCESS_STORIES[nextIndex].rank}</p>
+                    <p className="text-[10px] text-emerald-500/80 font-medium mt-0.5">{SUCCESS_STORIES[nextIndex].college}</p>
+                  </div>
+                </div>
+                <div className="text-sky-500/10 text-3xl font-black leading-none mt-2">“</div>
+                <p className="text-slate-400 text-xs mt-1 line-clamp-4 leading-relaxed">
+                  {SUCCESS_STORIES[nextIndex].quote}
+                </p>
               </div>
             </div>
+
+            {/* Circular Arrow Navigation Buttons */}
+            <button
+              onClick={handlePrevStory}
+              className="absolute left-2 md:left-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#3e6c65] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextStory}
+              className="absolute right-2 md:right-8 w-10 h-10 rounded-full bg-slate-950/40 hover:bg-[#3e6c65] text-white flex items-center justify-center transition border border-slate-800 backdrop-blur-sm shadow z-20 cursor-pointer select-none"
+            >
+              →
+            </button>
+          </div>
+
+          {/* Dot Indicators */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {SUCCESS_STORIES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setStoryIndex(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${storyIndex === i ? "bg-sky-500 w-6" : "bg-slate-700"}`}
+              />
+            ))}
           </div>
         </div>
       </section>
