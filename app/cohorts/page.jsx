@@ -508,7 +508,7 @@ export default function CohortsPage() {
   const nextIndex = (storyIndex + 1) % SUCCESS_STORIES.length
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
+    <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
       
       {/* 1. TOP ANNOUNCEMENT BAR */}
       <div className="bg-[#0f62fe] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#0b4ec2] z-50 relative">

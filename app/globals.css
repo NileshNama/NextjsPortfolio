@@ -47,3 +47,75 @@ h4 {
   width: max-content;
   animation: marquee 35s linear infinite;
 }
+
+.cohorts-page, .cohorts-page * {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
+/* Responsive Typography for Cohort Page */
+.cohorts-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #111827;
+}
+.dark .cohorts-page h1 {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .cohorts-page h1 {
+    font-size: 32px;
+  }
+}
+
+.cohorts-page h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #111827;
+}
+.dark .cohorts-page h2 {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .cohorts-page h2 {
+    font-size: 24px;
+  }
+}
+
+.cohorts-page h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #111827;
+}
+.dark .cohorts-page h3 {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .cohorts-page h3 {
+    font-size: 20px;
+  }
+}
+
+.cohorts-page p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .cohorts-page p {
+    font-size: 16px;
+  }
+}
+
+.cohorts-page .text-secondary {
+  font-weight: 500;
+  color: #6B7280;
+}
+.dark .cohorts-page .text-secondary {
+  color: #9CA3AF;
+}
