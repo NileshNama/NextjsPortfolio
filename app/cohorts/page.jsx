@@ -531,98 +531,100 @@ export default function CohortsPage() {
           />
         </a>
 
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Tracks</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Programs</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Interviews</a>
-          <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Mentorship</a>
-          <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Test Series</a>
-          <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">NQuestions</a>
-          
-          {/* Custom Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setMoreOpen(!moreOpen)}
-              className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition flex items-center gap-1.5 font-semibold"
-            >
-              More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
-            </button>
-            {moreOpen && (
-              <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
-                
-                <a
-                  href="https://cohorts.nileshnama.com/practice"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Daily coding & CS questions</p>
-                </a>
+        <div className="flex items-center gap-6 lg:gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Tracks</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Programs</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Interviews</a>
+            <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Mentorship</a>
+            <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">Test Series</a>
+            <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition">NQuestions</a>
+            
+            {/* Custom Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setMoreOpen(!moreOpen)}
+                className="hover:text-[#0f62fe] dark:hover:text-[#38bdf8] transition flex items-center gap-1.5 font-semibold"
+              >
+                More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
+              </button>
+              {moreOpen && (
+                <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
+                  
+                  <a
+                    href="https://cohorts.nileshnama.com/practice"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Daily coding & CS questions</p>
+                  </a>
 
-                <a
-                  href="https://cohorts.nileshnama.com/open-access"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Open Access</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Free reference archives</p>
-                </a>
+                  <a
+                    href="https://cohorts.nileshnama.com/open-access"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Open Access</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Free reference archives</p>
+                  </a>
 
-                <a
-                  href="https://cohorts.nileshnama.com/resources"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, sheets & study links</p>
-                </a>
+                  <a
+                    href="https://cohorts.nileshnama.com/resources"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, sheets & study links</p>
+                  </a>
 
-                <a
-                  href="https://cohorts.nileshnama.com/core-notes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Scientist-written summaries</p>
-                </a>
+                  <a
+                    href="https://cohorts.nileshnama.com/core-notes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Scientist-written summaries</p>
+                  </a>
 
-                <a
-                  href="https://cohorts.nileshnama.com/pyqs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions database</p>
-                </a>
+                  <a
+                    href="https://cohorts.nileshnama.com/pyqs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions database</p>
+                  </a>
 
-                <a
-                  href="https://cohorts.nileshnama.com/interview-pyqs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                >
-                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
-                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Systems & coding rounds prep</p>
-                </a>
+                  <a
+                    href="https://cohorts.nileshnama.com/interview-pyqs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                  >
+                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Systems & coding rounds prep</p>
+                  </a>
 
-              </div>
-            )}
-          </div>
-        </nav>
+                </div>
+              )}
+            </div>
+          </nav>
 
-        <a
-          href="https://cohorts.nileshnama.com/new-courses?examId=1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#061d33] hover:bg-black text-white dark:bg-[#0f62fe] dark:hover:bg-[#38bdf8] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
-        >
-          Explore Programs
-        </a>
+          <a
+            href="https://cohorts.nileshnama.com/new-courses?examId=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#0f62fe] dark:hover:bg-[#38bdf8] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
+          >
+            Explore Programs
+          </a>
+        </div>
       </header>
 
       {/* 3. HERO SECTION */}
