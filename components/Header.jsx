@@ -155,7 +155,7 @@ const Header = () => {
       whileTap={{ scale: 0.98 }}
       transition={{ duration: 0.45, delay: 0.6 }}
       viewport={{ once: true }}
-      href="https://cohorts.nileshnama.com"
+      href="https://www.nileshnama.com/cohorts"
       target="_blank"
       rel="noopener noreferrer"
       className="group px-9 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300"

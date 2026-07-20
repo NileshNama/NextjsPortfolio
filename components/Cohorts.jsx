@@ -158,7 +158,7 @@ const Cohorts = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          href="https://cohorts.nileshnama.com"
+          href="https://www.nileshnama.com/cohorts"
           target="_blank"
           rel="noopener noreferrer"
           className="
