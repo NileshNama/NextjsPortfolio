@@ -58,10 +58,6 @@ h4 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  color: #111827;
-}
-.dark .cohorts-page h1 {
-  color: #ffffff;
 }
 @media (min-width: 768px) {
   .cohorts-page h1 {
@@ -74,10 +70,6 @@ h4 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  color: #111827;
-}
-.dark .cohorts-page h2 {
-  color: #ffffff;
 }
 @media (min-width: 768px) {
   .cohorts-page h2 {
@@ -90,10 +82,6 @@ h4 {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0;
-  color: #111827;
-}
-.dark .cohorts-page h3 {
-  color: #ffffff;
 }
 @media (min-width: 768px) {
   .cohorts-page h3 {

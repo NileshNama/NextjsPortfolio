@@ -766,7 +766,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 4. WHY CHOOSE SECTION */}
-      <section className="bg-[#0b1329] py-24 px-4 sm:px-6 border-t border-b border-slate-850">
+      <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 border-t border-b border-slate-850">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Why Choose <span className="text-sky-400">Nilesh Nama</span> for GATE CS?
@@ -1179,7 +1179,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 7. SUCCESS STORIES CAROUSEL */}
-      <section className="bg-[#0b1329] py-24 px-4 sm:px-6 relative overflow-hidden">
+      <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center scroll-mt-20" id="results">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             GATE CS Toppers & Success Stories
