@@ -671,13 +671,12 @@ export default function CohortsPage() {
             <CheckIcon className="w-3.5 h-3.5 text-green-500" />
             <span>Trusted by Serious GATE Aspirants</span>
           </div>
-          {/* 
+           
           {/* 3.5 DIAGNOSTIC PROGRAM SELECTOR WIDGET */}
           <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0d1527]/70 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#509187] dark:text-[#5A9B92]">Prep Matcher</span>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-1">Find Your Ideal GATE Cohort</h3>
             <p className="text-xs text-slate-500 dark:text-sky-100/70 mt-1">Answer 2 simple questions to get your personalized learning path.</p>
- */}
             <div className="mt-6 border-t border-slate-200 dark:border-slate-800 pt-6">
               {quizStep === 1 && (
                 <div className="space-y-4">
