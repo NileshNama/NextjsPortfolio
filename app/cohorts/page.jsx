@@ -314,27 +314,27 @@ const SUCCESS_STORIES = [
 
 const FREE_RESOURCES = [
   {
-    title: "GATE CS Exam Overview",
-    desc: "What GATE CS is, who it's for, weightage metrics, and a scientist-built preparation roadmap."
+    title: "GATE CS & DA Exam Overview",
+    desc: "What GATE CS & DA is, who it's for, weightage metrics, and a scientist-built preparation roadmap."
   },
   {
-    title: "GATE CS Syllabus 2027",
+    title: "GATE CS & DA Syllabus 2027",
     desc: "Subject-wise topics, weightage chart, and core system priority ratings — downloadable as a PDF."
   },
   {
     title: "Online Course & Coaching",
-    desc: "How to choose a GATE CS online course, and why first-principles coaching is essential."
+    desc: "How to choose a GATE CS & DA online course, and why first-principles coaching is essential."
   },
   {
     title: "Course Fees & Intakes",
     desc: "Transparent pricing details for Core, Pro, and the standalone Mentorship Programs."
   },
   {
-    title: "GATE CS Test Series",
-    desc: "High-quality mock tests and practice problems built to match the actual GATE CS exam pattern."
+    title: "GATE CS & DA Test Series",
+    desc: "High-quality mock tests and practice problems built to match the actual GATE CS & DA exam pattern."
   },
   {
-    title: "GATE CS Blog & Guides",
+    title: "GATE CS & DA Blog & Guides",
     desc: "In-depth guides on operating systems, compilers, database theory, and exam strategies."
   }
 ]
@@ -353,7 +353,7 @@ const FAQS = [
     a: "The best coaching is one that focuses on first-principles understanding instead of rote formula memorization. Nilesh Nama's cohorts train candidates to think like system designers, enabling them to solve complex examiner-level twisted questions."
   },
   {
-    q: "What is the GATE CS 2027 syllabus?",
+    q: "What is the GATE CS syllabus?",
     a: "The syllabus comprises Engineering Mathematics, Discrete Mathematics, Digital Logic, Computer Organization, Programming & Data Structures, Algorithms, Theory of Computation, Compiler Design, Operating Systems, Databases, and Computer Networks."
   },
   {
@@ -634,7 +634,7 @@ export default function CohortsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
             <GraduationIcon className="w-4 h-4" />
-            <span>Founded by BARC AIR 12 & GATE Toppers</span>
+            <span>Founded by BARC AIR 12 & GATE Topper</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
@@ -651,7 +651,7 @@ export default function CohortsPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
-              href="https://cohorts.nileshnama.com"
+              href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 w-full sm:w-auto text-center"
@@ -773,9 +773,9 @@ export default function CohortsPage() {
       <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 border-t border-b border-slate-850">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Why Choose <span className="text-sky-400">Nilesh Nama</span> for GATE CS?
+            Why Choose <span className="text-sky-400">NN Cohorts</span> for GATE CS & DA?
           </h2>
-          <p className="text-xs sm:text-sm text-slate-450 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS coaching platform.</p>
+          <p className="text-xs sm:text-sm text-slate-450 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS & DA coaching platform.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-center">
             {WHY_CHOOSE_ITEMS.map((item, idx) => (
@@ -794,7 +794,7 @@ export default function CohortsPage() {
 
           <div className="mt-10">
             <a
-              href="#curriculum"
+              href="https://nileshnama.notion.site/schedule"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-sky-400 hover:text-sky-300 transition"
             >
               See the complete GATE CS curriculum →
@@ -831,15 +831,15 @@ export default function CohortsPage() {
           <div className="w-full md:w-2/3 space-y-4">
             <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
             <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
-              Learn Computer Science From a Former BARC Scientist
+              Learn Computer Science From a BARC AIR 12 & GATE Topper
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
-              Hi, I'm Nilesh Nama. During my preparation journey, I secured **BARC AIR 12** and **GATE CS AIR 202**. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
+              Hi, I'm Nilesh Nama. During my preparation journey, I secured *BARC AIR 12* and *GATE CS AIR 202*. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
                 <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 12</h4>
-                <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC Scientist Exam</p>
+                <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC OCES Exam</p>
               </div>
               <div>
                 <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 202</h4>
@@ -987,7 +987,7 @@ export default function CohortsPage() {
             <span key={n} className="flex items-center gap-16 shrink-0">
               <span className="flex items-center gap-2">
                 <SparklesIcon className="w-4 h-4 text-yellow-350 shrink-0" />
-                <span>Limited Time Early Bird Offer — 30% OFF on all courses! Enroll now!</span>
+                <span>Limited Time Early Bird Offer — 10% OFF on all courses! Enroll now!</span>
               </span>
               <span className="flex items-center gap-2">
                 <LightningIcon className="w-4 h-4 text-amber-350 shrink-0" />
@@ -1357,7 +1357,7 @@ export default function CohortsPage() {
                 <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </span>
-            Watch Free <span className="text-red-600 font-extrabold">GATE DA Lectures</span> on YouTube
+            Watch Free <span className="text-red-600 font-extrabold">GATE CS & DA Lectures</span> on YouTube
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-2">
             Free lectures, strategies, and insights — subscribe to stay ahead!
@@ -1466,7 +1466,7 @@ export default function CohortsPage() {
         {/* Subscribe Link */}
         <div className="mt-8 flex items-center justify-center gap-1.5">
           <a
-            href="https://www.youtube.com/@themlhub-ai"
+            href="https://www.youtube.com/@nileshnama"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs sm:text-sm font-bold text-red-600 hover:text-red-500 flex items-center gap-1.5 transition"
@@ -1485,7 +1485,7 @@ export default function CohortsPage() {
           Free <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS</span> Resources
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-2xl mx-auto">
-          Everything you need to understand the GATE Computer Science & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
+          Everything you need to understand the GATE Computer Science,DA & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
@@ -1510,7 +1510,7 @@ export default function CohortsPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-2">
-              Everything you need to know about GATE CS preparation and our learning systems.
+              Everything you need to know about GATE CS & DA preparation and our learning systems.
             </p>
           </div>
 
@@ -1545,23 +1545,23 @@ export default function CohortsPage() {
       <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto">
         <div className="rounded-[2.5rem] bg-gradient-to-r from-[#061d33] via-[#0d2744] to-[#12365c] text-white p-8 sm:p-14 text-center relative overflow-hidden shadow-lg shadow-[#061d33]/15">
           <div className="absolute top-0 right-0 w-[20rem] h-[20rem] rounded-full bg-blue-400/10 blur-2xl -z-10" />
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Ready to Crack GATE CS 2027?</h2>
-          <p className="text-sm text-sky-100/90 mt-2 font-medium">Join Nilesh Nama today. Learn from BARC scientists, train with toppers!</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Ready to Crack GATE CS & DA?</h2>
+          <p className="text-sm text-sky-100/90 mt-2 font-medium">Join Nilesh Nama today. Learn from BARC & Gate Topper, train with toppers!</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
-              href="#pricing"
+              href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
               className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
             >
               Enroll Now →
             </a>
             <a
-              href="https://cohorts.nileshnama.com"
+              href="https://cohorts.nileshnama.com/new-courses/15-nn-gate-barc-thinking-series-free-access"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-white hover:bg-white/10 text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 w-full sm:w-auto text-center"
             >
-              Try Free Demo
+              Try Open Access Cohort
             </a>
           </div>
         </div>
@@ -1578,7 +1578,7 @@ export default function CohortsPage() {
               className="w-28"
             />
             <p className="text-xs leading-relaxed text-slate-500 max-w-sm">
-              India's most trusted GATE CS preparation systems. Founded by former BARC scientists & GATE toppers. Learn, train, and conquer!
+              India’s Systems-Driven GATE CS Preparation Platform. Founded by former BARC & GATE topper. Learn, train, and conquer!
             </p>
             {/* Social Icons row */}
             <div className="flex items-center gap-3 pt-2">
