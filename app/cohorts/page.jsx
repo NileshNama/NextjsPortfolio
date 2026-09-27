@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { assets } from "@/assets/assets"
+import { assets } from "@/assets/assets" 
 
 // ----------------------------------------------------
 // PREMIUM INLINE SVG ICON COMPONENTS
@@ -1546,7 +1546,7 @@ export default function CohortsPage() {
         <div className="rounded-[2.5rem] bg-gradient-to-r from-[#061d33] via-[#0d2744] to-[#12365c] text-white p-8 sm:p-14 text-center relative overflow-hidden shadow-lg shadow-[#061d33]/15">
           <div className="absolute top-0 right-0 w-[20rem] h-[20rem] rounded-full bg-blue-400/10 blur-2xl -z-10" />
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Ready to Crack GATE CS & DA?</h2>
-          <p className="text-sm text-sky-100/90 mt-2 font-medium">Join Nilesh Nama today. Learn from BARC & Gate Topper, train with toppers!</p>
+          <p className="text-sm text-sky-100/90 mt-2 font-medium">Join NN Cohorts today. Learn from BARC & Gate Topper, train with toppers!</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
