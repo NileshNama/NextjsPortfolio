@@ -496,8 +496,8 @@ export default function CohortsPage() {
       }
     }
     return {
-      title: <>India’s Trusted <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS</span> Preparation Platform</>,
-      sub: "Learn from BARC Scientists & GATE Toppers",
+      title: <>India’s Systems-Driven <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Preparation Platform</>,
+      sub: "Learn from BARC & GATE Topper",
       desc: "Master Operating Systems, DBMS, Compilers, and Core Computer Science with recorded + live classes, exam-tested roadmaps, and 1:1 mentorship."
     }
   }
