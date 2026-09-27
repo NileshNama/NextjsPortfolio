@@ -1582,15 +1582,7 @@ export default function CohortsPage() {
             </p>
             {/* Social Icons row */}
             <div className="flex items-center gap-3 pt-2">
-              <a
-                href="https://discord.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center transition"
-                title="Discord"
-              >
-                <DiscordIcon />
-              </a>
+        
               <a
                 href="https://linkedin.com/in/nileshnama"
                 target="_blank"
@@ -1601,7 +1593,7 @@ export default function CohortsPage() {
                 <LinkedInIcon />
               </a>
               <a
-                href="mailto:nileshnama1997@gmail.com"
+                href="mailto:hello@nileshnama.com"
                 className="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-650 text-white flex items-center justify-center transition"
                 title="Email"
               >
@@ -1616,42 +1608,34 @@ export default function CohortsPage() {
               >
                 <WhatsAppIcon />
               </a>
-              <a
-                href="https://github.com/NileshNama"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-900 text-white flex items-center justify-center transition"
-                title="GitHub"
-              >
-                <GitHubIcon />
-              </a>
+              
             </div>
           </div>
 
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">GATE CS Resources</h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#pricing" className="hover:text-white transition">Exam Overview</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Syllabus 2027</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Online Courses</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Fee Structure</a></li>
+              <li><a href="https://cohorts.nileshnama.com/study-material" className="hover:text-white transition">Exam Overview</a></li>
+              <li><a href="https://cohorts.nileshnama.com/study-material" className="hover:text-white transition">Syllabus 2027</a></li>
+              <li><a href="https://cohorts.nileshnama.com/new-courses?examId=1" className="hover:text-white transition">Online Courses</a></li>
+              <li><a href="https://cohorts.nileshnama.com/" className="hover:text-white transition">Fee Structure</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Programs</h4>
             <ul className="space-y-2.5 text-xs">
-              <li><a href="#pricing" className="hover:text-white transition">PYQ Core Program</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Concepts Pro Program</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">1:1 Mentorship</a></li>
-              <li><a href="#pricing" className="hover:text-white transition">Free Demo Batch</a></li>
+              <li><a href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program" className="hover:text-white transition">PYQ Core Program</a></li>
+              <li><a href="https://cohorts.nileshnama.com/new-courses?examId=2" className="hover:text-white transition">BARC Mock Interview Program</a></li>
+              <li><a href="https://cohorts.nileshnama.com/new-courses?examId=3" className="hover:text-white transition">1:1 Mentorship</a></li>
+              <li><a href="https://cohorts.nileshnama.com/new-courses?examId=5" className="hover:text-white transition">Open Access Cohort Batch</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
             <ul className="space-y-2.5 text-xs text-slate-500">
-              <li>✉ <a href="mailto:nileshnama1997@gmail.com" className="hover:text-white transition text-slate-400">nileshnama1997@gmail.com</a></li>
+              <li>✉ <a href="mailto:hello@nileshnama.com" className="hover:text-white transition text-slate-400">hello@nileshnama.com</a></li>
               <li>📞 <a href="tel:+919509923340" className="hover:text-white transition text-slate-400">+91-9509923340</a></li>
               <li>💬 <a href="https://wa.me/919509923340" target="_blank" className="hover:text-white transition text-slate-400">WhatsApp Support</a></li>
             </ul>
@@ -1664,11 +1648,11 @@ export default function CohortsPage() {
             © {new Date().getFullYear()} Nilesh Nama. All rights reserved.
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-slate-400">Privacy Policy</a>
+            <a href="https://cohorts.nileshnama.com/privacy-policy" className="hover:text-slate-400">Privacy Policy</a>
             <span>·</span>
-            <a href="#" className="hover:text-slate-400">Terms of Service</a>
+            <a href="https://cohorts.nileshnama.com/terms" className="hover:text-slate-400">Terms of Service</a>
             <span>·</span>
-            <a href="#" className="hover:text-slate-400">Refund Policy</a>
+            <a href="https://cohorts.nileshnama.com/refund-policy" className="hover:text-slate-400">Refund Policy</a>
           </div>
         </div>
       </footer>
