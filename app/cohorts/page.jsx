@@ -834,7 +834,7 @@ export default function CohortsPage() {
               Learn Computer Science From a BARC AIR 12 & GATE Topper
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
-              Hi, I'm Nilesh Nama. During my preparation journey, I secured *BARC AIR 12* and *GATE CS AIR 202*. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
+              Hi, I'm Nilesh Nama. During my preparation journey, I secured BARC AIR 12 and GATE CS AIR 202. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
