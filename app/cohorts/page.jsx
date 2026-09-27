@@ -318,7 +318,7 @@ const FREE_RESOURCES = [
     desc: "What GATE CS & DA is, who it's for, weightage metrics, and a scientist-built preparation roadmap."
   },
   {
-    title: "GATE CS & DA Syllabus 2027",
+    title: "GATE CS & DA Syllabus",
     desc: "Subject-wise topics, weightage chart, and core system priority ratings — downloadable as a PDF."
   },
   {
