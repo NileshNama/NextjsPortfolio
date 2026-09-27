@@ -552,17 +552,17 @@ export default function CohortsPage() {
                 <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
                   
                   <a
-                    href="https://cohorts.nileshnama.com/practice"
+                    href="https://cohorts.nileshnama.com/quiz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
                     <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Daily coding & CS questions</p>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">CS & DA practice questions</p>
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/open-access"
+                    href="https://cohorts.nileshnama.com/new-courses?examId=5"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
@@ -572,43 +572,43 @@ export default function CohortsPage() {
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/resources"
+                    href="https://cohorts.nileshnama.com/books"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
                     <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, sheets & study links</p>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, Sheets &  Books</p>
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/core-notes"
+                    href="https://cohorts.nileshnama.com/study-material"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
                     <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Scientist-written summaries</p>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Handwritten Main, Shorte Notes & Formulas Sheet</p>
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/pyqs"
+                    href="https://cohorts.nileshnama.com/new-courses?examId=8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
                     <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions database</p>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions </p>
                   </a>
 
                   <a
-                    href="https://cohorts.nileshnama.com/interview-pyqs"
+                    href="https://cohorts.nileshnama.com/new-courses?examId=8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
                   >
                     <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Systems & coding rounds prep</p>
+                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Interview in-depth prep</p>
                   </a>
 
                 </div>
