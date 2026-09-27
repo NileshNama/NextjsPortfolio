@@ -671,12 +671,13 @@ export default function CohortsPage() {
             <CheckIcon className="w-3.5 h-3.5 text-green-500" />
             <span>Trusted by Serious GATE Aspirants</span>
           </div>
-           
           {/* 3.5 DIAGNOSTIC PROGRAM SELECTOR WIDGET */}
+          {false && (
           <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0d1527]/70 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#509187] dark:text-[#5A9B92]">Prep Matcher</span>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-1">Find Your Ideal GATE Cohort</h3>
             <p className="text-xs text-slate-500 dark:text-sky-100/70 mt-1">Answer 2 simple questions to get your personalized learning path.</p>
+
             <div className="mt-6 border-t border-slate-200 dark:border-slate-800 pt-6">
               {quizStep === 1 && (
                 <div className="space-y-4">
@@ -764,6 +765,7 @@ export default function CohortsPage() {
               )}
             </div>
           </div>
+          )}
         </div>
       </section>
 
@@ -853,6 +855,7 @@ export default function CohortsPage() {
       </section>
 
       {/* 4.6 CURRICULUM EXPLORER */}
+      {false && (
       <section id="curriculum" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#509187] dark:text-[#5A9B92]">Deep Subject Depth</span>
@@ -899,8 +902,10 @@ export default function CohortsPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* 5.5 INTERACTIVE CS SANDBOX */}
+      {false && (
       <section className="bg-slate-50 dark:bg-slate-900/40 py-20 px-4 sm:px-6 border-t border-b border-slate-200 dark:border-slate-800 scroll-mt-20">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#509187]/20 bg-[#509187]/5 dark:bg-[#509187]/20 text-[#509187] dark:text-[#5A9B92] text-[10px] font-bold shadow-sm mb-4">
@@ -973,6 +978,7 @@ export default function CohortsPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* 5. MOVING STRIP (GREEN TEAL) */}
       <div className="w-full bg-[#509187] text-white overflow-hidden py-3 font-semibold text-xs tracking-wider select-none border-t border-b border-[#36605a] relative flex items-center">
@@ -993,6 +999,7 @@ export default function CohortsPage() {
       </div>
 
       {/* 6. ONLINE COURSES & PRICING CARDS */}
+      {false && (
       <section id="pricing" className="py-24 px-4 sm:px-6 max-w-5xl mx-auto scroll-mt-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
@@ -1103,8 +1110,10 @@ export default function CohortsPage() {
         })}
         </div>
       </section>
+      )}
 
       {/* 6.5 COMPARE PROGRAMS MATRIX */}
+      {false && (
       <section className="py-20 px-4 sm:px-6 max-w-5xl mx-auto border-t border-slate-200 dark:border-slate-800">
         <div className="text-center mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#509187] dark:text-[#5A9B92]">Choose Smartly</span>
@@ -1179,8 +1188,10 @@ export default function CohortsPage() {
           </table>
         </div>
       </section>
+      )}
 
       {/* 7. SUCCESS STORIES CAROUSEL */}
+      {false && (
       <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto text-center scroll-mt-20" id="results">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -1320,6 +1331,7 @@ export default function CohortsPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* LIVE ACTIVITY FEED */}
       <div className="w-full bg-[#061d33] dark:bg-[#090f1d] py-3 text-white border-t border-b border-slate-800 overflow-hidden relative flex items-center justify-center">
