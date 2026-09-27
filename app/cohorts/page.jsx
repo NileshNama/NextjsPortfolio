@@ -346,7 +346,7 @@ const FAQS = [
   },
   {
     q: "Who are the instructors for the cohorts?",
-    a: "The cohorts are designed and taught directly by Nilesh Nama, a former BARC Scientist who secured BARC AIR 12, GATE CS AIR 202, and holds a B.Tech in Computer Science."
+    a: "The cohorts are designed and taught directly by Nilesh Nama, who secured BARC AIR 12, GATE CS AIR 202, and holds a B.Tech in Computer Science."
   },
   {
     q: "Which coaching is best for GATE CS preparation?",
