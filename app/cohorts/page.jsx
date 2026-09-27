@@ -1482,7 +1482,7 @@ export default function CohortsPage() {
       {/* 8. FREE GATE CS RESOURCES */}
       <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
-          Free <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS</span> Resources
+          Free <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Resources
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-2xl mx-auto">
           Everything you need to understand the GATE Computer Science,DA & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
