@@ -6,18 +6,7 @@ const communityImages = [
     src: "/community/meetup-1.jpg",
     caption: "Live High-Pressure Problem Solving",
   },
-  {
-    src: "/community/meetup-2.jpg",
-    caption: "Onboard reasoning discussions",
-  },
-  {
-    src: "/community/meetup-3.jpg",
-    caption: "Deep-dive interview Discussions",
-  },
-  {
-    src: "/community/meetup-4.jpg",
-    caption: "Hackathons Reveal Real Thinking",
-  },
+  
 ]
 const Community = () => {
   return (
