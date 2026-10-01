@@ -346,7 +346,7 @@ const FAQS = [
   },
   {
     q: "Who are the instructors for the cohorts?",
-    a: "The cohorts are designed and taught directly by Nilesh Nama, who secured BARC AIR 12, GATE CS AIR 202, and holds a B.Tech in Computer Science."
+    a: "The cohorts are designed and taught directly by Nilesh Nama, who Selected in BARC OCES CBT 2022, GATE CS AIR 212, and holds a B.Tech in Computer Science."
   },
   {
     q: "Which coaching is best for GATE CS preparation?",
@@ -634,7 +634,7 @@ export default function CohortsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
             <GraduationIcon className="w-4 h-4" />
-            <span>Founded by BARC AIR 12 & GATE Topper</span>
+            <span>Founded by GATE Topper & Selected in BARC OCES CBT  </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
@@ -834,7 +834,7 @@ export default function CohortsPage() {
               Learn Computer Science From a BARC AIR 12 & GATE Topper
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
-              Hi, I'm Nilesh Nama. During my preparation journey, I secured BARC AIR 12 and GATE CS AIR 202. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
+              Hi, I'm Nilesh Nama. During my preparation journey, I Selected in BARC OCES CBT 2022 and GATE CS AIR 212. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
@@ -842,7 +842,7 @@ export default function CohortsPage() {
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC OCES Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 202</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 212</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">GATE CS Exam</p>
               </div>
               <div>
