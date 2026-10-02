@@ -115,7 +115,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li><a className={navLinkClass} href="#work">Work</a></li>
           <li><a className={navLinkClass} href="#books">Books</a></li>
           <li><a className={navLinkClass} href="#cohorts">Cohorts</a></li>
-          <li><a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">NQuestions</a></li>
+          <li><a className={navLinkClass} href="https://nquestions.in" target="_blank" rel="noopener noreferrer">NQuestions</a></li>
           <li><a className={navLinkClass} href="#writing">Writing</a></li>
           <li><a className={navLinkClass} href="#talks">Talks</a></li>
         </ul>
