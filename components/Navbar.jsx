@@ -112,10 +112,10 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         >
           <li><a className={navLinkClass} href="#home">Home</a></li>
           <li><a className={navLinkClass} href="#about">About</a></li>
-          <li><a className={navLinkClass} href="#work">Work</a></li>
           <li><a className={navLinkClass} href="#books">Books</a></li>
           <li><a className={navLinkClass} href="#cohorts">Cohorts</a></li>
           <li><a className={navLinkClass} href="https://nquestions.in" target="_blank" rel="noopener noreferrer">NQuestions</a></li>
+          <li><a className={navLinkClass} href="#work">Work</a></li>
           <li><a className={navLinkClass} href="#writing">Writing</a></li>
           <li><a className={navLinkClass} href="#talks">Talks</a></li>
         </ul>
