@@ -634,7 +634,7 @@ export default function CohortsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
             <GraduationIcon className="w-4 h-4" />
-            <span>Founded by GATE Topper & Selected in BARC OCES CBT  </span>
+            <span>Founded by GATE Topper & Selected in BARC OCES   </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
@@ -809,8 +809,8 @@ export default function CohortsPage() {
           <div className="w-full md:w-1/3 text-center md:text-left relative flex flex-col items-center gap-3 justify-center">
             <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#509187] to-[#509187] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
               <div className="w-full h-full bg-slate-900 dark:bg-[#070b15] rounded-2xl flex flex-col items-center justify-center text-white relative">
-                <span className="text-4xl font-extrabold text-[#509187]">AIR 12</span>
-                <span className="text-[10px] tracking-widest text-slate-400 font-bold uppercase mt-1">BARC Scientist</span>
+                <span className="text-4xl font-extrabold text-[#509187]">Selected in</span>
+                <span className="text-[10px] tracking-widest text-slate-400 font-bold uppercase mt-1">BARC Exam</span>
                 <div className="absolute bottom-2 text-[9px] bg-[#509187]/10 text-[#509187] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
                 
                 {/* Modal Play Overlay / Permanent Play Icon */}
@@ -831,14 +831,14 @@ export default function CohortsPage() {
           <div className="w-full md:w-2/3 space-y-4">
             <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
             <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
-              Learn Computer Science From a BARC AIR 12 & GATE Topper
+              Learn Computer Science and Data Science From a BARC & GATE Topper
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
               Hi, I'm Nilesh Nama. During my preparation journey, I Selected in BARC OCES CBT 2022 and GATE CS AIR 212. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
             </p>
             <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 12</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">SELECTED IN</h4>
                 <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC OCES Exam</p>
               </div>
               <div>
