@@ -8,7 +8,7 @@ import { assets } from "@/assets/assets"
 const podcastData = [
   {
     title: "Exam Thinking for High-Stakes Interviews",
-    meta: "Podcast · YouTube",
+    meta: "Blog · NN Cohorts",
     description:
       "How interviewers evaluate reasoning, decision clarity, and follow-up depth in high-stakes technical interviews.",
     link: "https://cohorts.nileshnama.com/app-blog/3",
@@ -22,14 +22,14 @@ const podcastData = [
   },
   {
     title: "Systems Thinking in Competitive Exams",
-    meta: "Talk · Recorded",
+    meta: "Blog · NN Cohorts",
     description:
       "Why exam problems reward system-level thinking over isolated topic preparation.",
     link: "https://cohorts.nileshnama.com/app-blog/4",
   },
   {
     title: "Why Most Aspirants Misread Questions",
-    meta: "Podcast · Discussion",
+    meta: "Blog · NN Cohorts",
     description:
       "Common interpretation failures in exams and how examiners design questions to trigger them.",
     link: "https://cohorts.nileshnama.com/app-blog/6-why-most-aspirants-misread-questions?page=0",
@@ -75,7 +75,7 @@ const Podcasts = ({ isDarkMode }) => {
           </p>
 
           <h2 className="text-4xl sm:text-5xl font-semibold mb-6">
-            Podcasts & Seminars
+            Talks & Seminars
           </h2>
 
           <p className="max-w-3xl mx-auto text-gray-600 leading-8 text-base sm:text-lg">
