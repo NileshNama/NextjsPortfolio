@@ -184,7 +184,7 @@ export const cohortsData = [
     "Second-pass optimization strategies for lengthy and difficult papers",
     "Refining technical judgment and decision-making under uncertainty",
   ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/11-nn-gate-barc-concepts-pro-program",
+  enrollLink: "https://cohorts.nileshnama.com/new-courses/11-gate-barc-concepts-program",
     },
     {
         title: '1:1 Mentorship',
