@@ -44,14 +44,22 @@ const Header = () => {
 
         {/* Primary Identity */}
         <motion.h2
-          initial={{ y: -14, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-Ovo"
-        >
-          Software Engineer • Systems Educator
-        </motion.h2>
+  initial={{ y: -14, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-Ovo"
+>
+  Software Engineer ·{" "}
+  <a
+    href="https://dev.nileshnama.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline underline-offset-4 transition-all"
+  >
+    Engineering Portfolio ↗
+  </a>
+</motion.h2>
 
          {/* Proof Badges */}
 <motion.div
