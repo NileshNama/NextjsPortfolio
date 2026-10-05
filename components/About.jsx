@@ -99,7 +99,7 @@ const About = ({ isDarkMode }) => {
     
 
     <a
-      href="https://www.linkedin.com/in/nileshnama/"
+      href="https://dev.nileshnama.com/"
       target="_blank"
       rel="noopener noreferrer"
       className="
@@ -113,7 +113,7 @@ const About = ({ isDarkMode }) => {
         transition-all duration-300
       "
     >
-      LinkedIn Profile →
+      dev@nileshnama.com →
     </a>
 
   </div>
