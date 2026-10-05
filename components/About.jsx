@@ -113,7 +113,7 @@ const About = ({ isDarkMode }) => {
         transition-all duration-300
       "
     >
-      dev@nileshnama.com →
+      Engineering Portfolio →
     </a>
 
   </div>
