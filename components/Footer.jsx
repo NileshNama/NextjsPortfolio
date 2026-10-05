@@ -241,7 +241,7 @@ const Footer = ({ isDarkMode }) => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition"
               >
-                dev@nileshnama.com
+                Engineering Portfolio ↗
               </a>
             </li>
           </ul>
