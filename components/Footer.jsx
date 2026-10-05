@@ -233,6 +233,17 @@ const Footer = ({ isDarkMode }) => {
                 Writing
               </a>
             </li>
+
+            <li>
+              <a
+                href="https://dev.nileshnama.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
+                dev@nileshnama.com
+              </a>
+            </li>
           </ul>
 
         </div>
