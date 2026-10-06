@@ -924,7 +924,7 @@ export default function CohortsPage() {
 
           {/* Description */}
           <p className="max-w-2xl mx-auto mt-2 text-[11px] sm:text-xs text-slate-600 dark:text-gray-300 leading-relaxed font-normal">
-            Test series eventually run out. NQuestions doesn’t. Every GATE CS & DA enrolment includes NQuestions free—giving you unlimited topic-focused practice, complete PYQs, and AI doubt support.
+            Test series eventually run out. NQuestions doesn’t. Every enrollment includes NQuestions free—giving you unlimited topic-focused practice, complete PYQs, and AI doubt support.
           </p>
 
           {/* 4 Feature Cards Grid */}
@@ -959,7 +959,7 @@ export default function CohortsPage() {
                   All GATE CS & DA PYQs (1987–Present)
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  **Every PYQ in test mode with detailed solutions.** Covers CS, DA, EC, EE, ME & CE papers from **1987–2026**.
+                  Every PYQ in test mode with detailed solutions. Covers CS, DA, EC, EE, ME & CE papers from 1987–2026.
                 </p>
               </div>
             </div>
@@ -993,7 +993,7 @@ export default function CohortsPage() {
                   AI doubt support
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  **An AI copilot grounded in your practice history—giving you personalised explanations, not generic answers.**
+                  An AI copilot grounded in your practice history—giving you personalised explanations, not generic answers.
                 </p>
               </div>
             </div>
@@ -1023,7 +1023,7 @@ export default function CohortsPage() {
 
           {/* Footer note */}
           <p className="text-[10px] text-slate-400 dark:text-gray-400 mt-3 font-medium">
-            **Preparing for GATE CS & DA? Practise thousands of topic-wise questions for free on NQuestions.**
+            Preparing for GATE CS & DA? Practise thousands of topic-wise questions for free on NQuestions.
           </p>
 
         </div>
