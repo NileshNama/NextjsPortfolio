@@ -906,12 +906,12 @@ export default function CohortsPage() {
           {/* Top Pill Badge */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#509187]/10 border border-[#509187]/20 text-[#509187] dark:text-[#5A9B92] text-[11px] font-semibold tracking-wide mb-3">
             <CheckIcon className="w-3 h-3 text-[#509187] dark:text-[#5A9B92]" />
-            <span>Included free with Core & Elite — worth ₹999/year</span>
+            <span>Included free with GATE–BARC PYQ Core Program — worth ₹1499/year</span>
           </div>
 
           {/* Heading */}
           <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Unlimited AI-Powered Practice with{" "}
+            Unlimited Practice with{" "}
             <a
               href="https://nquestions.in"
               target="_blank"
@@ -924,7 +924,7 @@ export default function CohortsPage() {
 
           {/* Description */}
           <p className="max-w-2xl mx-auto mt-2 text-[11px] sm:text-xs text-slate-600 dark:text-gray-300 leading-relaxed font-normal">
-            A fixed test series eventually runs out. Every GATE CS & DA enrolment includes NQuestions free, so you can keep practising the exact topics holding your rank back — with all GATE CS & DA previous-year questions and AI doubt support built in.
+            Test series eventually run out. NQuestions doesn’t. Every GATE CS & DA enrolment includes NQuestions free—giving you unlimited topic-focused practice, complete PYQs, and AI doubt support.
           </p>
 
           {/* 4 Feature Cards Grid */}
@@ -939,10 +939,10 @@ export default function CohortsPage() {
                   </svg>
                 </div>
                 <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  Unlimited topic-wise practice
+                  Unlimited Topic-Wise Practice
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Drill any topic as long as you need. When the PYQs run out, the platform generates fresh exam-style questions from that same weak area.
+                  Drill any topic as long as you need. When PYQs run out, generate fresh exam-style questions from your weak areas.
                 </p>
               </div>
             </div>
@@ -956,10 +956,10 @@ export default function CohortsPage() {
                   </svg>
                 </div>
                 <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  All GATE CS & DA PYQs (2014–2026)
+                  All GATE CS & DA PYQs (1987–Present)
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Every previous-year question available in test mode with a detailed solution. CS, DA, EC, EE, ME and CE papers from 2014–2026 are covered too.
+                  **Every PYQ in test mode with detailed solutions.** Covers CS, DA, EC, EE, ME & CE papers from **1987–2026**.
                 </p>
               </div>
             </div>
@@ -976,7 +976,7 @@ export default function CohortsPage() {
                   Topic-wise skill scores
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Your skill score updates after every single question — so you get a live map of strong and weak topics, not just one mock-test percentile.
+                  Your skill score updates with every question—giving you a live map of your strengths and weaknesses, not just a mock-test percentile.
                 </p>
               </div>
             </div>
@@ -993,7 +993,7 @@ export default function CohortsPage() {
                   AI doubt support
                 </h4>
                 <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  An AI copilot grounded in your own practice history, so explanations match where you actually stand instead of being generic.
+                  **An AI copilot grounded in your practice history—giving you personalised explanations, not generic answers.**
                 </p>
               </div>
             </div>
@@ -1023,7 +1023,7 @@ export default function CohortsPage() {
 
           {/* Footer note */}
           <p className="text-[10px] text-slate-400 dark:text-gray-400 mt-3 font-medium">
-            Preparing for GATE CS & DA? Practice thousands of topic-wise questions free on NQuestions.
+            **Preparing for GATE CS & DA? Practise thousands of topic-wise questions for free on NQuestions.**
           </p>
 
         </div>
