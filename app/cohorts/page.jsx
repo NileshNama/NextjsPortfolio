@@ -725,11 +725,11 @@ export default function CohortsPage() {
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
                   </span>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">
-                    Sample GATE Session
+                    NN Sessions
                   </span>
                 </div>
                 <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92]">
-                  YouTube Embed
+                  YouTube
                 </span>
               </div>
 
@@ -747,7 +747,7 @@ export default function CohortsPage() {
               {/* Dummy Session Switcher */}
               <div className="mt-3.5 pt-2.5 border-t border-slate-200/60 dark:border-slate-800/80">
                 <p className="text-[11px] font-semibold text-slate-500 dark:text-gray-400 mb-2 text-left">
-                  Switch Dummy YouTube Session:
+                Sessions:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {DUMMY_YOUTUBE_SESSIONS.map((session) => (
