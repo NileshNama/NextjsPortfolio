@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-12 overflow-hidden"
+      className="w-full min-h-screen flex items-center justify-center pt-28 sm:pt-20 overflow-hidden"
     >
       <div className="w-11/12 max-w-4xl text-center mx-auto flex flex-col items-center gap-2 sm:gap-3 relative">
 

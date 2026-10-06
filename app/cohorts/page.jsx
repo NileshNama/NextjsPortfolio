@@ -375,8 +375,15 @@ const SIMULATED_ACTIVITY = [
   "💡 Doubt Solved: 'Decidability of equivalence of two regular grammars' answered in Mentorship thread"
 ]
 
+const DUMMY_YOUTUBE_SESSIONS = [
+  { id: "L_LUpnjgPso", title: "OS Paging & Virtual Memory" },
+  { id: "dQw4w9WgXcQ", title: "DBMS SQL & Transactions" },
+  { id: "tgbNymZ7vqY", title: "Compiler Syntax Analysis" }
+]
+
 export default function CohortsPage() {
   const [activeYearTab, setActiveYearTab] = useState("gate2027")
+  const [heroVideoId, setHeroVideoId] = useState("L_LUpnjgPso")
   const [storyIndex, setStoryIndex] = useState(0)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
   const [moreOpen, setMoreOpen] = useState(false)
@@ -511,9 +518,40 @@ export default function CohortsPage() {
     <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
       
       {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#509187] text-white text-center py-2.5 px-4 text-xs font-semibold flex items-center justify-center gap-2 border-b border-[#36605a] z-50 relative">
-        <WhatsAppIcon className="w-4 h-4 text-[#e2f3f1]" />
-        For any enquiries please WhatsApp at <a href="https://wa.me/919509923340" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-300 font-bold">+91 9509923340</a>
+      <div className="bg-[#5A9B92] text-white text-center py-2 px-3 text-[11px] sm:text-sm font-medium z-50 relative">
+        <div className="max-w-7xl mx-auto leading-tight">
+          <span className="sm:hidden">
+            ✦ Explore NN Cohorts & VebSkills Programs.
+            <a
+              href="https://nileshnama.notion.site/schedule"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2 px-2.5 py-0.5 rounded-full bg-black text-white text-[12px] font-semibold transition-all duration-300 hover:bg-black/90 hover:shadow-[0_0_18px_rgba(0,0,0,0.28)] inline-block"
+            >
+              Curriculum
+            </a>
+          </span>
+          <span className="hidden sm:inline">
+            ✦ Enrollments Now Open for NN Cohorts & VebSkills Programs.
+            <a
+              href="https://nileshnama.notion.site/schedule"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2 px-3 py-1 rounded-full bg-black text-white hover:bg-black/80 transition-all duration-300 font-semibold inline-block"
+            >
+              Curriculum
+            </a>
+            • For enquiries WhatsApp at{" "}
+            <a
+              href="https://wa.me/919509923340"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-900 font-semibold ml-1 hover:underline"
+            >
+              +91 9509923340.
+            </a>
+          </span>
+        </div>
       </div>
 
       {/* 2. CUSTOM NAVBAR */}
@@ -628,49 +666,110 @@ export default function CohortsPage() {
       </header>
 
       {/* 3. HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-20 pb-24 text-center px-4 sm:px-6">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-[#509187]/5 blur-3xl -z-10" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-8 sm:pt-10 lg:pt-12 pb-16 px-6 lg:px-[8%]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-[#509187]/5 blur-3xl -z-10" />
 
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide mb-6">
-            <GraduationIcon className="w-4 h-4" />
-            <span>Founded by GATE Topper & Selected in BARC OCES   </span>
+        <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          {/* LEFT COLUMN: TEXT DATA */}
+          <div className="lg:col-span-6 xl:col-span-7 text-left space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide">
+              <GraduationIcon className="w-4 h-4" />
+              <span>Founded by GATE Topper & Selected in BARC OCES</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-left">
+              {heroContent.title}
+            </h1>
+
+            <p className="text-base sm:text-lg lg:text-xl font-bold text-[#061d33]/90 dark:text-sky-100 tracking-tight text-left">
+              {heroContent.sub}
+            </p>
+
+            <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal text-left max-w-xl">
+              {heroContent.desc}
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-4 pt-4">
+              <a
+                href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 text-center"
+              >
+                Start PYQ Core Program →
+              </a>
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2"
+              >
+                <span>Play Full Class</span>
+                <PlayIcon className="w-4 h-4 text-[#509187]" />
+              </button>
+            </div>
+
+            <div className="flex items-center justify-start gap-2 text-xs text-slate-400 dark:text-sky-200 pt-2 font-medium">
+              <CheckIcon className="w-3.5 h-3.5 text-green-500" />
+              <span>Trusted by Serious GATE Aspirants</span>
+            </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
-            {heroContent.title}
-          </h1>
+          {/* RIGHT COLUMN: YOUTUBE VIDEO PLAYER LAYOUT */}
+          <div className="lg:col-span-6 xl:col-span-5 w-full">
+            <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800 bg-white/90 dark:bg-[#0d1527]/90 backdrop-blur p-3 sm:p-4 shadow-2xl relative">
+              {/* Header Bar */}
+              <div className="flex items-center justify-between pb-3 px-1 border-b border-slate-200/60 dark:border-slate-800/80 mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                  </span>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">
+                    Sample GATE Session
+                  </span>
+                </div>
+                <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92]">
+                  YouTube Embed
+                </span>
+              </div>
 
-          <p className="text-lg sm:text-xl md:text-2xl font-bold mt-5 text-[#061d33]/90 dark:text-sky-100 tracking-tight">
-            {heroContent.sub}
-          </p>
+              {/* YouTube Iframe Container */}
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black shadow-md border border-slate-900/50">
+                <iframe
+                  className="w-full h-full border-0"
+                  src={`https://www.youtube-nocookie.com/embed/${heroVideoId}?rel=0&modestbranding=1`}
+                  title="GATE CS Sample Session"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
 
-          <p className="max-w-2xl mx-auto mt-4 text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal">
-            {heroContent.desc}
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <a
-              href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 w-full sm:w-auto text-center"
-            >
-              Start PYQ Core Program →
-            </a>
-            <button
-              onClick={() => setIsVideoModalOpen(true)}
-              className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md w-full sm:w-auto flex items-center justify-center gap-2"
-            >
-              <span>Play Sample Class</span>
-              <PlayIcon className="w-4 h-4 text-[#509187]" />
-            </button>
+              {/* Dummy Session Switcher */}
+              <div className="mt-3.5 pt-2.5 border-t border-slate-200/60 dark:border-slate-800/80">
+                <p className="text-[11px] font-semibold text-slate-500 dark:text-gray-400 mb-2 text-left">
+                  Switch Dummy YouTube Session:
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {DUMMY_YOUTUBE_SESSIONS.map((session) => (
+                    <button
+                      key={session.id}
+                      onClick={() => setHeroVideoId(session.id)}
+                      className={`text-[11px] font-medium px-3 py-1.5 rounded-lg border transition-all text-left flex items-center gap-1.5 ${
+                        heroVideoId === session.id
+                          ? 'bg-[#509187] text-white border-[#509187] shadow-sm'
+                          : 'bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-gray-300 border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
+                      }`}
+                    >
+                      <PlayIcon className="w-3 h-3 shrink-0" />
+                      <span>{session.title}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 text-xs text-slate-400 dark:text-sky-200 mt-6 font-medium">
-            <CheckIcon className="w-3.5 h-3.5 text-green-500" />
-            <span>Trusted by Serious GATE Aspirants</span>
-          </div>
+        </div>
           {/* 3.5 DIAGNOSTIC PROGRAM SELECTOR WIDGET */}
           {false && (
           <div className="mt-12 max-w-2xl mx-auto rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-[#0d1527]/70 backdrop-blur p-6 sm:p-8 shadow-lg text-center">
@@ -766,6 +865,135 @@ export default function CohortsPage() {
             </div>
           </div>
           )}
+      </section>
+
+      {/* 3.5 NQUESTIONS FEATURE SECTION */}
+      <section className="py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="rounded-2xl sm:rounded-3xl border border-[#509187]/25 dark:border-[#5A9B92]/30 bg-gradient-to-b from-[#f2f8f7] via-[#e8f4f2] to-[#f2f8f7] dark:from-[#081514] dark:via-[#061211] dark:to-[#081514] p-4 sm:p-6 md:p-8 shadow-lg shadow-[#509187]/5 text-center relative overflow-hidden">
+          
+          {/* Top Pill Badge */}
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#509187]/10 border border-[#509187]/20 text-[#509187] dark:text-[#5A9B92] text-[11px] font-semibold tracking-wide mb-3">
+            <CheckIcon className="w-3 h-3 text-[#509187] dark:text-[#5A9B92]" />
+            <span>Included free with Core & Elite — worth ₹999/year</span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
+            Unlimited AI-Powered Practice with{" "}
+            <a
+              href="https://nquestions.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#509187] dark:text-[#5A9B92] underline underline-offset-4 decoration-[#509187]/40 hover:decoration-[#509187] transition-all"
+            >
+              NQuestions
+            </a>
+          </h2>
+
+          {/* Description */}
+          <p className="max-w-2xl mx-auto mt-2 text-[11px] sm:text-xs text-slate-600 dark:text-gray-300 leading-relaxed font-normal">
+            A fixed test series eventually runs out. Every GATE CS & DA enrolment includes NQuestions free, so you can keep practising the exact topics holding your rank back — with all GATE CS & DA previous-year questions and AI doubt support built in.
+          </p>
+
+          {/* 4 Feature Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-5 text-left">
+            
+            {/* Card 1 */}
+            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                  Unlimited topic-wise practice
+                </h4>
+                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
+                  Drill any topic as long as you need. When the PYQs run out, the platform generates fresh exam-style questions from that same weak area.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                  All GATE CS & DA PYQs (2014–2026)
+                </h4>
+                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
+                  Every previous-year question available in test mode with a detailed solution. CS, DA, EC, EE, ME and CE papers from 2014–2026 are covered too.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-6 0H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2h-2" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                  Topic-wise skill scores
+                </h4>
+                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
+                  Your skill score updates after every single question — so you get a live map of strong and weak topics, not just one mock-test percentile.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                  AI doubt support
+                </h4>
+                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
+                  An AI copilot grounded in your own practice history, so explanations match where you actually stand instead of being generic.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-5">
+            <a
+              href="https://nquestions.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#509187] hover:bg-[#3e6c65] text-white font-bold text-xs transition-all duration-300 shadow-md shadow-[#509187]/20 flex items-center justify-center gap-1.5"
+            >
+              <span>Get started with NQuestions</span>
+              <span>→</span>
+            </a>
+            <a
+              href="https://nquestions.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 font-bold text-xs transition-all duration-300 shadow-sm flex items-center justify-center"
+            >
+              Explore NQuestions
+            </a>
+          </div>
+
+          {/* Footer note */}
+          <p className="text-[10px] text-slate-400 dark:text-gray-400 mt-3 font-medium">
+            Preparing for GATE CS & DA? Practice thousands of topic-wise questions free on NQuestions.
+          </p>
+
         </div>
       </section>
 
@@ -806,29 +1034,16 @@ export default function CohortsPage() {
       {/* 4.5 INSTRUCTOR SPOTLIGHT */}
       <section className="py-20 px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/3 text-center md:text-left relative flex flex-col items-center gap-3 justify-center">
-            <div className="w-48 h-48 rounded-3xl bg-gradient-to-tr from-[#509187] to-[#509187] p-1.5 shadow-xl relative overflow-hidden group cursor-pointer" onClick={() => setIsVideoModalOpen(true)}>
-              <div className="w-full h-full bg-slate-900 dark:bg-[#070b15] rounded-2xl flex flex-col items-center justify-center text-white relative">
-                <span className="text-4xl font-extrabold text-[#509187]">Selected in</span>
-                <span className="text-[10px] tracking-widest text-slate-400 font-bold uppercase mt-1">BARC Exam</span>
-                <div className="absolute bottom-2 text-[9px] bg-[#509187]/10 text-[#509187] px-2 py-0.5 rounded-full font-bold">Nilesh Nama</div>
-                
-                {/* Modal Play Overlay / Permanent Play Icon */}
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition duration-300 group-hover:bg-black/50">
-                  <div className="w-12 h-12 rounded-full bg-[#509187] flex items-center justify-center shadow-lg text-white group-hover:scale-110 transition duration-300">
-                    <PlayIcon className="w-6 h-6 ml-0.5" />
-                  </div>
-                </div>
-              </div>
+          <div className="w-full md:w-2/5 flex items-center justify-center md:justify-start">
+            <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-2">
+              <Image
+                src={assets.profile_img}
+                alt="Nilesh Nama - Coach"
+                className="w-full max-w-[300px] h-auto rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
             </div>
-            <button
-              onClick={() => setIsVideoModalOpen(true)}
-              className="text-xs font-bold text-[#509187] hover:text-[#5A9B92] hover:underline flex items-center gap-1.5 transition"
-            >
-              <span>Watch Sample Class Video</span>
-            </button>
           </div>
-          <div className="w-full md:w-2/3 space-y-4">
+          <div className="w-full md:w-3/5 space-y-4">
             <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
             <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
               Learn Computer Science and Data Science From a BARC & GATE Topper
@@ -1333,20 +1548,6 @@ export default function CohortsPage() {
       </section>
       )}
 
-      {/* LIVE ACTIVITY FEED */}
-      <div className="w-full bg-[#061d33] dark:bg-[#090f1d] py-3 text-white border-t border-b border-slate-800 overflow-hidden relative flex items-center justify-center">
-        <div className="max-w-4xl mx-auto flex items-center gap-3 px-4 text-xs font-semibold select-none flex-wrap justify-center">
-          <span className="inline-flex items-center gap-1 bg-red-500 text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full tracking-wider animate-pulse shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
-            Live Activity
-          </span>
-          <div className="h-5 flex items-center justify-center min-w-[200px]">
-            <span className={`text-slate-200 dark:text-gray-350 text-[10px] sm:text-xs transition-opacity duration-300 ${fadeState ? "opacity-100" : "opacity-0"}`}>
-              {activeActivity}
-            </span>
-          </div>
-        </div>
-      </div>
 
       {/* YOUTUBE LECTURES SECTION */}
       <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-200 dark:border-slate-800">
