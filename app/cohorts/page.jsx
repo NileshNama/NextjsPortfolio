@@ -376,9 +376,9 @@ const SIMULATED_ACTIVITY = [
 ]
 
 const DUMMY_YOUTUBE_SESSIONS = [
-  { id: "z44z1U76dIs", title: "OS Paging & Virtual Memory" },
-  { id: "xG2e1c9m6Yw", title: "DBMS SQL & Transactions" },
-  { id: "6NtbCuU3TLy", title: "Compiler Syntax Analysis" }
+  { id: "sd2SX1wS5iM", title: "OS Paging & Virtual Memory" },
+  { id: "sd2SX1wS5iM", title: "DBMS SQL & Transactions" },
+  { id: "sd2SX1wS5iM", title: "Compiler Syntax Analysis" }
 ]
 
 export default function CohortsPage() {
@@ -703,7 +703,7 @@ export default function CohortsPage() {
                 onClick={() => setIsVideoModalOpen(true)}
                 className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2"
               >
-                <span>Play Full Class</span>
+                <span> Know the WHY </span>
                 <PlayIcon className="w-4 h-4 text-[#509187]" />
               </button>
             </div>
