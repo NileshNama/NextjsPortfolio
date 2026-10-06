@@ -376,9 +376,9 @@ const SIMULATED_ACTIVITY = [
 ]
 
 const DUMMY_YOUTUBE_SESSIONS = [
-  { id: "L_LUpnjgPso", title: "OS Paging & Virtual Memory" },
-  { id: "dQw4w9WgXcQ", title: "DBMS SQL & Transactions" },
-  { id: "tgbNymZ7vqY", title: "Compiler Syntax Analysis" }
+  { id: "AzlVYtVfO00", title: "OS Paging & Virtual Memory" },
+  { id: "AzlVYtVfO00", title: "DBMS SQL & Transactions" },
+  { id: "AzlVYtVfO00", title: "Compiler Syntax Analysis" }
 ]
 
 export default function CohortsPage() {
