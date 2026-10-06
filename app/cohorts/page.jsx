@@ -376,14 +376,14 @@ const SIMULATED_ACTIVITY = [
 ]
 
 const DUMMY_YOUTUBE_SESSIONS = [
-  { id: "L_LUpnjgPso", title: "OS Paging & Virtual Memory" },
-  { id: "dQw4w9WgXcQ", title: "DBMS SQL & Transactions" },
-  { id: "tgbNymZ7vqY", title: "Compiler Syntax Analysis" }
+  { id: "z44z1U76dIs", title: "OS Paging & Virtual Memory" },
+  { id: "xG2e1c9m6Yw", title: "DBMS SQL & Transactions" },
+  { id: "6NtbCuU3TLy", title: "Compiler Syntax Analysis" }
 ]
 
 export default function CohortsPage() {
   const [activeYearTab, setActiveYearTab] = useState("gate2027")
-  const [heroVideoId, setHeroVideoId] = useState("L_LUpnjgPso")
+  const [heroVideoId, setHeroVideoId] = useState("z44z1U76dIs")
   const [storyIndex, setStoryIndex] = useState(0)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
   const [moreOpen, setMoreOpen] = useState(false)
