@@ -17,7 +17,7 @@ const inter = Inter({
 
 
 export const metadata = {
-  title: "Nilesh Nama",
+  title: "Nilesh Nama | Engineer",
   description: "",
 };
 
