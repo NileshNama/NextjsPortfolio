@@ -375,15 +375,21 @@ const SIMULATED_ACTIVITY = [
   "💡 Doubt Solved: 'Decidability of equivalence of two regular grammars' answered in Mentorship thread"
 ]
 
+// ----------------------------------------------------
+// VIDEO CONFIGURATIONS
+// ----------------------------------------------------
+// "Know the WHY" CTA Button Modal Video ID:
+const KNOW_THE_WHY_VIDEO_ID = "sd2SX1wS5iM"
+
 const DUMMY_YOUTUBE_SESSIONS = [
   { id: "sd2SX1wS5iM", title: "OS Paging & Virtual Memory" },
-  { id: "sd2SX1wS5iM", title: "DBMS SQL & Transactions" },
-  { id: "sd2SX1wS5iM", title: "Compiler Syntax Analysis" }
+  { id: "xG2e1c9m6Yw", title: "DBMS SQL & Transactions" },
+  { id: "6NtbCuU3TLy", title: "Compiler Syntax Analysis" }
 ]
 
 export default function CohortsPage() {
   const [activeYearTab, setActiveYearTab] = useState("gate2027")
-  const [heroVideoId, setHeroVideoId] = useState("z44z1U76dIs")
+  const [heroVideoId, setHeroVideoId] = useState(DUMMY_YOUTUBE_SESSIONS[0]?.id || "z44z1U76dIs")
   const [storyIndex, setStoryIndex] = useState(0)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
   const [moreOpen, setMoreOpen] = useState(false)
@@ -398,6 +404,32 @@ export default function CohortsPage() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
   const [isYoutubeModalOpen, setIsYoutubeModalOpen] = useState(false)
   const [selectedYoutubeId, setSelectedYoutubeId] = useState(null)
+
+  // Lock background scroll when modal is open
+  useEffect(() => {
+    const isAnyModalOpen = isVideoModalOpen || isYoutubeModalOpen
+    if (isAnyModalOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [isVideoModalOpen, isYoutubeModalOpen])
+
+  // Close modal on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsVideoModalOpen(false)
+        setIsYoutubeModalOpen(false)
+        setSelectedYoutubeId(null)
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [])
 
   // Sandbox State
   const [sandboxAnswer, setSandboxAnswer] = useState(null)
@@ -703,7 +735,7 @@ export default function CohortsPage() {
                 onClick={() => setIsVideoModalOpen(true)}
                 className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2"
               >
-                <span> Know the WHY </span>
+                <span>Know the WHY</span>
                 <PlayIcon className="w-4 h-4 text-[#509187]" />
               </button>
             </div>
@@ -1860,10 +1892,16 @@ export default function CohortsPage() {
 
       {/* VIDEO PREVIEW MODAL */}
       {isVideoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
-          <div className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+        <div 
+          onClick={() => setIsVideoModalOpen(false)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300 cursor-pointer"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl cursor-default"
+          >
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0d1527]">
-              <span className="text-xs sm:text-sm font-extrabold text-[#509187] tracking-wider uppercase">Sample Lecture Preview</span>
+              <span className="text-xs sm:text-sm font-extrabold text-[#509187] tracking-wider uppercase">Know the WHY</span>
               <button
                 onClick={() => setIsVideoModalOpen(false)}
                 className="text-slate-400 hover:text-white text-lg font-black transition"
@@ -1874,8 +1912,8 @@ export default function CohortsPage() {
             <div className="relative pb-[56.25%] h-0">
               <iframe
                 className="absolute top-0 left-0 w-full h-full border-none"
-                src="https://www.youtube.com/embed/z44z1U76dIs?autoplay=1"
-                title="GATE CS Sample Class"
+                src={`https://www.youtube.com/embed/${KNOW_THE_WHY_VIDEO_ID}?autoplay=1`}
+                title="Know the WHY"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
@@ -1886,8 +1924,17 @@ export default function CohortsPage() {
 
       {/* YOUTUBE MODAL PREVIEWER */}
       {isYoutubeModalOpen && selectedYoutubeId && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300">
-          <div className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+        <div 
+          onClick={() => {
+            setIsYoutubeModalOpen(false)
+            setSelectedYoutubeId(null)
+          }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm transition-all duration-300 cursor-pointer"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-4xl bg-[#0d1527] border border-slate-800 rounded-3xl overflow-hidden shadow-2xl cursor-default"
+          >
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-[#0d1527]">
               <span className="text-xs sm:text-sm font-extrabold text-red-600 tracking-wider uppercase">YouTube Video Lecture</span>
               <button
@@ -1912,6 +1959,7 @@ export default function CohortsPage() {
           </div>
         </div>
       )}
+
 
     </div>
   )
