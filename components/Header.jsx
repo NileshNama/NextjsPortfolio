@@ -185,7 +185,15 @@ const Header = () => {
       transition={{ duration: 0.45, delay: 0.75 }}
       viewport={{ once: true }}
       href="#nn-sessions"
-      className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300"
+      onClick={(e) => {
+        e.preventDefault()
+        const el = document.getElementById('nn-sessions')
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+          window.history.pushState(null, '', window.location.pathname)
+        }
+      }}
+      className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300 cursor-pointer"
     >
       See NN Sessions
       <Image

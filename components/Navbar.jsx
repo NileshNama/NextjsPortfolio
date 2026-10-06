@@ -15,8 +15,39 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const hash = window.location.hash.replace('#', '')
+      setTimeout(() => {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+        window.history.replaceState(null, '', window.location.pathname)
+      }, 150)
+    }
+  }, [])
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault()
+    setIsMenuOpen(false)
+
+    if (typeof window !== 'undefined') {
+      if (window.location.pathname !== '/') {
+        window.location.href = `/#${targetId}`
+        return
+      }
+
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+        window.history.pushState(null, '', window.location.pathname)
+      }
+    }
+  }
+
   const navLinkClass =
-    'font-Ovo text-sm transition-opacity hover:opacity-70'
+    'font-Ovo text-sm transition-opacity hover:opacity-70 cursor-pointer'
 
   return (
     <>
@@ -89,7 +120,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         `}
       >
         {/* Logo */}
-        <a href="#home" className="flex items-center">
+        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Nilesh Nama"
@@ -110,14 +141,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             }
           `}
         >
-          <li><a className={navLinkClass} href="#home">Home</a></li>
-          <li><a className={navLinkClass} href="#about">About</a></li>
-          <li><a className={navLinkClass} href="#books">Books</a></li>
-          <li><a className={navLinkClass} href="#cohorts">NN Cohorts</a></li>
+          <li><a className={navLinkClass} href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
+          <li><a className={navLinkClass} href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
+          <li><a className={navLinkClass} href="#books" onClick={(e) => handleNavClick(e, 'books')}>Books</a></li>
+          <li><a className={navLinkClass} href="#cohorts" onClick={(e) => handleNavClick(e, 'cohorts')}>NN Cohorts</a></li>
           <li><a className={navLinkClass} href="https://nquestions.in" target="_blank" rel="noopener noreferrer">NQuestions</a></li>
-          <li><a className={navLinkClass} href="#work">Work</a></li>
-          <li><a className={navLinkClass} href="#writing">Writing</a></li>
-          <li><a className={navLinkClass} href="#talks">Talks</a></li>
+          <li><a className={navLinkClass} href="#work" onClick={(e) => handleNavClick(e, 'work')}>Work</a></li>
+          <li><a className={navLinkClass} href="#writing" onClick={(e) => handleNavClick(e, 'writing')}>Writing</a></li>
+          <li><a className={navLinkClass} href="#talks" onClick={(e) => handleNavClick(e, 'talks')}>Talks</a></li>
         </ul>
 
         {/* Right controls */}
@@ -213,20 +244,20 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <ul className="flex flex-col gap-5 pt-24 px-10 text-sm">
             {[
-              ['Home', '#home'],
-              ['About', '#about'],
-              ['Work', '#work'],
-              ['Books', '#books'],
-              ['Cohorts', '#cohorts'],
-              ['Writing', '#writing'],
-              ['Talks', '#talks'],
-              ['Contact', '#contact'],
-            ].map(([label, link]) => (
+              ['Home', 'home'],
+              ['About', 'about'],
+              ['Work', 'work'],
+              ['Books', 'books'],
+              ['Cohorts', 'cohorts'],
+              ['Writing', 'writing'],
+              ['Talks', 'talks'],
+              ['Contact', 'contact'],
+            ].map(([label, targetId]) => (
               <li key={label}>
                 <a
-                  href={link}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-Ovo hover:opacity-70 transition"
+                  href={`#${targetId}`}
+                  onClick={(e) => handleNavClick(e, targetId)}
+                  className="font-Ovo hover:opacity-70 transition cursor-pointer"
                 >
                   {label}
                 </a>

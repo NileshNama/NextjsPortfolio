@@ -28,6 +28,7 @@ const Work = ({ isDarkMode }) => {
   return (
     <>
       {/* MAIN SECTION */}
+      <div id="work">
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -164,6 +165,7 @@ const Work = ({ isDarkMode }) => {
           />
         </motion.a>
       </motion.section>
+      </div>
 
       {/* MODAL */}
       {activeBook && (
