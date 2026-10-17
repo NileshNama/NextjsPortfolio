@@ -47,7 +47,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   }
 
   const navLinkClass =
-    'font-Ovo text-sm transition-opacity hover:opacity-70 cursor-pointer'
+    'font-Ovo text-sm transition-opacity hover:opacity-70 cursor-pointer whitespace-nowrap'
 
   return (
     <>
@@ -59,8 +59,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       <nav
         className={`
           fixed top-0 left-0 w-full z-50
-          px-5 lg:px-8 xl:px-[8%] py-4
-          flex items-center justify-between
+          px-5 sm:px-8 lg:px-10 xl:px-14 py-4
+          flex items-center justify-between gap-4 lg:gap-8
           transition-all duration-300
           ${
             isScroll
@@ -70,7 +70,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         `}
       >
         {/* Logo */}
-        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
+        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center shrink-0">
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Nilesh Nama"
@@ -81,9 +81,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         {/* Desktop Nav */}
         <ul
           className={`
-            hidden md:flex items-center gap-6 lg:gap-8
-            px-10 py-2.5 rounded-full
-            transition-all duration-300
+            hidden md:flex items-center gap-5 lg:gap-6 xl:gap-7
+            px-7 py-2 rounded-full
+            transition-all duration-300 shrink-0
             ${
               isScroll
                 ? ''
@@ -94,70 +94,125 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <li><a className={navLinkClass} href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a></li>
           <li><a className={navLinkClass} href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a></li>
           <li><a className={navLinkClass} href="#books" onClick={(e) => handleNavClick(e, 'books')}>Books</a></li>
-          <li><a className={navLinkClass} href="#cohorts" onClick={(e) => handleNavClick(e, 'cohorts')}>NN Cohorts</a></li>
-          <li><a className={navLinkClass} href="https://nquestions.in" target="_blank" rel="noopener noreferrer">NQuestions</a></li>
+          <li><a className={navLinkClass} href="#cohorts" onClick={(e) => handleNavClick(e, 'cohorts')}>Cohorts</a></li>
           <li><a className={navLinkClass} href="#work" onClick={(e) => handleNavClick(e, 'work')}>Work</a></li>
           <li><a className={navLinkClass} href="#writing" onClick={(e) => handleNavClick(e, 'writing')}>Writing</a></li>
           <li><a className={navLinkClass} href="#talks" onClick={(e) => handleNavClick(e, 'talks')}>Talks</a></li>
         </ul>
 
         {/* Right controls */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+          {/* VebSkills */}
+          <motion.a
+            whileHover={{ y: -1.5 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            href="https://www.vebskills.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              hidden sm:flex items-center gap-1.5
+              px-4 py-1.5 sm:px-4.5 sm:py-2
+              rounded-full
+              border border-gray-400/60 dark:border-white/20
+              bg-white/70 dark:bg-darkTheme/60
+              backdrop-blur-xl
+              text-gray-700 dark:text-gray-200
+              font-Ovo text-xs sm:text-sm
+              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+              hover:text-black dark:hover:text-white
+              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
+              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
+              transition-[color,background-color,border-color,box-shadow] duration-200
+            "
+          >
+            <span>VebSkills</span>
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt=""
+              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </motion.a>
+
+          {/* NQuestions */}
+          <motion.a
+            whileHover={{ y: -1.5 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            href="https://nquestions.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              hidden sm:flex items-center gap-1.5
+              px-4 py-1.5 sm:px-4.5 sm:py-2
+              rounded-full
+              border border-gray-400/60 dark:border-white/20
+              bg-white/70 dark:bg-darkTheme/60
+              backdrop-blur-xl
+              text-gray-700 dark:text-gray-200
+              font-Ovo text-xs sm:text-sm
+              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+              hover:text-black dark:hover:text-white
+              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
+              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
+              transition-[color,background-color,border-color,box-shadow] duration-200
+            "
+          >
+            <span>NQuestions</span>
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt=""
+              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </motion.a>
+
+          {/* NN Cohorts */}
+          <motion.a
+            whileHover={{ y: -1.5 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+            href="https://cohorts.nileshnama.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              hidden sm:flex items-center gap-1.5
+              px-4 py-1.5 sm:px-4.5 sm:py-2
+              rounded-full
+              border border-gray-400/60 dark:border-white/20
+              bg-white/70 dark:bg-darkTheme/60
+              backdrop-blur-xl
+              text-gray-700 dark:text-gray-200
+              font-Ovo text-xs sm:text-sm
+              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
+              hover:text-black dark:hover:text-white
+              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
+              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
+              transition-[color,background-color,border-color,box-shadow] duration-200
+            "
+          >
+            <span>NN Cohorts</span>
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt=""
+              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </motion.a>
+
+          {/* Dark / Light Mode Toggle (Right side of Login) */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+            className="p-2 sm:p-2.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors cursor-pointer"
+            aria-label="Toggle Theme"
           >
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="Toggle Theme"
-              className="w-6"
+              className="w-5 sm:w-6"
             />
           </button>
-
-          {/* LMS Login (NEW) */}
-          <motion.a
-  whileHover={{
-    scale: 1.03,
-    y: -2,
-  }}
-  whileTap={{ scale: 0.98 }}
-  transition={{ duration: 0.25 }}
-  href="https://cohorts.nileshnama.com/login"
-  target="_blank"
-  rel="noopener noreferrer"
-  className=" hidden sm:flex
-    group
-    flex
-    items-center
-    gap-2
-    px-6
-    py-2.5
-    rounded-full
-    border border-gray-400/70
-    bg-white/70
-    backdrop-blur-xl
-    text-gray-700
-    font-medium
-    shadow-[0_6px_18px_rgba(0,0,0,0.05)]
-    hover:shadow-[0_18px_45px_rgba(80,145,135,0.16)]
-    hover:border-[#5A9B92]/40
-    transition-all duration-300
-  "
->
-  Login
-
-  <Image
-    src={assets.arrow_icon}
-    alt=""
-    className="
-      w-4
-      transition-transform
-      duration-300
-      group-hover:translate-x-1
-      group-hover:-translate-y-1
-    "
-  />
-</motion.a>
 
           {/* Mobile menu button */}
           <button

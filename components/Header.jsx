@@ -1,209 +1,327 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { motion } from 'motion/react'
 
 const Header = () => {
+  const manifestoText = "Building technology. Teaching engineering. Training minds to think."
+
+  const profileImages = [
+    assets.profile_img,
+    assets.profile_img_2,
+    assets.profile_img_3,
+    assets.profile_img_4,
+  ]
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % profileImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [profileImages.length])
+
+  const [charIndex, setCharIndex] = useState(manifestoText.length)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+
+  const contentRef = useRef(null)
+  const [contentHeight, setContentHeight] = useState('auto')
+
+  useEffect(() => {
+    setIsMounted(true)
+    setCharIndex(0)
+  }, [])
+
+  useEffect(() => {
+    if (!contentRef.current) return
+    const ro = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.target) {
+          setContentHeight(entry.target.offsetHeight)
+        }
+      }
+    })
+    ro.observe(contentRef.current)
+    return () => ro.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+
+    let timeout
+
+    if (!isDeleting && charIndex < manifestoText.length) {
+      // Keystroke cadence modeled after a real developer typing speed
+      const prevChar = charIndex > 0 ? manifestoText[charIndex - 1] : ''
+      let delay = 40 + Math.floor(Math.random() * 30) // 40-70ms keystrokes
+
+      if (prevChar === '.') {
+        delay = 350 + Math.floor(Math.random() * 80) // natural pause between sentences
+      } else if (prevChar === '&') {
+        delay = 110
+      } else if (prevChar === ' ') {
+        delay = 65 + Math.floor(Math.random() * 25)
+      }
+
+      timeout = setTimeout(() => {
+        setCharIndex((prev) => prev + 1)
+      }, delay)
+    } else if (!isDeleting && charIndex === manifestoText.length) {
+      // Typing completed! Cursor blinks for 20 seconds before rewriting
+      timeout = setTimeout(() => {
+        setIsDeleting(true)
+      }, 20000)
+    } else if (isDeleting && charIndex > 0) {
+      // Rapid developer backspace
+      timeout = setTimeout(() => {
+        setCharIndex((prev) => prev - 1)
+      }, 20)
+    } else if (isDeleting && charIndex === 0) {
+      // Brief pause before typing starts again
+      timeout = setTimeout(() => {
+        setIsDeleting(false)
+      }, 600)
+    }
+
+    return () => clearTimeout(timeout)
+  }, [charIndex, isDeleting, isMounted, manifestoText])
+
+  const displayManifesto = isMounted ? manifestoText.slice(0, charIndex) : manifestoText
+
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-28 sm:pt-20 overflow-hidden"
+      className="w-full min-h-screen flex items-center justify-center pt-32 pb-16 lg:pt-28 lg:pb-12 overflow-hidden"
     >
-      <div className="w-11/12 max-w-4xl text-center mx-auto flex flex-col items-center gap-2 sm:gap-3 relative">
-
+      <div className="w-full px-5 lg:px-8 xl:px-[8%] mx-auto relative">
         {/* Soft background glow */}
-        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/10 blur-3xl -z-10" />
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[20rem] h-[20rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
+        <div className="absolute -top-10 left-1/4 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-[#5A9B92]/10 blur-3xl -z-10" />
+        <div className="absolute top-20 right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
-        {/* Profile Image */}
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-          viewport={{ once: true }}
-          className="relative flex items-center justify-center mb-0"
-        >
-          <div className="absolute w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full bg-[#5A9B92]/20 blur-3xl -z-10" />
-          <Image
-            src={assets.profile_img}
-            alt="Nilesh Nama"
-            className="rounded-full w-32 sm:w-40 md:w-48 relative z-10 shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
-          />
-        </motion.div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20">
+          {/* Left side: Profile Image (3D Floating & Swing Animation) */}
+          <div className="w-full md:w-5/12 lg:w-5/12 xl:w-5/12 flex items-center justify-center lg:justify-start relative py-4 sm:py-6">
+            {/* Ambient Background Aura / Deep 3D Atmosphere */}
+            <div className="absolute w-72 h-72 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] lg:w-[460px] lg:h-[460px] xl:w-[540px] xl:h-[540px] rounded-full bg-gradient-to-tr from-[#5A9B92]/30 via-[#5A9B92]/15 to-transparent blur-3xl -z-20 pointer-events-none" />
 
-        {/* Name */}
-        <motion.h1
-          initial={{ y: -18, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.12 }}
-          viewport={{ once: true }}
-          className="text-4xl sm:text-5xl md:text-6xl font-semibold font-Ovo tracking-tight"
-        >
-          NILESH NAMA
-        </motion.h1>
+            {/* 3D Floating/Swinging Motion Container */}
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
+              viewport={{ once: true }}
+              className="relative flex flex-col items-center justify-center"
+            >
+              {/* Floating & gentle swing motion wrapper */}
+              <motion.div
+                animate={{
+                  y: [-12, 12, -12],
+                  rotate: [-1.2, 1.2, -1.2],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative group z-10"
+              >
+                {/* 3D Back Glow / Rim Light */}
+                <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-[#5A9B92]/50 via-teal-400/20 to-transparent blur-xl group-hover:blur-2xl transition-all duration-500 -z-10" />
 
-        {/* Primary Identity */}
-        <motion.h2
-  initial={{ y: -14, opacity: 0 }}
-  whileInView={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  viewport={{ once: true }}
-  className="text-base sm:text-lg text-gray-600 dark:text-gray-400 font-Ovo"
->
-  Software Engineer ·{" "}
-  <a
-    href="https://dev.nileshnama.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:underline underline-offset-4 transition-all"
-  >
-    Engineering Portfolio ↗
-  </a>
-</motion.h2>
+                {/* 3D Beveled Frame with Deep Perspective Shadow */}
+                <div
+                  className="
+                    relative rounded-full p-2 sm:p-2.5
+                    bg-gradient-to-b from-white/90 via-white/50 to-gray-200/40
+                    dark:from-white/20 dark:via-white/5 dark:to-black/50
+                    backdrop-blur-md
+                    shadow-[0_25px_60px_-10px_rgba(0,0,0,0.28),0_40px_80px_-20px_rgba(90,155,146,0.35),0_10px_25px_-5px_rgba(0,0,0,0.18)]
+                    dark:shadow-[0_30px_70px_-10px_rgba(0,0,0,0.7),0_40px_80px_-20px_rgba(90,155,146,0.25)]
+                    ring-1 ring-white/60 dark:ring-white/15
+                    transition-transform duration-300
+                  "
+                >
+                  {/* Smooth 5-Second Profile Image Carousel */}
+                  <div className="relative rounded-full w-56 sm:w-72 md:w-80 lg:w-[380px] xl:w-[440px] 2xl:w-[480px] aspect-square overflow-hidden z-10">
+                    {profileImages.map((img, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={false}
+                        animate={{
+                          opacity: currentImageIndex === idx ? 1 : 0,
+                          scale: currentImageIndex === idx ? 1 : 1.04,
+                        }}
+                        transition={{
+                          opacity: { duration: 1.2, ease: "easeInOut" },
+                          scale: { duration: 1.6, ease: "easeOut" },
+                        }}
+                        className="absolute inset-0 w-full h-full"
+                      >
+                        <Image
+                          src={img}
+                          alt="Nilesh Nama"
+                          priority={idx === 0}
+                          fill
+                          sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 380px, 480px"
+                          className="rounded-full aspect-square object-cover"
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
 
-         {/* Proof Badges */}
-<motion.div
-  initial={{ opacity: 0, y: 8 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, delay: 0.4 }}
-  viewport={{ once: true }}
-  className="flex flex-wrap items-center justify-center gap-3 mt-1"
->
-  <div
-    className="
-      min-w-[220px]
-      px-5 py-3
-      rounded-2xl
-      border border-gray-300/80
-      bg-white/80
-      backdrop-blur-sm
-      text-sm font-medium text-gray-700
-      shadow-sm
-      hover:-translate-y-1
-      hover:shadow-md
-      transition-all duration-300
-      text-center
-    "
-  >
-    GATE • BARC • PSU Focused
-  </div>
+                  {/* 3D Glass Specular Rim Inner Ring */}
+                  <div className="absolute inset-2 sm:inset-2.5 rounded-full pointer-events-none ring-1 ring-inset ring-white/70 dark:ring-white/20 z-20" />
+                </div>
 
-  <div
-    className="
-      min-w-[240px]
-      px-5 py-3
-      rounded-2xl
-      border border-gray-300/80
-      bg-white/80
-      backdrop-blur-sm
-      text-sm font-medium text-gray-700
-      shadow-sm
-      hover:-translate-y-1
-      hover:shadow-md
-      transition-all duration-300
-      text-center
-    "
-  >
-    5+ Years Exam Reasoning Research
-  </div>
+                {/* Corner Badge: Engineering Portfolio (Attached to image corner) */}
+                <motion.a
+                  href="https://dev.nileshnama.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="
+                    absolute bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-6 md:right-4 lg:bottom-6 lg:right-4 xl:bottom-8 xl:right-6
+                    z-30
+                    flex items-center gap-1.5 sm:gap-2
+                    px-3.5 py-2 sm:px-4 sm:py-2.5
+                    rounded-full
+                    border border-gray-300/80 dark:border-white/20
+                    bg-white/95 dark:bg-darkTheme/90
+                    backdrop-blur-xl
+                    text-xs sm:text-sm font-medium text-gray-800 dark:text-gray-100
+                    shadow-[0_10px_30px_rgba(0,0,0,0.18)] dark:shadow-[0_12px_30px_rgba(0,0,0,0.6)]
+                    hover:border-[#5A9B92] dark:hover:border-[#5A9B92]
+                    hover:shadow-[0_14px_35px_rgba(90,155,146,0.3)]
+                    transition-all duration-300
+                    group/badge cursor-pointer
+                    whitespace-nowrap
+                  "
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#5A9B92] animate-pulse" />
+                  <span>Engineering Portfolio</span>
+                  <span className="text-[#5A9B92] font-semibold transition-transform duration-200 ease-out group-hover/badge:translate-x-0.5 group-hover/badge:-translate-y-0.5">↗</span>
+                </motion.a>
+              </motion.div>
 
-  <div
-    className="
-      min-w-[240px]
-      px-5 py-3
-      rounded-2xl
-      border border-gray-300/80
-      bg-white/80
-      backdrop-blur-sm
-      text-sm font-medium text-gray-700
-      shadow-sm
-      hover:-translate-y-1
-      hover:shadow-md
-      transition-all duration-300
-      text-center
-    "
-  >
-    Systems-Based Learning Frameworks
-  </div>
-</motion.div>
+              {/* 3D Dynamic Cast Ground Shadow (breathes in sync with float) */}
+              <motion.div
+                animate={{
+                  scaleX: [1, 0.82, 1],
+                  scaleY: [1, 0.82, 1],
+                  opacity: [0.55, 0.28, 0.55],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="
+                  w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-6 sm:h-8
+                  rounded-[100%]
+                  bg-black/35 dark:bg-black/75
+                  blur-lg sm:blur-xl
+                  mt-3 sm:mt-4
+                  -z-10
+                "
+              />
+            </motion.div>
+          </div>
 
-        {/* Main line */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto mt-1 text-gray-600 dark:text-gray-300 leading-7 font-medium text-sm sm:text-base"
-        >
-          <p>
-            Structured reasoning for high-pressure exams and interviews. <br /> Train your mind to think clearly under pressure.
-          </p>
+          {/* Right side: Remaining Text (Pushed Right towards Login button) */}
+          <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-3 sm:gap-4 md:pl-2 lg:pl-6 xl:pl-10">
+            {/* Trust Badge (Above Name) */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.08 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm font-medium shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-white/10"
+            >
+              <div className="w-2.5 h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
+              Trusted by 5K Aspirants
+            </motion.div>
 
-          {/* Trust Badge */}
-<motion.div
-  initial={{ opacity: 0, y: 8 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5, delay: 0.2 }}
-  viewport={{ once: true }}
-  className="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm font-medium shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-white/10"
->
-  <div className="w-2.5 h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
-  Trusted by 5K Aspirants
-</motion.div>
-        </motion.div>
+            {/* Primary Identity (Above Nilesh Nama) */}
+            <motion.h2
+              initial={{ y: -12, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.12 }}
+              viewport={{ once: true }}
+              className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-Ovo tracking-wide"
+            >
+              Software Engineer · Technical Educator · Author
+            </motion.h2>
 
-       {/* CTA Section */}
-<div className="flex flex-col items-center justify-center mt-2 sm:mt-1">
-  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5">
-    {/* PRIMARY CTA */}
-    <motion.a
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.45, delay: 0.6 }}
-      viewport={{ once: true }}
-      href="https://www.nileshnama.com/cohorts"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group px-9 py-3 rounded-full bg-[#509187] text-white font-medium flex items-center gap-2 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300"
-    >
-      Explore The System
-      <Image
-        src={assets.right_arrow_white}
-        alt=""
-        className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-      />
-    </motion.a>
+            {/* Name */}
+            <motion.h1
+              initial={{ y: -18, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.16 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(4.2rem,6.8vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[0.95] whitespace-nowrap"
+            >
+              NILESH NAMA
+            </motion.h1>
 
-    {/* SECONDARY CTA */}
-    <motion.a
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.45, delay: 0.75 }}
-      viewport={{ once: true }}
-      href="#nn-sessions"
-      onClick={(e) => {
-        e.preventDefault()
-        const el = document.getElementById('nn-sessions')
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' })
-          window.history.pushState(null, '', window.location.pathname)
-        }
-      }}
-      className="group px-7 py-3 rounded-full border border-gray-400/80 text-gray-700 dark:text-gray-300 dark:border-gray-500 flex items-center gap-2 bg-white/60 dark:bg-white/5 backdrop-blur-sm shadow-sm hover:bg-gray-100 dark:hover:bg-darkHover transition-all duration-300 cursor-pointer"
-    >
-      See NN Sessions
-      <Image
-        src={assets.right_arrow_bold}
-        alt=""
-        className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-      />
-    </motion.a>
-  </div>
+            {/* Main line (Description with Smooth Height-Expanding Typing Animation) */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-2 mt-1 sm:mt-1.5"
+            >
+              {/* Smooth height-expanding wrapper: fits 1 line with no extra space, smoothly expands when wrapping to 2 lines to push text below */}
+              <motion.div
+                animate={isMounted && typeof contentHeight === 'number' ? { height: contentHeight } : { height: 'auto' }}
+                transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                className="overflow-hidden"
+              >
+                <div ref={contentRef} className="font-medium text-gray-800 dark:text-gray-200">
+                  <span>{displayManifesto}</span>
+                  <span className="inline-block w-[2px] h-[1.15em] bg-[#509187] align-middle ml-1 animate-pulse" />
+                </div>
+              </motion.div>
+              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                I build software, teach core computer science concepts, and help aspiring engineers prepare for GATE, BARC, technical interviews, and real-world engineering challenges.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                I bridge technical knowledge and practical application, helping learners reason clearly, solve systematically, and perform confidently under pressure.
+              </p>
+            </motion.div>
 
+            {/* CTA Section */}
+            <div className="w-full max-w-2xl mt-2 sm:mt-3">
+              <motion.a
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+                transition={{ duration: 0.45, delay: 0.5 }}
+                viewport={{ once: true }}
+                href="#nn-sessions"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const el = document.getElementById('nn-sessions')
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                    window.history.pushState(null, '', window.location.pathname)
+                  }
+                }}
+                className="group w-full py-3.5 px-8 rounded-full bg-[#509187] text-white font-medium flex items-center justify-center gap-2.5 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300 cursor-pointer text-center text-sm sm:text-base"
+              >
+                <span>See NN Sessions</span>
+                <Image
+                  src={assets.right_arrow_white}
+                  alt=""
+                  className="w-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                />
+              </motion.a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
