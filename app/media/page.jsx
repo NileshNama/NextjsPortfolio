@@ -191,7 +191,7 @@ const MediaPage = () => {
             onClick={(e) => e.stopPropagation()}
             className="bg-white dark:bg-darkTheme rounded-xl max-w-2xl w-full shadow-xl overflow-hidden"
           >
-            <div className="max-h-[80vh] overflow-y-auto p-8 relative font-Ovo">
+            <div className="max-h-[80vh] overflow-y-auto p-5 sm:p-8 relative font-Ovo">
               <button
                 onClick={() => setActiveItem(null)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"

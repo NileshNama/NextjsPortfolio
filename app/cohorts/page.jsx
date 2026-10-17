@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { assets } from "@/assets/assets" 
+import { assets } from "@/assets/assets"
+import Preloader from "@/components/Preloader" 
 
 // ----------------------------------------------------
 // PREMIUM INLINE SVG ICON COMPONENTS
@@ -393,6 +394,7 @@ export default function CohortsPage() {
   const [storyIndex, setStoryIndex] = useState(0)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
   const [moreOpen, setMoreOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSyllabusIdx, setActiveSyllabusIdx] = useState(0)
 
   // Quiz Recommendation States
@@ -548,6 +550,10 @@ export default function CohortsPage() {
 
   return (
     <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
+      <Preloader
+        title="NN COHORTS"
+        subtitle="GATE / BARC / PSUs Exam Preparation Hub"
+      />
       
       {/* 1. TOP ANNOUNCEMENT BAR */}
       <div className="bg-[#5A9B92] text-white text-center py-2 px-3 text-[11px] sm:text-sm font-medium z-50 relative">
@@ -587,22 +593,22 @@ export default function CohortsPage() {
       </div>
 
       {/* 2. CUSTOM NAVBAR */}
-      <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#070b15]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 lg:px-[8%] py-4 flex items-center justify-between transition-all duration-300">
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#070b15]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 lg:px-[8%] py-3.5 sm:py-4 flex items-center justify-between transition-all duration-300">
         <a href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src={assets.logo}
             alt="Nilesh Nama"
-            className="w-28 cursor-pointer dark:hidden"
+            className="w-24 sm:w-28 cursor-pointer dark:hidden"
           />
           <Image
             src={assets.logo_dark}
             alt="Nilesh Nama"
-            className="w-28 cursor-pointer hidden dark:block"
+            className="w-24 sm:w-28 cursor-pointer hidden dark:block"
           />
         </a>
 
-        <div className="flex items-center gap-6 lg:gap-8">
-          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
+        <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
+          <nav className="hidden xl:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
             <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Tracks</a>
             <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Programs</a>
             <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Interviews</a>
@@ -690,27 +696,203 @@ export default function CohortsPage() {
             href="https://cohorts.nileshnama.com/new-courses?examId=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#509187] dark:hover:bg-[#5A9B92] font-semibold px-6 py-2 rounded-full text-sm transition-all duration-300 shadow-sm shrink-0"
+            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#509187] dark:hover:bg-[#5A9B92] font-semibold px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm transition-all duration-300 shadow-sm shrink-0"
           >
             Explore Programs
           </a>
+
+          {/* Mobile & Tablet Hamburger Button */}
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="xl:hidden p-2 rounded-xl text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-slate-800/80 transition cursor-pointer"
+            aria-label="Open Navigation Menu"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </header>
 
+      {/* Backdrop for Mobile/Tablet Drawer */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 xl:hidden transition-opacity duration-300"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile/Tablet Slide-in Drawer */}
+      <div
+        className={`
+          fixed top-0 right-0 h-screen w-80 max-w-[85vw] z-50
+          bg-white dark:bg-[#070b15]
+          shadow-[-10px_0_30px_rgba(0,0,0,0.3)]
+          border-l border-slate-200 dark:border-slate-800
+          transform transition-transform duration-300 ease-out
+          flex flex-col justify-between p-6 pt-6 xl:hidden overflow-y-auto
+          ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
+        `}
+      >
+        <div className="flex flex-col gap-5">
+          <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#509187] dark:text-[#5A9B92]">
+              NN Cohorts Navigation
+            </span>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-900 dark:text-gray-400 dark:hover:text-white transition cursor-pointer text-lg font-bold"
+              aria-label="Close menu"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div className="flex flex-col gap-2 text-sm font-semibold text-slate-800 dark:text-gray-100">
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=6"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+            >
+              Tracks
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+            >
+              Programs
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=2"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+            >
+              Interviews
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=3"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+            >
+              Mentorship
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/test-series"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition"
+            >
+              Test Series
+            </a>
+            <a
+              href="https://nquestions.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-[#509187] dark:text-[#5A9B92]"
+            >
+              NQuestions (Free Practice)
+            </a>
+
+            <div className="border-t border-slate-200 dark:border-slate-800 my-2 pt-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3">
+                Resources &amp; Notes
+              </span>
+            </div>
+
+            <a
+              href="https://cohorts.nileshnama.com/quiz"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-xs"
+            >
+              CS &amp; DA Practice Quiz
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=5"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-xs"
+            >
+              Open Access Free Archives
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/books"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-xs"
+            >
+              Reference Books &amp; Guides
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/study-material"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-xs"
+            >
+              Handwritten Core Notes &amp; Formulas
+            </a>
+            <a
+              href="https://cohorts.nileshnama.com/new-courses?examId=8"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="px-3 py-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 transition text-xs"
+            >
+              GATE &amp; Interview PYQs
+            </a>
+          </div>
+        </div>
+
+        <div className="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+          <a
+            href="https://cohorts.nileshnama.com/new-courses?examId=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full bg-[#509187] hover:bg-[#3e6c65] text-white font-bold py-3 rounded-xl text-center text-xs sm:text-sm shadow-md transition"
+          >
+            Explore Programs →
+          </a>
+          <a
+            href="https://wa.me/919509923340"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/60 text-slate-800 dark:text-gray-200 font-semibold py-2.5 rounded-xl text-center text-xs transition"
+          >
+            WhatsApp Support: +91 9509923340
+          </a>
+        </div>
+      </div>
+
       {/* 3. HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-8 sm:pt-10 lg:pt-12 pb-16 px-6 lg:px-[8%]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f7fc] to-[#e2edf8] text-[#061d33] dark:from-[#070b15] dark:via-[#0d1527] dark:to-[#0f172a] dark:text-white pt-8 sm:pt-10 lg:pt-12 pb-16 px-4 sm:px-6 lg:px-[8%]">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-[#509187]/5 blur-3xl -z-10" />
 
         <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* LEFT COLUMN: TEXT DATA */}
           <div className="lg:col-span-6 xl:col-span-7 text-left space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-xs font-semibold tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-[11px] sm:text-xs font-semibold tracking-wide">
               <GraduationIcon className="w-4 h-4" />
               <span>Founded by GATE Topper & Selected in BARC OCES</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-left">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-left">
               {heroContent.title}
             </h1>
 
@@ -722,7 +904,7 @@ export default function CohortsPage() {
               {heroContent.desc}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 pt-4">
               <a
                 href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
                 target="_blank"

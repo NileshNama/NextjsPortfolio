@@ -10,7 +10,7 @@ const ovo = Ovo({
 });
 
 const inter = Inter({
-  subsets: ["latin"], weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-inter"
 });
 
@@ -19,6 +19,12 @@ const inter = Inter({
 export const metadata = {
   title: "Nilesh Nama | Engineer",
   description: "",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({ children }) {

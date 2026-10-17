@@ -37,27 +37,27 @@ const NNSessions = () => {
   return (
     <section
       id="inside-nn-sessions"
-      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#111827] text-white"
+      className="w-full px-6 md:px-[12%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#111827] text-white"
     >
       {/* Heading */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8 sm:mb-10">
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
-          className="section-label mb-3"
+          className="section-label mb-2"
         >
           METHOD
         </motion.p>
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3"
         >
           Inside NN Sessions
         </motion.h2>
 
         <motion.p
           {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
-          className="max-w-2xl mx-auto text-white/75 font-medium leading-8 text-base sm:text-lg"
+          className="max-w-2xl mx-auto text-white/75 font-medium leading-relaxed text-sm sm:text-base"
         >
           See how questions are decoded, reasoning is structured, and clarity is built under pressure.
         </motion.p>
@@ -161,24 +161,10 @@ const NNSessions = () => {
     href="https://www.youtube.com/@nileshnama"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      group
-      px-6 py-3
-      rounded-full
-      border border-white/10
-      bg-white/5
-      backdrop-blur-sm
-      text-white
-      font-medium
-      hover:bg-[#5A9B92]
-      hover:border-[#5A9B92]
-      hover:-translate-y-1
-      transition-all duration-300
-      shadow-sm
-    "
+    className="group cta-secondary px-6 py-3 text-sm border-white/20 bg-white/5 text-white hover:border-[#509187] hover:bg-[#509187]/20 hover:text-[#67b0a5]"
   >
-    Written Mastery
-    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    <span>Written Mastery</span>
+    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
       →
     </span>
   </a>
@@ -187,24 +173,10 @@ const NNSessions = () => {
     href="https://www.youtube.com/@about_interviewers"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      group
-      px-6 py-3
-      rounded-full
-      border border-white/10
-      bg-white/5
-      backdrop-blur-sm
-      text-white
-      font-medium
-      hover:bg-[#5A9B92]
-      hover:border-[#5A9B92]
-      hover:-translate-y-1
-      transition-all duration-300
-      shadow-sm
-    "
+    className="group cta-secondary px-6 py-3 text-sm border-white/20 bg-white/5 text-white hover:border-[#509187] hover:bg-[#509187]/20 hover:text-[#67b0a5]"
   >
-    Interview
-    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    <span>Interview</span>
+    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
       →
     </span>
   </a>
@@ -213,24 +185,10 @@ const NNSessions = () => {
     href="https://www.youtube.com/@numericcore"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      group
-      px-6 py-3
-      rounded-full
-      border border-white/10
-      bg-white/5
-      backdrop-blur-sm
-      text-white
-      font-medium
-      hover:bg-[#5A9B92]
-      hover:border-[#5A9B92]
-      hover:-translate-y-1
-      transition-all duration-300
-      shadow-sm
-    "
+    className="group cta-secondary px-6 py-3 text-sm border-white/20 bg-white/5 text-white hover:border-[#509187] hover:bg-[#509187]/20 hover:text-[#67b0a5]"
   >
-    Numeric Core
-    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    <span>Numeric Core</span>
+    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
       →
     </span>
   </a>
@@ -239,49 +197,22 @@ const NNSessions = () => {
     href="https://www.youtube.com/@gateailab"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      group
-      px-6 py-3
-      rounded-full
-      border border-white/10
-      bg-white/5
-      backdrop-blur-sm
-      text-white
-      font-medium
-      hover:bg-[#5A9B92]
-      hover:border-[#5A9B92]
-      hover:-translate-y-1
-      transition-all duration-300
-      shadow-sm
-    "
+    className="group cta-secondary px-6 py-3 text-sm border-white/20 bg-white/5 text-white hover:border-[#509187] hover:bg-[#509187]/20 hover:text-[#67b0a5]"
   >
-    GATE AI Data Lab
-    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    <span>GATE AI Data Lab</span>
+    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
       →
     </span>
   </a>
+
   <a
     href="https://cohorts.nileshnama.com"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      group
-      px-6 py-3
-      rounded-full
-      border border-white/10
-      bg-white/5
-      backdrop-blur-sm
-      text-white
-      font-medium
-      hover:bg-[#5A9B92]
-      hover:border-[#5A9B92]
-      hover:-translate-y-1
-      transition-all duration-300
-      shadow-sm
-    "
+    className="group cta-primary px-6 py-3 text-sm"
   >
-    Explore NN Cohorts
-    <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    <span>Explore NN Cohorts</span>
+    <span className="inline-block transition-transform duration-300 ease-out group-hover:translate-x-1.5">
       →
     </span>
   </a>

@@ -108,26 +108,26 @@ const BooksPage = () => {
 
         {/* BOOK GRID */}
         <div className="grid gap-5 grid-cols-[repeat(auto-fill,minmax(260px,1fr))]">
-          {filteredBooks.map((book) => (
+          {filteredBooks.map((book, index) => (
             <div
-              key={book.id}
+              key={book.id || book.title || index}
               onClick={() => setActiveBook(book)}
               className="aspect-square bg-cover bg-center rounded-lg relative cursor-pointer"
-              style={{ backgroundImage: `url(${book.bgImage})` }}
+              style={{ backgroundImage: `url(${typeof book.bgImage === 'object' && book.bgImage?.src ? book.bgImage.src : book.bgImage})` }}
             >
-              <div className="bg-white dark:bg-black/90 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between">
-                <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">{book.title}</h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+              <div className="bg-white dark:bg-black/90 w-11/12 sm:w-10/12 rounded-xl absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 py-2.5 sm:py-3 px-3.5 sm:px-5 flex items-center justify-between gap-2 shadow-lg backdrop-blur-md">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base truncate">{book.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 line-clamp-1">
                     {book.description}
                   </p>
                 </div>
 
-                <div className="border border-black dark:border-white/40 rounded-full w-9 aspect-square flex items-center justify-center bg-[#509187] text-white shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff]">
+                <div className="shrink-0 border border-black dark:border-white/40 rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-[#509187] text-white shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#fff]">
                   <Image
                     src={assets.send_icon}
                     alt="Open"
-                    className="w-5 dark:invert"
+                    className="w-4 sm:w-5 dark:invert"
                   />
                 </div>
               </div>
@@ -146,7 +146,7 @@ const BooksPage = () => {
             onClick={(e) => e.stopPropagation()}
             className="bg-white dark:bg-darkTheme rounded-xl max-w-2xl w-full shadow-xl overflow-hidden"
           >
-            <div className="max-h-[80vh] overflow-y-auto p-8 relative">
+            <div className="max-h-[80vh] overflow-y-auto p-5 sm:p-8 relative">
               <button
                 onClick={() => setActiveBook(null)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"

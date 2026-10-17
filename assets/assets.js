@@ -25,6 +25,7 @@ import profile_img_7 from './profile-img-7.png';
 import profile_img_8 from './profile-img-8.png';
 import profile_img_9 from './profile-img-9.png';
 import profile_img_10 from './profile-img-10.png';
+import profile_img_11 from './profile-img-11.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -44,6 +45,13 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import vebskills from './vebskills.png';
+import work_1 from './work-1.png';
+import work_2 from './work-2.png';
+import work_3 from './work-3.png';
+import work_4 from './work-4.png';
+import cohort_nn_bg from './cohort-nn-bg.png';
+import cohort_vebskills_bg from './cohort-vebskills-bg.png';
 
 export const assets = {
     user_image,
@@ -73,6 +81,7 @@ export const assets = {
     profile_img_8,
     profile_img_9,
     profile_img_10,
+    profile_img_11,
     download_icon,
     hand_icon,
     header_bg_color,
@@ -91,14 +100,21 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    vebskills,
+    work_1,
+    work_2,
+    work_3,
+    work_4,
+    cohort_nn_bg,
+    cohort_vebskills_bg
 };
 
 export const workData = [
     {
         title: 'Operating Systems',
         description: 'Concept-driven reference text for OS fundamentals.',
-        bgImage: '/work-1.png',
+        bgImage: work_1,
         volumeLabel: "Volume I",
         details: [
       "This book approaches Operating Systems as a collection of trade-offs, constraints, and architectural decisions — not a checklist of algorithms or definitions.",
@@ -106,7 +122,7 @@ export const workData = [
       "Special emphasis is placed on how examiners and interviewers evaluate OS understanding — focusing on reasoning, explanation clarity, and boundary cases.",
       "Common student misconceptions and shallow intuitions are explicitly surfaced and corrected to prevent false confidence.",
       "Examples are used selectively to strengthen mental models, not to function as a question bank.",
-      "Designed for GATE, BARC, ISRO, PSU-level interviews, and serious computer science learners seeking durable conceptual clarity.",,
+      "Designed for GATE, BARC, ISRO, PSU-level interviews, and serious computer science learners seeking durable conceptual clarity.",
     ],
     purchaseLink: "https://cohorts.nileshnama.com/books/3-operating-systems",
     sampleLink: "https://drive.google.com/drive/folders/1BjsfOorCIvMoX1TNoZRCqL8iJRBWXqmc?usp=sharing",
@@ -115,7 +131,7 @@ export const workData = [
     {
         title: 'DBMS',
         description: 'Structured reference text for database systems.',
-        bgImage: '/work-2.png',
+        bgImage: work_2,
          volumeLabel: "Volume I",
         details: [
       "This book frames DBMS as a system balancing consistency, performance, durability, and usability — not as isolated SQL commands.",
@@ -135,7 +151,7 @@ export const workData = [
     {
         title: 'Compiler Design',
         description: 'Reference series for deeper conceptual understanding.',
-        bgImage: '/work-4.png',
+        bgImage: work_4,
         volumeLabel: "Volume I",
         details: [
       "This book approaches Compiler Design as an end-to-end transformation system — not as disconnected phases like lexical analysis, parsing, or code generation.",
@@ -157,9 +173,9 @@ export const workData = [
 export const serviceData = [
     { icon: assets.web_icon, title: 'Software Engineering', description: 'Building scalable software systems with clarity.', link: 'https://cohorts.nileshnama.com/books/4-nn-proframing-standard-reference-edition-physical-combo' },
     { icon: assets.mobile_icon, title: 'Education Systems', description: 'Thinking-first learning systems for serious aspirants.', link: 'https://cohorts.nileshnama.com' },
-    { icon: assets.ui_icon, title: ' Author & Writing', description: ' Reference-level technical writing for long-term clarity.', link: '' },
-    { icon: assets.graphics_icon, title: 'Research & Systems Thinking', description: 'Research-driven frameworks for structured reasoning.', link: '' },
-    
+    { icon: assets.vebskills, title: 'VebSkills', description: 'Applied engineering ecosystem and production simulation lab.', link: 'https://www.vebskills.com/' },
+    { icon: assets.ui_icon, title: 'Author & Writing', description: 'Reference-level technical writing for long-term clarity.', link: 'https://cohorts.nileshnama.com/books' },
+    { icon: assets.graphics_icon, title: 'Research & Systems Thinking', description: 'Research-driven frameworks for structured reasoning.', link: 'https://cohorts.nileshnama.com/app-blog' },
 ]
 
 export const infoList = [
@@ -174,65 +190,131 @@ export const toolsData = [
 
 export const cohortsData = [
     {
+        id: 'gate-pyq',
+        badge: 'COHORT',
+        category: 'nn',
         title: 'GATE–BARC PYQ Core Program',
         description: 'Learn how to decode and approach PYQs systematically.',
-        bgImage: '/NileshN.png',
+        bgImage: cohort_nn_bg,
         videoId: "AzlVYtVfO00",
-  longDescription: "GATE–BARC PYQ Core Program trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
-  points: [
-    "How to identify question intent within the first 5–10 seconds",
-    "Elimination-driven reasoning and option analysis",
-    "Forward vs backward solving decisions",
-    "Concept reconstruction instead of formula recall",
-    "Mistake pattern awareness and correction",
-  ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/5-nn-gate-barc-pyq-core-program",
+        longDescription: "GATE–BARC PYQ Core Program trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
+        points: [
+            "How to identify question intent within the first 5–10 seconds",
+            "Elimination-driven reasoning and option analysis",
+            "Forward vs backward solving decisions",
+            "Concept reconstruction instead of formula recall",
+            "Mistake pattern awareness and correction",
+        ],
+        enrollLink: "https://cohorts.nileshnama.com/new-courses/5-nn-gate-barc-pyq-core-program",
     },
     {
+        id: 'gate-concepts',
+        badge: 'COHORT',
+        category: 'nn',
         title: 'GATE–BARC Concepts',
-        description: 'Build system-level conceptual depth for interviews and difficult questions.',
-        bgImage: '/NileshN.png',
+        description: 'System-level conceptual depth for high-pressure exams.',
+        bgImage: cohort_nn_bg,
         videoId: "sd2SX1wS5iM",
-  longDescription: "GATE–BARC Concepts Program is designed for aspirants who already understand fundamental concepts and standard problem-solving approaches but struggle with consistency, depth, and handling examiner-level twists. This program moves beyond surface-level preparation and develops structured, high-reliability conceptual thinking systems required to solve difficult, deceptive, and multi-layered GATE and BARC questions.",
-  points: [
-    "Advanced conceptual interpretation and structured problem-solving frameworks",
-    "Handling deceptive, multi-concept, and examiner-twisted questions",
-    "Identifying false assumptions and premature conclusions during solving",
-    "Balancing speed, accuracy, and mental clarity under pressure",
-    "Second-pass optimization strategies for lengthy and difficult papers",
-    "Refining technical judgment and decision-making under uncertainty",
-  ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/11-gate-barc-concepts-program",
+        longDescription: "GATE–BARC Concepts Program is designed for aspirants who already understand fundamental concepts and standard problem-solving approaches but struggle with consistency, depth, and handling examiner-level twists. This program moves beyond surface-level preparation and develops structured, high-reliability conceptual thinking systems required to solve difficult, deceptive, and multi-layered GATE and BARC questions.",
+        points: [
+            "Advanced conceptual interpretation and structured problem-solving frameworks",
+            "Handling deceptive, multi-concept, and examiner-twisted questions",
+            "Identifying false assumptions and premature conclusions during solving",
+            "Balancing speed, accuracy, and mental clarity under pressure",
+            "Second-pass optimization strategies for lengthy and difficult papers",
+            "Refining technical judgment and decision-making under uncertainty",
+        ],
+        enrollLink: "https://cohorts.nileshnama.com/new-courses/11-gate-barc-concepts-program",
     },
     {
+        id: 'mentorship',
+        badge: 'COHORT',
+        category: 'nn',
         title: '1:1 Mentorship',
-        description: 'GATE–BARC Exam execution Rank Accelerator Program guide',
-        bgImage: '/NileshN.png',
+        description: 'GATE–BARC exam execution & rank acceleration guide.',
+        bgImage: cohort_nn_bg,
         videoId: "AR3dbS4iPeM",
-  longDescription: "1:1 Mentorship Cohort is a pressure-oriented mentorship program designed for aspirants who already know the syllabus but struggle to execute effectively under real exam conditions. The focus is not on revision alone, but on transforming existing knowledge into accurate decisions, disciplined thinking, and stable performance during the final phase of GATE, BARC, and technical examinations.",
-  points: [
-    "Question-first training focused on attempt vs skip decisions",
-    "Time-pressure handling and elimination-heavy problem solving",
-    "Identification of examiner traps and false confidence patterns",
-    "Second-pass optimization and risk control strategies",
-    "Daily thinking drills instead of passive revision",
-  ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/8-gate-barc-mentorship-program",
+        longDescription: "1:1 Mentorship Cohort is a pressure-oriented mentorship program designed for aspirants who already know the syllabus but struggle to execute effectively under real exam conditions. The focus is not on revision alone, but on transforming existing knowledge into accurate decisions, disciplined thinking, and stable performance during the final phase of GATE, BARC, and technical examinations.",
+        points: [
+            "Question-first training focused on attempt vs skip decisions",
+            "Time-pressure handling and elimination-heavy problem solving",
+            "Identification of examiner traps and false confidence patterns",
+            "Second-pass optimization and risk control strategies",
+            "Daily thinking drills instead of passive revision",
+        ],
+        enrollLink: "https://cohorts.nileshnama.com/new-courses/8-gate-barc-mentorship-program",
     },
     {
+        id: 'youtube-sessions',
+        badge: 'COHORT',
+        category: 'nn',
         title: 'All Youtube Sessions (Open Access)',
-        description: 'Deep Thinking System for GATE & BARC Exam',
-        bgImage: '/NileshN.png',
+        description: 'Deep thinking systems library for GATE & BARC prep.',
+        bgImage: cohort_nn_bg,
         videoId: "bmBnSE-v0wQ",
-  longDescription: "**All YouTube Sessions (Open Access)** brings together all NN Cohorts YouTube sessions in one structured, distraction-free learning space. Instead of searching through playlists, recommendations, and unrelated content, access the complete collection of sessions in one place—organized for focused and consistent preparation. Designed for aspirants who want to learn at their own pace, revisit important concepts, solve questions, and build stronger exam-oriented thinking without the distractions of the YouTube feed.",
-  points: [
-    "All Sessions in One Place — Access the complete NN Cohorts YouTube learning library from a single structured space.",
-    "Distraction-Free Learning — Learn without recommendations, Shorts, ads, or endless scrolling pulling you away from your preparation.",
-    "Structured & Organized — Find sessions systematically instead of searching through multiple playlists and videos.",
-    "Learn at Your Own Pace — Pause, revisit, revise, and continue sessions whenever it fits your preparation.",
-    "Exam-Focused Learning — Build concepts, solve questions, and develop the thinking approach needed for GATE, BARC, and other technical exams.",
-  ],
-  enrollLink: "https://cohorts.nileshnama.com/new-courses/15-all-youtube-sessions-open-access",
+        longDescription: "**All YouTube Sessions (Open Access)** brings together all NN Cohorts YouTube sessions in one structured, distraction-free learning space. Instead of searching through playlists, recommendations, and unrelated content, access the complete collection of sessions in one place—organized for focused and consistent preparation. Designed for aspirants who want to learn at their own pace, revisit important concepts, solve questions, and build stronger exam-oriented thinking without the distractions of the YouTube feed.",
+        points: [
+            "All Sessions in One Place — Access the complete NN Cohorts YouTube learning library from a single structured space.",
+            "Distraction-Free Learning — Learn without recommendations, Shorts, ads, or endless scrolling pulling you away from your preparation.",
+            "Structured & Organized — Find sessions systematically instead of searching through multiple playlists and videos.",
+            "Learn at Your Own Pace — Pause, revisit, revise, and continue sessions whenever it fits your preparation.",
+            "Exam-Focused Learning — Build concepts, solve questions, and develop the thinking approach needed for GATE, BARC, and other technical exams.",
+        ],
+        enrollLink: "https://cohorts.nileshnama.com/new-courses/15-all-youtube-sessions-open-access",
+    },
+    {
+        id: 'vebskills-architecture',
+        badge: 'VEBSKILLS',
+        category: 'vebskills',
+        title: 'Production Software Architecture',
+        description: 'Distributed systems, Redis caching, microservices & Docker.',
+        bgImage: cohort_vebskills_bg,
+        videoId: null,
+        longDescription: "Production Software Architecture is VebSkills' flagship applied engineering track designed to bridge the gap between tutorial coding and enterprise systems. Master distributed caching strategies, message queues, containerization, and backend scalability for senior technical interviews.",
+        points: [
+            "Distributed caching with Redis & intelligent invalidation strategies",
+            "Microservices communication: REST vs gRPC vs message brokers",
+            "Database indexing, query planning, and connection pooling at scale",
+            "Docker multi-stage containerization & production deployment",
+            "System design defense rounds for Senior SDE evaluations",
+        ],
+        enrollLink: "https://www.vebskills.com/",
+    },
+    {
+        id: 'vebskills-fullstack',
+        badge: 'VEBSKILLS',
+        category: 'vebskills',
+        title: 'Full-Stack Systems Engineering',
+        description: 'Type-safe architectures, robust state & CI/CD pipelines.',
+        bgImage: cohort_vebskills_bg,
+        videoId: null,
+        longDescription: "Full-Stack Systems Engineering trains engineers to architect end-to-end applications to enterprise standards. Build production Next.js & React architectures with strict type safety, zero-waterfall data fetching, and automated GitHub Actions pipelines.",
+        points: [
+            "Enterprise Next.js full-stack system architecture",
+            "Strict type-safe contracts with schema validation",
+            "Continuous integration & deployment with GitHub Actions",
+            "Security fundamentals: OAuth2, rate limiting, and CORS",
+            "Rigorous code reviews & software design patterns",
+        ],
+        enrollLink: "https://www.vebskills.com/",
+    },
+    {
+        id: 'vebskills-opensource',
+        badge: 'VEBSKILLS',
+        category: 'vebskills',
+        title: 'Open Source & System Defense',
+        description: 'Real open-source PRs, code reviews & proof-of-work.',
+        bgImage: cohort_vebskills_bg,
+        videoId: null,
+        longDescription: "Open Source & System Defense develops the habits, technical judgment, and verifiable proof-of-work required to pass senior engineering evaluations. Contribute to real open-source repositories, submit production-ready pull requests, and defend architectural trade-offs.",
+        points: [
+            "Navigating large-scale open-source codebases and tracing dependencies",
+            "Submitting high-quality PRs with comprehensive test suites",
+            "Line-by-line code reviews focused on clean code & maintainability",
+            "Building a publicly verifiable engineering portfolio on GitHub",
+            "Architectural defense rounds for product engineering companies",
+        ],
+        enrollLink: "https://www.vebskills.com/",
     },
 ]
 export const writingData = [

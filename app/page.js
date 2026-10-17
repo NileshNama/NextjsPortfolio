@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
+import Preloader from "../components/Preloader";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
@@ -13,15 +14,10 @@ import Writing from "../components/Writing";
 import Podcasts from "../components/Podcasts";
 import Community from "../components/Community"
 import Impact from "../components/Impact"
+import FeaturedWork from "../components/FeaturedWork"
 import Philosophy from "../components/Philosophy"
 import Journey from "../components/Journey"
-
-
-
-
-
-
-
+import FeaturedPrograms from "../components/FeaturedPrograms"
 
 export default function Home() {
 
@@ -48,12 +44,15 @@ export default function Home() {
 
   return (
     <>
+    <Preloader isDarkMode={isDarkMode} />
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} isHidden={isModalOpen}/>
     <Header isDarkMode={isDarkMode} />
-    <Organizations isDarkMode={isDarkMode} onModalToggle={setIsModalOpen} />
+    <Organizations isDarkMode={isDarkMode} />
     <About isDarkMode={isDarkMode} />
+    <FeaturedWork isDarkMode={isDarkMode} />
     <Philosophy isDarkMode={isDarkMode} />
     <Journey isDarkMode={isDarkMode} />
+    <FeaturedPrograms isDarkMode={isDarkMode} onModalToggle={setIsModalOpen} />
     <Services isDarkMode={isDarkMode} />
     <Work isDarkMode={isDarkMode} />
     <Cohorts isDarkMode={isDarkMode} />

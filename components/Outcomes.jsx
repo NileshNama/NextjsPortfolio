@@ -31,27 +31,27 @@ const Outcomes = () => {
   return (
     <section
       id="outcomes"
-      className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20"
+      className="w-full px-[8%] pt-6 sm:pt-8 md:pt-10 pb-10 sm:pb-12 md:pb-14 scroll-mt-20"
     >
       {/* Section Heading */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8 sm:mb-10">
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
-          className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3"
+          className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-2"
         >
           NN Cohorts · Systems
         </motion.p>
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight"
         >
           What Changes Inside NN Cohorts
         </motion.h2>
 
         <motion.p
           {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
-          className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg"
+          className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
         >
           What Students Learn to Do
         </motion.p>

@@ -30,9 +30,10 @@ const SubpageHeader = () => {
 
       <a
         href="/"
-        className="font-Ovo text-sm border border-gray-400/80 dark:border-gray-500 rounded-full px-5 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300"
+        className="group cta-secondary px-5 py-2 text-xs sm:text-sm font-Ovo"
       >
-        ← Back to Home
+        <span className="transition-transform duration-300 ease-out group-hover:-translate-x-1">←</span>
+        <span>Back to Home</span>
       </a>
     </header>
   )

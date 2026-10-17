@@ -10,11 +10,9 @@ const Header = () => {
 
   const profileImages = [
     assets.profile_img_2,
-    assets.profile_img,
+    assets.profile_img_11,
     assets.profile_img_3,
     assets.profile_img_4,
-    assets.profile_img_5,
-    assets.profile_img_7,
     assets.profile_img_8,
     assets.profile_img_9,
     assets.profile_img_10,
@@ -271,7 +269,7 @@ const Header = () => {
               initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.32, ease: EASINGS.smoothOut }}
-              className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[clamp(4.2rem,6.8vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[1] whitespace-nowrap"
+              className="text-[clamp(1.85rem,7.5vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[1] whitespace-nowrap"
             >
               NILESH NAMA
             </motion.h1>
@@ -304,8 +302,9 @@ const Header = () => {
               </div>
             </motion.div>
 
-            {/* CTA Section */}
-            <div className="w-full max-w-2xl mt-1.5 sm:mt-3 mb-1 sm:mb-0">
+            {/* CTA Section (2 Buttons: NN Sessions + Featured Engineering Work) */}
+            <div className="w-full max-w-2xl mt-1.5 sm:mt-3 mb-1 sm:mb-0 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+              {/* Button 1: Dive Into the NN Sessions */}
               <motion.a
                 initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -321,14 +320,36 @@ const Header = () => {
                     window.history.pushState(null, '', window.location.pathname)
                   }
                 }}
-                className="group w-full py-3 sm:py-3.5 px-6 sm:px-8 rounded-full bg-[#509187] text-white font-medium flex items-center justify-center gap-2.5 shadow-[0_12px_28px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300 cursor-pointer text-center text-xs sm:text-base"
+                className="group flex-1 w-full py-3 sm:py-3.5 px-4 sm:px-6 cta-primary text-center text-xs sm:text-sm md:text-[15px] focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
               >
                 <span>Dive Into the NN Sessions</span>
                 <Image
                   src={assets.right_arrow_white}
                   alt=""
-                  className="w-3.5 sm:w-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  className="w-3.5 sm:w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
                 />
+              </motion.a>
+
+              {/* Button 2: Featured Engineering Work */}
+              <motion.a
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={shouldReduceMotion ? undefined : { y: -2.5, scale: 1.01 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
+                transition={{ duration: 0.45, delay: 0.62, ease: EASINGS.smoothOut }}
+                href="#featured-work"
+                onClick={(e) => {
+                  e.preventDefault()
+                  const el = document.getElementById('featured-work')
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                    window.history.pushState(null, '', window.location.pathname)
+                  }
+                }}
+                className="group flex-1 w-full py-3 sm:py-3.5 px-4 sm:px-6 cta-secondary text-center text-xs sm:text-sm md:text-[15px] focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
+              >
+                <span>Featured Engineering Work</span>
+                <span className="text-sm transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-[#509187] dark:text-[#67b0a5]">→</span>
               </motion.a>
             </div>
 

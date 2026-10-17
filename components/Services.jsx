@@ -70,17 +70,17 @@ const SERVICE_DETAILS = {
 
   "VebSkills": {
     intro:
-      "I develop structured reasoning frameworks to analyze problems, decisions, and systems under constraints.",
+      "A hands-on engineering ecosystem and production simulation platform designed to bridge the gap between academic theory and real-world software delivery.",
     bullets: [
-      "Question classification and decision-bucket frameworks",
-      "Mistake-pattern analysis and examiner psychology models",
-      "System decomposition and abstraction control techniques",
-      "Research-backed thinking tools for exams and engineering",
+      "Simulated production repositories, automated code reviews, and CI/CD pipelines",
+      "Full-stack architectures across React, Node.js, Docker, and PostgreSQL",
+      "Scenario-based debugging labs, concurrency puzzles, and database profiling",
+      "System design implementation and real-world deployment workflows",
     ],
     closing:
-      "This work sits at the intersection of research, engineering, and education — focused on how decisions are actually made.",
-    cta: "Explore thinking frameworks →",
-    link: "https://cohorts.nileshnama.com/app-blog",
+      "VebSkills trains engineers to build, scale, and maintain production systems under real-world constraints.",
+    cta: "Visit VebSkills →",
+    link: "https://www.vebskills.com/",
   },
 }
 
@@ -149,7 +149,7 @@ const Services = () => {
                 rounded-[2rem]
                 border border-black/10 dark:border-white/10
                 bg-white dark:bg-[#111827]
-                p-8
+                p-6 sm:p-8
                 cursor-pointer
                 transition-all duration-300 ease-out
                 shadow-[0_10px_40px_rgba(0,0,0,0.08)]
@@ -189,9 +189,11 @@ const Services = () => {
               ">
                 <Image
                   src={service.icon}
-                  alt=""
+                  alt={service.title}
+                  width={64}
+                  height={64}
                   className="
-                    w-16
+                    w-16 h-16 object-contain
                     transition-transform duration-500 ease-out
                     group-hover:scale-110
                   "
@@ -248,7 +250,7 @@ const Services = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white dark:bg-[#111827] rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative shadow-2xl border border-black/10 dark:border-white/10"
+            className="bg-white dark:bg-[#111827] rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-5 sm:p-8 relative shadow-2xl border border-black/10 dark:border-white/10"
           >
             <button
               onClick={() => setActiveService(null)}
@@ -257,7 +259,7 @@ const Services = () => {
               ✕
             </button>
 
-            <h3 className="text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
+            <h3 className="text-2xl sm:text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
               {activeService.title}
             </h3>
 
@@ -279,9 +281,10 @@ const Services = () => {
               href={details.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 mt-8 rounded-full bg-[#509187] text-white py-3 px-6 text-sm font-medium hover:opacity-95 transition-transform hover:scale-[1.02]"
+              className="group cta-primary mt-8 py-3.5 px-7 text-sm sm:text-base"
             >
-              {details.cta}
+              <span>{details.cta}</span>
+              <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
             </a>
           </div>
         </div>

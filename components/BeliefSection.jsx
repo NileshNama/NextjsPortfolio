@@ -12,7 +12,7 @@ const BeliefSection = () => {
         relative overflow-hidden
         w-full
         px-6 md:px-[8%]
-        py-20 sm:py-24 md:py-28
+        py-10 sm:py-12 md:py-14
         bg-[#0b1120]
         text-white
         scroll-mt-20
@@ -63,7 +63,7 @@ const BeliefSection = () => {
             tracking-[0.3em]
             text-[#5A9B92]
             font-semibold
-            mb-6
+            mb-3 sm:mb-4
           "
         >
           Core Belief · Method
@@ -73,13 +73,13 @@ const BeliefSection = () => {
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="
-            text-4xl
-            sm:text-5xl
-            md:text-6xl
-            lg:text-7xl
+            text-3xl
+            sm:text-4xl
+            md:text-5xl
+            lg:text-6xl
             font-semibold
             font-Ovo
-            leading-[1.08]
+            leading-[1.12]
             tracking-tight
             max-w-5xl
             mx-auto
@@ -98,7 +98,7 @@ const BeliefSection = () => {
           className="
             max-w-3xl
             mx-auto
-            mt-10
+            mt-5 sm:mt-6
             text-base
             sm:text-lg
             md:text-xl

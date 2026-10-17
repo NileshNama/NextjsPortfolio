@@ -36,23 +36,23 @@ const steps = [
 
 const QuestionFramework = () => {
   return (
-    <section id="framework" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#0f172a] text-white">
+    <section id="framework" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#0f172a] text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5A9B92] font-semibold mb-4">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5A9B92] font-semibold mb-2">
           QUESTION DECODING FRAMEWORK
         </p>
-        <p className="section-label mb-3">THINKING MODELS</p>
-        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+        <p className="section-label mb-2">THINKING MODELS</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
           How NN Approaches Questions
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-6 text-gray-300 dark:text-gray-400 leading-relaxed">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           A repeatable thinking pipeline that makes the process visible, teachable, and more effective under pressure.
         </p>
       </motion.div>

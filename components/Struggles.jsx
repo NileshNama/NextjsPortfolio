@@ -23,25 +23,25 @@ const painPoints = [
 const Struggles = () => {
   return (
     <section
-  id="struggles"
-  className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#111827] text-white"
->
+      id="struggles"
+      className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#111827] text-white"
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-2">
           Why Many Aspirants Stay Stuck
         </p>
-        <p className="section-label mb-3">REASONING</p>
-        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+        <p className="section-label mb-2">REASONING</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
           Why Most Aspirants Struggle
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-6 text-gray-300 dark:text-gray-400 leading-relaxed">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           The problem is not effort. The problem is unclear thinking under pressure.
         </p>
       </motion.div>

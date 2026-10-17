@@ -44,7 +44,7 @@ const Footer = ({ isDarkMode }) => {
         "
       />
 
-      <div className="relative px-6 md:px-[10%] py-20 sm:py-24 md:py-28">
+      <div className="relative px-6 md:px-[10%] pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12">
 
         {/* Main Statement */}
         <motion.div
@@ -94,44 +94,43 @@ const Footer = ({ isDarkMode }) => {
           </p>
 
           {/* CTA */}
-          <motion.a
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            href="https://cohorts.nileshnama.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              inline-flex
-              items-center
-              gap-3
-              mt-12
-              px-8
-              py-4
-              rounded-full
-              bg-[#5A9B92]
-              text-white
-              text-sm
-              sm:text-base
-              font-medium
-              transition-all
-              duration-300
-              hover:scale-[1.02]
-              hover:shadow-[0_18px_50px_rgba(90,155,146,0.25)]
-            "
-          >
-            Explore NN Cohorts
+          <div className="w-full flex flex-wrap items-center justify-center gap-4 sm:gap-5 mt-12">
+            <motion.a
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://cohorts.nileshnama.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cta-primary px-7 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
+            >
+              <span>Explore NN Cohorts</span>
+              <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
+                →
+              </span>
+            </motion.a>
 
-            <span className="
-              transition-transform
-              duration-300
-              group-hover:translate-x-1
-            ">
-              →
-            </span>
-          </motion.a>
-
+            <motion.a
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.28, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://www.vebskills.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group cta-primary px-7 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
+            >
+              <span>Explore VebSkills</span>
+              <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
+                →
+              </span>
+            </motion.a>
+          </div>
         </motion.div>
 
         {/* Divider */}
@@ -229,12 +228,45 @@ const Footer = ({ isDarkMode }) => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center mt-16 text-xs text-white/30">
-          © Nilesh Nama. All rights reserved.
+        <div className="text-center mt-12 sm:mt-16 text-xs text-white/40 tracking-wider">
+          © {new Date().getFullYear()} Nilesh Nama. All rights reserved.
+        </div>
+
+        {/* Giant Nilesh Brand Watermark (Aligned in-line with above content width, no clipping) */}
+        <div className="w-full mt-10 sm:mt-14 select-none pointer-events-none flex justify-center items-center">
+          <svg
+            viewBox="0 0 1000 185"
+            className="w-full h-auto overflow-visible block"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="nileshWatermarkGrad" x1="0" y1="0" x2="0" y2="100%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.32" />
+                <stop offset="48%" stopColor="#ffffff" stopOpacity="0.12" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.01" />
+              </linearGradient>
+            </defs>
+            <text
+              x="50%"
+              y="152"
+              textAnchor="middle"
+              textLength="1000"
+              lengthAdjust="spacing"
+              fill="url(#nileshWatermarkGrad)"
+              style={{
+                fontFamily: 'var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontWeight: 900,
+              }}
+              fontSize="195"
+            >
+              NILESH
+            </text>
+          </svg>
         </div>
 
       </div>
     </footer>
+
   )
 }
 

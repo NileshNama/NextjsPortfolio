@@ -135,26 +135,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
             rel="noopener noreferrer"
             className="
               group
-              hidden sm:flex items-center gap-1.5
+              hidden xl:flex items-center gap-1.5
               px-4 py-1.5 sm:px-4.5 sm:py-2
               rounded-full
-              border border-gray-400/60 dark:border-white/20
-              bg-white/70 dark:bg-darkTheme/60
+              border border-gray-300/80 dark:border-white/15
+              bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm
-              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
-              hover:text-black dark:hover:text-white
-              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
-              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
-              transition-[color,background-color,border-color,box-shadow] duration-200
+              font-Ovo text-xs sm:text-sm font-medium
+              shadow-sm
+              hover:text-[#386b62] dark:hover:text-[#67b0a5]
+              hover:border-[#509187] dark:hover:border-[#509187]
+              hover:bg-[#509187]/10 dark:hover:bg-[#509187]/20
+              hover:shadow-[0_8px_20px_rgba(80,145,135,0.2)]
+              transition-all duration-300
             "
           >
             <span>VebSkills</span>
             <Image
               src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
               alt=""
-              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="w-3 h-3 object-contain transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </motion.a>
 
@@ -168,26 +169,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
             rel="noopener noreferrer"
             className="
               group
-              hidden sm:flex items-center gap-1.5
+              hidden 2xl:flex items-center gap-1.5
               px-4 py-1.5 sm:px-4.5 sm:py-2
               rounded-full
-              border border-gray-400/60 dark:border-white/20
-              bg-white/70 dark:bg-darkTheme/60
+              border border-gray-300/80 dark:border-white/15
+              bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm
-              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
-              hover:text-black dark:hover:text-white
-              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
-              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
-              transition-[color,background-color,border-color,box-shadow] duration-200
+              font-Ovo text-xs sm:text-sm font-medium
+              shadow-sm
+              hover:text-[#386b62] dark:hover:text-[#67b0a5]
+              hover:border-[#509187] dark:hover:border-[#509187]
+              hover:bg-[#509187]/10 dark:hover:bg-[#509187]/20
+              hover:shadow-[0_8px_20px_rgba(80,145,135,0.2)]
+              transition-all duration-300
             "
           >
             <span>NQuestions</span>
             <Image
               src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
               alt=""
-              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="w-3 h-3 object-contain transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </motion.a>
 
@@ -201,26 +203,27 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
             rel="noopener noreferrer"
             className="
               group
-              hidden sm:flex items-center gap-1.5
+              hidden lg:flex items-center gap-1.5
               px-4 py-1.5 sm:px-4.5 sm:py-2
               rounded-full
-              border border-gray-400/60 dark:border-white/20
-              bg-white/70 dark:bg-darkTheme/60
+              border border-gray-300/80 dark:border-white/15
+              bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm
-              shadow-[0_2px_8px_rgba(0,0,0,0.04)]
-              hover:text-black dark:hover:text-white
-              hover:border-[#5A9B92]/70 dark:hover:border-[#5A9B92]/70
-              hover:shadow-[0_6px_20px_rgba(90,155,146,0.15)]
-              transition-[color,background-color,border-color,box-shadow] duration-200
+              font-Ovo text-xs sm:text-sm font-medium
+              shadow-sm
+              hover:text-[#386b62] dark:hover:text-[#67b0a5]
+              hover:border-[#509187] dark:hover:border-[#509187]
+              hover:bg-[#509187]/10 dark:hover:bg-[#509187]/20
+              hover:shadow-[0_8px_20px_rgba(80,145,135,0.2)]
+              transition-all duration-300
             "
           >
             <span>NN Cohorts</span>
             <Image
               src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
               alt=""
-              className="w-3 h-3 object-contain transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="w-3 h-3 object-contain transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </motion.a>
 

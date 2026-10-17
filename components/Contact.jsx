@@ -93,7 +93,7 @@ const Contact = () => {
             border border-gray-200/70 dark:border-white/10
             bg-white/70 dark:bg-white/5
             backdrop-blur-xl
-            p-8 sm:p-10
+            p-5 sm:p-8 md:p-10
             shadow-[0_10px_40px_rgba(0,0,0,0.04)]
           "
         >
@@ -187,7 +187,7 @@ const Contact = () => {
             border border-gray-200/70 dark:border-white/10
             bg-white/75 dark:bg-white/5
             backdrop-blur-xl
-            p-8 sm:p-10
+            p-5 sm:p-8 md:p-10
             shadow-[0_10px_40px_rgba(0,0,0,0.04)]
           "
         >
@@ -276,24 +276,10 @@ const Contact = () => {
                 scale: 0.985,
               }}
               type="submit"
-              className="
-                mt-8
-                group
-                w-full
-                rounded-2xl
-                bg-[#509187]
-                text-white
-                py-4
-                font-medium
-                flex items-center justify-center gap-3
-                hover:shadow-[0_10px_30px_rgba(80,145,135,0.35)]
-                focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#509187] focus-visible:outline-none
-                transition-all duration-300
-              "
+              className="mt-8 group w-full cta-primary py-4 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#509187]"
             >
-              Send Message
-
-              <span className="group-hover:translate-x-1 transition">
+              <span>Send Message</span>
+              <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
                 →
               </span>
             </motion.button>

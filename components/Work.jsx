@@ -78,7 +78,7 @@ const Work = ({ isDarkMode }) => {
                   overflow-hidden
                   rounded-[2rem]
                   border border-black/10 dark:border-white/10
-                  bg-white dark:bg-[#111827]
+                  bg-[#BFEBE5] dark:bg-[#0c3630]
                   shadow-[0_20px_60px_rgba(0,0,0,0.14)]
                   hover:shadow-[0_28px_80px_rgba(90,155,146,0.2)]
                   hover:border-[#5A9B92]/40
@@ -89,12 +89,13 @@ const Work = ({ isDarkMode }) => {
                 "
               >
                 {/* Book body */}
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative aspect-[3/4] overflow-hidden bg-[#BFEBE5] dark:bg-[#0c3630]">
                   <Image
                     src={project.bgImage}
                     alt={project.title}
                     fill
-                    className="object-contain object-center p-2 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   />
 
                   {/* realism overlay */}
@@ -123,7 +124,7 @@ const Work = ({ isDarkMode }) => {
                         </p>
                       </div>
 
-                      <div className="shrink-0 rounded-full border border-black/20 dark:border-white/20 w-10 h-10 flex items-center justify-center bg-[#509187] text-white shadow-[0_8px_20px_rgba(80,145,135,0.35)] transition-transform duration-300 group-hover:translate-x-1">
+                      <div className="shrink-0 rounded-full border border-black/20 dark:border-white/20 w-10 h-10 flex items-center justify-center bg-[#509187] group-hover:bg-[#3f736b] text-white shadow-[0_8px_20px_rgba(80,145,135,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:translate-x-1">
                         <Image src={assets.send_icon} alt="open" className="w-5" />
                       </div>
                     </div>
@@ -134,24 +135,28 @@ const Work = ({ isDarkMode }) => {
           })}
         </div>
 
-        <motion.a
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.5, ease: EASINGS.smoothOut }}
-          viewport={{ once: true }}
-          whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
-          href="https://cohorts.nileshnama.com/books"
-          target="_blank"
-          rel="noreferrer"
-          className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 rounded-full py-3 px-10 mx-auto mt-16 hover:bg-lightHover duration-300 dark:text-white dark:border-white/20 dark:hover:bg-white/10 transition-all shadow-sm focus-visible:ring-2 focus-visible:ring-[#509187]"
-        >
-          View all books
-          <Image
-            src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
-            alt="Right arrow"
-            className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </motion.a>
+        {/* CTA */}
+        <div className="w-full flex justify-center mt-14 sm:mt-16 relative z-10">
+          <motion.a
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.5, ease: EASINGS.smoothOut }}
+            viewport={{ once: true }}
+            whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
+            whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+            href="https://cohorts.nileshnama.com/books"
+            target="_blank"
+            rel="noreferrer"
+            className="group cta-primary py-3.5 sm:py-4 px-8 sm:px-9 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
+          >
+            <span>View all books</span>
+            <Image
+              src={assets.right_arrow_white}
+              alt="Right arrow"
+              className="w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+            />
+          </motion.a>
+        </div>
       </section>
       </div>
 
@@ -166,7 +171,7 @@ const Work = ({ isDarkMode }) => {
             onClick={(e) => e.stopPropagation()}
             className="bg-white dark:bg-darkTheme rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden border border-black/10 dark:border-white/10"
           >
-            <div className="max-h-[80vh] overflow-y-auto p-8 relative">
+            <div className="max-h-[80vh] overflow-y-auto p-5 sm:p-8 relative">
               <button
                 onClick={() => setActiveBook(null)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition"
@@ -174,7 +179,7 @@ const Work = ({ isDarkMode }) => {
                 ✕
               </button>
 
-              <h3 className="text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
                 {activeBook.title}
               </h3>
 
@@ -196,9 +201,10 @@ const Work = ({ isDarkMode }) => {
                     href={activeBook.purchaseLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 w-full rounded-full bg-[#509187] text-white py-3 text-sm font-medium hover:opacity-95 transition-transform hover:scale-[1.02]"
+                    className="group cta-primary w-full py-3.5 text-sm sm:text-base"
                   >
-                    Get the full reference →
+                    <span>Get the full reference</span>
+                    <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
                   </a>
 
                   {activeBook.sampleLink && (

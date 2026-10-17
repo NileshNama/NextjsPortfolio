@@ -1,13 +1,14 @@
-import { assets, infoList, toolsData } from '@/assets/assets'
+import { assets, infoList } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
+import SkillsPeriodicTable from './SkillsPeriodicTable'
 
 const About = ({ isDarkMode }) => {
   return (
     <motion.section
       id="about"
-      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-24 overflow-hidden"
+      className="w-full px-6 md:px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-24 overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -188,55 +189,8 @@ const About = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      {/* Tools full width */}
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto mt-16 xl:mt-20"
-      >
-        <p className="section-label mb-5">SYSTEMS</p>
-
-        <h4 className="text-2xl font-semibold font-Ovo mb-8">
-          Tools & Workflow
-        </h4>
-
-        <motion.ul
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap items-center gap-4 sm:gap-5"
-        >
-          {toolsData.map((tool, index) => (
-            <motion.li
-              key={index}
-              whileHover={{ y: -4, scale: 1.05 }}
-              transition={{ duration: 0.25 }}
-              className="
-                group
-                flex items-center justify-center
-                w-14 sm:w-16
-                aspect-square
-                rounded-2xl
-                border border-black/10 dark:border-white/10
-                bg-white dark:bg-[#111827]
-                shadow-sm
-                hover:border-[#5A9B92]/35
-                hover:shadow-[0_15px_40px_rgba(90,155,146,0.14)]
-                transition-all duration-300
-              "
-            >
-              <Image
-                src={tool}
-                alt="Tool"
-                className="w-7 sm:w-8 transition-transform duration-300 group-hover:scale-110"
-              />
-            </motion.li>
-          ))}
-        </motion.ul>
-      </motion.div>
+      {/* Systems, Tools & Periodic Table Section */}
+      <SkillsPeriodicTable isDarkMode={isDarkMode} />
     </motion.section>
   )
 }

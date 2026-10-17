@@ -163,7 +163,7 @@ const StudentTestimonial = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 bg-[#0b1120] text-white scroll-mt-20"
+      className="w-full px-6 md:px-[12%] py-10 sm:py-12 md:py-14 bg-[#0b1120] text-white scroll-mt-20"
     >
       <style>{`
         @keyframes reel-marquee {
@@ -178,14 +178,14 @@ const StudentTestimonial = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="section-label mb-3">STUDENT VOICE</p>
+        <div className="text-center mb-8 sm:mb-10">
+          <p className="section-label mb-2">STUDENT VOICE</p>
 
-          <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3">
             How My Thinking Changed After NN
           </h2>
 
-          <p className="max-w-2xl mx-auto text-white/75 font-medium leading-8">
+          <p className="max-w-2xl mx-auto text-white/75 font-medium leading-relaxed text-sm sm:text-base">
             Real student stories reveal how thinking changes under pressure. <br /> Some Visuals are AI-generated recreations.
           </p>
         </div>
@@ -269,34 +269,20 @@ const StudentTestimonial = () => {
                     href="https://cohorts.nileshnama.com/new-courses/12-nn-gate-barc-thinking-program-all-access"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      px-5 py-2.5
-                      rounded-full
-                      border border-white/15
-                      bg-white/5
-                      hover:bg-white/10
-                      text-sm font-medium
-                      transition-all duration-300
-                    "
+                    className="group cta-primary px-5 py-2.5 text-xs sm:text-sm"
                   >
-                    Enrolled Cohort →
+                    <span>Enrolled Cohort</span>
+                    <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
                   </a>
 
                   <a
                     href="https://cohorts.nileshnama.com/app-blog/1"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="
-                      px-5 py-2.5
-                      rounded-full
-                      border border-[#5A9B92]/25
-                      bg-[#5A9B92]/10
-                      hover:bg-[#5A9B92]/20
-                      text-sm font-medium
-                      transition-all duration-300
-                    "
+                    className="group cta-secondary px-5 py-2.5 text-xs sm:text-sm border-white/20 bg-white/5 text-white hover:border-[#509187] hover:bg-[#509187]/20 hover:text-[#67b0a5]"
                   >
-                    The NN Approach →
+                    <span>The NN Approach</span>
+                    <span className="transition-transform duration-300 ease-out group-hover:translate-x-1">→</span>
                   </a>
                 </div>
               </div>

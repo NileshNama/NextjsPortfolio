@@ -14,23 +14,23 @@ const shifts = [
 
 const StudentProof = () => {
   return (
-    <section id="student-proof" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
+    <section id="student-proof" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-2">
           Student Proof
         </p>
 
-        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
           Student Thinking Shifts
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           Real shifts in thinking create real shifts in performance.
         </p>
       </motion.div>

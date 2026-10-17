@@ -20,6 +20,29 @@ const renderInlineMarkdown = (text) => {
   })
 }
 
+const writingMeta = [
+  {
+    category: "System Design & OS",
+    readTime: "10 min read",
+    tags: ["Scheduling", "Virtual Memory", "Concurrency & Locks"],
+  },
+  {
+    category: "Databases & Theory",
+    readTime: "9 min read",
+    tags: ["ACID Guarantees", "Isolation Levels", "Query Constraints"],
+  },
+  {
+    category: "Computer Networks",
+    readTime: "8 min read",
+    tags: ["TCP/IP Stack", "Flow & Congestion", "Layer Abstractions"],
+  },
+  {
+    category: "Compilers & Automata",
+    readTime: "11 min read",
+    tags: ["LR Parsing", "Syntax-Directed Translation", "Intermediate Code"],
+  },
+]
+
 const Writing = ({ isDarkMode }) => {
   const [activeWriting, setActiveWriting] = useState(null)
   const [progress, setProgress] = useState(0)
@@ -99,131 +122,177 @@ const Writing = ({ isDarkMode }) => {
           </motion.p>
         </div>
 
-        {/* Cards */}
+        {/* Modern Beautiful Horizontal List View */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10"
+          className="max-w-5xl mx-auto flex flex-col gap-5 sm:gap-6"
         >
-          {writingData.map((item, index) => (
-            <motion.button
-              key={index}
-              type="button"
-              onClick={() => setActiveWriting(item)}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[2rem]
-                border border-white/10
-                bg-white/5
-                backdrop-blur-sm
-                text-left
-                cursor-pointer
-                shadow-[0_10px_40px_rgba(0,0,0,0.08)]
-                hover:shadow-[0_25px_80px_rgba(90,155,146,0.16)]
-                hover:border-[#5A9B92]/35
-                transition-all duration-300
-                transform-gpu
-                will-change-transform
-              "
-            >
-              {/* Glow */}
-              <div className="
-                absolute
-                top-0
-                right-0
-                w-40
-                h-40
-                bg-[#5A9B92]/10
-                blur-3xl
-                opacity-0
-                group-hover:opacity-100
-                transition-opacity duration-500
-                pointer-events-none
-              " />
+          {writingData.map((item, index) => {
+            const meta = writingMeta[index] || {
+              category: "Field Notes",
+              readTime: "8 min read",
+              tags: ["Systems", "Computer Science"],
+            }
 
-              {/* Image */}
-              <div className="relative aspect-[4/5] overflow-hidden">
-                {item.bgImage && (
-  <Image
-    src={item.bgImage}
-    alt={item.title}
-    fill
-    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-  />
-)}
+            return (
+              <motion.div
+                key={index}
+                onClick={() => setActiveWriting(item)}
+                whileHover={{ y: -4, scale: 1.008 }}
+                transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="
+                  group
+                  flex items-stretch gap-3 sm:gap-5
+                  cursor-pointer
+                  text-left
+                "
+              >
+                {/* Serial Number Box (Matches Card Height) */}
+                <div
+                  className="
+                    w-14 sm:w-24 md:w-32 shrink-0
+                    rounded-2xl sm:rounded-3xl
+                    border border-white/10
+                    bg-[#0f172a]/90 dark:bg-[#07221e]/85
+                    backdrop-blur-xl
+                    p-2 sm:p-4
+                    flex flex-col items-center justify-center
+                    shadow-lg shadow-black/25
+                    group-hover:border-[#509187]/60
+                    group-hover:shadow-[0_16px_45px_rgba(80,145,135,0.25)]
+                    transition-all duration-300
+                    relative overflow-hidden
+                  "
+                >
+                  {/* Subtle grid pattern */}
+                  <div
+                    className="
+                      absolute inset-0 opacity-[0.04] pointer-events-none
+                      [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+                      [background-size:24px_24px]
+                    "
+                  />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5A9B92]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {/* Mobile background glow */}
-                <div className="absolute inset-0 opacity-20 sm:hidden bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-[#56b7a5]/20 blur-3xl sm:hidden" />
-                {/* Tag */}
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center rounded-full bg-black/55 px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-white/90 backdrop-blur-md">
-                    WRITING
+                  {/* Radial glow on hover */}
+                  <div className="absolute inset-0 bg-radial from-[#509187]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                  <span className="relative z-10 text-2xl sm:text-4xl md:text-5xl font-bold font-Ovo bg-gradient-to-b from-white via-white/90 to-[#509187] bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_4px_16px_rgba(80,145,135,0.25)]">
+                    {index + 1}
+                  </span>
+                  <span className="relative z-10 text-[8px] sm:text-[10px] uppercase font-mono tracking-widest text-[#509187] font-semibold mt-0.5 sm:mt-1 opacity-70 group-hover:opacity-100 transition-opacity">
+                    PART
                   </span>
                 </div>
 
-                {/* Card Content */}
-                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/25 dark:border-white/10">
-                  <div className="flex items-start justify-between gap-3">
+                {/* Card Content Box */}
+                <div
+                  className="
+                    flex-1 min-w-0
+                    rounded-2xl sm:rounded-3xl
+                    border border-white/10
+                    bg-[#0f172a]/90 dark:bg-[#07221e]/85
+                    backdrop-blur-xl
+                    p-3.5 sm:p-6 md:p-7
+                    shadow-lg shadow-black/25
+                    group-hover:border-[#509187]/60
+                    group-hover:shadow-[0_16px_45px_rgba(80,145,135,0.25)]
+                    transition-all duration-300
+                    relative overflow-hidden
+                  "
+                >
+                  {/* Radial glow on hover */}
+                  <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#509187]/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                  {/* Subtle grid pattern */}
+                  <div
+                    className="
+                      absolute inset-0 opacity-[0.035] pointer-events-none
+                      [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
+                      [background-size:28px_28px]
+                    "
+                  />
+
+                  <div className="relative z-10 flex flex-col justify-between h-full gap-3 sm:gap-4">
+                    {/* Top Row: Category + Read Time */}
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#509187]/15 text-[#5A9B92] dark:text-[#67b0a5] border border-[#509187]/30 text-xs font-mono font-semibold uppercase tracking-wider">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#509187] animate-pulse" />
+                          {meta.category}
+                        </span>
+                        <span className="text-xs text-white/30 font-mono hidden sm:inline-block">·</span>
+                        <span className="text-xs text-white/60 font-mono hidden sm:inline-block">
+                          {meta.readTime}
+                        </span>
+                      </div>
+
+                      <span className="text-[11px] font-mono text-[#509187] uppercase tracking-wider font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block">
+                        Read Note →
+                      </span>
+                    </div>
+
+                    {/* Middle Row: Title & Description */}
                     <div className="min-w-0">
-                      <h3 className="font-semibold text-gray-900 dark:text-white text-lg leading-snug">
+                      <h3 className="text-xl sm:text-2xl md:text-[1.5rem] font-bold font-Ovo text-white group-hover:text-[#67b0a5] transition-colors leading-snug tracking-tight">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-700 dark:text-gray-300 mt-1 leading-relaxed">
+                      <p className="text-sm sm:text-[15px] text-gray-300 dark:text-gray-300/90 mt-1 sm:mt-1.5 leading-relaxed font-normal">
                         {item.description}
                       </p>
                     </div>
 
-                    <div className="shrink-0 rounded-full border border-black/15 dark:border-white/15 w-10 h-10 flex items-center justify-center bg-[#509187] text-white shadow-[0_8px_20px_rgba(80,145,135,0.35)] transition-transform duration-300 group-hover:translate-x-1">
-                      <Image src={assets.send_icon} alt="open" className="w-5" />
+                    {/* Bottom Row: Tag Pills + Action Button */}
+                    <div className="pt-3 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-auto">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                        {meta.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-white/5 text-white/70 text-xs font-mono border border-white/5 group-hover:border-white/10 group-hover:text-white/90 transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#509187] group-hover:text-[#67b0a5] transition-colors self-end sm:self-auto shrink-0">
+                        <span className="hidden sm:inline-block">Read Article</span>
+                        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#509187] group-hover:bg-[#3f736b] flex items-center justify-center text-white shadow-md shadow-[#509187]/30 group-hover:scale-110 group-hover:translate-x-1 transition-all duration-300">
+                          <Image src={assets.send_icon} alt="open" className="w-4 h-4" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </motion.button>
-          ))}
+              </motion.div>
+            )
+          })}
         </motion.div>
 
         {/* CTA */}
-        <motion.a
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          href="https://cohorts.nileshnama.com/app-blog"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            w-max
-            flex items-center justify-center gap-2
-            px-8 py-3
-            mt-16 md:mt-20 mx-auto
-            rounded-full
-            border border-white/20
-            text-white
-            bg-white/5
-            backdrop-blur-sm
-            hover:bg-white/10
-            hover:scale-[1.02]
-            transition-all duration-300
-            shadow-sm
-          "
-        >
-          View all writing
-          <Image
-            src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
-            alt="Right arrow"
-            className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </motion.a>
+        <div className="w-full flex justify-center mt-14 sm:mt-16 md:mt-20 relative z-10">
+          <motion.a
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -2, scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            href="https://cohorts.nileshnama.com/app-blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cta-primary py-3.5 sm:py-4 px-8 sm:px-9 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2"
+          >
+            <span>View all writing</span>
+            <Image
+              src={assets.right_arrow_white}
+              alt="Right arrow"
+              className="w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+            />
+          </motion.a>
+        </div>
       </motion.section>
 
       {/* MODAL */}

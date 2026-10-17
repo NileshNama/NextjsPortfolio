@@ -35,11 +35,11 @@ const VebSkillsOutcomes = () => {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section id="vebskills-outcomes" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
-      <div className="text-center mb-16">
+    <section id="vebskills-outcomes" className="w-full px-[8%] pt-6 sm:pt-8 md:pt-10 pb-10 sm:pb-12 md:pb-14 scroll-mt-20">
+      <div className="text-center mb-8 sm:mb-10">
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
-          className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono"
+          className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono"
         >
           VEBSKILLS · APPLIED ENGINEERING
         </motion.p>
@@ -53,7 +53,7 @@ const VebSkillsOutcomes = () => {
 
         <motion.p
           {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
-          className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base md:text-lg"
+          className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base"
         >
           What Engineers Learn to Architect, Build &amp; Ship
         </motion.p>
@@ -117,23 +117,23 @@ const painPoints = [
 
 const VebSkillsStruggles = () => {
   return (
-    <section id="vebskills-struggles" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#111827] text-white">
+    <section id="vebskills-struggles" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#111827] text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono">
           WHY MOST DEVELOPERS STAY STUCK IN TUTORIAL HELL
         </p>
-        <p className="section-label mb-3 text-[#5A9B92]">INDUSTRY REALITY</p>
+        <p className="section-label mb-2 text-[#5A9B92]">INDUSTRY REALITY</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight">
           Why Most Developers Struggle
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-6 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           The problem is not effort or intelligence. The problem is never building software that handles real production constraints.
         </p>
       </motion.div>
@@ -190,7 +190,7 @@ const VebSkillsBelief = () => {
   return (
     <section
       id="vebskills-belief"
-      className="relative overflow-hidden w-full px-6 md:px-[8%] py-20 sm:py-24 md:py-28 bg-[#0b1120] text-white scroll-mt-20"
+      className="relative overflow-hidden w-full px-6 md:px-[8%] py-10 sm:py-12 md:py-14 bg-[#0b1120] text-white scroll-mt-20"
     >
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -210,7 +210,7 @@ const VebSkillsBelief = () => {
       <div className="relative max-w-6xl mx-auto text-center">
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
-          className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#5A9B92] font-semibold mb-6 font-mono"
+          className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#5A9B92] font-semibold mb-3 sm:mb-4 font-mono"
         >
           CORE BELIEF · PROOF OF WORK
         </motion.p>
@@ -228,7 +228,7 @@ const VebSkillsBelief = () => {
 
         <motion.p
           {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
-          className="max-w-3xl mx-auto mt-8 text-base sm:text-lg md:text-xl text-gray-300 dark:text-gray-300 leading-relaxed"
+          className="max-w-3xl mx-auto mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 dark:text-gray-300 leading-relaxed"
         >
           Tutorials give the illusion of competence. Engineering mastery only happens when you debug production environments, defend architectural trade-offs, and ship systems that real users depend on.
         </motion.p>
@@ -261,15 +261,15 @@ const shifts = [
 
 const VebSkillsProof = () => {
   return (
-    <section id="vebskills-proof" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
+    <section id="vebskills-proof" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono">
           ENGINEERING PROOF
         </p>
 
@@ -277,7 +277,7 @@ const VebSkillsProof = () => {
           Developer Thinking Shifts
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           Real shifts in engineering habits create real breakthroughs in careers.
         </p>
       </motion.div>
@@ -347,25 +347,25 @@ const VebSkillsLabs = () => {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section id="vebskills-labs" className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#111827] text-white">
-      <div className="text-center mb-16">
+    <section id="vebskills-labs" className="w-full px-6 md:px-[12%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#111827] text-white">
+      <div className="text-center mb-8 sm:mb-10">
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
-          className="section-label mb-3 text-[#5A9B92]"
+          className="section-label mb-2 text-[#5A9B92]"
         >
           ENGINEERING LABS
         </motion.p>
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-4 tracking-tight"
+          className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3 tracking-tight"
         >
           Inside VebSkills Engineering Labs
         </motion.h2>
 
         <motion.p
           {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
-          className="max-w-2xl mx-auto text-white/75 font-normal leading-relaxed text-sm sm:text-base md:text-lg"
+          className="max-w-2xl mx-auto text-white/75 font-normal leading-relaxed text-sm sm:text-base"
         >
           See how software is architected, code is reviewed to senior standards, and deployments are automated.
         </motion.p>
@@ -428,9 +428,9 @@ const developerReviews = [
 
 const VebSkillsTestimonials = () => {
   return (
-    <section id="vebskills-testimonials" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
-      <div className="text-center mb-16">
-        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono">
+    <section id="vebskills-testimonials" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20">
+      <div className="text-center mb-8 sm:mb-10">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono">
           DEVELOPER IMPACT
         </p>
 
@@ -438,7 +438,7 @@ const VebSkillsTestimonials = () => {
           What Developers Say About VebSkills
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           Real feedback from engineers who transitioned from tutorial purgatory to building and shipping production software.
         </p>
       </div>
@@ -494,15 +494,15 @@ const whoThrivesList = [
 
 const VebSkillsWhoThrives = () => {
   return (
-    <section id="vebskills-who-thrives" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
+    <section id="vebskills-who-thrives" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono">
           IDEAL ENGINEERS
         </p>
 
@@ -510,7 +510,7 @@ const VebSkillsWhoThrives = () => {
           Who Thrives Inside VebSkills
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           VebSkills is engineered for developers who want deep engineering habits, production-level standards, and verifiable proof of work.
         </p>
       </motion.div>
@@ -567,15 +567,15 @@ const notForPoints = [
 
 const VebSkillsAudienceFilter = () => {
   return (
-    <section id="vebskills-not-for" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
+    <section id="vebskills-not-for" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-3 font-mono">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-semibold mb-2 font-mono">
           CLEAR FIT
         </p>
 
@@ -658,23 +658,23 @@ const engineeringSteps = [
 
 const VebSkillsFramework = () => {
   return (
-    <section id="vebskills-framework" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#0f172a] text-white">
+    <section id="vebskills-framework" className="w-full px-[8%] py-10 sm:py-12 md:py-14 scroll-mt-20 bg-[#0f172a] text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-8 sm:mb-10"
       >
-        <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5A9B92] font-semibold mb-4 font-mono">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#5A9B92] font-semibold mb-2 font-mono">
           THE PRODUCTION ENGINEERING PIPELINE
         </p>
-        <p className="section-label mb-3 text-[#5A9B92]">SYSTEM DESIGN</p>
+        <p className="section-label mb-2 text-[#5A9B92]">SYSTEM DESIGN</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight">
           How VebSkills Engineers Build
         </h2>
 
-        <p className="max-w-2xl mx-auto mt-4 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
+        <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
           A repeatable 6-stage engineering pipeline that transforms ambiguous requirements into scalable, observable production software.
         </p>
       </motion.div>
@@ -781,7 +781,7 @@ const VebSkillsFaq = () => {
   }
 
   return (
-    <section id="vebskills-faq" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 relative overflow-hidden">
+    <section id="vebskills-faq" className="w-full px-[8%] pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 scroll-mt-20 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
       <div className="max-w-4xl mx-auto">
@@ -790,13 +790,13 @@ const VebSkillsFaq = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-10"
         >
-          <p className="section-label mb-3 text-[#5A9B92]">FAQ</p>
+          <p className="section-label mb-2 text-[#5A9B92]">FAQ</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
             Frequently Asked Questions
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+          <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
             Answers to common questions about our applied engineering methodology, hands-on curriculum, and proof-of-work standards.
           </p>
         </motion.div>

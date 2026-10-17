@@ -61,7 +61,7 @@ const Faq = () => {
   }
 
   return (
-    <section id="faq" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 relative overflow-hidden">
+    <section id="faq" className="w-full px-[8%] pt-10 sm:pt-12 md:pt-14 pb-12 sm:pb-16 md:pb-20 scroll-mt-20 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
@@ -71,13 +71,13 @@ const Faq = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-10"
         >
-          <p className="section-label mb-3">FAQ</p>
-          <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+          <p className="section-label mb-2">FAQ</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
             Frequently Asked Questions
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-gray-600 dark:text-gray-400">
+          <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
             Answers to common questions about our preparation methodology, cohort timelines, and core curriculum structure.
           </p>
         </motion.div>

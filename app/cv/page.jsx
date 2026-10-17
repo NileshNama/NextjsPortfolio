@@ -87,13 +87,13 @@ export default function CVPage() {
         <main className="max-w-6xl mx-auto pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           
           {/* ROLE TOGGLE */}
-          <section className="mb-10 flex justify-center">
-            <div className="inline-flex p-1 rounded-full bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/30 dark:border-slate-700/30 shadow-inner">
+          <section className="mb-10 flex justify-center px-2">
+            <div className="flex flex-wrap sm:inline-flex items-center justify-center gap-1.5 p-1 rounded-2xl sm:rounded-full bg-slate-200/70 dark:bg-slate-800/70 border border-slate-300/30 dark:border-slate-700/30 shadow-inner max-w-full">
               {Object.entries(ROLE_CONTENT).map(([key, value]) => (
                 <button
                   key={key}
                   onClick={() => setRole(key)}
-                  className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300
+                  className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-xl sm:rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 whitespace-nowrap
                     ${
                       role === key
                         ? "bg-white dark:bg-[#0f172a] text-[#0077b5] dark:text-[#70b5f9] shadow-sm scale-[1.02]"
@@ -134,20 +134,25 @@ export default function CVPage() {
                   <div className="w-full border-t border-slate-100 dark:border-slate-800 my-4" />
 
                   <div className="w-full text-left space-y-3 text-xs text-slate-600 dark:text-gray-300">
-                    <a href="mailto:nileshnama1997@gmail.com" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm">✉</span> nileshnama1997@gmail.com
+                    <a href="mailto:nileshnama1997@gmail.com" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
+                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">✉</span>
+                      <span className="truncate">nileshnama1997@gmail.com</span>
                     </a>
-                    <a href="tel:+919602323340" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm">📞</span> +91-9602323340
+                    <a href="tel:+919602323340" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
+                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">📞</span>
+                      <span className="truncate">+91-9602323340</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/nileshnama/" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm">🔗</span> linkedin.com/in/nileshnama
+                    <a href="https://www.linkedin.com/in/nileshnama/" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
+                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">🔗</span>
+                      <span className="truncate">linkedin.com/in/nileshnama</span>
                     </a>
-                    <a href="https://github.com/NileshNama" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm">💻</span> github.com/NileshNama
+                    <a href="https://github.com/NileshNama" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
+                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">💻</span>
+                      <span className="truncate">github.com/NileshNama</span>
                     </a>
-                    <a href="https://nileshnama.notion.site" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm">📄</span> nileshnama.notion.site
+                    <a href="https://nileshnama.notion.site" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
+                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">📄</span>
+                      <span className="truncate">nileshnama.notion.site</span>
                     </a>
                   </div>
 
