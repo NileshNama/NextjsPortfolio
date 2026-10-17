@@ -1,5 +1,6 @@
 import React from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
+import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
 
 const sessionCards = [
   {
@@ -31,26 +32,35 @@ const videos = [
 ]
 
 const NNSessions = () => {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
-    <motion.section
+    <section
       id="nn-sessions"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
       className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 bg-[#111827] text-white"
     >
       {/* Heading */}
       <div className="text-center mb-16">
-        <p className="section-label mb-3">METHOD</p>
+        <motion.p
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
+          className="section-label mb-3"
+        >
+          METHOD
+        </motion.p>
 
-        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5">
+        <motion.h2
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
+          className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5"
+        >
           Inside NN Sessions
-        </h2>
+        </motion.h2>
 
-        <p className="max-w-2xl mx-auto text-white/75 font-medium leading-8">
+        <motion.p
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
+          className="max-w-2xl mx-auto text-white/75 font-medium leading-8 text-base sm:text-lg"
+        >
           See how questions are decoded, reasoning is structured, and clarity is built under pressure.
-        </p>
+        </motion.p>
       </div>
 
       {/* Layout */}
@@ -58,14 +68,11 @@ const NNSessions = () => {
 
         {/* LEFT SIDE VIDEOS */}
         <div className="flex flex-col gap-8">
-
           {videos.map((video, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
               className="
                 group
                 relative
@@ -75,6 +82,7 @@ const NNSessions = () => {
                 bg-black
                 shadow-[0_25px_80px_rgba(0,0,0,0.35)]
                 hover:shadow-[0_30px_100px_rgba(90,155,146,0.18)]
+                hover:border-[#5A9B92]/40
                 transition-all duration-300
               "
             >
@@ -99,7 +107,6 @@ const NNSessions = () => {
               </video>
             </motion.div>
           ))}
-
         </div>
 
         {/* RIGHT SIDE CARDS */}
@@ -107,10 +114,8 @@ const NNSessions = () => {
           {sessionCards.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              viewport={{ once: true }}
+              {...safeMotion(cardMotion.reveal(index, 0.1), shouldReduceMotion)}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
               className="
                 group
                 relative
@@ -121,16 +126,16 @@ const NNSessions = () => {
                 backdrop-blur-sm
                 p-6
                 shadow-sm
-                hover:-translate-y-1
-                hover:border-[#5A9B92]/35
+                hover:border-[#5A9B92]/40
                 hover:shadow-[0_18px_60px_rgba(90,155,146,0.14)]
+                focus-within:ring-2 focus-within:ring-[#509187]
                 transition-all duration-300
               "
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
 
               <div className="relative z-10">
-                <div className="w-11 h-11 rounded-2xl bg-[#5A9B92]/10 flex items-center justify-center text-[#5A9B92] font-semibold mb-4">
+                <div className="w-11 h-11 rounded-2xl bg-[#5A9B92]/10 flex items-center justify-center text-[#5A9B92] font-semibold mb-4 transition-transform duration-300 group-hover:scale-105">
                   0{index + 1}
                 </div>
 
@@ -147,6 +152,7 @@ const NNSessions = () => {
         </div>
 
       </div>
+
 
       {/* YouTube Channels CTA */}
 <div className="flex flex-wrap items-center justify-center gap-4 mt-14">
@@ -281,7 +287,7 @@ const NNSessions = () => {
   </a>
 
 </div>
-    </motion.section>
+    </section>
     
   )
 }

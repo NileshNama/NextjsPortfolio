@@ -1,5 +1,6 @@
 import React from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
+import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
 
 const outcomes = [
   {
@@ -25,44 +26,44 @@ const outcomes = [
 ]
 
 const Outcomes = () => {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
     <section
       id="outcomes"
       className="w-full px-[8%] py-24 md:py-32 scroll-mt-20"
     >
       {/* Section Heading */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <p className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3">
-          NN Cohorts
-        </p>
+      <div className="text-center mb-16">
+        <motion.p
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
+          className="text-sm uppercase tracking-[0.2em] text-[#5A9B92] font-medium mb-3"
+        >
+          NN Cohorts · Systems
+        </motion.p>
 
-        <p className="section-label mb-3">SYSTEMS</p>
-
-        <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo">
+        <motion.h2
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
+          className="text-4xl sm:text-5xl font-semibold font-Ovo"
+        >
           What Changes Inside NN Cohorts
-        </h2>
+        </motion.h2>
 
-        <p className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+        <motion.p
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
+          className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg"
+        >
           What Students Learn to Do
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
 
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
         {outcomes.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            viewport={{ once: true }}
+            {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
+            whileHover={shouldReduceMotion ? undefined : { y: -4 }}
             className="
               group
               rounded-3xl
@@ -70,13 +71,15 @@ const Outcomes = () => {
               bg-white/70 dark:bg-white/5
               backdrop-blur-sm
               p-7
-              hover:shadow-xl
-              hover:-translate-y-1
+              shadow-sm
+              hover:shadow-[0_20px_50px_rgba(90,155,146,0.14)]
+              hover:border-[#5A9B92]/40
+              focus-within:ring-2 focus-within:ring-[#509187]
               transition-all duration-300
             "
           >
             {/* Icon */}
-            <div className="w-14 h-14 rounded-2xl bg-[#5A9B92]/10 flex items-center justify-center text-2xl mb-6">
+            <div className="w-14 h-14 rounded-2xl bg-[#5A9B92]/10 flex items-center justify-center text-2xl mb-6 text-[#5A9B92] transition-transform duration-300 group-hover:scale-105">
               {item.icon}
             </div>
 
@@ -91,10 +94,9 @@ const Outcomes = () => {
             </p>
           </motion.div>
         ))}
-
       </div>
     </section>
   )
 }
 
-export default Outcomes
+export default Outcomes

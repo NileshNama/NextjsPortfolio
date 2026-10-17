@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react"
 import { assets, workData } from "@/assets/assets"
 import Image from "next/image"
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
+import { typographyReveal, cardMotion, safeMotion, EASINGS } from "@/lib/animations"
 
 const Work = ({ isDarkMode }) => {
+  const shouldReduceMotion = useReducedMotion()
   const [activeBook, setActiveBook] = useState(null)
 
   useEffect(() => {
@@ -29,39 +31,26 @@ const Work = ({ isDarkMode }) => {
     <>
       {/* MAIN SECTION */}
       <div id="work">
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      <section
         id="books"
         className="w-full px-6 md:px-[12%] py-24 md:py-28 scroll-mt-20"
       >
-        <motion.h4
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
+        <motion.p
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
           className="text-center mb-2 text-sm uppercase tracking-[0.22em] text-[#5A9B92] font-medium"
         >
           Books
-        </motion.h4>
+        </motion.p>
 
         <motion.h2
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-center text-4xl sm:text-5xl font-semibold font-Ovo"
         >
           Standard Reference Texts
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
           className="text-center max-w-3xl mx-auto mt-5 mb-14 font-Ovo text-gray-600 dark:text-gray-300 leading-relaxed"
         >
           A curated set of reference-level books focused on system thinking,
@@ -69,13 +58,7 @@ const Work = ({ isDarkMode }) => {
           subjects.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.65, duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
           {workData.map((project, index) => {
             const label = project.volumeLabel || volumeLabels[index] || `Volume ${index + 1}`
 
@@ -84,38 +67,42 @@ const Work = ({ isDarkMode }) => {
                 key={index}
                 type="button"
                 onClick={() => setActiveBook(project)}
-                whileHover={{ y: -6, scale: 1.01 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
+                {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
+                whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
                 className="
-  group
-  relative
-  text-left
-  overflow-hidden
-  rounded-[2rem]
-  border border-black/10 dark:border-white/10
-  bg-white dark:bg-[#111827]
-  shadow-[0_20px_60px_rgba(0,0,0,0.14)]
-  hover:shadow-[0_28px_80px_rgba(0,0,0,0.22)]
-  transition-all duration-300
-  transform-gpu
-  will-change-transform
-"
+                  group
+                  relative
+                  text-left
+                  overflow-hidden
+                  rounded-[2rem]
+                  border border-black/10 dark:border-white/10
+                  bg-white dark:bg-[#111827]
+                  shadow-[0_20px_60px_rgba(0,0,0,0.14)]
+                  hover:shadow-[0_28px_80px_rgba(90,155,146,0.2)]
+                  hover:border-[#5A9B92]/40
+                  focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:outline-none
+                  transition-all duration-300
+                  transform-gpu
+                  will-change-transform
+                "
               >
                 {/* Book body */}
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
-  src={project.bgImage}
-  alt={project.title}
-  fill
-  className="object-contain object-center p-2"
-/>
+                    src={project.bgImage}
+                    alt={project.title}
+                    fill
+                    className="object-contain object-center p-2 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                  />
 
                   {/* realism overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent pointer-events-none" />
 
                   {/* spine */}
-                  <div className="absolute left-0 top-0 h-full w-[14px] bg-black/35" />
-                  <div className="absolute left-[14px] top-0 h-full w-[2px] bg-white/15" />
+                  <div className="absolute left-0 top-0 h-full w-[14px] bg-black/35 pointer-events-none" />
+                  <div className="absolute left-[14px] top-0 h-full w-[2px] bg-white/15 pointer-events-none" />
 
                   {/* top label */}
                   <div className="absolute top-4 left-4">
@@ -125,7 +112,7 @@ const Work = ({ isDarkMode }) => {
                   </div>
 
                   {/* bottom info panel */}
-                  <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/92 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/30 dark:border-white/10">
+                  <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/92 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/30 dark:border-white/10 transition-colors duration-300 group-hover:border-[#5A9B92]/30">
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0">
                         <h2 className="font-semibold text-gray-900 dark:text-white text-lg leading-snug">
@@ -145,17 +132,18 @@ const Work = ({ isDarkMode }) => {
               </motion.button>
             )
           })}
-        </motion.div>
+        </div>
 
         <motion.a
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.5 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5, ease: EASINGS.smoothOut }}
           viewport={{ once: true }}
+          whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
           href="https://cohorts.nileshnama.com/books"
           target="_blank"
           rel="noreferrer"
-          className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 rounded-full py-3 px-10 mx-auto mt-16 hover:bg-lightHover duration-300 dark:text-white dark:border-white/20 dark:hover:bg-white/10 transition-transform hover:scale-[1.02]"
+          className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 rounded-full py-3 px-10 mx-auto mt-16 hover:bg-lightHover duration-300 dark:text-white dark:border-white/20 dark:hover:bg-white/10 transition-all shadow-sm focus-visible:ring-2 focus-visible:ring-[#509187]"
         >
           View all books
           <Image
@@ -164,8 +152,9 @@ const Work = ({ isDarkMode }) => {
             className="w-4 transition-transform duration-300 group-hover:translate-x-1"
           />
         </motion.a>
-      </motion.section>
+      </section>
       </div>
+
 
       {/* MODAL */}
       {activeBook && (

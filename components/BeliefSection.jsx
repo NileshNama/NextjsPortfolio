@@ -1,14 +1,13 @@
 import React from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
+import { typographyReveal, safeMotion, EASINGS } from '@/lib/animations'
 
 const BeliefSection = () => {
+  const shouldReduceMotion = useReducedMotion()
+
   return (
-    <motion.section
+    <section
       id="belief"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
-      viewport={{ once: true }}
       className="
         relative overflow-hidden
         w-full
@@ -19,10 +18,8 @@ const BeliefSection = () => {
         scroll-mt-20
       "
     >
-
       {/* Premium Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
-
         <div className="
           absolute
           top-[-180px]
@@ -45,7 +42,6 @@ const BeliefSection = () => {
           bg-[#5A9B92]/5
           blur-3xl
         " />
-
       </div>
 
       {/* subtle grid texture */}
@@ -58,13 +54,9 @@ const BeliefSection = () => {
       />
 
       <div className="relative max-w-6xl mx-auto text-center">
-
         {/* Top Label */}
         <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
           className="
             text-xs sm:text-sm
             uppercase
@@ -74,15 +66,12 @@ const BeliefSection = () => {
             mb-6
           "
         >
-          Core Belief
+          Core Belief · Method
         </motion.p>
-        <p className="section-label mb-3">METHOD</p>
+
         {/* Main Statement */}
         <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.7 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="
             text-4xl
             sm:text-5xl
@@ -99,16 +88,13 @@ const BeliefSection = () => {
           Most aspirants don’t fail from lack of effort.
           <br className="hidden sm:block" />
           <span className="text-[#d9f3ee]">
-            They fail from unclear thinking under pressure.
+            {" "}They fail from unclear thinking under pressure.
           </span>
         </motion.h2>
 
         {/* Supporting Line */}
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.6 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
           className="
             max-w-3xl
             mx-auto
@@ -125,18 +111,17 @@ const BeliefSection = () => {
 
         {/* Bottom Divider */}
         <motion.div
-          initial={{ opacity: 0, scaleX: 0.7 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, scaleX: 0.7 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.25, duration: 0.5, ease: EASINGS.smoothOut }}
           viewport={{ once: true }}
           className="mt-14 flex justify-center"
         >
           <div className="h-px w-28 bg-gradient-to-r from-transparent via-[#5A9B92]/70 to-transparent" />
         </motion.div>
-
       </div>
-    </motion.section>
+    </section>
   )
 }
 
-export default BeliefSection
+export default BeliefSection

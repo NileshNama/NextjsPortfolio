@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react"
 import { assets, serviceData } from "@/assets/assets"
 import Image from "next/image"
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
+import { typographyReveal, cardMotion, safeMotion, EASINGS } from "@/lib/animations"
 
 const SERVICE_DETAILS = {
   "Software Engineering": {
@@ -84,6 +85,7 @@ const SERVICE_DETAILS = {
 }
 
 const Services = () => {
+  const shouldReduceMotion = useReducedMotion()
   const [activeService, setActiveService] = useState(null)
 
   useEffect(() => {
@@ -103,48 +105,26 @@ const Services = () => {
   return (
     <>
       {/* MAIN */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
+      <section
         id="work"
         className="w-full px-6 md:px-[12%] py-24 md:py-28 scroll-mt-20"
       >
-        <motion.h4
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
+        <motion.p
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
           className="text-center mb-2 text-sm uppercase tracking-[0.22em] text-[#5A9B92] font-medium"
         >
-          What I Build
-        </motion.h4>
-        <motion.h4
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-2 text-sm uppercase tracking-[0.22em] text-[#5A9B92] font-medium"
-        >
-          <p className="section-label mb-3">SYSTEMS</p>
-        </motion.h4>
+          What I Build · Systems
+        </motion.p>
       
         <motion.h2
-          initial={{ y: -20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-center text-4xl sm:text-5xl font-semibold font-Ovo"
         >
           Work
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          viewport={{ once: true }}
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
           className="text-center max-w-3xl mx-auto mt-5 mb-14 font-Ovo text-gray-600 dark:text-gray-300 leading-relaxed"
         >
           A snapshot of the systems I build and lead across engineering,
@@ -152,19 +132,14 @@ const Services = () => {
           body of work, not a client service.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.65, duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
           {serviceData.map((service, index) => (
             <motion.button
               key={index}
               type="button"
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
+              whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
               onClick={() => setActiveService(service)}
               className="
                 group
@@ -180,10 +155,12 @@ const Services = () => {
                 shadow-[0_10px_40px_rgba(0,0,0,0.08)]
                 hover:shadow-[0_25px_80px_rgba(90,155,146,0.18)]
                 hover:border-[#5A9B92]/40
+                focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:outline-none
                 transform-gpu
                 will-change-transform
               "
             >
+
               {/* Glow Accent */}
               <div className="
                 absolute
@@ -260,8 +237,8 @@ const Services = () => {
               </div>
             </motion.button>
           ))}
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
       {/* MODAL */}
       {activeService && details && (

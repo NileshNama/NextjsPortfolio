@@ -111,3 +111,21 @@ h4 {
 .dark .cohorts-page .text-secondary {
   color: #9CA3AF;
 }
+
+/* Accessibility: Respect Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessible Interactive Focus Rings */
+:focus-visible {
+  outline: 2px solid #509187;
+  outline-offset: 3px;
+}

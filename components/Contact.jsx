@@ -3,9 +3,11 @@
 import { assets } from "@/assets/assets"
 import Image from "next/image"
 import React, { useState } from "react"
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
+import { typographyReveal, safeMotion, EASINGS } from "@/lib/animations"
 
 const Contact = () => {
+  const shouldReduceMotion = useReducedMotion()
   const [result, setResult] = useState("")
 
   const onSubmit = async (event) => {
@@ -48,41 +50,43 @@ const Contact = () => {
         scroll-mt-24
       "
     >
-
       {/* Background Glow */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#5A9B92]/10 blur-3xl rounded-full"></div>
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#5A9B92]/10 blur-3xl rounded-full pointer-events-none"></div>
 
       {/* HEADING */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center relative z-10"
-      >
-
-        <p className="text-sm tracking-[4px] uppercase text-[#5A9B92] font-semibold mb-4">
+      <div className="text-center relative z-10">
+        <motion.p
+          {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
+          className="text-sm tracking-[4px] uppercase text-[#5A9B92] font-semibold mb-4"
+        >
           Contact
-        </p>
+        </motion.p>
 
-        <h2 className="text-4xl sm:text-5xl font-semibold mb-6">
+        <motion.h2
+          {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
+          className="text-4xl sm:text-5xl font-semibold mb-6 font-Ovo"
+        >
           Start a Conversation
-        </h2>
+        </motion.h2>
 
-        <p className="max-w-3xl mx-auto text-gray-600 leading-8 text-base sm:text-lg">
+        <motion.p
+          {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
+          className="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 leading-8 text-base sm:text-lg"
+        >
           Thoughtful discussions around systems, learning,
           interview reasoning, structured thinking, and long-term execution.
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
+
 
       {/* MAIN GRID */}
       <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 mt-16 relative z-10">
 
         {/* LEFT SIDE */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.55 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: EASINGS.smoothOut }}
           viewport={{ once: true }}
           className="
             rounded-[32px]
@@ -131,7 +135,7 @@ const Contact = () => {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                whileHover={{ x: 4 }}
+                whileHover={shouldReduceMotion ? undefined : { x: 4 }}
                 className="
                   flex items-start gap-4
                   rounded-2xl
@@ -174,9 +178,9 @@ const Contact = () => {
 
         {/* RIGHT SIDE FORM */}
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.55 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.1, ease: EASINGS.smoothOut }}
           viewport={{ once: true }}
           className="
             rounded-[32px]
@@ -264,11 +268,12 @@ const Contact = () => {
 
             {/* CTA */}
             <motion.button
-              whileHover={{
-                scale: 1.03,
+              whileHover={shouldReduceMotion ? undefined : {
+                scale: 1.015,
+                y: -2,
               }}
-              whileTap={{
-                scale: 0.98,
+              whileTap={shouldReduceMotion ? undefined : {
+                scale: 0.985,
               }}
               type="submit"
               className="
@@ -282,6 +287,7 @@ const Contact = () => {
                 font-medium
                 flex items-center justify-center gap-3
                 hover:shadow-[0_10px_30px_rgba(80,145,135,0.35)]
+                focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#509187] focus-visible:outline-none
                 transition-all duration-300
               "
             >
@@ -291,6 +297,7 @@ const Contact = () => {
                 →
               </span>
             </motion.button>
+
 
             {/* Result */}
             {result && (

@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react"
 import { assets, cohortsData } from '@/assets/assets'
 import Image from 'next/image'
-import { motion } from "motion/react"
+import { motion, useReducedMotion } from "motion/react"
+import { typographyReveal, cardMotion, safeMotion, EASINGS } from "@/lib/animations"
 
 const Cohorts = ({ isDarkMode }) => {
+  const shouldReduceMotion = useReducedMotion()
   const [activeCohort, setActiveCohort] = useState(null)
 
   useEffect(() => {
@@ -24,40 +26,27 @@ const Cohorts = ({ isDarkMode }) => {
   return (
     <>
       {/* MAIN SECTION */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
+      <section
         id="cohorts"
         className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 overflow-hidden"
       >
         <div className="text-center mb-16 md:mb-20">
           <motion.p
-            initial={{ opacity: 0, y: -16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...safeMotion(typographyReveal.tag, shouldReduceMotion)}
             className="section-label mb-3"
           >
             SYSTEMS
           </motion.p>
 
           <motion.h2
-            initial={{ opacity: 0, y: -16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
+            {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
             className="text-4xl sm:text-5xl font-semibold font-Ovo"
           >
             Curated Learning Systems
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.18 }}
-            viewport={{ once: true }}
+            {...safeMotion(typographyReveal.subtext, shouldReduceMotion)}
             className="max-w-2xl mx-auto mt-6 text-gray-600 dark:text-gray-300 font-medium leading-8"
           >
             A focused set of thinking-first cohorts designed for serious computer science aspirants.
@@ -65,20 +54,16 @@ const Cohorts = ({ isDarkMode }) => {
         </div>
 
         {/* Cards */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10">
           {cohortsData.map((cohort, index) => (
             <motion.button
               key={index}
               type="button"
               onClick={() => setActiveCohort(cohort)}
-              whileHover={{ y: -6, scale: 1.01 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
+              whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               className="
                 group
                 relative
@@ -89,8 +74,9 @@ const Cohorts = ({ isDarkMode }) => {
                 text-left
                 cursor-pointer
                 shadow-[0_10px_40px_rgba(0,0,0,0.06)]
-                hover:shadow-[0_25px_80px_rgba(90,155,146,0.16)]
-                hover:border-[#5A9B92]/35
+                hover:shadow-[0_25px_80px_rgba(90,155,146,0.18)]
+                hover:border-[#5A9B92]/40
+                focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:outline-none
                 transition-all duration-300
                 transform-gpu
                 will-change-transform
@@ -120,8 +106,8 @@ const Cohorts = ({ isDarkMode }) => {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#5A9B92]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#5A9B92]/8 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Top badge */}
                 <div className="absolute top-4 left-4">
@@ -131,7 +117,7 @@ const Cohorts = ({ isDarkMode }) => {
                 </div>
 
                 {/* Bottom panel */}
-                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/30 dark:border-white/10">
+                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 dark:bg-black/70 backdrop-blur-md p-4 shadow-lg border border-white/30 dark:border-white/10 transition-colors duration-300 group-hover:border-[#5A9B92]/30">
                   <div className="flex items-start justify-between gap-3">
                     <div className="min-w-0">
                       <h3 className="font-semibold text-gray-900 dark:text-white text-lg leading-snug">
@@ -150,41 +136,72 @@ const Cohorts = ({ isDarkMode }) => {
               </div>
             </motion.button>
           ))}
-        </motion.div>
+        </div>
 
-        {/* CTA */}
-        <motion.a
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          href="https://www.nileshnama.com/cohorts"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            w-max
-            flex items-center justify-center gap-2
-            px-8 py-3
-            mt-16 md:mt-20 mx-auto
-            rounded-full
-            border border-gray-300 dark:border-white/20
-            text-gray-700 dark:text-white
-            bg-white/80 dark:bg-white/5
-            backdrop-blur-sm
-            hover:bg-lightHover dark:hover:bg-white/10
-            hover:scale-[1.02]
-            transition-all duration-300
-            shadow-sm
-          "
-        >
-          Explore cohorts
-          <Image
-            src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
-            alt="Right arrow"
-            className="w-4 transition-transform duration-300 group-hover:translate-x-1"
-          />
-        </motion.a>
-      </motion.section>
+        {/* CTA Container */}
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-16 md:mt-20">
+          <motion.a
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25, ease: EASINGS.smoothOut }}
+            viewport={{ once: true }}
+            whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
+            href="https://www.nileshnama.com/cohorts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group flex items-center justify-center gap-2
+              px-8 py-3
+              rounded-full
+              border border-gray-300 dark:border-white/20
+              text-gray-700 dark:text-white
+              bg-white/80 dark:bg-white/5
+              backdrop-blur-sm
+              hover:bg-lightHover dark:hover:bg-white/10
+              transition-all duration-300
+              shadow-sm
+              focus-visible:ring-2 focus-visible:ring-[#509187]
+            "
+          >
+            Explore cohorts
+            <Image
+              src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold}
+              alt="Right arrow"
+              className="w-4 transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </motion.a>
+
+          <motion.a
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.32, ease: EASINGS.smoothOut }}
+            viewport={{ once: true }}
+            whileHover={shouldReduceMotion ? undefined : { y: -2, scale: 1.02 }}
+            href="https://nileshnama.notion.site/schedule"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group flex items-center justify-center gap-2.5
+              px-8 py-3
+              rounded-full
+              border border-gray-300 dark:border-white/20
+              text-gray-700 dark:text-white
+              bg-white/80 dark:bg-white/5
+              backdrop-blur-sm
+              hover:bg-lightHover dark:hover:bg-white/10
+              transition-all duration-300
+              shadow-sm
+              focus-visible:ring-2 focus-visible:ring-[#509187]
+            "
+          >
+            Curriculum
+            <span className="text-base transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </motion.a>
+        </div>
+      </section>
+
 
       {/* MODAL */}
       {activeCohort && (

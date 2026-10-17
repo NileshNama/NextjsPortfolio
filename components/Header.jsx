@@ -1,9 +1,11 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useEffect, useState, useRef } from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
+import { EASINGS, heroEntrance } from '@/lib/animations'
 
 const Header = () => {
+  const shouldReduceMotion = useReducedMotion()
   const manifestoText = "Building technology. Teaching engineering. Training minds to think."
 
   const profileImages = [
@@ -113,15 +115,14 @@ const Header = () => {
 
             {/* 3D Floating/Swinging Motion Container */}
             <motion.div
-              initial={{ scale: 0.85, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.65, ease: EASINGS.smoothOut }}
               className="relative flex flex-col items-center justify-center"
             >
               {/* Floating & gentle swing motion wrapper */}
               <motion.div
-                animate={{
+                animate={shouldReduceMotion ? undefined : {
                   y: [-8, 8, -8],
                   rotate: [-1, 1, -1],
                 }}
@@ -185,8 +186,11 @@ const Header = () => {
                   href="https://dev.nileshnama.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, y: -1.5 }}
-                  whileTap={{ scale: 0.96 }}
+                  initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.92 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.45, delay: 0.35, ease: EASINGS.smoothOut }}
+                  whileHover={shouldReduceMotion ? undefined : { scale: 1.04, y: -2 }}
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.96 }}
                   className="
                     absolute -bottom-1 right-0 sm:bottom-4 sm:right-4 md:bottom-6 md:right-4 lg:bottom-6 lg:right-4 xl:bottom-8 xl:right-6
                     z-30
@@ -217,7 +221,7 @@ const Header = () => {
 
               {/* 3D Dynamic Cast Ground Shadow (breathes in sync with float) */}
               <motion.div
-                animate={{
+                animate={shouldReduceMotion ? undefined : {
                   scaleX: [1, 0.82, 1],
                   scaleY: [1, 0.82, 1],
                   opacity: [0.55, 0.28, 0.55],
@@ -243,10 +247,9 @@ const Header = () => {
           <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-2 sm:gap-3 md:gap-4 md:pl-2 lg:pl-6 xl:pl-10">
             {/* Trust Badge (Above Name) */}
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.08 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: 0.12, ease: EASINGS.smoothOut }}
               className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-black text-white text-xs sm:text-sm font-medium shadow-[0_10px_25px_rgba(0,0,0,0.18)] border border-white/10"
             >
               <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
@@ -255,10 +258,9 @@ const Header = () => {
 
             {/* Primary Identity (Above Nilesh Nama) */}
             <motion.h2
-              initial={{ y: -12, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.22, ease: EASINGS.smoothOut }}
               className="text-xs sm:text-base lg:text-xl text-gray-600 dark:text-gray-400 font-Ovo tracking-wide"
             >
               Software Engineer · Technical Educator · Author
@@ -266,10 +268,9 @@ const Header = () => {
 
             {/* Name */}
             <motion.h1
-              initial={{ y: -18, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.16 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.32, ease: EASINGS.smoothOut }}
               className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[clamp(4.2rem,6.8vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[1] whitespace-nowrap"
             >
               NILESH NAMA
@@ -277,10 +278,9 @@ const Header = () => {
 
             {/* Main line (Description with Smooth Height-Expanding Typing Animation) */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.45, ease: EASINGS.smoothOut }}
               className="text-gray-600 dark:text-gray-300 leading-relaxed text-xs sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-2 sm:gap-2.5 mt-0.5 sm:mt-1.5 px-1 sm:px-0"
             >
               {/* Smooth height-expanding wrapper: fits 1 line with no extra space, smoothly expands when wrapping to 2 lines to push text below */}
@@ -307,12 +307,11 @@ const Header = () => {
             {/* CTA Section */}
             <div className="w-full max-w-2xl mt-1.5 sm:mt-3 mb-1 sm:mb-0">
               <motion.a
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                whileHover={{ scale: 1.015 }}
-                whileTap={{ scale: 0.985 }}
-                transition={{ duration: 0.45, delay: 0.5 }}
-                viewport={{ once: true }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={shouldReduceMotion ? undefined : { y: -2.5, scale: 1.01 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
+                transition={{ duration: 0.45, delay: 0.58, ease: EASINGS.smoothOut }}
                 href="#nn-sessions"
                 onClick={(e) => {
                   e.preventDefault()
@@ -332,6 +331,7 @@ const Header = () => {
                 />
               </motion.a>
             </div>
+
           </div>
         </div>
       </div>

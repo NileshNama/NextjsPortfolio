@@ -401,32 +401,6 @@ export default function ExecutionRoadmapPremium() {
             ))}
           </div>
         </div>
-
-        {/* BOTTOM CTA */}
-        <div className="mt-10 flex justify-center">
-          <motion.a
-            href={SCHEDULE_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.02, y: -1 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.25 }}
-            className="
-              group inline-flex items-center gap-3 rounded-full
-              border border-slate-300 dark:border-white/20 bg-white dark:bg-darkTheme px-8 py-3 text-sm
-              font-medium text-slate-700 dark:text-white shadow-sm transition-all
-              duration-300 hover:border-transparent hover:bg-[#5A9B92]
-              hover:text-white dark:hover:bg-white/10
-              hover:shadow-[0_18px_40px_rgba(90,155,146,0.22)]
-            "
-          >
-            Curriculum
-
-            <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </motion.a>
-        </div>
       </div>
     </section>
   )
