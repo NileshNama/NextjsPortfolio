@@ -50,6 +50,32 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
     }
   }, [])
 
+  // Lock background scroll when mobile hamburger menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
+  // Close mobile menu on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
   const handleNavClick = (e, targetId) => {
     e.preventDefault()
     setIsMenuOpen(false)
@@ -257,7 +283,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
         {/* Backdrop Overlay for Mobile Drawer */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 touch-none"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
@@ -270,7 +296,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
             shadow-[-10px_0_30px_rgba(0,0,0,0.15)] dark:shadow-[-10px_0_30px_rgba(0,0,0,0.6)]
             border-l border-gray-200/60 dark:border-white/10
             transform transition-transform duration-300 ease-out
-            flex flex-col justify-between p-6 pt-20
+            flex flex-col justify-between p-6 pt-20 overscroll-contain
             ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
           `}
         >

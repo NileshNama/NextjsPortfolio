@@ -407,26 +407,30 @@ export default function CohortsPage() {
   const [isYoutubeModalOpen, setIsYoutubeModalOpen] = useState(false)
   const [selectedYoutubeId, setSelectedYoutubeId] = useState(null)
 
-  // Lock background scroll when modal is open
+  // Lock background scroll when modal or mobile menu is open
   useEffect(() => {
-    const isAnyModalOpen = isVideoModalOpen || isYoutubeModalOpen
-    if (isAnyModalOpen) {
+    const isLocked = isVideoModalOpen || isYoutubeModalOpen || isMobileMenuOpen
+    if (isLocked) {
       document.body.style.overflow = "hidden"
+      document.documentElement.style.overflow = "hidden"
     } else {
       document.body.style.overflow = ""
+      document.documentElement.style.overflow = ""
     }
     return () => {
       document.body.style.overflow = ""
+      document.documentElement.style.overflow = ""
     }
-  }, [isVideoModalOpen, isYoutubeModalOpen])
+  }, [isVideoModalOpen, isYoutubeModalOpen, isMobileMenuOpen])
 
-  // Close modal on ESC key
+  // Close modal or mobile menu on ESC key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setIsVideoModalOpen(false)
         setIsYoutubeModalOpen(false)
         setSelectedYoutubeId(null)
+        setIsMobileMenuOpen(false)
       }
     }
     window.addEventListener("keydown", handleKeyDown)
@@ -718,7 +722,7 @@ export default function CohortsPage() {
       {/* Backdrop for Mobile/Tablet Drawer */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 xl:hidden transition-opacity duration-300"
+          className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 xl:hidden transition-opacity duration-300 touch-none"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -731,7 +735,7 @@ export default function CohortsPage() {
           shadow-[-10px_0_30px_rgba(0,0,0,0.3)]
           border-l border-slate-200 dark:border-slate-800
           transform transition-transform duration-300 ease-out
-          flex flex-col justify-between p-6 pt-6 xl:hidden overflow-y-auto
+          flex flex-col justify-between p-6 pt-6 xl:hidden overflow-y-auto overscroll-contain
           ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
