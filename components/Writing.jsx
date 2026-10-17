@@ -65,7 +65,7 @@ const Writing = ({ isDarkMode }) => {
         transition={{ duration: 0.9 }}
         viewport={{ once: true }}
         id="writing"
-        className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 overflow-hidden bg-[#0b1120] text-white"
+        className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20 overflow-hidden bg-[#0b1120] text-white"
       >
         <div className="text-center mb-16 md:mb-20">
           <motion.p

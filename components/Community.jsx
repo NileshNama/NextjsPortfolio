@@ -19,7 +19,7 @@ const Community = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full px-6 md:px-[12%] py-24 md:py-32 bg-[#0f172a] text-white overflow-hidden"
+      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 bg-[#0f172a] text-white overflow-hidden scroll-mt-20"
     >
       {/* Heading */}
       <div className="text-center mb-16">

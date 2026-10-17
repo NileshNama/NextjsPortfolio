@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const Footer = ({ isDarkMode }) => {
   return (
-    <footer className="relative overflow-hidden mt-24 bg-[#0b1120] text-white">
+    <footer className="relative overflow-hidden bg-[#0b1120] text-white">
 
       {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
@@ -44,7 +44,7 @@ const Footer = ({ isDarkMode }) => {
         "
       />
 
-      <div className="relative px-6 md:px-[10%] py-24 md:py-32">
+      <div className="relative px-6 md:px-[10%] py-20 sm:py-24 md:py-28">
 
         {/* Main Statement */}
         <motion.div

@@ -7,7 +7,7 @@ const About = ({ isDarkMode }) => {
   return (
     <motion.section
       id="about"
-      className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-24 overflow-hidden"
+      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-24 overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}

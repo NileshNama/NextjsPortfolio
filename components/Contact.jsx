@@ -46,7 +46,7 @@ const Contact = () => {
         relative overflow-hidden
         w-full
         px-[7%] sm:px-[10%] lg:px-[12%]
-        py-24 md:py-32
+        py-20 sm:py-24 md:py-28
         scroll-mt-24
       "
     >

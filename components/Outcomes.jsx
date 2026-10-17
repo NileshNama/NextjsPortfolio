@@ -31,7 +31,7 @@ const Outcomes = () => {
   return (
     <section
       id="outcomes"
-      className="w-full px-[8%] py-24 md:py-32 scroll-mt-20"
+      className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20"
     >
       {/* Section Heading */}
       <div className="text-center mb-16">

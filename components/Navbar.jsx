@@ -3,16 +3,37 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
   const [isScroll, setIsScroll] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScroll(window.scrollY > 40)
+      if (typeof window !== 'undefined') {
+        setIsScroll(window.scrollY > 40)
+      }
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    // Immediately evaluate scroll position on mount
+    handleScroll()
+
+    // Handle browsers that restore scroll position asynchronously after layout/hydration
+    const rafId = requestAnimationFrame(handleScroll)
+    const timer50 = setTimeout(handleScroll, 50)
+    const timer150 = setTimeout(handleScroll, 150)
+    const timer300 = setTimeout(handleScroll, 300)
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleScroll, { passive: true })
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      clearTimeout(timer50)
+      clearTimeout(timer150)
+      clearTimeout(timer300)
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -23,6 +44,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' })
         }
+        setIsScroll(window.scrollY > 40)
         window.history.replaceState(null, '', window.location.pathname)
       }, 150)
     }
@@ -52,16 +74,17 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <>
       {/* Decorative background */}
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+      <div className={`fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden transition-opacity duration-300 ${isHidden ? 'opacity-0' : 'opacity-100'}`}>
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
 
       <nav
         className={`
-          fixed top-0 left-0 w-full z-50
+          fixed top-0 left-0 w-full z-40
           px-4 sm:px-8 lg:px-10 xl:px-14 py-3 sm:py-4
           flex items-center justify-between gap-3 sm:gap-4 lg:gap-8
-          transition-all duration-300
+          transition-all duration-300 ease-in-out
+          ${isHidden ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'}
           ${
             isScroll
               ? 'bg-white/70 backdrop-blur-xl border-b border-black/5 shadow-sm dark:bg-darkTheme/70 dark:border-white/10'

@@ -12,7 +12,7 @@ const BeliefSection = () => {
         relative overflow-hidden
         w-full
         px-6 md:px-[8%]
-        py-24 md:py-32
+        py-20 sm:py-24 md:py-28
         bg-[#0b1120]
         text-white
         scroll-mt-20

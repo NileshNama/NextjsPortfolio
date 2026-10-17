@@ -100,7 +100,7 @@ const Header = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-20 pb-8 sm:pt-28 sm:pb-12 lg:pt-28 lg:pb-12 overflow-hidden"
+      className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-[8%] mx-auto relative">
         {/* Soft background glow */}

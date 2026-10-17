@@ -36,7 +36,7 @@ const steps = [
 
 const QuestionFramework = () => {
   return (
-    <section id="framework" className="w-full px-[8%] py-24 md:py-32 scroll-mt-20 bg-[#0f172a] text-white">
+    <section id="framework" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#0f172a] text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

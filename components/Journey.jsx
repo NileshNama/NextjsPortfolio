@@ -58,7 +58,7 @@ const JourneyTimeline = () => {
     <section
       id="journey"
       ref={containerRef}
-      className="w-full px-4 sm:px-6 md:px-[8%] py-24 md:py-32 scroll-mt-20 relative overflow-hidden"
+      className="w-full px-4 sm:px-6 md:px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 relative overflow-hidden"
     >
       {/* Ambient background glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[38rem] h-[38rem] rounded-full bg-[#5A9B92]/5 blur-3xl pointer-events-none -z-10" />

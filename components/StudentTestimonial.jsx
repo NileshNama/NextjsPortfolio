@@ -163,7 +163,7 @@ const StudentTestimonial = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true }}
-      className="w-full px-6 md:px-[12%] py-24 md:py-32 bg-[#0b1120] text-white scroll-mt-20"
+      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 bg-[#0b1120] text-white scroll-mt-20"
     >
       <style>{`
         @keyframes reel-marquee {

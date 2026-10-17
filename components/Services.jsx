@@ -107,7 +107,7 @@ const Services = () => {
       {/* MAIN */}
       <section
         id="work"
-        className="w-full px-6 md:px-[12%] py-24 md:py-28 scroll-mt-20"
+        className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20"
       >
         <motion.p
           {...safeMotion(typographyReveal.tag, shouldReduceMotion)}

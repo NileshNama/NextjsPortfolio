@@ -61,7 +61,7 @@ const Faq = () => {
   }
 
   return (
-    <section id="faq" className="w-full px-[8%] py-24 md:py-32 scroll-mt-20 relative overflow-hidden">
+    <section id="faq" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 

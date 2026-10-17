@@ -36,8 +36,8 @@ const NNSessions = () => {
 
   return (
     <section
-      id="nn-sessions"
-      className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 bg-[#111827] text-white"
+      id="inside-nn-sessions"
+      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20 bg-[#111827] text-white"
     >
       {/* Heading */}
       <div className="text-center mb-16">

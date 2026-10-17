@@ -12,7 +12,7 @@ const WhoThrives = () => {
   return (
     <section
       id="who-thrives"
-      className="w-full px-[8%] py-24 md:py-32 scroll-mt-20"
+      className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}

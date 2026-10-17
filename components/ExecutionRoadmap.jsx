@@ -339,7 +339,7 @@ function CohortRow({ cohort, index }) {
 
 export default function ExecutionRoadmapPremium() {
   return (
-    <section id="cohorts" className="bg-[#f7fafb] dark:bg-darkTheme/40 py-20 sm:py-24">
+    <section id="cohorts" className="bg-[#f7fafb] dark:bg-darkTheme/40 py-20 sm:py-24 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
         <motion.div

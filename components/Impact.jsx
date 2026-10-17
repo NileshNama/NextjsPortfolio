@@ -43,7 +43,7 @@ const Impact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="w-full px-[12%] py-24 md:py-32 bg-[#111827] text-white"
+      className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 bg-[#111827] text-white scroll-mt-20"
     >
       {/* Heading */}
       <div className="text-center mb-14">

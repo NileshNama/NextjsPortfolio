@@ -28,7 +28,7 @@ const Cohorts = ({ isDarkMode }) => {
       {/* MAIN SECTION */}
       <section
         id="cohorts"
-        className="w-full px-6 md:px-[12%] py-24 md:py-32 scroll-mt-20 overflow-hidden"
+        className="w-full px-6 md:px-[12%] py-20 sm:py-24 md:py-28 scroll-mt-20 overflow-hidden"
       >
         <div className="text-center mb-16 md:mb-20">
           <motion.p

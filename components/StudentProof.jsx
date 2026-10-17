@@ -14,7 +14,7 @@ const shifts = [
 
 const StudentProof = () => {
   return (
-    <section id="student-proof" className="w-full px-[8%] py-24 scroll-mt-20">
+    <section id="student-proof" className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

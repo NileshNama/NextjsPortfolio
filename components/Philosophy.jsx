@@ -27,7 +27,7 @@ const ThinkingPrinciples = () => {
   return (
     <section
       id="thinking-principles"
-      className="w-full px-[8%] py-24 scroll-mt-20"
+      className="w-full px-[8%] py-20 sm:py-24 md:py-28 scroll-mt-20"
     >
       <div className="text-center mb-16">
         <motion.p
