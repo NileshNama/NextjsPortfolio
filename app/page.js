@@ -4,6 +4,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Organizations from "../components/Organizations";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Work from "../components/Work";
@@ -59,6 +60,7 @@ export default function Home() {
     <>
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
     <Header isDarkMode={isDarkMode} />
+    <Organizations isDarkMode={isDarkMode} />
     <Outcomes isDarkMode={isDarkMode} />
     <Struggles isDarkMode={isDarkMode} />
     <BeliefSection isDarkMode={isDarkMode}  />
