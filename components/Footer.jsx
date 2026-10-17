@@ -179,27 +179,7 @@ const Footer = ({ isDarkMode }) => {
             text-sm
             text-white/60
           ">
-            <li>
-              <a
-                href="https://www.nquestions.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition"
-              >
-                NQuestions.in
-              </a>
-            </li>
-            
-            <li>
-              <a
-                href="https://cohorts.nileshnama.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition"
-              >
-                Cohorts
-              </a>
-            </li>
+
 
             <li>
               <a

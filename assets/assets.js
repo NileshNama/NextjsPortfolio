@@ -19,6 +19,12 @@ import profile_img from './profile-img.png';
 import profile_img_2 from './profile-img-2.png';
 import profile_img_3 from './profile-img-3.png';
 import profile_img_4 from './profile-img-4.png';
+import profile_img_5 from './profile-img-5.png';
+import profile_img_6 from './profile-img-6.png';
+import profile_img_7 from './profile-img-7.png';
+import profile_img_8 from './profile-img-8.png';
+import profile_img_9 from './profile-img-9.png';
+import profile_img_10 from './profile-img-10.png';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -61,6 +67,12 @@ export const assets = {
     profile_img_2,
     profile_img_3,
     profile_img_4,
+    profile_img_5,
+    profile_img_6,
+    profile_img_7,
+    profile_img_8,
+    profile_img_9,
+    profile_img_10,
     download_icon,
     hand_icon,
     header_bg_color,

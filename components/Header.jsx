@@ -7,10 +7,15 @@ const Header = () => {
   const manifestoText = "Building technology. Teaching engineering. Training minds to think."
 
   const profileImages = [
-    assets.profile_img,
     assets.profile_img_2,
+    assets.profile_img,
     assets.profile_img_3,
     assets.profile_img_4,
+    assets.profile_img_5,
+    assets.profile_img_7,
+    assets.profile_img_8,
+    assets.profile_img_9,
+    assets.profile_img_10,
   ]
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -175,34 +180,38 @@ const Header = () => {
                   <div className="absolute inset-1.5 sm:inset-2.5 rounded-full pointer-events-none ring-1 ring-inset ring-white/70 dark:ring-white/20 z-20" />
                 </div>
 
-                {/* Corner Badge: Engineering Portfolio (Attached to image corner) */}
+                {/* Corner Badge: Engineering Portfolio (Subtle Dark Teal Accent) */}
                 <motion.a
                   href="https://dev.nileshnama.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileHover={{ scale: 1.05, y: -1.5 }}
                   whileTap={{ scale: 0.96 }}
                   className="
                     absolute -bottom-1 right-0 sm:bottom-4 sm:right-4 md:bottom-6 md:right-4 lg:bottom-6 lg:right-4 xl:bottom-8 xl:right-6
                     z-30
                     flex items-center gap-1.5 sm:gap-2
-                    px-2.5 py-1 sm:px-4 sm:py-2.5
+                    px-3 py-1.5 sm:px-4 sm:py-2.5
                     rounded-full
-                    border border-gray-300/80 dark:border-white/20
-                    bg-white/95 dark:bg-darkTheme/90
+                    border border-white/25 dark:border-white/20
+                    bg-gradient-to-r from-[#437d75] to-[#509187]
+                    text-white
                     backdrop-blur-xl
-                    text-[11px] sm:text-sm font-medium text-gray-800 dark:text-gray-100
-                    shadow-[0_8px_24px_rgba(0,0,0,0.14)] dark:shadow-[0_10px_24px_rgba(0,0,0,0.5)]
-                    hover:border-[#5A9B92] dark:hover:border-[#5A9B92]
-                    hover:shadow-[0_14px_35px_rgba(90,155,146,0.3)]
+                    text-[11px] sm:text-sm font-semibold
+                    shadow-[0_4px_14px_rgba(80,145,135,0.25),0_2px_6px_rgba(0,0,0,0.12)]
+                    hover:shadow-[0_6px_20px_rgba(80,145,135,0.38)]
+                    hover:brightness-105
                     transition-all duration-300
                     group/badge cursor-pointer
                     whitespace-nowrap
                   "
                 >
-                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#5A9B92] animate-pulse" />
-                  <span>Engineering Portfolio</span>
-                  <span className="text-[#5A9B92] font-semibold transition-transform duration-200 ease-out group-hover/badge:translate-x-0.5 group-hover/badge:-translate-y-0.5">↗</span>
+                  <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-70" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-white" />
+                  </span>
+                  <span className="tracking-wide">Engineering Portfolio</span>
+                  <span className="text-white font-bold transition-transform duration-200 ease-out group-hover/badge:translate-x-0.5 group-hover/badge:-translate-y-0.5">↗</span>
                 </motion.a>
               </motion.div>
 
@@ -272,7 +281,7 @@ const Header = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-gray-600 dark:text-gray-300 leading-relaxed text-xs sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-1.5 sm:gap-2 mt-0.5 sm:mt-1.5 px-1 sm:px-0"
+              className="text-gray-600 dark:text-gray-300 leading-relaxed text-xs sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-2 sm:gap-2.5 mt-0.5 sm:mt-1.5 px-1 sm:px-0"
             >
               {/* Smooth height-expanding wrapper: fits 1 line with no extra space, smoothly expands when wrapping to 2 lines to push text below */}
               <motion.div
@@ -285,12 +294,14 @@ const Header = () => {
                   <span className="inline-block w-[2px] h-[1.15em] bg-[#509187] align-middle ml-1 animate-pulse" />
                 </div>
               </motion.div>
-              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
-                I build software, teach core computer science concepts, and help aspiring engineers prepare for GATE, BARC, technical interviews, and real-world engineering challenges.
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
-                I bridge technical knowledge and practical application, helping learners reason clearly, solve systematically, and perform confidently under pressure.
-              </p>
+              <div className="flex flex-col gap-1 sm:gap-1.5 text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
+                <p>
+                  I build software, teach core computer science concepts, and help aspiring engineers prepare for GATE, BARC, technical interviews, and real-world engineering challenges.
+                </p>
+                <p>
+                  I bridge technical knowledge and practical application, helping learners reason clearly, solve systematically, and perform confidently under pressure.
+                </p>
+              </div>
             </motion.div>
 
             {/* CTA Section */}
@@ -313,7 +324,7 @@ const Header = () => {
                 }}
                 className="group w-full py-3 sm:py-3.5 px-6 sm:px-8 rounded-full bg-[#509187] text-white font-medium flex items-center justify-center gap-2.5 shadow-[0_12px_28px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300 cursor-pointer text-center text-xs sm:text-base"
               >
-                <span>See NN Sessions</span>
+                <span>Dive Into the NN Sessions</span>
                 <Image
                   src={assets.right_arrow_white}
                   alt=""
