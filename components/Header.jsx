@@ -93,18 +93,18 @@ const Header = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-screen flex items-center justify-center pt-32 pb-16 lg:pt-28 lg:pb-12 overflow-hidden"
+      className="w-full min-h-screen flex items-center justify-center pt-20 pb-8 sm:pt-28 sm:pb-12 lg:pt-28 lg:pb-12 overflow-hidden"
     >
-      <div className="w-full px-5 lg:px-8 xl:px-[8%] mx-auto relative">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-[8%] mx-auto relative">
         {/* Soft background glow */}
         <div className="absolute -top-10 left-1/4 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-[#5A9B92]/10 blur-3xl -z-10" />
         <div className="absolute top-20 right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-14 xl:gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-6 md:gap-10 lg:gap-14 xl:gap-20">
           {/* Left side: Profile Image (3D Floating & Swing Animation) */}
-          <div className="w-full md:w-5/12 lg:w-5/12 xl:w-5/12 flex items-center justify-center lg:justify-start relative py-4 sm:py-6">
+          <div className="w-full md:w-5/12 lg:w-5/12 xl:w-5/12 flex items-center justify-center lg:justify-start relative py-1 sm:py-4 md:py-6">
             {/* Ambient Background Aura / Deep 3D Atmosphere */}
-            <div className="absolute w-72 h-72 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] lg:w-[460px] lg:h-[460px] xl:w-[540px] xl:h-[540px] rounded-full bg-gradient-to-tr from-[#5A9B92]/30 via-[#5A9B92]/15 to-transparent blur-3xl -z-20 pointer-events-none" />
+            <div className="absolute w-56 h-56 sm:w-80 sm:h-80 md:w-[420px] md:h-[420px] lg:w-[460px] lg:h-[460px] xl:w-[540px] xl:h-[540px] rounded-full bg-gradient-to-tr from-[#5A9B92]/30 via-[#5A9B92]/15 to-transparent blur-2xl sm:blur-3xl -z-20 pointer-events-none" />
 
             {/* 3D Floating/Swinging Motion Container */}
             <motion.div
@@ -117,8 +117,8 @@ const Header = () => {
               {/* Floating & gentle swing motion wrapper */}
               <motion.div
                 animate={{
-                  y: [-12, 12, -12],
-                  rotate: [-1.2, 1.2, -1.2],
+                  y: [-8, 8, -8],
+                  rotate: [-1, 1, -1],
                 }}
                 transition={{
                   duration: 5.5,
@@ -137,14 +137,14 @@ const Header = () => {
                     bg-gradient-to-b from-white/90 via-white/50 to-gray-200/40
                     dark:from-white/20 dark:via-white/5 dark:to-black/50
                     backdrop-blur-md
-                    shadow-[0_25px_60px_-10px_rgba(0,0,0,0.28),0_40px_80px_-20px_rgba(90,155,146,0.35),0_10px_25px_-5px_rgba(0,0,0,0.18)]
-                    dark:shadow-[0_30px_70px_-10px_rgba(0,0,0,0.7),0_40px_80px_-20px_rgba(90,155,146,0.25)]
+                    shadow-[0_20px_50px_-10px_rgba(0,0,0,0.25),0_30px_60px_-15px_rgba(90,155,146,0.3)]
+                    dark:shadow-[0_25px_60px_-10px_rgba(0,0,0,0.7),0_35px_70px_-20px_rgba(90,155,146,0.25)]
                     ring-1 ring-white/60 dark:ring-white/15
                     transition-transform duration-300
                   "
                 >
                   {/* Smooth 5-Second Profile Image Carousel */}
-                  <div className="relative rounded-full w-56 sm:w-72 md:w-80 lg:w-[380px] xl:w-[440px] 2xl:w-[480px] aspect-square overflow-hidden z-10">
+                  <div className="relative rounded-full w-44 sm:w-64 md:w-80 lg:w-[380px] xl:w-[440px] 2xl:w-[480px] aspect-square overflow-hidden z-10">
                     {profileImages.map((img, idx) => (
                       <motion.div
                         key={idx}
@@ -164,7 +164,7 @@ const Header = () => {
                           alt="Nilesh Nama"
                           priority={idx === 0}
                           fill
-                          sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 380px, 480px"
+                          sizes="(max-width: 640px) 176px, (max-width: 768px) 256px, (max-width: 1024px) 380px, 480px"
                           className="rounded-full aspect-square object-cover"
                         />
                       </motion.div>
@@ -172,7 +172,7 @@ const Header = () => {
                   </div>
 
                   {/* 3D Glass Specular Rim Inner Ring */}
-                  <div className="absolute inset-2 sm:inset-2.5 rounded-full pointer-events-none ring-1 ring-inset ring-white/70 dark:ring-white/20 z-20" />
+                  <div className="absolute inset-1.5 sm:inset-2.5 rounded-full pointer-events-none ring-1 ring-inset ring-white/70 dark:ring-white/20 z-20" />
                 </div>
 
                 {/* Corner Badge: Engineering Portfolio (Attached to image corner) */}
@@ -183,16 +183,16 @@ const Header = () => {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.96 }}
                   className="
-                    absolute bottom-2 right-2 sm:bottom-4 sm:right-4 md:bottom-6 md:right-4 lg:bottom-6 lg:right-4 xl:bottom-8 xl:right-6
+                    absolute -bottom-1 right-0 sm:bottom-4 sm:right-4 md:bottom-6 md:right-4 lg:bottom-6 lg:right-4 xl:bottom-8 xl:right-6
                     z-30
                     flex items-center gap-1.5 sm:gap-2
-                    px-3.5 py-2 sm:px-4 sm:py-2.5
+                    px-2.5 py-1 sm:px-4 sm:py-2.5
                     rounded-full
                     border border-gray-300/80 dark:border-white/20
                     bg-white/95 dark:bg-darkTheme/90
                     backdrop-blur-xl
-                    text-xs sm:text-sm font-medium text-gray-800 dark:text-gray-100
-                    shadow-[0_10px_30px_rgba(0,0,0,0.18)] dark:shadow-[0_12px_30px_rgba(0,0,0,0.6)]
+                    text-[11px] sm:text-sm font-medium text-gray-800 dark:text-gray-100
+                    shadow-[0_8px_24px_rgba(0,0,0,0.14)] dark:shadow-[0_10px_24px_rgba(0,0,0,0.5)]
                     hover:border-[#5A9B92] dark:hover:border-[#5A9B92]
                     hover:shadow-[0_14px_35px_rgba(90,155,146,0.3)]
                     transition-all duration-300
@@ -200,7 +200,7 @@ const Header = () => {
                     whitespace-nowrap
                   "
                 >
-                  <span className="w-2 h-2 rounded-full bg-[#5A9B92] animate-pulse" />
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#5A9B92] animate-pulse" />
                   <span>Engineering Portfolio</span>
                   <span className="text-[#5A9B92] font-semibold transition-transform duration-200 ease-out group-hover/badge:translate-x-0.5 group-hover/badge:-translate-y-0.5">↗</span>
                 </motion.a>
@@ -219,11 +219,11 @@ const Header = () => {
                   ease: "easeInOut",
                 }}
                 className="
-                  w-48 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-6 sm:h-8
+                  w-36 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-3 sm:h-8
                   rounded-[100%]
                   bg-black/35 dark:bg-black/75
-                  blur-lg sm:blur-xl
-                  mt-3 sm:mt-4
+                  blur-md sm:blur-xl
+                  mt-1.5 sm:mt-4
                   -z-10
                 "
               />
@@ -231,16 +231,16 @@ const Header = () => {
           </div>
 
           {/* Right side: Remaining Text (Pushed Right towards Login button) */}
-          <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-3 sm:gap-4 md:pl-2 lg:pl-6 xl:pl-10">
+          <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-2 sm:gap-3 md:gap-4 md:pl-2 lg:pl-6 xl:pl-10">
             {/* Trust Badge (Above Name) */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black text-white text-sm font-medium shadow-[0_12px_30px_rgba(0,0,0,0.18)] border border-white/10"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-black text-white text-xs sm:text-sm font-medium shadow-[0_10px_25px_rgba(0,0,0,0.18)] border border-white/10"
             >
-              <div className="w-2.5 h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
               Trusted by 5K Aspirants
             </motion.div>
 
@@ -250,7 +250,7 @@ const Header = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.12 }}
               viewport={{ once: true }}
-              className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-Ovo tracking-wide"
+              className="text-xs sm:text-base lg:text-xl text-gray-600 dark:text-gray-400 font-Ovo tracking-wide"
             >
               Software Engineer · Technical Educator · Author
             </motion.h2>
@@ -261,7 +261,7 @@ const Header = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.16 }}
               viewport={{ once: true }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-[clamp(4.2rem,6.8vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[0.95] whitespace-nowrap"
+              className="text-[2.2rem] sm:text-5xl md:text-6xl lg:text-[clamp(4.2rem,6.8vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[1] whitespace-nowrap"
             >
               NILESH NAMA
             </motion.h1>
@@ -272,7 +272,7 @@ const Header = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-2 mt-1 sm:mt-1.5"
+              className="text-gray-600 dark:text-gray-300 leading-relaxed text-xs sm:text-base lg:text-lg w-full max-w-2xl flex flex-col gap-1.5 sm:gap-2 mt-0.5 sm:mt-1.5 px-1 sm:px-0"
             >
               {/* Smooth height-expanding wrapper: fits 1 line with no extra space, smoothly expands when wrapping to 2 lines to push text below */}
               <motion.div
@@ -280,21 +280,21 @@ const Header = () => {
                 transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                 className="overflow-hidden"
               >
-                <div ref={contentRef} className="font-medium text-gray-800 dark:text-gray-200">
+                <div ref={contentRef} className="font-medium text-gray-800 dark:text-gray-200 text-xs sm:text-base lg:text-lg leading-snug sm:leading-relaxed">
                   <span>{displayManifesto}</span>
                   <span className="inline-block w-[2px] h-[1.15em] bg-[#509187] align-middle ml-1 animate-pulse" />
                 </div>
               </motion.div>
-              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
                 I build software, teach core computer science concepts, and help aspiring engineers prepare for GATE, BARC, technical interviews, and real-world engineering challenges.
               </p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
                 I bridge technical knowledge and practical application, helping learners reason clearly, solve systematically, and perform confidently under pressure.
               </p>
             </motion.div>
 
             {/* CTA Section */}
-            <div className="w-full max-w-2xl mt-2 sm:mt-3">
+            <div className="w-full max-w-2xl mt-1.5 sm:mt-3 mb-1 sm:mb-0">
               <motion.a
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -311,13 +311,13 @@ const Header = () => {
                     window.history.pushState(null, '', window.location.pathname)
                   }
                 }}
-                className="group w-full py-3.5 px-8 rounded-full bg-[#509187] text-white font-medium flex items-center justify-center gap-2.5 shadow-[0_18px_40px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300 cursor-pointer text-center text-sm sm:text-base"
+                className="group w-full py-3 sm:py-3.5 px-6 sm:px-8 rounded-full bg-[#509187] text-white font-medium flex items-center justify-center gap-2.5 shadow-[0_12px_28px_rgba(80,145,135,0.22)] hover:shadow-[0_24px_60px_rgba(80,145,135,0.28)] transition-all duration-300 cursor-pointer text-center text-xs sm:text-base"
               >
                 <span>See NN Sessions</span>
                 <Image
                   src={assets.right_arrow_white}
                   alt=""
-                  className="w-4 transition-transform duration-300 group-hover:translate-x-1.5"
+                  className="w-3.5 sm:w-4 transition-transform duration-300 group-hover:translate-x-1.5"
                 />
               </motion.a>
             </div>
