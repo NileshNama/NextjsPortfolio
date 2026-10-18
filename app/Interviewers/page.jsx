@@ -135,23 +135,44 @@ export default function CVPage() {
 
                   <div className="w-full text-left space-y-3 text-xs text-slate-600 dark:text-gray-300">
                     <a href="mailto:nileshnama1997@gmail.com" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">✉</span>
+                      <span className="w-5 h-5 rounded-md bg-[#0077b5]/10 dark:bg-[#70b5f9]/15 text-[#0077b5] dark:text-[#70b5f9] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                          <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                        </svg>
+                      </span>
                       <span className="truncate">nileshnama1997@gmail.com</span>
                     </a>
                     <a href="tel:+919602323340" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">📞</span>
+                      <span className="w-5 h-5 rounded-md bg-[#0077b5]/10 dark:bg-[#70b5f9]/15 text-[#0077b5] dark:text-[#70b5f9] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                          <path fillRule="evenodd" clipRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97a15.353 15.353 0 006.318 6.318l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V21a3 3 0 01-3 3 19.5 19.5 0 01-19.5-19.5z" />
+                        </svg>
+                      </span>
                       <span className="truncate">+91-9602323340</span>
                     </a>
                     <a href="https://www.linkedin.com/in/nileshnama/" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">🔗</span>
+                      <span className="w-5 h-5 rounded-md bg-[#0077b5]/10 dark:bg-[#70b5f9]/15 text-[#0077b5] dark:text-[#70b5f9] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6h2.76v-7.6H6.46M7.84 6.94a1.6 1.6 0 1 0 1.6 1.6 1.6 1.6 0 0 0-1.6-1.6z"/>
+                        </svg>
+                      </span>
                       <span className="truncate">linkedin.com/in/nileshnama</span>
                     </a>
                     <a href="https://github.com/NileshNama" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">💻</span>
+                      <span className="w-5 h-5 rounded-md bg-[#0077b5]/10 dark:bg-[#70b5f9]/15 text-[#0077b5] dark:text-[#70b5f9] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                          <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                      </span>
                       <span className="truncate">github.com/NileshNama</span>
                     </a>
                     <a href="https://nileshnama.notion.site" target="_blank" className="flex items-center gap-2 hover:text-[#0077b5] dark:hover:text-[#70b5f9] transition min-w-0">
-                      <span className="text-[#0077b5] dark:text-[#70b5f9] text-sm shrink-0">📄</span>
+                      <span className="w-5 h-5 rounded-md bg-[#0077b5]/10 dark:bg-[#70b5f9]/15 text-[#0077b5] dark:text-[#70b5f9] flex items-center justify-center shrink-0">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </span>
                       <span className="truncate">nileshnama.notion.site</span>
                     </a>
                   </div>

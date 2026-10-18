@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { assets } from "@/assets/assets"
 import Preloader from "@/components/Preloader" 
@@ -71,8 +71,8 @@ const HelpIcon = ({ className = "w-4 h-4 text-[#509187] dark:text-[#5A9B92]" }) 
 )
 
 const WhatsAppIcon = ({ className = "w-4 h-4" }) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.451L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.859-4.42 9.863-9.864.002-2.637-1.023-5.116-2.887-6.98C16.576 1.897 14.1 1.072 11.9 1.072c-5.437 0-9.861 4.42-9.865 9.865-.001 1.8.49 3.558 1.42 5.114l-.955 3.49 3.547-.932zm12.355-6.607c-.31-.156-1.836-.906-2.12-.1.1-.284-.156-.425-.213-.679-.057-.254-.254-.849-.254-1.217s.14-.566.254-.679c.113-.113.254-.142.34-.142s.17.028.254.028c.084 0 .17-.028.254.028.085.057.34.821.37.878.028.057.028.142-.028.254-.056.113-.142.254-.226.34-.085.085-.17.17-.057.34.113.197.508.826 1.084 1.34.744.662 1.37.867 1.56.96.19.094.283.085.39-.028.1-.113.45-.538.56-.68.1-.14.22-.113.34-.056.113.056.736.347.849.405.113.056.19.085.22.14.03.056.03.31-.085.65-.113.34-.68 1.67-1.47 1.75-.8.08-1.55-.25-2.23-.79z"/>
+  <svg className={className} fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.705 1.917.81 2.049c.098.133 1.39 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
   </svg>
 )
 
@@ -84,13 +84,26 @@ const DiscordIcon = ({ className = "w-4 h-4" }) => (
 
 const LinkedInIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v7.6h2.76v-7.6H6.46M7.84 6.94a1.6 1.6 0 1 0 1.6 1.6 1.6 1.6 0 0 0-1.6-1.6z"/>
   </svg>
 )
 
 const MailIcon = ({ className = "w-4 h-4" }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+  </svg>
+)
+
+const PhoneIcon = ({ className = "w-4 h-4" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path fillRule="evenodd" clipRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97a15.353 15.353 0 006.318 6.318l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V21a3 3 0 01-3 3 19.5 19.5 0 01-19.5-19.5z" />
+  </svg>
+)
+
+const YouTubeIcon = ({ className = "w-4 h-4" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
   </svg>
 )
 
@@ -313,32 +326,45 @@ const SUCCESS_STORIES = [
   }
 ]
 
-const FREE_RESOURCES = [
+const GATE_RESOURCES = [
   {
     title: "GATE CS & DA Exam Overview",
-    desc: "What GATE CS & DA is, who it's for, weightage metrics, and a scientist-built preparation roadmap."
+    desc: "What GATE CS & DA is, who it's for, weightage metrics, and a scientist-built preparation roadmap.",
+    tag: "Roadmap & Strategy",
+    url: "https://cohorts.nileshnama.com/books"
   },
   {
     title: "GATE CS & DA Syllabus",
-    desc: "Subject-wise topics, weightage chart, and core system priority ratings — downloadable as a PDF."
+    desc: "Subject-wise topics, weightage chart, and core system priority ratings — downloadable as a PDF.",
+    tag: "Full Curriculum",
+    url: "https://cohorts.nileshnama.com/study-material"
   },
   {
     title: "Online Course & Coaching",
-    desc: "How to choose a GATE CS & DA online course, and why first-principles coaching is essential."
+    desc: "How to choose a GATE CS & DA online course, and why first-principles coaching is essential.",
+    tag: "Guidance & Selection",
+    url: "https://cohorts.nileshnama.com/new-courses?examId=1"
   },
   {
     title: "Course Fees & Intakes",
-    desc: "Transparent pricing details for Core, Pro, and the standalone Mentorship Programs."
+    desc: "Transparent pricing details for Core, Pro, and the standalone Mentorship Programs.",
+    tag: "Transparent Pricing",
+    url: "https://cohorts.nileshnama.com/new-courses?examId=6"
   },
   {
     title: "GATE CS & DA Test Series",
-    desc: "High-quality mock tests and practice problems built to match the actual GATE CS & DA exam pattern."
+    desc: "High-quality mock tests and practice problems built to match the actual GATE CS & DA exam pattern.",
+    tag: "Exam Simulation",
+    url: "https://cohorts.nileshnama.com/test-series"
   },
   {
     title: "GATE CS & DA Blog & Guides",
-    desc: "In-depth guides on operating systems, compilers, database theory, and exam strategies."
+    desc: "In-depth guides on operating systems, compilers, database theory, and exam strategies.",
+    tag: "Knowledge Base",
+    url: "https://cohorts.nileshnama.com/study-material"
   }
 ]
+const FREE_RESOURCES = GATE_RESOURCES
 
 const FAQS = [
   {
@@ -388,14 +414,125 @@ const DUMMY_YOUTUBE_SESSIONS = [
   { id: "6NtbCuU3TLy", title: "Compiler Syntax Analysis" }
 ]
 
+const NQUESTIONS_FEATURES = [
+  {
+    title: "Unlimited Topic-Wise Practice",
+    desc: "Drill any topic as long as you need. When PYQs run out, generate fresh exam-style questions from your weak areas.",
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+      </svg>
+    ),
+  },
+  {
+    title: "All GATE CS & DA PYQs (1987–Present)",
+    desc: "Every PYQ in test mode with detailed solutions. Covers CS, DA, EC, EE, ME & CE papers from 1987–2026.",
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
+  {
+    title: "Topic-wise skill scores",
+    desc: "Your skill score updates with every question—giving you a live map of your strengths and weaknesses, not just a mock-test percentile.",
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-6 0H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2h-2" />
+      </svg>
+    ),
+  },
+  {
+    title: "AI doubt support",
+    desc: "An AI copilot grounded in your practice history—giving you personalised explanations, not generic answers.",
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+]
+
+const DUPLICATED_NQUESTIONS = [
+  ...NQUESTIONS_FEATURES,
+  ...NQUESTIONS_FEATURES,
+  ...NQUESTIONS_FEATURES,
+  ...NQUESTIONS_FEATURES,
+]
+
+const COACH_PROFILE_IMAGES = [
+  assets.profile_img_2,
+  assets.profile_img_11,
+  assets.profile_img_3,
+  assets.profile_img_4,
+  assets.profile_img_8,
+  assets.profile_img_9,
+  assets.profile_img_10,
+]
+
 export default function CohortsPage() {
   const [activeYearTab, setActiveYearTab] = useState("gate2027")
   const [heroVideoId, setHeroVideoId] = useState(DUMMY_YOUTUBE_SESSIONS[0]?.id || "z44z1U76dIs")
   const [storyIndex, setStoryIndex] = useState(0)
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
+  const [coachImageIndex, setCoachImageIndex] = useState(0)
+  const [isNQuestionsPaused, setIsNQuestionsPaused] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+  const moreDropdownRef = useRef(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSyllabusIdx, setActiveSyllabusIdx] = useState(0)
+  const [resourceActiveIdx, setResourceActiveIdx] = useState(1)
+  const resourceSliderRef = useRef(null)
+  const resourceTrackRef = useRef(null)
+  const touchStartXRef = useRef(null)
+  const touchEndXRef = useRef(null)
+
+  const handleSliderTouchStart = (e) => {
+    touchStartXRef.current = e.targetTouches[0].clientX
+    touchEndXRef.current = null
+  }
+
+  const handleSliderTouchMove = (e) => {
+    touchEndXRef.current = e.targetTouches[0].clientX
+  }
+
+  const handleSliderTouchEnd = () => {
+    if (touchStartXRef.current === null || touchEndXRef.current === null) return
+    const diff = touchStartXRef.current - touchEndXRef.current
+    if (diff > 45) {
+      // Swiped left -> next
+      setResourceActiveIdx((prev) => (prev + 1) % GATE_RESOURCES.length)
+    } else if (diff < -45) {
+      // Swiped right -> prev
+      setResourceActiveIdx((prev) => (prev - 1 + GATE_RESOURCES.length) % GATE_RESOURCES.length)
+    }
+    touchStartXRef.current = null
+    touchEndXRef.current = null
+  }
+
+  // Auto-center the active resource card in the slider
+  useEffect(() => {
+    if (!resourceSliderRef.current || !resourceTrackRef.current) return
+    const activeEl = resourceTrackRef.current.children[resourceActiveIdx]
+    if (activeEl) {
+      const containerWidth = resourceSliderRef.current.offsetWidth
+      const elOffset = activeEl.offsetLeft
+      const elWidth = activeEl.offsetWidth
+      const targetScroll = elOffset - (containerWidth / 2) + (elWidth / 2)
+      resourceSliderRef.current.scrollTo({
+        left: targetScroll,
+        behavior: "smooth"
+      })
+    }
+  }, [resourceActiveIdx])
+
+  // Coach Profile Carousel (Changes every 5s like the main hero section)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCoachImageIndex((prev) => (prev + 1) % COACH_PROFILE_IMAGES.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
 
   // Quiz Recommendation States
   const [quizStep, setQuizStep] = useState(1) // 1: target year, 2: prep state, 3: result recommendation
@@ -423,7 +560,7 @@ export default function CohortsPage() {
     }
   }, [isVideoModalOpen, isYoutubeModalOpen, isMobileMenuOpen])
 
-  // Close modal or mobile menu on ESC key
+  // Close modal, mobile menu, or dropdown on ESC key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -431,11 +568,27 @@ export default function CohortsPage() {
         setIsYoutubeModalOpen(false)
         setSelectedYoutubeId(null)
         setIsMobileMenuOpen(false)
+        setMoreOpen(false)
       }
     }
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [])
+
+  // Close "More" dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target)) {
+        setMoreOpen(false)
+      }
+    }
+    if (moreOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [moreOpen])
 
   // Sandbox State
   const [sandboxAnswer, setSandboxAnswer] = useState(null)
@@ -553,7 +706,7 @@ export default function CohortsPage() {
   const nextIndex = (storyIndex + 1) % SUCCESS_STORIES.length
 
   return (
-    <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100  transition-colors duration-300">
+    <div className="cohorts-page min-h-screen bg-[#fafbfc] dark:bg-[#070b15] text-slate-900 dark:text-gray-100 transition-colors duration-300 overflow-x-clip">
       <Preloader
         title="NN COHORTS"
         subtitle="GATE / BARC / PSUs Exam Preparation Hub"
@@ -598,109 +751,114 @@ export default function CohortsPage() {
 
       {/* 2. CUSTOM NAVBAR */}
       <header className="sticky top-0 z-40 bg-white/95 dark:bg-[#070b15]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 sm:px-6 lg:px-[8%] py-3.5 sm:py-4 flex items-center justify-between transition-all duration-300">
-        <a href="/" className="flex items-center gap-2 shrink-0">
-          <Image
-            src={assets.logo}
-            alt="Nilesh Nama"
-            className="w-24 sm:w-28 cursor-pointer dark:hidden"
-          />
-          <Image
-            src={assets.logo_dark}
-            alt="Nilesh Nama"
-            className="w-24 sm:w-28 cursor-pointer hidden dark:block"
-          />
-        </a>
+        {/* Left: Logo */}
+        <div className="flex-1 flex items-center justify-start">
+          <a href="/" className="flex items-center gap-2 shrink-0">
+            <Image
+              src={assets.logo}
+              alt="Nilesh Nama"
+              className="w-24 sm:w-28 cursor-pointer dark:hidden"
+            />
+            <Image
+              src={assets.logo_dark}
+              alt="Nilesh Nama"
+              className="w-24 sm:w-28 cursor-pointer hidden dark:block"
+            />
+          </a>
+        </div>
 
-        <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
-          <nav className="hidden xl:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200">
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Tracks</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Programs</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Interviews</a>
-            <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Mentorship</a>
-            <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Test Series</a>
-            <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">NQuestions</a>
-            
-            {/* Custom Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setMoreOpen(!moreOpen)}
-                className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition flex items-center gap-1.5 font-semibold"
-              >
-                More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
-              </button>
-              {moreOpen && (
-                <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
-                  
-                  <a
-                    href="https://cohorts.nileshnama.com/quiz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">CS & DA practice questions</p>
-                  </a>
+        {/* Center: Desktop Navigation (Tracks to More) */}
+        <nav className="hidden xl:flex items-center justify-center gap-6 lg:gap-8 text-sm font-semibold text-slate-700 dark:text-gray-200 shrink-0">
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=6" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Tracks</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=1" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Programs</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=2" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Interviews</a>
+          <a href="https://cohorts.nileshnama.com/new-courses?examId=3" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Mentorship</a>
+          <a href="https://cohorts.nileshnama.com/test-series" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">Test Series</a>
+          <a href="https://nquestions.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition">NQuestions</a>
+          
+          {/* Custom Dropdown */}
+          <div className="relative" ref={moreDropdownRef}>
+            <button
+              onClick={() => setMoreOpen(!moreOpen)}
+              className="hover:text-[#509187] dark:hover:text-[#5A9B92] transition flex items-center gap-1.5 font-semibold"
+            >
+              More <ChevronIcon isOpen={moreOpen} className="w-3 h-3 text-slate-400" />
+            </button>
+            {moreOpen && (
+              <div className="absolute right-0 mt-3 w-80 rounded-3xl border border-slate-200 dark:border-slate-850 bg-white/95 dark:bg-[#0d1527]/95 backdrop-blur-md p-3 shadow-xl shadow-slate-200/40 dark:shadow-black/40 z-50 flex flex-col gap-1">
+                
+                <a
+                  href="https://cohorts.nileshnama.com/quiz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Practice</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">CS & DA practice questions</p>
+                </a>
 
-                  <a
-                    href="https://cohorts.nileshnama.com/new-courses?examId=5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Open Access</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Free reference archives</p>
-                  </a>
+                <a
+                  href="https://cohorts.nileshnama.com/new-courses?examId=5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Open Access</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Free reference archives</p>
+                </a>
 
-                  <a
-                    href="https://cohorts.nileshnama.com/books"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, Sheets &  Books</p>
-                  </a>
+                <a
+                  href="https://cohorts.nileshnama.com/books"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Resources</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Guides, Sheets &  Books</p>
+                </a>
 
-                  <a
-                    href="https://cohorts.nileshnama.com/study-material"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Handwritten Main, Shorte Notes & Formulas Sheet</p>
-                  </a>
+                <a
+                  href="https://cohorts.nileshnama.com/study-material"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Core Notes</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Handwritten Main, Shorte Notes & Formulas Sheet</p>
+                </a>
 
-                  <a
-                    href="https://cohorts.nileshnama.com/new-courses?examId=8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions </p>
-                  </a>
+                <a
+                  href="https://cohorts.nileshnama.com/new-courses?examId=8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">GATE PYQs</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Previous Year Questions </p>
+                </a>
 
-                  <a
-                    href="https://cohorts.nileshnama.com/new-courses?examId=8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
-                  >
-                    <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
-                    <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Interview in-depth prep</p>
-                  </a>
+                <a
+                  href="https://cohorts.nileshnama.com/new-courses?examId=8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition text-left"
+                >
+                  <h5 className="font-bold text-slate-900 dark:text-white text-sm">Interview PYQs</h5>
+                  <p className="text-xs text-slate-400 mt-1 font-normal leading-normal">Interview in-depth prep</p>
+                </a>
 
-                </div>
-              )}
-            </div>
-          </nav>
+              </div>
+            )}
+          </div>
+        </nav>
 
+        {/* Right: Actions */}
+        <div className="flex-1 flex items-center justify-end gap-2 sm:gap-4">
           <a
             href="https://cohorts.nileshnama.com/new-courses?examId=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#509187] dark:hover:bg-[#5A9B92] font-semibold px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm transition-all duration-300 shadow-sm shrink-0"
+            className="bg-[#061d33] hover:bg-black text-white dark:bg-[#509187] dark:hover:bg-[#5A9B92] font-semibold px-3.5 sm:px-6 py-2 rounded-full text-xs sm:text-sm transition-all duration-300 shadow-sm shrink-0"
           >
             Explore Programs
           </a>
@@ -904,26 +1062,39 @@ export default function CohortsPage() {
               {heroContent.sub}
             </p>
 
-            <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal text-left max-w-xl">
+            <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal text-left">
               {heroContent.desc}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-3 sm:gap-4 pt-4">
-              <a
-                href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 text-center"
-              >
-                Start PYQ Core Program →
-              </a>
+            <div className="flex flex-col gap-3 pt-3 w-full">
               <button
+                type="button"
                 onClick={() => setIsVideoModalOpen(true)}
-                className="bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-7 py-3 rounded-xl text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2"
+                className="w-full bg-white hover:bg-slate-100 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Know the WHY</span>
                 <PlayIcon className="w-4 h-4 text-[#509187]" />
               </button>
+
+              <a
+                href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 flex items-center justify-center gap-2 text-center"
+              >
+                <span>Start PYQ Core Program</span>
+                <span className="text-base sm:text-lg">→</span>
+              </a>
+
+              <a
+                href="https://vebskills.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#061d33] hover:bg-black text-white dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-[#061d33] dark:border-slate-700 font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2 text-center"
+              >
+                <span>Explore VebSkills</span>
+                <span className="text-base sm:text-lg">→</span>
+              </a>
             </div>
 
             <div className="flex items-center justify-start gap-2 text-xs text-slate-400 dark:text-sky-200 pt-2 font-medium">
@@ -933,7 +1104,7 @@ export default function CohortsPage() {
           </div>
 
           {/* RIGHT COLUMN: YOUTUBE VIDEO PLAYER LAYOUT */}
-          <div className="lg:col-span-6 xl:col-span-5 w-full">
+          <div className="lg:col-span-6 xl:col-span-5 w-full max-w-2xl mx-auto lg:max-w-none">
             <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800 bg-white/90 dark:bg-[#0d1527]/90 backdrop-blur p-3 sm:p-4 shadow-2xl relative">
               {/* Header Bar */}
               <div className="flex items-center justify-between pb-3 px-1 border-b border-slate-200/60 dark:border-slate-800/80 mb-3">
@@ -1086,17 +1257,27 @@ export default function CohortsPage() {
       </section>
 
       {/* 3.5 NQUESTIONS FEATURE SECTION */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 max-w-7xl mx-auto">
+      <section className="py-6 sm:py-8 px-3 sm:px-6 max-w-7xl mx-auto overflow-hidden">
+        <style>{`
+          @keyframes nquestions-marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        `}</style>
         <div className="rounded-2xl sm:rounded-3xl border border-[#509187]/25 dark:border-[#5A9B92]/30 bg-gradient-to-b from-[#f2f8f7] via-[#e8f4f2] to-[#f2f8f7] dark:from-[#081514] dark:via-[#061211] dark:to-[#081514] p-4 sm:p-6 md:p-8 shadow-lg shadow-[#509187]/5 text-center relative overflow-hidden">
           
           {/* Top Pill Badge */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#509187]/10 border border-[#509187]/20 text-[#509187] dark:text-[#5A9B92] text-[11px] font-semibold tracking-wide mb-3">
-            <CheckIcon className="w-3 h-3 text-[#509187] dark:text-[#5A9B92]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#509187]/10 border border-[#509187]/20 text-[#509187] dark:text-[#5A9B92] text-[10px] sm:text-[11px] font-semibold tracking-wide mb-3 max-w-full text-center leading-tight">
+            <CheckIcon className="w-3 h-3 text-[#509187] dark:text-[#5A9B92] shrink-0" />
             <span>Included free with GATE–BARC PYQ Core Program — worth ₹1499/year</span>
           </div>
 
           {/* Heading */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto px-2">
             Unlimited Practice with{" "}
             <a
               href="https://nquestions.in"
@@ -1109,127 +1290,87 @@ export default function CohortsPage() {
           </h2>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto mt-2 text-[11px] sm:text-xs text-slate-600 dark:text-gray-300 leading-relaxed font-normal">
+          <p className="max-w-2xl mx-auto mt-2 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed font-normal px-2">
             Test series eventually run out. NQuestions doesn’t. Every enrollment includes NQuestions free—giving you unlimited topic-focused practice, complete PYQs, and AI doubt support.
           </p>
 
-          {/* 4 Feature Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-5 text-left">
-            
-            {/* Card 1 */}
-            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-              <div>
-                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  Unlimited Topic-Wise Practice
-                </h4>
-                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Drill any topic as long as you need. When PYQs run out, generate fresh exam-style questions from your weak areas.
-                </p>
-              </div>
-            </div>
+          {/* Auto-moving Swiped Cards Track (Moving right to left) */}
+          <div
+            className="relative w-full overflow-hidden my-5 py-2 select-none"
+            onMouseEnter={() => setIsNQuestionsPaused(true)}
+            onMouseLeave={() => setIsNQuestionsPaused(false)}
+            onTouchStart={() => setIsNQuestionsPaused(true)}
+            onTouchEnd={() => setIsNQuestionsPaused(false)}
+          >
+            {/* Left & Right Gradient edge fades */}
+            <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-16 md:w-24 bg-gradient-to-r from-[#f2f8f7] via-[#f2f8f7]/90 to-transparent dark:from-[#081514] dark:via-[#081514]/90 to-transparent z-10 pointer-events-none" />
+            <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-16 md:w-24 bg-gradient-to-l from-[#f2f8f7] via-[#f2f8f7]/90 to-transparent dark:from-[#081514] dark:via-[#081514]/90 to-transparent z-10 pointer-events-none" />
 
-            {/* Card 2 */}
-            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-              <div>
-                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+            <div
+              className="flex gap-3.5 sm:gap-4.5 w-max"
+              style={{
+                animation: "nquestions-marquee 32s linear infinite",
+                animationPlayState: isNQuestionsPaused ? "paused" : "running",
+              }}
+            >
+              {DUPLICATED_NQUESTIONS.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="w-[260px] sm:w-[290px] md:w-[320px] shrink-0 rounded-2xl bg-white dark:bg-[#0f172a] p-4 sm:p-5 border border-slate-200/90 dark:border-slate-800/90 shadow-sm hover:shadow-lg hover:border-[#509187]/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-left"
+                >
+                  <div>
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#509187] text-white flex items-center justify-center mb-3 shadow-sm shadow-[#509187]/25 shrink-0">
+                      {item.icon}
+                    </div>
+                    <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white line-clamp-2 leading-snug">
+                      {item.title}
+                    </h4>
+                    <p className="text-[11px] sm:text-xs text-slate-500 dark:text-gray-400 mt-1.5 leading-relaxed font-normal">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  All GATE CS & DA PYQs (1987–Present)
-                </h4>
-                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Every PYQ in test mode with detailed solutions. Covers CS, DA, EC, EE, ME & CE papers from 1987–2026.
-                </p>
-              </div>
+              ))}
             </div>
-
-            {/* Card 3 */}
-            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-              <div>
-                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-6 0H7a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2h-2" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  Topic-wise skill scores
-                </h4>
-                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  Your skill score updates with every question—giving you a live map of your strengths and weaknesses, not just a mock-test percentile.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="rounded-xl bg-white dark:bg-[#0f172a] p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-md transition duration-300 flex flex-col justify-between">
-              <div>
-                <div className="w-8 h-8 rounded-lg bg-[#509187] text-white flex items-center justify-center mb-2.5 shadow-sm shadow-[#509187]/20">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
-                  AI doubt support
-                </h4>
-                <p className="text-[11px] text-slate-500 dark:text-gray-400 mt-1 leading-relaxed font-normal">
-                  An AI copilot grounded in your practice history—giving you personalised explanations, not generic answers.
-                </p>
-              </div>
-            </div>
-
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-5">
+          {/* Action Button (Explore NQuestions removed, single primary CTA retained) */}
+          <div className="flex items-center justify-center mt-5 px-4">
             <a
               href="https://nquestions.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#509187] hover:bg-[#3e6c65] text-white font-bold text-xs transition-all duration-300 shadow-md shadow-[#509187]/20 flex items-center justify-center gap-1.5"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-[#509187] hover:bg-[#3e6c65] text-white font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 shadow-md shadow-[#509187]/20 flex items-center justify-center gap-2 group hover:-translate-y-0.5 active:translate-y-0 text-center"
             >
               <span>Get started with NQuestions</span>
-              <span>→</span>
-            </a>
-            <a
-              href="https://nquestions.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-750 text-slate-800 dark:text-white border border-slate-200 dark:border-slate-700 font-bold text-xs transition-all duration-300 shadow-sm flex items-center justify-center"
-            >
-              Explore NQuestions
+              <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
           </div>
 
           {/* Footer note */}
-          <p className="text-[10px] text-slate-400 dark:text-gray-400 mt-3 font-medium">
+          <p className="text-[10px] sm:text-xs text-slate-400 dark:text-gray-400 mt-3 font-medium px-4">
             Preparing for GATE CS & DA? Practise thousands of topic-wise questions for free on NQuestions.
           </p>
 
         </div>
       </section>
 
+
       {/* 4. WHY CHOOSE SECTION */}
-      <section className="bg-[#0b1329] text-white py-24 px-4 sm:px-6 border-t border-b border-slate-850">
+      <section className="bg-[#0b1329] text-white py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-t border-b border-slate-850">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
             Why Choose <span className="text-sky-400">NN Cohorts</span> for GATE CS & DA?
           </h2>
-          <p className="text-xs sm:text-sm text-slate-450 mt-2">We train you to think, apply, and conquer! India's most trusted GATE CS & DA coaching platform.</p>
+          <p className="text-xs sm:text-sm text-slate-450 mt-2 max-w-xl mx-auto">We train you to think, apply, and conquer! India's most trusted GATE CS & DA coaching platform.</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12 text-center">
             {WHY_CHOOSE_ITEMS.map((item, idx) => (
               <div
                 key={idx}
-                className="rounded-3xl border border-slate-800/80 bg-[#0d172e]/50 p-6 hover:bg-[#0d172e] hover:border-slate-700/80 transition duration-300 shadow-sm"
+                className="rounded-2xl sm:rounded-3xl border border-slate-800/80 bg-[#0d172e]/50 p-5 sm:p-6 hover:bg-[#0d172e] hover:border-slate-700/80 transition duration-300 shadow-sm"
               >
-                <div className="w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-500/25 flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-500/5">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-blue-600/10 border border-blue-500/25 flex items-center justify-center mx-auto mb-4 sm:mb-5 shadow-lg shadow-blue-500/5">
                   {renderWhyChooseIcon(item.iconType)}
                 </div>
                 <h4 className="font-extrabold text-sm sm:text-base text-white">{item.title}</h4>
@@ -1238,7 +1379,7 @@ export default function CohortsPage() {
             ))}
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8 sm:mt-10">
             <a
               href="https://nileshnama.notion.site/schedule"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-sky-400 hover:text-sky-300 transition"
@@ -1250,37 +1391,76 @@ export default function CohortsPage() {
       </section>
 
       {/* 4.5 INSTRUCTOR SPOTLIGHT */}
-      <section className="py-20 px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-b border-slate-100 dark:border-slate-800">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-2/5 flex items-center justify-center md:justify-start">
-            <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-2">
-              <Image
-                src={assets.profile_img}
-                alt="Nilesh Nama - Coach"
-                className="w-full max-w-[300px] h-auto rounded-2xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
+      <section className="py-14 sm:py-20 px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/10 border-t border-b border-slate-100 dark:border-slate-800">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-6 sm:gap-8 lg:gap-12">
+          <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col items-center md:items-stretch">
+            <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-800 bg-white dark:bg-slate-900 p-2.5 sm:p-3 flex flex-col justify-between w-full h-full max-w-[360px] md:max-w-none">
+              {/* Profile Image Carousel */}
+              <div className="relative flex-1 w-full h-[280px] sm:h-[340px] md:h-auto min-h-[280px] md:min-h-0 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800">
+                {COACH_PROFILE_IMAGES.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                      coachImageIndex === idx
+                        ? "opacity-100 scale-100 z-10"
+                        : "opacity-0 scale-105 pointer-events-none z-0"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt="Nilesh Nama - Coach"
+                      priority={idx === 0}
+                      fill
+                      sizes="(max-width: 640px) 340px, (max-width: 1024px) 380px, 420px"
+                      className="w-full h-full object-cover object-top rounded-2xl"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Carousel Indicator Dots */}
+              <div className="flex items-center justify-center gap-1.5 pt-3 pb-1 shrink-0">
+                {COACH_PROFILE_IMAGES.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setCoachImageIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      coachImageIndex === idx
+                        ? "w-5 bg-[#509187]"
+                        : "w-1.5 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-          <div className="w-full md:w-3/5 space-y-4">
-            <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">Meet Your Coach</span>
-            <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white text-left leading-tight">
-              Learn Computer Science and Data Science From a BARC & GATE Topper
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left">
-              Hi, I'm Nilesh Nama. During my preparation journey, I Selected in BARC OCES CBT 2022 and GATE CS AIR 212. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
-            </p>
-            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
+          <div className="w-full md:w-7/12 lg:w-7/12 flex flex-col justify-between space-y-4">
+            <div>
+              <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">
+                Meet Your Coach
+              </span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white text-left leading-tight mt-1">
+                Learn Computer Science and Data Science From a BARC & GATE Topper
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left mt-3">
+                Hi, I'm Nilesh Nama. During my preparation journey, I Selected in BARC OCES CBT 2022 and GATE CS AIR 212. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">SELECTED IN</h4>
-                <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">BARC OCES Exam</p>
+                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">SELECTED IN</h4>
+                <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">BARC OCES Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">AIR 212</h4>
-                <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">GATE CS Exam</p>
+                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">AIR 212</h4>
+                <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">GATE CS Exam</p>
               </div>
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-[#509187] dark:text-[#5A9B92]">99.9%</h4>
-                <p className="text-[9px] sm:text-[10px] text-slate-400 font-semibold">CS Conceptual Index</p>
+                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">99.9%</h4>
+                <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">CS Conceptual Index</p>
               </div>
             </div>
           </div>
@@ -1768,30 +1948,30 @@ export default function CohortsPage() {
 
 
       {/* YOUTUBE LECTURES SECTION */}
-      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-200 dark:border-slate-800">
-        <div className="flex flex-col items-center justify-center mb-10">
-          <h2 className="text-2xl sm:text-4xl font-bold  text-slate-900 dark:text-white flex items-center justify-center gap-2.5 flex-wrap">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-200 dark:border-slate-800">
+        <div className="flex flex-col items-center justify-center mb-8 sm:mb-10">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap">
             <span className="inline-flex items-center justify-center text-red-600">
-              <svg className="w-8 h-8 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
                 <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </span>
-            Watch Free <span className="text-red-600 font-extrabold">GATE CS & DA Lectures</span> on YouTube
+            <span>Watch Free <span className="text-red-600 font-extrabold">GATE CS & DA Lectures</span> on YouTube</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-2">
+          <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-lg mx-auto">
             Free lectures, strategies, and insights — subscribe to stay ahead!
           </p>
         </div>
 
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8 text-left">
           {/* Card 1 */}
           <div
             onClick={() => {
               setSelectedYoutubeId("xG2e1c9m6Yw")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="group cursor-pointer rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
@@ -1800,12 +1980,12 @@ export default function CohortsPage() {
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
               />
               <div className="absolute inset-0 bg-black/10 flex items-center justify-center group-hover:bg-black/35 transition duration-300">
-                <div className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition duration-300">
-                  <PlayIcon className="w-6 h-6 ml-0.5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition duration-300">
+                  <PlayIcon className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" />
                 </div>
               </div>
             </div>
-            <div className="p-5 flex-1 flex flex-col justify-between">
+            <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
               <div>
                 <h4 className="font-bold text-xs sm:text-sm text-slate-800 dark:text-white group-hover:text-red-600 transition leading-snug">
                   Why Write GATE DA? Scope & Career Benefits
@@ -1823,7 +2003,7 @@ export default function CohortsPage() {
               setSelectedYoutubeId("6NtbCuU3TLy")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="group cursor-pointer rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
@@ -1832,12 +2012,12 @@ export default function CohortsPage() {
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
               />
               <div className="absolute inset-0 bg-black/10 flex items-center justify-center group-hover:bg-black/35 transition duration-300">
-                <div className="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition duration-300">
-                  <PlayIcon className="w-6 h-6 ml-0.5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition duration-300">
+                  <PlayIcon className="w-5 h-5 sm:w-6 sm:h-6 ml-0.5" />
                 </div>
               </div>
             </div>
-            <div className="p-5 flex-1 flex flex-col justify-between">
+            <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
               <div>
                 <h4 className="font-bold text-xs sm:text-sm text-slate-800 dark:text-white group-hover:text-red-600 transition leading-snug">
                   GATE DA Books, Resources & Syllabus
@@ -1855,7 +2035,7 @@ export default function CohortsPage() {
               setSelectedYoutubeId("fmnOetlPwcg")
               setIsYoutubeModalOpen(true)
             }}
-            className="group cursor-pointer rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
+            className="sm:col-span-2 lg:col-span-1 max-w-md sm:mx-auto lg:max-w-none w-full group cursor-pointer rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden shadow-sm hover:shadow-md transition duration-300 flex flex-col"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
@@ -1898,76 +2078,296 @@ export default function CohortsPage() {
         </div>
       </section>
 
-      {/* 8. FREE GATE CS RESOURCES */}
-      <section className="py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
-          Free <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Resources
-        </h2>
-        <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-2xl mx-auto">
-          Everything you need to understand the GATE Computer Science,DA & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
-        </p>
+      {/* 8. GATE CS & DA RESOURCES SLIDER */}
+      <section className="py-14 sm:py-20 lg:py-24 max-w-7xl mx-auto text-center relative overflow-hidden">
+        {/* Soft Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44rem] h-[22rem] rounded-full bg-[#509187]/8 dark:bg-[#5A9B92]/10 blur-3xl -z-10 pointer-events-none" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
-          {FREE_RESOURCES.map((res, i) => (
-            <div key={i} className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] p-6 hover:shadow-md transition">
-              <h4 className="font-bold text-sm sm:text-base text-slate-800 dark:text-white">{res.title}</h4>
-              <p className="text-xs text-slate-500 dark:text-gray-400 mt-2 leading-relaxed">{res.desc}</p>
+        <div className="px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Resources
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 mt-2.5 max-w-2xl mx-auto font-normal leading-relaxed">
+            Everything you need to understand the GATE Computer Science, DA & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
+          </p>
+        </div>
+
+        {/* Carousel Slider Container */}
+        <div className="relative w-full mt-8 sm:mt-12 select-none">
+          {/* Left Arrow Button (Tablet & Desktop) */}
+          <button
+            type="button"
+            onClick={() => setResourceActiveIdx((prev) => (prev - 1 + GATE_RESOURCES.length) % GATE_RESOURCES.length)}
+            className="hidden sm:flex absolute left-4 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 w-10 sm:w-11 h-10 sm:h-11 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white items-center justify-center shadow-2xl backdrop-blur-sm z-30 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+            aria-label="Previous resource"
+          >
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Right Arrow Button (Tablet & Desktop) */}
+          <button
+            type="button"
+            onClick={() => setResourceActiveIdx((prev) => (prev + 1) % GATE_RESOURCES.length)}
+            className="hidden sm:flex absolute right-4 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 w-10 sm:w-11 h-10 sm:h-11 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white items-center justify-center shadow-2xl backdrop-blur-sm z-30 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+            aria-label="Next resource"
+          >
+            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Slider Scroll Track with Touch Swipe */}
+          <div
+            ref={resourceSliderRef}
+            onTouchStart={handleSliderTouchStart}
+            onTouchMove={handleSliderTouchMove}
+            onTouchEnd={handleSliderTouchEnd}
+            className="overflow-x-auto no-scrollbar scroll-smooth py-6 touch-pan-x"
+          >
+            <div
+              ref={resourceTrackRef}
+              className="flex items-center gap-4 sm:gap-6 md:gap-8 px-[10vw] sm:px-[22vw] md:px-[28vw] lg:px-[33vw] w-max"
+            >
+              {GATE_RESOURCES.map((res, i) => {
+                const isActive = i === resourceActiveIdx
+                return (
+                  <div
+                    key={i}
+                    onClick={() => setResourceActiveIdx(i)}
+                    className={`rounded-3xl transition-all duration-500 p-5 sm:p-7 md:p-8 flex flex-col justify-between text-left shrink-0 cursor-pointer ${
+                      isActive
+                        ? "w-[84vw] max-w-[340px] sm:max-w-none sm:w-[380px] md:w-[410px] bg-[#0c1730] text-white border-2 border-[#509187] shadow-2xl scale-100 sm:scale-105 z-20"
+                        : "w-[75vw] max-w-[300px] sm:max-w-none sm:w-[340px] md:w-[370px] bg-white dark:bg-[#0c1629] text-slate-800 dark:text-gray-200 border border-slate-200/90 dark:border-slate-800 shadow-md scale-95 opacity-60 sm:opacity-75 hover:opacity-95"
+                    }`}
+                  >
+                    <div>
+                      {/* Code Tag Badge `< >` matching reference image */}
+                      <div
+                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-mono font-bold text-xs sm:text-sm mb-4 sm:mb-5 shrink-0 transition-all duration-300 ${
+                          isActive
+                            ? "bg-white text-[#0c1730] shadow-md scale-105"
+                            : "bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92]"
+                        }`}
+                      >
+                        <span className="text-sm sm:text-base font-extrabold tracking-tighter">&lt;&gt;</span>
+                      </div>
+
+                      <h4
+                        className={`text-base sm:text-lg md:text-xl font-extrabold tracking-tight transition-colors duration-300 ${
+                          isActive ? "text-white" : "text-slate-900 dark:text-white"
+                        }`}
+                      >
+                        {res.title}
+                      </h4>
+
+                      <p
+                        className={`text-xs sm:text-sm mt-2.5 sm:mt-3 leading-relaxed font-normal transition-colors duration-300 ${
+                          isActive ? "text-slate-200/90" : "text-slate-500 dark:text-gray-400"
+                        }`}
+                      >
+                        {res.desc}
+                      </p>
+                    </div>
+
+                    <div className="pt-5 sm:pt-6 mt-4 border-t border-white/10 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+                      <span className={isActive ? "text-[#5A9B92]" : "text-slate-400"}>
+                        {res.tag}
+                      </span>
+                      <a
+                        href={res.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className={`flex items-center gap-1 transition-transform duration-300 hover:underline ${
+                          isActive ? "text-white translate-x-1" : "text-[#509187] dark:text-[#5A9B92]"
+                        }`}
+                      >
+                        Explore →
+                      </a>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
-          ))}
+          </div>
+
+          {/* Slider Pagination Controls (Mobile Arrows + Dots) */}
+          <div className="flex items-center justify-center gap-3 mt-4">
+            <button
+              type="button"
+              onClick={() => setResourceActiveIdx((prev) => (prev - 1 + GATE_RESOURCES.length) % GATE_RESOURCES.length)}
+              className="sm:hidden w-8 h-8 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-gray-200 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm active:scale-95 cursor-pointer"
+              aria-label="Previous resource"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              {GATE_RESOURCES.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setResourceActiveIdx(idx)}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                    resourceActiveIdx === idx
+                      ? "w-7 bg-[#509187]"
+                      : "w-2 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400"
+                  }`}
+                  aria-label={`Go to resource slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setResourceActiveIdx((prev) => (prev + 1) % GATE_RESOURCES.length)}
+              className="sm:hidden w-8 h-8 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-gray-200 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm active:scale-95 cursor-pointer"
+              aria-label="Next resource"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
       {/* 9. FREQUENTLY ASKED QUESTIONS */}
-      <section className="bg-slate-50 dark:bg-slate-900/40 py-24 px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-[10px] font-bold shadow-sm mb-4">
-              <HelpIcon className="w-3.5 h-3.5" />
-              <span>FAQs</span>
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold  text-slate-900 dark:text-white">
-              Frequently Asked Questions
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-[#070b15] dark:via-[#09101f] dark:to-[#070b15] py-14 sm:py-20 lg:py-24 px-4 sm:px-6">
+        {/* Ambient Glows */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[42rem] h-[24rem] rounded-full bg-[#509187]/8 dark:bg-[#5A9B92]/10 blur-3xl -z-10 pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-sky-400/5 blur-3xl -z-10 pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto relative">
+          {/* Section Header */}
+          <div className="text-center mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#509187]/25 dark:border-[#5A9B92]/30 bg-[#509187]/10 dark:bg-[#5A9B92]/15 text-[#509187] dark:text-[#5A9B92] text-xs font-bold shadow-sm tracking-wide mb-3.5">
+              <HelpIcon className="w-4 h-4 text-[#509187] dark:text-[#5A9B92]" />
+              <span>FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+              Got Questions? We Have <span className="text-[#509187] dark:text-[#5A9B92]">Answers</span>.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-2">
-              Everything you need to know about GATE CS & DA preparation and our learning systems.
+            <p className="max-w-xl mx-auto text-xs sm:text-sm text-slate-500 dark:text-gray-400 mt-2.5 leading-relaxed font-normal">
+              Everything you need to know about our first-principles teaching, BARC/GATE syllabus coverage, and platform features.
             </p>
           </div>
 
-          <div className="space-y-4">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0d1527] overflow-hidden transition">
-                <button
-                  onClick={() => toggleFaq(i)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left font-bold text-xs sm:text-sm text-slate-800 dark:text-white gap-4"
+          {/* FAQ Accordion List */}
+          <div className="space-y-3 sm:space-y-4">
+            {FAQS.map((faq, i) => {
+              const isOpen = openFaqIndex === i
+              return (
+                <div
+                  key={i}
+                  className={`group rounded-2xl transition-all duration-300 border ${
+                    isOpen
+                      ? "border-[#509187] dark:border-[#5A9B92] bg-white dark:bg-[#0c1629] shadow-lg shadow-[#509187]/10"
+                      : "border-slate-200/90 dark:border-slate-800/90 bg-white/80 dark:bg-[#0c1629]/70 backdrop-blur-sm shadow-sm hover:border-[#509187]/50 hover:shadow-md"
+                  }`}
                 >
-                  <span className="flex items-center gap-3">
-                    <span className="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-400 px-2 py-1 rounded">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    {faq.q}
-                  </span>
-                  <ChevronIcon isOpen={openFaqIndex === i} />
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(i)}
+                    className="w-full px-4 sm:px-6 py-3.5 sm:py-4.5 flex items-center justify-between text-left gap-3 cursor-pointer select-none"
+                    aria-expanded={isOpen}
+                  >
+                    <div className="flex items-center gap-2.5 sm:gap-4 flex-1">
+                      <span
+                        className={`font-mono text-xs font-bold px-2 sm:px-2.5 py-1 rounded-lg shrink-0 transition-colors duration-300 ${
+                          isOpen
+                            ? "bg-[#509187] text-white shadow-sm shadow-[#509187]/30"
+                            : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 group-hover:text-[#509187]"
+                        }`}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span
+                        className={`text-xs sm:text-sm md:text-base font-bold transition-colors duration-200 ${
+                          isOpen
+                            ? "text-[#509187] dark:text-[#5A9B92]"
+                            : "text-slate-800 dark:text-white group-hover:text-[#509187] dark:group-hover:text-[#5A9B92]"
+                        }`}
+                      >
+                        {faq.q}
+                      </span>
+                    </div>
 
-                {openFaqIndex === i && (
-                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-50 dark:border-slate-800">
-                    {faq.a}
+                    <div
+                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                        isOpen
+                          ? "bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92] rotate-180"
+                          : "bg-slate-100 dark:bg-slate-800 text-slate-400 group-hover:bg-[#509187]/10 group-hover:text-[#509187]"
+                      }`}
+                    >
+                      <svg className="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </button>
+
+                  {/* Smooth Grid Expand/Collapse Container */}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
+                        <div className="pt-2 pl-0 sm:pl-11">
+                          {faq.a}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                )}
-              </div>
-            ))}
+                </div>
+              )
+            })}
           </div>
+
+          {/* Quick Support Card */}
+          <div className="mt-8 sm:mt-12 rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800/90 bg-white dark:bg-[#0c1629] p-4 sm:p-7 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-3.5">
+              <div className="w-11 h-11 rounded-2xl bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92] flex items-center justify-center shrink-0">
+                <WhatsAppIcon className="w-5 h-5 text-[#509187] dark:text-[#5A9B92]" />
+              </div>
+              <div>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
+                  Have more questions about admissions or syllabus?
+                </h4>
+                <p className="text-[11px] sm:text-xs text-slate-500 dark:text-gray-400 mt-0.5">
+                  Chat directly with our team on WhatsApp for personalized guidance.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/919509923340"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#509187] hover:bg-[#3e6c65] text-white font-bold text-xs transition-all duration-300 shadow-md shadow-[#509187]/20 flex items-center justify-center gap-2 shrink-0 group hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <WhatsAppIcon className="w-4 h-4 fill-white" />
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
       {/* 10. READY TO CRACK BANNER (FOOTER CTA) */}
-      <section className="py-12 px-4 sm:px-6 max-w-5xl mx-auto">
-        <div className="rounded-[2.5rem] bg-gradient-to-r from-[#061d33] via-[#0d2744] to-[#12365c] text-white p-8 sm:p-14 text-center relative overflow-hidden shadow-lg shadow-[#061d33]/15">
+      <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-5xl mx-auto">
+        <div className="rounded-2xl sm:rounded-[2.5rem] bg-gradient-to-r from-[#061d33] via-[#0d2744] to-[#12365c] text-white p-6 sm:p-10 lg:p-14 text-center relative overflow-hidden shadow-lg shadow-[#061d33]/15">
           <div className="absolute top-0 right-0 w-[20rem] h-[20rem] rounded-full bg-blue-400/10 blur-2xl -z-10" />
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Ready to Crack GATE CS & DA?</h2>
-          <p className="text-sm text-sky-100/90 mt-2 font-medium">Join NN Cohorts today. Learn from BARC & Gate Topper, train with toppers!</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Ready to Crack GATE CS & DA?</h2>
+          <p className="text-xs sm:text-sm text-sky-100/90 mt-2 font-medium">Join NN Cohorts today. Learn from BARC & Gate Topper, train with toppers!</p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mt-6 sm:mt-8">
             <a
               href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
               className="bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-8 py-3.5 rounded-2xl text-xs sm:text-sm transition-all duration-300 shadow-md w-full sm:w-auto text-center"
@@ -1987,10 +2387,10 @@ export default function CohortsPage() {
       </section>
 
       {/* 11. MULTI-COLUMN FOOTER */}
-      <footer className="bg-[#040d1a] text-slate-400 py-16 px-6 lg:px-[8%] border-t border-slate-800">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+      <footer className="bg-[#040d1a] text-slate-400 py-12 sm:py-16 px-4 sm:px-6 lg:px-[8%] border-t border-slate-800">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-8 mb-12">
           
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <Image
               src={assets.logo_dark}
               alt="Nilesh Nama"
@@ -2000,38 +2400,49 @@ export default function CohortsPage() {
               India’s Systems-Driven GATE CS Preparation Platform. Founded by former BARC & GATE topper. Learn, train, and conquer!
             </p>
             {/* Social Icons row */}
-            <div className="flex items-center gap-3 pt-2">
-        
+            <div className="flex items-center gap-2.5 pt-2">
               <a
                 href="https://linkedin.com/in/nileshnama"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-[#509187] text-white flex items-center justify-center transition"
+                className="w-8 h-8 rounded-full bg-slate-800/90 hover:bg-[#0077b5] text-slate-300 hover:text-white border border-slate-700/60 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm"
                 title="LinkedIn"
+                aria-label="LinkedIn Profile"
               >
-                <LinkedInIcon />
+                <LinkedInIcon className="w-3.5 h-3.5 fill-current" />
               </a>
               <a
                 href="mailto:hello@nileshnama.com"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-650 text-white flex items-center justify-center transition"
+                className="w-8 h-8 rounded-full bg-slate-800/90 hover:bg-[#EA4335] text-slate-300 hover:text-white border border-slate-700/60 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm"
                 title="Email"
+                aria-label="Send Email"
               >
-                <MailIcon />
+                <MailIcon className="w-3.5 h-3.5 fill-current" />
               </a>
               <a
                 href="https://wa.me/919509923340"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-slate-800 hover:bg-emerald-600 text-white flex items-center justify-center transition"
-                title="WhatsApp"
+                className="w-8 h-8 rounded-full bg-slate-800/90 hover:bg-[#25D366] text-slate-300 hover:text-white border border-slate-700/60 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm"
+                title="WhatsApp Support"
+                aria-label="WhatsApp Support"
               >
-                <WhatsAppIcon />
+                <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
               </a>
-              
+              <a
+                href="https://www.youtube.com/@nileshnama"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-slate-800/90 hover:bg-[#FF0000] text-slate-300 hover:text-white border border-slate-700/60 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm"
+                title="YouTube Channel"
+                aria-label="YouTube Channel"
+              >
+                <YouTubeIcon className="w-3.5 h-3.5 fill-current" />
+              </a>
             </div>
           </div>
 
-          <div>
+          <div className="sm:col-span-1 lg:col-span-1">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">GATE CS Resources</h4>
             <ul className="space-y-2.5 text-xs">
               <li><a href="https://cohorts.nileshnama.com/study-material" className="hover:text-white transition">Exam Overview</a></li>
@@ -2041,7 +2452,7 @@ export default function CohortsPage() {
             </ul>
           </div>
 
-          <div>
+          <div className="sm:col-span-1 lg:col-span-1">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Programs</h4>
             <ul className="space-y-2.5 text-xs">
               <li><a href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program" className="hover:text-white transition">PYQ Core Program</a></li>
@@ -2051,12 +2462,44 @@ export default function CohortsPage() {
             </ul>
           </div>
 
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Get In Touch</h4>
-            <ul className="space-y-2.5 text-xs text-slate-500">
-              <li>✉ <a href="mailto:hello@nileshnama.com" className="hover:text-white transition text-slate-400">hello@nileshnama.com</a></li>
-              <li>📞 <a href="tel:+919509923340" className="hover:text-white transition text-slate-400">+91-9509923340</a></li>
-              <li>💬 <a href="https://wa.me/919509923340" target="_blank" className="hover:text-white transition text-slate-400">WhatsApp Support</a></li>
+            <ul className="space-y-3 text-xs">
+              <li>
+                <a 
+                  href="mailto:hello@nileshnama.com" 
+                  className="group flex items-center gap-2.5 text-slate-400 hover:text-white transition"
+                >
+                  <span className="w-6 h-6 rounded-lg bg-slate-800/90 border border-slate-700/70 flex items-center justify-center text-[#509187] dark:text-[#5A9B92] group-hover:bg-[#509187] group-hover:text-white group-hover:border-[#509187] transition-all duration-300 shadow-sm shrink-0">
+                    <MailIcon className="w-3.5 h-3.5 fill-current" />
+                  </span>
+                  <span className="group-hover:translate-x-0.5 transition-transform duration-200">hello@nileshnama.com</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+919509923340" 
+                  className="group flex items-center gap-2.5 text-slate-400 hover:text-white transition"
+                >
+                  <span className="w-6 h-6 rounded-lg bg-slate-800/90 border border-slate-700/70 flex items-center justify-center text-[#509187] dark:text-[#5A9B92] group-hover:bg-[#509187] group-hover:text-white group-hover:border-[#509187] transition-all duration-300 shadow-sm shrink-0">
+                    <PhoneIcon className="w-3.5 h-3.5 fill-current" />
+                  </span>
+                  <span className="group-hover:translate-x-0.5 transition-transform duration-200">+91-9509923340</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://wa.me/919509923340" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group flex items-center gap-2.5 text-slate-400 hover:text-white transition"
+                >
+                  <span className="w-6 h-6 rounded-lg bg-slate-800/90 border border-slate-700/70 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white group-hover:border-[#25D366] transition-all duration-300 shadow-sm shrink-0">
+                    <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                  </span>
+                  <span className="group-hover:translate-x-0.5 transition-transform duration-200">WhatsApp Support</span>
+                </a>
+              </li>
             </ul>
           </div>
 
