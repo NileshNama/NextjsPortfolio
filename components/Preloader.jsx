@@ -68,7 +68,7 @@ const Preloader = ({
               ease: [0.76, 0, 0.24, 1]
             }
           }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center px-4 sm:px-8 bg-white dark:bg-darkTheme text-gray-900 dark:text-white select-none overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.25)] dark:shadow-[0_30px_90px_rgba(0,0,0,0.7)]"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center px-2 sm:px-4 md:px-6 bg-white dark:bg-darkTheme text-gray-900 dark:text-white select-none overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.25)] dark:shadow-[0_30px_90px_rgba(0,0,0,0.7)]"
         >
           {/* User Provided Background Image */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden -z-20">
@@ -91,7 +91,7 @@ const Preloader = ({
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 sm:w-[560px] h-40 sm:h-72 rounded-full bg-[#509187]/15 blur-3xl -z-10 pointer-events-none" />
 
           {/* Full-Width Center Content Wrapper */}
-          <div className="w-full flex flex-col items-center text-center relative z-10">
+          <div className="w-full flex flex-col items-center text-center relative z-10 px-1">
             
             {/* Top Pill: ✳ INTRODUCING */}
             <motion.div
@@ -108,7 +108,14 @@ const Preloader = ({
               initial={{ opacity: 0, scale: 0.96, y: 14 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full preloader-hero-text font-black text-gray-900 dark:text-white px-2 select-none"
+              className="w-full preloader-hero-text font-black text-gray-900 dark:text-white select-none px-1 text-center"
+              style={{
+                fontSize: title?.toLowerCase().includes("cohort")
+                  ? "clamp(2.8rem, 15.6vw, 21rem)"
+                  : "clamp(2.5rem, 14.3vw, 19.5rem)",
+                letterSpacing: "-0.04em",
+                lineHeight: 0.88,
+              }}
             >
               {title}
             </motion.h1>

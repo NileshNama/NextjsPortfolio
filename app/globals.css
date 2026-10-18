@@ -147,15 +147,16 @@ h4 {
 }
 
 .preloader-hero-text {
-  font-size: clamp(2.3rem, 11.5vw, 11.5rem) !important;
+  font-size: clamp(2.5rem, 14.5vw, 19.5rem) !important;
   font-weight: 900 !important;
-  letter-spacing: -0.035em !important;
-  line-height: 0.92 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 0.88 !important;
   white-space: nowrap !important;
   text-align: center !important;
   width: 100% !important;
   max-width: 100vw !important;
   text-transform: uppercase !important;
+  display: block !important;
 }
 
 .cohorts-page h2 {

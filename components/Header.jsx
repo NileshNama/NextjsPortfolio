@@ -6,7 +6,7 @@ import { EASINGS, heroEntrance } from '@/lib/animations'
 
 const Header = () => {
   const shouldReduceMotion = useReducedMotion()
-  const manifestoText = "Building technology. Teaching engineering. Training minds to think."
+  const manifestoText = "I Build Technology. I Teach Engineering. I Train Minds to Think."
 
   const profileImages = [
     assets.profile_img_2,
@@ -100,12 +100,12 @@ const Header = () => {
       id="home"
       className="w-full min-h-screen flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 overflow-hidden"
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-[8%] mx-auto relative">
+      <div className="w-full px-4 sm:px-8 lg:px-10 xl:px-14 mx-auto relative">
         {/* Soft background glow */}
         <div className="absolute -top-10 left-1/4 -translate-x-1/2 w-[36rem] h-[36rem] rounded-full bg-[#5A9B92]/10 blur-3xl -z-10" />
         <div className="absolute top-20 right-1/4 w-[28rem] h-[28rem] rounded-full bg-[#5A9B92]/5 blur-3xl -z-10" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-6 md:gap-10 lg:gap-14 xl:gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 lg:gap-10 xl:gap-12">
           {/* Left side: Profile Image (3D Floating & Swing Animation) */}
           <div className="w-full md:w-5/12 lg:w-5/12 xl:w-5/12 flex items-center justify-center lg:justify-start relative py-1 sm:py-4 md:py-6">
             {/* Ambient Background Aura / Deep 3D Atmosphere */}
@@ -241,8 +241,8 @@ const Header = () => {
             </motion.div>
           </div>
 
-          {/* Right side: Remaining Text (Pushed Right towards Login button) */}
-          <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-2 sm:gap-3 md:gap-4 md:pl-2 lg:pl-6 xl:pl-10">
+          {/* Right side: Remaining Text */}
+          <div className="w-full md:w-7/12 lg:w-7/12 xl:w-7/12 flex flex-col items-center md:items-start text-center md:text-left gap-2 sm:gap-3 md:gap-4 md:pl-0">
             {/* Trust Badge (Above Name) */}
             <motion.div
               initial={shouldReduceMotion ? false : { opacity: 0, y: -8 }}
@@ -269,7 +269,7 @@ const Header = () => {
               initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.32, ease: EASINGS.smoothOut }}
-              className="text-[clamp(1.85rem,7.5vw,6.2rem)] font-bold tracking-tight text-gray-900 dark:text-white leading-[1] whitespace-nowrap"
+              className="text-[clamp(2.5rem,6.7vw,4.3rem)] md:text-[3.6rem] lg:text-[5rem] xl:text-[6.5rem] 2xl:text-[7.4rem] font-black tracking-tight text-gray-900 dark:text-white leading-[0.92] whitespace-nowrap"
             >
               NILESH NAMA
             </motion.h1>
@@ -292,12 +292,9 @@ const Header = () => {
                   <span className="inline-block w-[2px] h-[1.15em] bg-[#509187] align-middle ml-1 animate-pulse" />
                 </div>
               </motion.div>
-              <div className="flex flex-col gap-1 sm:gap-1.5 text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
+              <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
                 <p>
-                  I build software, teach core computer science concepts, and help aspiring engineers prepare for GATE, BARC, technical interviews, and real-world engineering challenges.
-                </p>
-                <p>
-                  I bridge technical knowledge and practical application, helping learners reason clearly, solve systematically, and perform confidently under pressure.
+                  Software engineer, technical educator, and author building practical products and helping people master complex technical concepts through structured thinking.
                 </p>
               </div>
             </motion.div>
