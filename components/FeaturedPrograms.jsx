@@ -163,16 +163,16 @@ const FeaturedPrograms = ({ isDarkMode, onModalToggle }) => {
               h-full min-h-[350px] sm:min-h-[385px] md:min-h-[415px]
             "
           >
-            {/* Background Image from user (High visibility logo) */}
+            {/* Background Image from user (Subtle, highly transparent watermark) */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
               <Image
                 src="/nn-bg.png"
                 alt="NN Cohorts Background"
                 fill
-                className="object-cover object-center opacity-75 dark:opacity-80 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                className="object-cover object-center opacity-20 dark:opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/45 to-black/30 dark:from-black/75 dark:via-black/55 dark:to-black/35 backdrop-blur-[0.5px]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/50 dark:from-black/80 dark:via-black/65 dark:to-black/55" />
             </div>
 
             {/* Radial gradient glow */}
@@ -262,16 +262,16 @@ const FeaturedPrograms = ({ isDarkMode, onModalToggle }) => {
               h-full min-h-[350px] sm:min-h-[385px] md:min-h-[415px]
             "
           >
-            {/* Background Image from user (Centered and symmetric) */}
+            {/* Background Image from user (Subtle, highly transparent watermark) */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
               <Image
                 src="/vebskills-bg.png"
                 alt="VebSkills Background"
                 fill
-                className="object-cover object-center opacity-70 dark:opacity-75 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700"
+                className="object-cover object-center opacity-20 dark:opacity-25 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0a2e29]/70 via-[#0a2e29]/50 to-[#0a2e29]/75 dark:from-[#07221e]/75 dark:via-[#07221e]/55 dark:to-[#07221e]/80 backdrop-blur-[0.5px]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0a2e29]/80 via-[#0a2e29]/65 to-[#0a2e29]/80 dark:from-[#07221e]/85 dark:via-[#07221e]/70 dark:to-[#07221e]/85" />
             </div>
 
             {/* Radial gradient glow */}
