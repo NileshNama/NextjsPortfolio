@@ -195,11 +195,11 @@ export const toolsData = [
 export const cohortsData = [
     {
         id: 'gate-pyq',
-        badge: 'COHORT',
+        badge: 'NN Cohorts',
         category: 'nn',
         title: 'GATE–BARC PYQ Core Program',
         description: 'Learn how to decode and approach PYQs systematically.',
-        bgImage: cohort_nn_bg,
+        bgImage: '/cohorts/gate-pyq-thumb.jpg',
         videoId: "AzlVYtVfO00",
         longDescription: "GATE–BARC PYQ Core Program trains how competitive exam questions should be approached, decoded, and reasoned about. Instead of topic-wise learning, questions are treated as decision-making instruments.",
         points: [
@@ -213,11 +213,11 @@ export const cohortsData = [
     },
     {
         id: 'gate-concepts',
-        badge: 'COHORT',
+        badge: 'NN Cohorts',
         category: 'nn',
         title: 'GATE–BARC Concepts',
         description: 'System-level conceptual depth for high-pressure exams.',
-        bgImage: cohort_nn_bg,
+        bgImage: '/cohorts/gate-concepts-thumb.jpg',
         videoId: "sd2SX1wS5iM",
         longDescription: "GATE–BARC Concepts Program is designed for aspirants who already understand fundamental concepts and standard problem-solving approaches but struggle with consistency, depth, and handling examiner-level twists. This program moves beyond surface-level preparation and develops structured, high-reliability conceptual thinking systems required to solve difficult, deceptive, and multi-layered GATE and BARC questions.",
         points: [
@@ -232,11 +232,11 @@ export const cohortsData = [
     },
     {
         id: 'mentorship',
-        badge: 'COHORT',
+        badge: 'NN Cohorts',
         category: 'nn',
         title: '1:1 Mentorship',
         description: 'GATE–BARC exam execution & rank acceleration guide.',
-        bgImage: cohort_nn_bg,
+        bgImage: '/cohorts/mentorship-thumb.jpg',
         videoId: "AR3dbS4iPeM",
         longDescription: "1:1 Mentorship Cohort is a pressure-oriented mentorship program designed for aspirants who already know the syllabus but struggle to execute effectively under real exam conditions. The focus is not on revision alone, but on transforming existing knowledge into accurate decisions, disciplined thinking, and stable performance during the final phase of GATE, BARC, and technical examinations.",
         points: [
@@ -250,11 +250,11 @@ export const cohortsData = [
     },
     {
         id: 'youtube-sessions',
-        badge: 'COHORT',
+        badge: 'NN Cohorts',
         category: 'nn',
         title: 'All Youtube Sessions (Open Access)',
-        description: 'Deep thinking systems library for GATE & BARC prep.',
-        bgImage: cohort_nn_bg,
+        description: 'A preview experience of the complete NN GATE-BARC Performance System designed for focused preparation.',
+        bgImage: '/cohorts/youtube-sessions-thumb.jpg',
         videoId: "bmBnSE-v0wQ",
         longDescription: "**All YouTube Sessions (Open Access)** brings together all NN Cohorts YouTube sessions in one structured, distraction-free learning space. Instead of searching through playlists, recommendations, and unrelated content, access the complete collection of sessions in one place—organized for focused and consistent preparation. Designed for aspirants who want to learn at their own pace, revisit important concepts, solve questions, and build stronger exam-oriented thinking without the distractions of the YouTube feed.",
         points: [

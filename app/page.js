@@ -18,6 +18,7 @@ import FeaturedWork from "../components/FeaturedWork"
 import Philosophy from "../components/Philosophy"
 import Journey from "../components/Journey"
 import FeaturedPrograms from "../components/FeaturedPrograms"
+import WhatsAppBanner from "../components/WhatsAppBanner"
 
 export default function Home() {
 
@@ -60,6 +61,7 @@ export default function Home() {
     <Writing isDarkMode={isDarkMode} />
     <Podcasts isDarkMode={isDarkMode} />
     <Community isDarkMode={isDarkMode} />
+    <WhatsAppBanner isDarkMode={isDarkMode} />
     <Contact isDarkMode={isDarkMode} />
     <Footer isDarkMode={isDarkMode} />
     </>

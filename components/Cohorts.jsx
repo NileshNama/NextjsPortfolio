@@ -91,79 +91,89 @@ const Cohorts = ({ isDarkMode }) => {
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7">
           {filteredCohorts.map((cohort, index) => (
-            <motion.button
+            <motion.div
               key={cohort.id || index}
-              type="button"
+              role="button"
+              tabIndex={0}
               onClick={() => setActiveCohort(cohort)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault()
+                  setActiveCohort(cohort)
+                }
+              }}
               {...safeMotion(cardMotion.reveal(index), shouldReduceMotion)}
-              whileHover={shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }}
-              whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.99 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               className="
                 group
                 relative
                 flex flex-col justify-between
-                min-h-[400px] sm:min-h-[420px] w-full
-                overflow-hidden
-                rounded-[2rem]
-                border border-black/10 dark:border-white/10
-                bg-[#181c24] dark:bg-[#0f1217]
+                w-full
+                rounded-2xl sm:rounded-[1.4rem]
+                border border-gray-200/90 dark:border-white/10
+                bg-white dark:bg-[#12161f]
                 text-left
                 cursor-pointer
-                shadow-[0_12px_40px_rgba(0,0,0,0.12)]
-                hover:shadow-[0_24px_70px_rgba(80,145,135,0.22)]
+                p-3.5 sm:p-4
+                shadow-sm
+                hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/40
                 hover:border-[#509187]/50
                 focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:outline-none
                 transition-all duration-300
-                transform-gpu
-                will-change-transform
-                p-3.5 sm:p-4
               "
             >
-              {/* Background Image (visible with high clarity) */}
-              <Image
-                src={cohort.bgImage}
-                alt={cohort.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-              />
+              <div className="flex flex-col flex-1 justify-between">
+                <div>
+                  {/* Top Cover Image (16:9 thumbnail from corresponding YouTube video or background) */}
+                  <div className="relative w-full aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 border border-black/5 dark:border-white/10">
+                    <Image
+                      src={cohort.bgImage || (cohort.videoId ? `https://img.youtube.com/vi/${cohort.videoId}/maxresdefault.jpg` : assets.cohort_nn_bg)}
+                      alt={cohort.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  </div>
 
-              {/* Ambient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/15 pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#509187]/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-              {/* Top Bar with Badge (Pinned at Top, Never Overlapped) */}
-              <div className="relative z-10 flex items-center justify-between w-full">
-                <span
-                  className={`inline-flex items-center rounded-full px-3 py-1 text-[10.5px] font-semibold tracking-[0.16em] backdrop-blur-md shadow-sm ${
-                    cohort.badge === 'VEBSKILLS'
-                      ? 'bg-[#0070f3]/85 text-white border border-[#00b4d8]/40'
-                      : 'bg-black/65 text-white/95 border border-white/15'
-                  }`}
-                >
-                  {cohort.badge || 'COHORT'}
-                </span>
-              </div>
-
-              {/* Bottom Frosted Glass Panel (Uniform ~70% Transparency, Natural Text Flow) */}
-              <div className="relative z-10 w-full min-h-[132px] rounded-2xl bg-white/75 dark:bg-[#111827]/80 backdrop-blur-md p-3.5 sm:p-4 shadow-lg border border-white/60 dark:border-white/15 transition-all duration-300 group-hover:bg-white/85 dark:group-hover:bg-[#111827]/90 group-hover:border-[#509187]/50 flex items-center">
-                <div className="flex items-start justify-between gap-2.5 w-full">
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white text-[15px] sm:text-base leading-snug line-clamp-2">
+                  {/* Content Section with uniform title & description height */}
+                  <div className="pt-3.5">
+                    <h3 className="font-bold text-gray-900 dark:text-white text-[15px] sm:text-base leading-snug line-clamp-2 min-h-[42px] sm:min-h-[46px] flex items-start group-hover:text-[#509187] dark:group-hover:text-[#67b0a5] transition-colors">
                       {cohort.title}
                     </h3>
-                    <p className="text-xs sm:text-[13px] text-gray-700 dark:text-gray-300 mt-1.5 leading-relaxed line-clamp-2">
+                    <p className="text-xs sm:text-[13px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed line-clamp-2 min-h-[36px] sm:min-h-[40px]">
                       {cohort.description}
                     </p>
                   </div>
+                </div>
 
-                  <div className="shrink-0 rounded-full border border-black/15 dark:border-white/15 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center bg-[#509187] group-hover:bg-[#3f736b] text-white shadow-[0_8px_20px_rgba(80,145,135,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:translate-x-1 mt-0.5">
-                    <Image src={assets.send_icon} alt="open" className="w-4 sm:w-5" />
-                  </div>
+                {/* Badge Tag Pill - always aligned at the exact same vertical line */}
+                <div className="mt-4 mb-1 flex items-center justify-end">
+                  <span
+                    className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-[10.5px] font-semibold tracking-wider uppercase ${
+                      cohort.category === 'vebskills' || cohort.badge === 'VEBSKILLS'
+                        ? 'bg-[#0070f3] text-white shadow-sm'
+                        : 'bg-[#181c24] text-white dark:bg-white/10 dark:text-white border border-black/10 dark:border-white/15'
+                    }`}
+                  >
+                    {cohort.badge || (cohort.category === 'nn' ? 'NN Cohorts' : 'VebSkills')}
+                  </span>
                 </div>
               </div>
-            </motion.button>
+
+              {/* Bottom Divider & View Details Row (No pricing or % segment) */}
+              <div className="border-t border-gray-100 dark:border-white/10 mt-3 pt-3 flex items-center justify-between w-full">
+                <span className="text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-400 group-hover:text-[#509187] dark:group-hover:text-[#67b0a5] transition-colors">
+                  View Details
+                </span>
+                <span className="w-8 h-8 rounded-full bg-[#181c24] dark:bg-white text-white dark:text-[#181c24] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-[#509187] group-hover:text-white shadow-sm">
+                  <svg className="w-3.5 h-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H9M17 7V15" />
+                  </svg>
+                </span>
+              </div>
+            </motion.div>
           ))}
         </div>
 
@@ -229,20 +239,20 @@ const Cohorts = ({ isDarkMode }) => {
               <div className="flex items-center gap-2 mb-3">
                 <span
                   className={`inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold tracking-[0.16em] ${
-                    activeCohort.badge === 'VEBSKILLS'
+                    activeCohort.category === 'vebskills' || activeCohort.badge === 'VEBSKILLS'
                       ? 'bg-[#0070f3]/15 text-[#0070f3] border border-[#0070f3]/30'
                       : 'bg-[#509187]/15 text-[#509187] border border-[#509187]/30'
                   }`}
                 >
-                  {activeCohort.badge || 'COHORT'}
+                  {activeCohort.badge || (activeCohort.category === 'nn' ? 'NN Cohorts' : 'VebSkills')}
                 </span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-Ovo mb-4 text-gray-900 dark:text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
                 {activeCohort.title}
               </h3>
 
-              {activeCohort.videoId && (
+              {activeCohort.videoId ? (
                 <div className="w-full aspect-video mb-6 rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
                   <iframe
                     className="w-full h-full"
@@ -253,7 +263,16 @@ const Cohorts = ({ isDarkMode }) => {
                     allowFullScreen
                   />
                 </div>
-              )}
+              ) : activeCohort.bgImage ? (
+                <div className="w-full aspect-video mb-6 rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 relative">
+                  <Image
+                    src={activeCohort.bgImage}
+                    alt={activeCohort.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ) : null}
 
               <p className="text-gray-700 dark:text-gray-300 font-Ovo leading-relaxed mb-6">
                 {activeCohort.longDescription}

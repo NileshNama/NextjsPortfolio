@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { usePathname } from 'next/navigation'
 
 /**
  * Authentic Ancient Reed Pen (Kalam) Red Calligraphic Underline
@@ -43,12 +44,26 @@ export const KalamRedUnderline = ({ className = "" }) => (
 
 /**
  * HandnoteHighlight Component
- * Highlights heading text with authentic study handnotes yellow highlighter pen,
- * and underlines it with an ancient reed pen (Kalam) in red ink.
- * Uses `isolate` and non-negative z-index so the yellow highlighter is never
- * clipped or hidden behind dark-themed section backgrounds.
+ * On the main page, displays clean typography with the ancient reed pen (Kalam) red underline
+ * without the yellow highlighter box. On other pages (/cohorts, etc.), displays the full
+ * handwritten notes yellow highlighter background + red underline.
  */
-export const HandnoteHighlight = ({ children, className = "" }) => {
+export const HandnoteHighlight = ({ children, className = "", showYellow }) => {
+  const pathname = usePathname()
+  const isMainPage = !pathname || pathname === "/"
+  const shouldShowYellow = showYellow !== undefined ? showYellow : !isMainPage
+
+  if (!shouldShowYellow) {
+    return (
+      <span className={`relative inline-block isolate px-0.5 my-1 leading-normal ${className}`}>
+        <span className="relative z-10 text-inherit font-bold tracking-tight">
+          {children}
+        </span>
+        <KalamRedUnderline />
+      </span>
+    )
+  }
+
   return (
     <span className={`relative inline-block isolate px-2.5 sm:px-4 py-0.5 sm:py-1 my-1 leading-normal ${className}`}>
       {/* Authentic Handwritten Notes Yellow Highlighter Background with natural hand marker rotation */}

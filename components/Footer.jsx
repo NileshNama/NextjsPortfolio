@@ -76,6 +76,7 @@ const Footer = ({ isDarkMode }) => {
             font-bold
             leading-[1.08]
             tracking-tight
+            text-white
           ">
             <HandnoteHighlight>
               Deep thinking wins{" "} 
