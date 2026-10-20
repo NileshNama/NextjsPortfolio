@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion, useReducedMotion } from 'motion/react'
 import { cardMotion, safeMotion } from '@/lib/animations'
 
@@ -119,6 +120,16 @@ const Organizations = ({ isDarkMode }) => {
                   />
                 </a>
               ))}
+
+              <div className="hidden md:block w-px h-5 bg-white/25" />
+
+              <Link
+                href="/linktree"
+                className="text-xs font-semibold px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/40 transition-all flex items-center gap-1.5 shadow-sm hover:scale-105"
+              >
+                <span>Linktree Hub</span>
+                <span className="text-xs">↗</span>
+              </Link>
             </div>
           </div>
         </motion.div>

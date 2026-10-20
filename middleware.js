@@ -32,6 +32,11 @@ export function middleware(req) {
     return NextResponse.rewrite(url)
   }
 
+  if (hostname === "linktree.nileshnama.com") {
+    url.pathname = "/linktree"
+    return NextResponse.rewrite(url)
+  }
+
   return NextResponse.next()
 }
 

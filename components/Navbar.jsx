@@ -1,5 +1,6 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 
@@ -95,7 +96,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
   }
 
   const navLinkClass =
-    'font-Ovo text-sm transition-opacity hover:opacity-70 cursor-pointer whitespace-nowrap'
+    'font-medium text-sm transition-opacity hover:opacity-70 cursor-pointer whitespace-nowrap'
 
   return (
     <>
@@ -168,7 +169,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
               bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm font-medium
+              font-semibold text-xs sm:text-sm
               shadow-sm
               hover:text-[#386b62] dark:hover:text-[#67b0a5]
               hover:border-[#509187] dark:hover:border-[#509187]
@@ -202,7 +203,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
               bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm font-medium
+              font-semibold text-xs sm:text-sm
               shadow-sm
               hover:text-[#386b62] dark:hover:text-[#67b0a5]
               hover:border-[#509187] dark:hover:border-[#509187]
@@ -236,7 +237,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
               bg-white/80 dark:bg-white/[0.06]
               backdrop-blur-xl
               text-gray-700 dark:text-gray-200
-              font-Ovo text-xs sm:text-sm font-medium
+              font-semibold text-xs sm:text-sm
               shadow-sm
               hover:text-[#386b62] dark:hover:text-[#67b0a5]
               hover:border-[#509187] dark:hover:border-[#509187]
@@ -328,7 +329,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
                   <a
                     href={`#${targetId}`}
                     onClick={(e) => handleNavClick(e, targetId)}
-                    className="font-Ovo text-gray-800 dark:text-gray-100 hover:text-[#5A9B92] dark:hover:text-[#5A9B92] transition-colors cursor-pointer block py-1"
+                    className="font-medium text-gray-800 dark:text-gray-100 hover:text-[#5A9B92] dark:hover:text-[#5A9B92] transition-colors cursor-pointer block py-1"
                   >
                     {label}
                   </a>
@@ -341,6 +342,14 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
               <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-400 dark:text-gray-500">
                 Platforms & Resources
               </span>
+              <Link
+                href="/linktree"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center justify-between px-3.5 py-2.5 rounded-full border border-[#509187] bg-[#509187]/20 text-[#2f665e] dark:text-[#80ded0] font-bold text-xs shadow-sm hover:bg-[#509187] hover:text-white transition-all"
+              >
+                <span>🌳 All Organizations Linktree</span>
+                <span className="text-xs">→</span>
+              </Link>
               <a
                 href="https://cohorts.nileshnama.com/"
                 target="_blank"

@@ -10,49 +10,49 @@ import SubpageHeader from "@/components/SubpageHeader"
 
 const projects = [
   {
-    title: "ThemeForest Backend Clone",
+    title: "Interviewers",
     description:
-      "Backend system implementing authentication, digital product flow, access control, and purchases.",
+      "Mentor–student matching platform and live evaluation engine designed for structured technical interview preparation and reasoning feedback.",
     intent:
-      "To explore how authentication, access control, and monetization interact in a digital marketplace.",
-    category: "Backend",
-    tech: ["Node.js", "Express", "MongoDB"],
-    featured: true,
-    readmePreview:
-      "Focuses on backend system design, authentication flows, role-based access, and transactional integrity.",
-    source: "https://github.com/yourrepo",
-    demo: "https://demo-link.com",
-    readme: "https://github.com/yourrepo#readme",
-  },
-  {
-    title: "Interviewers Platform",
-    description:
-      "Mentor–student matching platform for structured technical interview preparation.",
-    intent:
-      "To design interview preparation as a system of reasoning, feedback, and performance — not content delivery.",
+      "To design interview preparation as a system of reasoning, feedback, and performance — not passive content delivery.",
     category: "System",
-    tech: ["Next.js", "React", "Tailwind"],
+    tech: ["React", "Node.js", "WebRTC", "Tailwind"],
     featured: true,
     readmePreview:
-      "A system-first platform designed around interview thinking and mentor workflows.",
-    source: "https://github.com/yourrepo",
-    demo: "https://interviewers.in",
-    readme: "https://github.com/yourrepo#readme",
+      "A system-first platform designed around live interview reasoning, telemetry, and structured mentor workflows.",
+    source: "https://github.com/nileshnama/interviewers-platform",
+    demo: "https://www.interviewers.in/",
+    readme: "https://github.com/nileshnama/interviewers-platform#readme",
   },
   {
-    title: "NN Cohorts LMS",
+    title: "NQuestions",
     description:
-      "Cohort-based learning infrastructure focused on exam reasoning and decision-making.",
+      "Interactive cognitive puzzle and question-decoding engine built to analyze examiner psychology and trap elimination patterns.",
     intent:
-      "To build a learning system where thinking patterns matter more than syllabus coverage.",
-    category: "Education",
-    tech: ["Next.js", "Supabase"],
-    featured: false,
+      "To decode examiner traps and cognitive reasoning models in competitive examinations through structured puzzles.",
+    category: "System",
+    tech: ["Next.js", "PostgreSQL", "Tailwind", "Python"],
+    featured: true,
     readmePreview:
-      "Explores learning system design, cohort dynamics, and long-term conceptual retention.",
-    source: "https://github.com/yourrepo",
-    demo: "https://cohorts.nileshnama.com",
-    readme: "https://github.com/yourrepo#readme",
+      "Interactive reasoning engine for systematic option elimination and question analysis.",
+    source: "https://github.com/nileshnama/nquestions",
+    demo: "https://www.nquestions.in/",
+    readme: "https://github.com/nileshnama/nquestions#readme",
+  },
+  {
+    title: "VebCampus",
+    description:
+      "Campus-wide technical training and placement ecosystem bridging academic curriculum with production-grade engineering practices.",
+    intent:
+      "To transform university engineering cohorts into production-ready software engineers through verifiable proof-of-work.",
+    category: "Education",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Docker"],
+    featured: true,
+    readmePreview:
+      "Campus engineering ecosystem connecting universities with industry standard development practices and automated reviews.",
+    source: "https://github.com/nileshnama/vebcampus",
+    demo: "https://www.vebskills.com/",
+    readme: "https://github.com/nileshnama/vebcampus#readme",
   },
 ]
 

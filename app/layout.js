@@ -1,17 +1,11 @@
-import { Outfit, Ovo, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  subsets: ["latin"], weight: ["400", "500", "600", "700"]
-});
-
-const ovo = Ovo({
-  subsets: ["latin"], weight: ["400"]
-});
-
 const inter = Inter({
-  subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-inter"
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 
@@ -44,7 +38,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${outfit.className} ${ovo.className} ${inter.variable} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
+        className={`${inter.variable} font-sans antialiased leading-relaxed overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
         {children}
       </body>

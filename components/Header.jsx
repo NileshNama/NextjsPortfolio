@@ -1,12 +1,39 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import indianFlagWavy from '@/public/india-flag-ripple.png'
 import React, { useEffect, useState, useRef } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { EASINGS, heroEntrance } from '@/lib/animations'
 
+// Authentic ancient reed pen (Kalam) thick yellow calligraphic underline
+const KalamUnderline = () => (
+  <svg
+    className="absolute -bottom-1 sm:-bottom-1.5 left-0 w-full h-[6px] sm:h-[8px] pointer-events-none overflow-visible -z-10"
+    viewBox="0 0 100 12"
+    preserveAspectRatio="none"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Thick calligraphic chisel body of ancient pen */}
+    <path
+      d="M 1 8.5 C 22 5, 52 9.5, 99 3 C 78 7, 36 5.5, 1 8.5 Z"
+      fill="#FACC15"
+      className="dark:fill-yellow-400 opacity-90"
+    />
+    {/* Main reed pen ink stroke */}
+    <path
+      d="M 2 7.5 C 24 5, 54 8.5, 98 3.5"
+      stroke="#EAB308"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      className="dark:stroke-yellow-300"
+    />
+  </svg>
+)
+
 const Header = () => {
   const shouldReduceMotion = useReducedMotion()
-  const manifestoText = "I Build Technology. I Teach Engineering. I Train Minds to Think."
+  const manifestoText = "I build products at VebGlitch, shape engineers through VebSkills, and prepare aspirants to crack GATE, BARC and technical interviews through NN Cohorts."
 
   const profileImages = [
     assets.profile_img_2,
@@ -30,6 +57,7 @@ const Header = () => {
   const [charIndex, setCharIndex] = useState(manifestoText.length)
   const [isDeleting, setIsDeleting] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
 
   const contentRef = useRef(null)
   const [contentHeight, setContentHeight] = useState('auto')
@@ -64,6 +92,8 @@ const Header = () => {
 
       if (prevChar === '.') {
         delay = 350 + Math.floor(Math.random() * 80) // natural pause between sentences
+      } else if (prevChar === ',') {
+        delay = 180 + Math.floor(Math.random() * 40) // natural pause at commas
       } else if (prevChar === '&') {
         delay = 110
       } else if (prevChar === ' ') {
@@ -74,6 +104,7 @@ const Header = () => {
         setCharIndex((prev) => prev + 1)
       }, delay)
     } else if (!isDeleting && charIndex === manifestoText.length) {
+      if (isHovered) return // Pause deleting if user is hovering over text or hyperlinks
       // Typing completed! Cursor blinks for 20 seconds before rewriting
       timeout = setTimeout(() => {
         setIsDeleting(true)
@@ -91,9 +122,26 @@ const Header = () => {
     }
 
     return () => clearTimeout(timeout)
-  }, [charIndex, isDeleting, isMounted, manifestoText])
+  }, [charIndex, isDeleting, isMounted, isHovered, manifestoText])
 
-  const displayManifesto = isMounted ? manifestoText.slice(0, charIndex) : manifestoText
+  const renderTypedSegment = (fullStr, startIdx, endIdx, currentChars) => {
+    if (currentChars <= startIdx) return null
+    const visibleLength = Math.min(currentChars - startIdx, endIdx - startIdx)
+    return fullStr.slice(0, visibleLength)
+  }
+
+  const charCount = isMounted ? charIndex : manifestoText.length
+
+  const s1 = renderTypedSegment("I build products at ", 0, 20, charCount)
+  const vebGlitchText = renderTypedSegment("VebGlitch", 20, 29, charCount)
+  const isVebGlitchComplete = charCount >= 29
+  const s2 = renderTypedSegment(", shape engineers through ", 29, 55, charCount)
+  const vebSkillsText = renderTypedSegment("VebSkills", 55, 64, charCount)
+  const isVebSkillsComplete = charCount >= 64
+  const s3 = renderTypedSegment(", and prepare aspirants to crack GATE, BARC and technical interviews through ", 64, 141, charCount)
+  const nnCohortsText = renderTypedSegment("NN Cohorts", 141, 151, charCount)
+  const isNnCohortsComplete = charCount >= 151
+  const s4 = renderTypedSegment(".", 151, 152, charCount)
 
   return (
     <section
@@ -259,9 +307,51 @@ const Header = () => {
               initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.22, ease: EASINGS.smoothOut }}
-              className="text-xs sm:text-base lg:text-xl text-gray-600 dark:text-gray-400 font-Ovo tracking-wide"
+              className="text-xs sm:text-base lg:text-xl text-gray-700 dark:text-gray-200 font-semibold tracking-normal flex items-center justify-center md:justify-start gap-1.5 sm:gap-2"
             >
-              Software Engineer · Technical Educator · Author
+              <motion.span
+                animate={
+                  shouldReduceMotion
+                    ? undefined
+                    : {
+                        rotate: [0, 3, -3, 2, -1, 0],
+                        y: [0, -1.5, 0, -1, 0],
+                        scale: [1, 1.05, 1, 1.03, 1],
+                        filter: [
+                          'drop-shadow(0 2px 4px rgba(0,0,0,0.22)) drop-shadow(0 0 4px rgba(255,153,51,0.2)) brightness(1)',
+                          'drop-shadow(0 4px 8px rgba(0,0,0,0.32)) drop-shadow(0 0 8px rgba(255,153,51,0.42)) brightness(1.06)',
+                          'drop-shadow(0 2px 4px rgba(0,0,0,0.22)) drop-shadow(0 0 4px rgba(255,153,51,0.2)) brightness(1)',
+                        ],
+                      }
+                }
+                transition={{
+                  duration: 2.8,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                whileHover={{ scale: 1.25, rotate: 6 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center shrink-0 w-[1.28em] h-[1.28em] relative select-none cursor-pointer group"
+                title="Proudly Indian 🇮🇳"
+                aria-label="Indian Flag"
+              >
+                {/* 3D background depth shade / elevated drop shadow */}
+                <span
+                  className="absolute inset-0 bg-black/25 dark:bg-black/45 blur-[2.5px] rounded-lg -z-10 translate-y-[2px] scale-95 group-hover:scale-105 transition-transform"
+                  aria-hidden="true"
+                />
+
+                {/* Waving Indian Flag */}
+                <Image
+                  src={indianFlagWavy}
+                  alt="Indian Flag"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain select-none pointer-events-none drop-shadow-sm"
+                  priority
+                />
+              </motion.span>
+              <span>Software Engineer · Technical Educator · Author</span>
             </motion.h2>
 
             {/* Name */}
@@ -287,14 +377,80 @@ const Header = () => {
                 transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
                 className="overflow-hidden"
               >
-                <div ref={contentRef} className="font-medium text-gray-800 dark:text-gray-200 text-xs sm:text-base lg:text-lg leading-snug sm:leading-relaxed">
-                  <span>{displayManifesto}</span>
+                <div
+                  ref={contentRef}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className="font-medium text-gray-800 dark:text-gray-200 text-xs sm:text-base lg:text-lg leading-snug sm:leading-relaxed pb-2"
+                >
+                  {s1 && <span>{s1}</span>}
+
+                  {vebGlitchText && (
+                    isVebGlitchComplete ? (
+                      <a
+                        href="https://vebglitch.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative inline-block font-bold text-[#0284c7] dark:text-[#38bdf8] hover:text-[#0369a1] dark:hover:text-[#7dd3fc] transition-all duration-200 hover:scale-[1.02] cursor-pointer group/kalam mx-0.5"
+                      >
+                        <span className="relative z-10">{vebGlitchText}</span>
+                        <KalamUnderline />
+                      </a>
+                    ) : (
+                      <span className="relative inline-block font-bold text-[#0284c7] dark:text-[#38bdf8] mx-0.5">
+                        <span>{vebGlitchText}</span>
+                      </span>
+                    )
+                  )}
+
+                  {s2 && <span>{s2}</span>}
+
+                  {vebSkillsText && (
+                    isVebSkillsComplete ? (
+                      <a
+                        href="https://www.vebskills.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative inline-block font-bold text-[#059669] dark:text-[#34d399] hover:text-[#047857] dark:hover:text-[#6ee7b7] transition-all duration-200 hover:scale-[1.02] cursor-pointer group/kalam mx-0.5"
+                      >
+                        <span className="relative z-10">{vebSkillsText}</span>
+                        <KalamUnderline />
+                      </a>
+                    ) : (
+                      <span className="relative inline-block font-bold text-[#059669] dark:text-[#34d399] mx-0.5">
+                        <span>{vebSkillsText}</span>
+                      </span>
+                    )
+                  )}
+
+                  {s3 && <span>{s3}</span>}
+
+                  {nnCohortsText && (
+                    isNnCohortsComplete ? (
+                      <a
+                        href="https://cohorts.nileshnama.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative inline-block font-bold text-[#d97706] dark:text-[#fbbf24] hover:text-[#b45309] dark:hover:text-[#fde68a] transition-all duration-200 hover:scale-[1.02] cursor-pointer group/kalam mx-0.5"
+                      >
+                        <span className="relative z-10">{nnCohortsText}</span>
+                        <KalamUnderline />
+                      </a>
+                    ) : (
+                      <span className="relative inline-block font-bold text-[#d97706] dark:text-[#fbbf24] mx-0.5">
+                        <span>{nnCohortsText}</span>
+                      </span>
+                    )
+                  )}
+
+                  {s4 && <span>{s4}</span>}
+
                   <span className="inline-block w-[2px] h-[1.15em] bg-[#509187] align-middle ml-1 animate-pulse" />
                 </div>
               </motion.div>
               <div className="text-gray-600 dark:text-gray-400 text-xs sm:text-base leading-relaxed">
                 <p>
-                  Software engineer, technical educator, and author building practical products and helping people master complex technical concepts through structured thinking.
+                  Software engineer, technical educator, and author building practical products, developing engineering talent, and making complex technical concepts easier to understand through structured thinking.
                 </p>
               </div>
             </motion.div>

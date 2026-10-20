@@ -1,5 +1,6 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { motion } from 'motion/react'
 
@@ -211,6 +212,15 @@ const Footer = ({ isDarkMode }) => {
               >
                 Writing
               </a>
+            </li>
+
+            <li>
+              <Link
+                href="/linktree"
+                className="hover:text-white transition"
+              >
+                Linktree
+              </Link>
             </li>
 
             <li>
