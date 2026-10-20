@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { motion } from "motion/react"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const communityImages = [
   {
@@ -28,7 +29,7 @@ const Community = () => {
         </p>
 
         <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo mb-5">
-          Conversations & Community
+          <HandnoteHighlight>Conversations &amp; Community</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto text-white/75 font-medium leading-8">

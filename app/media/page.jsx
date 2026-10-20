@@ -5,6 +5,7 @@ import { motion } from "motion/react"
 import Image from "next/image"
 import SubpageHeader from "@/components/SubpageHeader"
 import { assets } from "@/assets/assets"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const MEDIA_TYPES = [
   "All",
@@ -102,7 +103,7 @@ const MediaPage = () => {
           <h4 className="text-lg font-Ovo mb-2">Media</h4>
 
           <h2 className="text-4xl sm:text-5xl font-Ovo">
-            Talks, Podcasts & Seminars
+            <HandnoteHighlight>Talks, Podcasts &amp; Seminars</HandnoteHighlight>
           </h2>
 
           <p className="mt-6 text-gray-600 dark:text-gray-400 font-Ovo">

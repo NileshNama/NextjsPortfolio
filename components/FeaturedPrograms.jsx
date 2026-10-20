@@ -13,6 +13,7 @@ import WhoThrives from './WhoThrives'
 import AudienceFilter from './AudienceFilter'
 import QuestionFramework from './QuestionFramework'
 import Faq from './Faq'
+import HandnoteHighlight from './HandnoteHeading'
 import VebSkillsContent from './VebSkillsContent'
 
 const modalDetails = {
@@ -133,8 +134,8 @@ const FeaturedPrograms = ({ isDarkMode, onModalToggle }) => {
               <span className="w-1.5 h-1.5 rounded-full bg-[#509187] animate-pulse" />
               Featured Programs
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-[2.2rem] font-bold font-Ovo tracking-tight text-gray-900 dark:text-white">
-              NN Sessions
+            <h2 className="text-2xl sm:text-3xl md:text-[2.2rem] font-bold tracking-tight text-gray-900 dark:text-white">
+              <HandnoteHighlight>NN Sessions</HandnoteHighlight>
             </h2>
           </div>
           <p className="max-w-md text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-normal leading-relaxed">

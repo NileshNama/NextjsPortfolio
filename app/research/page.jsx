@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react"
 import SubpageHeader from "@/components/SubpageHeader"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const RESEARCH_TYPES = [
   "All",
@@ -93,7 +94,7 @@ const ResearchPage = () => {
           <h4 className="text-lg font-Ovo mb-2">Research</h4>
 
           <h2 className="text-4xl sm:text-5xl font-Ovo">
-            Applied Research & Thought Work
+            <HandnoteHighlight>Applied Research &amp; Thought Work</HandnoteHighlight>
           </h2>
 
           <p className="mt-6 text-gray-600 dark:text-gray-400 font-Ovo">

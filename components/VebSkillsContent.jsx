@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
 import { typographyReveal, cardMotion, safeMotion } from '@/lib/animations'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 // ==========================================
 // 1. VEBSKILLS OUTCOMES
@@ -130,7 +131,7 @@ const VebSkillsStruggles = () => {
         </p>
         <p className="section-label mb-2 text-[#5A9B92]">INDUSTRY REALITY</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight">
-          Why Most Developers Struggle
+          <HandnoteHighlight>Why Most Developers Struggle</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -274,7 +275,7 @@ const VebSkillsProof = () => {
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-          Developer Thinking Shifts
+          <HandnoteHighlight>Developer Thinking Shifts</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -435,7 +436,7 @@ const VebSkillsTestimonials = () => {
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-          What Developers Say About VebSkills
+          <HandnoteHighlight>What Developers Say About VebSkills</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -507,7 +508,7 @@ const VebSkillsWhoThrives = () => {
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-          Who Thrives Inside VebSkills
+          <HandnoteHighlight>Who Thrives Inside VebSkills</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -580,7 +581,7 @@ const VebSkillsAudienceFilter = () => {
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-          Who This Is Not For
+          <HandnoteHighlight>Who This Is Not For</HandnoteHighlight>
         </h2>
       </motion.div>
 
@@ -671,7 +672,7 @@ const VebSkillsFramework = () => {
         </p>
         <p className="section-label mb-2 text-[#5A9B92]">SYSTEM DESIGN</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight">
-          How VebSkills Engineers Build
+          <HandnoteHighlight>How VebSkills Engineers Build</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
@@ -794,7 +795,7 @@ const VebSkillsFaq = () => {
         >
           <p className="section-label mb-2 text-[#5A9B92]">FAQ</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-            Frequently Asked Questions
+            <HandnoteHighlight>Frequently Asked Questions</HandnoteHighlight>
           </h2>
           <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
             Answers to common questions about our applied engineering methodology, hands-on curriculum, and proof-of-work standards.

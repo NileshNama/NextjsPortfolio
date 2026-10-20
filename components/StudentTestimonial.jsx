@@ -1,5 +1,6 @@
 import React, { useMemo, useRef, useState } from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const reelTestimonials = [
   {
@@ -182,7 +183,7 @@ const StudentTestimonial = () => {
           <p className="section-label mb-2">STUDENT VOICE</p>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3">
-            How My Thinking Changed After NN
+            <HandnoteHighlight>How My Thinking Changed After NN</HandnoteHighlight>
           </h2>
 
           <p className="max-w-2xl mx-auto text-white/75 font-medium leading-relaxed text-sm sm:text-base">

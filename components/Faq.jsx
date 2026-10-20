@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "motion/react"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const FAQ_ITEMS = [
   {
@@ -75,7 +76,7 @@ const Faq = () => {
         >
           <p className="section-label mb-2">FAQ</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
-            Frequently Asked Questions
+            <HandnoteHighlight>Frequently Asked Questions</HandnoteHighlight>
           </h2>
           <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
             Answers to common questions about our preparation methodology, cohort timelines, and core curriculum structure.

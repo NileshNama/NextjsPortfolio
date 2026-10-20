@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { assets, writingData } from "@/assets/assets"
 import Image from "next/image"
 import { motion } from "motion/react"
+import HandnoteHighlight from './HandnoteHeading'
 
 /* ---------- INLINE MARKDOWN RENDERER (ONLY ** and *) ---------- */
 const renderInlineMarkdown = (text) => {
@@ -106,9 +107,9 @@ const Writing = ({ isDarkMode }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-4xl sm:text-5xl font-semibold font-Ovo"
+            className="text-4xl sm:text-5xl font-bold tracking-tight"
           >
-            Technical Writing
+            <HandnoteHighlight>Technical Writing</HandnoteHighlight>
           </motion.h2>
 
           <motion.p

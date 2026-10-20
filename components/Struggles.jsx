@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const painPoints = [
   {
@@ -38,7 +39,7 @@ const Struggles = () => {
         </p>
         <p className="section-label mb-2">REASONING</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
-          Why Most Aspirants Struggle
+          <HandnoteHighlight>Why Most Aspirants Struggle</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">

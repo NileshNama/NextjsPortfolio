@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
 import SkillsPeriodicTable from './SkillsPeriodicTable'
+import HandnoteHighlight from './HandnoteHeading'
 
 const About = ({ isDarkMode }) => {
   return (
@@ -32,7 +33,7 @@ const About = ({ isDarkMode }) => {
           viewport={{ once: true }}
           className="text-4xl sm:text-5xl font-bold tracking-tight"
         >
-          About Me
+          <HandnoteHighlight>About Me</HandnoteHighlight>
         </motion.h2>
       </div>
 

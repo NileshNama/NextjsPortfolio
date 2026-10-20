@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
+import HandnoteHighlight from './HandnoteHeading'
 
 const impactData = [
   {
@@ -90,8 +91,8 @@ const Impact = ({ isDarkMode }) => {
       <div className="text-center mb-10 sm:mb-14 px-4 sm:px-6 max-w-3xl mx-auto">
         <p className="text-sm text-[#5A9B92] uppercase tracking-[0.2em] font-medium mb-2">Impact</p>
         <p className="section-label mb-2">FIELD NOTES</p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-white mb-3">
-          Proof of Work &amp; Outcomes
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3">
+          <HandnoteHighlight>Proof of Work &amp; Outcomes</HandnoteHighlight>
         </h2>
         <p className="text-gray-300 font-normal text-sm sm:text-base leading-relaxed">
           Systems, platforms, and learning frameworks built and used in real contexts.

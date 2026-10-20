@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const points = [
   'Looking for shortcuts, hacks, or surface-level learning',
@@ -25,7 +26,7 @@ const WhoThisIsNotFor = () => {
         </p>
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
-          Who This Is Not For
+          <HandnoteHighlight>Who This Is Not For</HandnoteHighlight>
         </h2>
       </motion.div>
 

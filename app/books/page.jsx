@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react"
 import { assets, workData } from "@/assets/assets"
 import Image from "next/image"
 import SubpageHeader from "@/components/SubpageHeader"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const GENRES = [
   "All",
@@ -67,7 +68,7 @@ const BooksPage = () => {
           <h4 className="text-lg font-Ovo mb-2">Books</h4>
 
           <h2 className="text-4xl sm:text-5xl font-Ovo">
-            Book Library
+            <HandnoteHighlight>Book Library</HandnoteHighlight>
           </h2>
 
           <p className="mt-6 text-gray-600 dark:text-gray-400 font-Ovo">

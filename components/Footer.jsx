@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const Footer = ({ isDarkMode }) => {
   return (
@@ -76,9 +77,11 @@ const Footer = ({ isDarkMode }) => {
             leading-[1.08]
             tracking-tight
           ">
-            Deep thinking wins{" "} 
-             <br className="hidden sm:block" />
-             under pressure.
+            <HandnoteHighlight>
+              Deep thinking wins{" "} 
+              <br className="hidden sm:block" />
+              under pressure.
+            </HandnoteHighlight>
           </h2>
 
           <p className="

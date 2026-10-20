@@ -5,6 +5,7 @@ import { assets, cohortsData } from '@/assets/assets'
 import Image from 'next/image'
 import { motion, useReducedMotion } from "motion/react"
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from "@/lib/animations"
+import HandnoteHighlight from './HandnoteHeading'
 
 const Cohorts = ({ isDarkMode }) => {
   const shouldReduceMotion = useReducedMotion()
@@ -51,9 +52,9 @@ const Cohorts = ({ isDarkMode }) => {
 
           <motion.h2
             {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-            className="text-4xl sm:text-5xl font-semibold font-Ovo"
+            className="text-4xl sm:text-5xl font-bold tracking-tight"
           >
-            Curated Learning Systems
+            <HandnoteHighlight>Curated Learning Systems</HandnoteHighlight>
           </motion.h2>
 
           <motion.p

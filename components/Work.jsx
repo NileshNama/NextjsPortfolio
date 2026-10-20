@@ -5,6 +5,7 @@ import { assets, workData } from "@/assets/assets"
 import Image from "next/image"
 import { motion, useReducedMotion } from "motion/react"
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from "@/lib/animations"
+import HandnoteHighlight from './HandnoteHeading'
 
 const Work = ({ isDarkMode }) => {
   const shouldReduceMotion = useReducedMotion()
@@ -46,7 +47,7 @@ const Work = ({ isDarkMode }) => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-center text-4xl sm:text-5xl font-bold tracking-tight"
         >
-          Standard Reference Texts
+          <HandnoteHighlight>Standard Reference Texts</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

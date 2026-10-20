@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { assets } from "@/assets/assets"
 import Preloader from "@/components/Preloader" 
+import { HandnoteHighlight } from "@/components/HandnoteHeading" 
 
 // ----------------------------------------------------
 // PREMIUM INLINE SVG ICON COMPONENTS
@@ -1442,7 +1443,7 @@ export default function CohortsPage() {
                 Meet Your Coach
               </span>
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white text-left leading-tight mt-1 tracking-tight">
-                Learn Computer Science and Data Science From a BARC & GATE Topper
+                <HandnoteHighlight>Learn Computer Science and Data Science From a BARC &amp; GATE Topper</HandnoteHighlight>
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left mt-3">
                 Hi, I'm Nilesh Nama. During my preparation journey, I Selected in BARC OCES CBT 2022 and GATE CS AIR 212. I designed these cohorts with a singular focus: training you to think from first principles. We don't teach shortcuts; we build system-level intuition so you can tackle complex questions.
@@ -2085,7 +2086,7 @@ export default function CohortsPage() {
 
         <div className="px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Resources
+            <HandnoteHighlight>GATE CS &amp; DA Resources</HandnoteHighlight>
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 mt-2.5 max-w-2xl mx-auto font-normal leading-relaxed">
             Everything you need to understand the GATE Computer Science, DA & IT exam — the syllabus, exam pattern, fees and scientist-built preparation roadmaps.
@@ -2251,7 +2252,7 @@ export default function CohortsPage() {
             </div>
             
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-              Got Questions? We Have <span className="text-[#509187] dark:text-[#5A9B92]">Answers</span>.
+              <HandnoteHighlight>Got Questions? We Have Answers.</HandnoteHighlight>
             </h2>
             <p className="max-w-xl mx-auto text-xs sm:text-sm text-slate-500 dark:text-gray-400 mt-2.5 leading-relaxed font-normal">
               Everything you need to know about our first-principles teaching, BARC/GATE syllabus coverage, and platform features.

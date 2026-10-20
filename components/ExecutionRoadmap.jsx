@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const months = ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN']
 
@@ -354,7 +355,7 @@ export default function ExecutionRoadmapPremium() {
           </p>
 
           <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
-            One Year. Four Paths. One System.
+            <HandnoteHighlight>One Year. Four Paths. One System.</HandnoteHighlight>
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-slate-600 dark:text-gray-400">

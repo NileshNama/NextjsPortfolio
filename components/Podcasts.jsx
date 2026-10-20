@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "motion/react"
 import Image from "next/image"
 import { assets } from "@/assets/assets"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const podcastData = [
   {
@@ -102,7 +103,7 @@ const Podcasts = ({ isDarkMode }) => {
             </p>
 
             <h2 className="text-4xl sm:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white">
-              Talks &amp; Seminars
+              <HandnoteHighlight>Talks &amp; Seminars</HandnoteHighlight>
             </h2>
 
             <p className="max-w-2xl text-gray-600 dark:text-gray-400 mt-3 text-sm sm:text-base md:text-lg leading-relaxed">

@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useSpring, useReducedMotion } from 'motion/react'
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
+import HandnoteHighlight from './HandnoteHeading'
 
 const journey = [
   {
@@ -74,9 +75,9 @@ const JourneyTimeline = () => {
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo tracking-tight"
+          className="text-4xl sm:text-5xl font-bold tracking-tight"
         >
-          A Non-Linear Path
+          <HandnoteHighlight>A Non-Linear Path</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

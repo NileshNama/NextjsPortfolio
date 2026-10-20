@@ -5,6 +5,7 @@ import Image from "next/image"
 import React, { useState } from "react"
 import { motion, useReducedMotion } from "motion/react"
 import { typographyReveal, safeMotion, EASINGS } from "@/lib/animations"
+import { HandnoteHighlight } from "@/components/HandnoteHeading"
 
 const Contact = () => {
   const shouldReduceMotion = useReducedMotion()
@@ -66,7 +67,7 @@ const Contact = () => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight"
         >
-          Start a Conversation
+          <HandnoteHighlight>Start a Conversation</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

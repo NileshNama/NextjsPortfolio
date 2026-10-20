@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
+import HandnoteHighlight from './HandnoteHeading'
 
 const principles = [
   {
@@ -39,9 +40,9 @@ const ThinkingPrinciples = () => {
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo"
+          className="text-4xl sm:text-5xl font-bold tracking-tight"
         >
-          How I Think & Build
+          <HandnoteHighlight>How I Think & Build</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

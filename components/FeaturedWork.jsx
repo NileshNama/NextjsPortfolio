@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { typographyReveal, safeMotion, EASINGS } from '@/lib/animations'
+import HandnoteHighlight from './HandnoteHeading'
 
 const projects = [
   {
@@ -52,9 +53,9 @@ const FeaturedWork = ({ isDarkMode }) => {
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white"
+          className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
-          Featured Engineering Work
+          <HandnoteHighlight>Featured Engineering Work</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

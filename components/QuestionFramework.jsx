@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'motion/react'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const steps = [
   {
@@ -49,7 +50,7 @@ const QuestionFramework = () => {
         </p>
         <p className="section-label mb-2">THINKING MODELS</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo">
-          How NN Approaches Questions
+          <HandnoteHighlight>How NN Approaches Questions</HandnoteHighlight>
         </h2>
 
         <p className="max-w-2xl mx-auto mt-2.5 sm:mt-3 text-gray-300 dark:text-gray-400 leading-relaxed text-sm sm:text-base">
