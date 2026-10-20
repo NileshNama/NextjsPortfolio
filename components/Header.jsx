@@ -37,7 +37,9 @@ const Header = () => {
 
   const profileImages = [
     assets.profile_img_2,
+    assets.profile_img_12,
     assets.profile_img_3,
+    assets.profile_img_13,
     assets.profile_img_4,
     assets.profile_img_8,
     assets.profile_img_9,

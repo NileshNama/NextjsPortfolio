@@ -26,6 +26,8 @@ import profile_img_8 from './profile-img-8.png';
 import profile_img_9 from './profile-img-9.png';
 import profile_img_10 from './profile-img-10.png';
 import profile_img_11 from './profile-img-11.png';
+import profile_img_12 from './profile-img-12.jpg';
+import profile_img_13 from './profile-img-13.jpg';
 import download_icon from './download-icon.png';
 import hand_icon from './hand-icon.png';
 import header_bg_color from './header-bg-color.png';
@@ -82,6 +84,8 @@ export const assets = {
     profile_img_9,
     profile_img_10,
     profile_img_11,
+    profile_img_12,
+    profile_img_13,
     download_icon,
     hand_icon,
     header_bg_color,
