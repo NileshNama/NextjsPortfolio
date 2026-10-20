@@ -167,6 +167,25 @@ const FeaturedWork = ({ isDarkMode }) => {
             </motion.div>
           ))}
         </div>
+
+        {/* Engineering Portfolio CTA below all 3 projects at center */}
+        <motion.div
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full flex justify-center mt-12 sm:mt-16"
+        >
+          <a
+            href="https://dev.nileshnama.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cta-primary px-8 py-3.5 sm:py-4 text-sm sm:text-base focus-visible:ring-2 focus-visible:ring-[#509187] focus-visible:ring-offset-2 shadow-lg shadow-[#509187]/20 hover:shadow-xl hover:shadow-[#509187]/30 transition-all duration-300"
+          >
+            <span>Engineering Portfolio</span>
+            <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">→</span>
+          </a>
+        </motion.div>
       </div>
     </section>
   )

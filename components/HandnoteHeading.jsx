@@ -9,7 +9,7 @@ import React from 'react'
  */
 export const KalamRedUnderline = ({ className = "" }) => (
   <svg
-    className={`absolute -bottom-2 sm:-bottom-3 left-0 w-full h-[9px] sm:h-[13px] pointer-events-none overflow-visible z-10 ${className}`}
+    className={`absolute -bottom-2 sm:-bottom-3 left-0 w-full h-[9px] sm:h-[13px] pointer-events-none overflow-visible z-20 ${className}`}
     viewBox="0 0 240 14"
     preserveAspectRatio="none"
     fill="none"
@@ -45,13 +45,15 @@ export const KalamRedUnderline = ({ className = "" }) => (
  * HandnoteHighlight Component
  * Highlights heading text with authentic study handnotes yellow highlighter pen,
  * and underlines it with an ancient reed pen (Kalam) in red ink.
+ * Uses `isolate` and non-negative z-index so the yellow highlighter is never
+ * clipped or hidden behind dark-themed section backgrounds.
  */
 export const HandnoteHighlight = ({ children, className = "" }) => {
   return (
-    <span className={`relative inline-block px-2.5 sm:px-4 py-0.5 sm:py-1 my-1 leading-normal ${className}`}>
+    <span className={`relative inline-block isolate px-2.5 sm:px-4 py-0.5 sm:py-1 my-1 leading-normal ${className}`}>
       {/* Authentic Handwritten Notes Yellow Highlighter Background with natural hand marker rotation */}
       <span
-        className="absolute inset-0 -rotate-[0.6deg] rounded-md sm:rounded-lg bg-[#FEF08A] dark:bg-[#FACC15] shadow-[0_2px_14px_rgba(250,204,21,0.32)] -z-10 pointer-events-none"
+        className="absolute inset-0 -rotate-[0.6deg] rounded-md sm:rounded-lg bg-[#FEF08A] dark:bg-[#FACC15] shadow-[0_2px_14px_rgba(250,204,21,0.32)] z-0 pointer-events-none"
         aria-hidden="true"
       />
       {/* Text: crisp, high-contrast dark ink on yellow highlighter */}

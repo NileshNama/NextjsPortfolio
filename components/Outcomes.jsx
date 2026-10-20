@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const outcomes = [
   {
@@ -46,7 +47,7 @@ const Outcomes = () => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight"
         >
-          What Changes Inside NN Cohorts
+          <HandnoteHighlight>What Changes Inside NN Cohorts</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

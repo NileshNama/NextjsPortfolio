@@ -49,7 +49,7 @@ const VebSkillsOutcomes = () => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo tracking-tight text-gray-900 dark:text-white"
         >
-          What Changes Inside VebSkills
+          <HandnoteHighlight>What Changes Inside VebSkills</HandnoteHighlight>
         </motion.h2>
 
         <motion.p
@@ -361,7 +361,7 @@ const VebSkillsLabs = () => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3 tracking-tight"
         >
-          Inside VebSkills Engineering Labs
+          <HandnoteHighlight>Inside VebSkills Engineering Labs</HandnoteHighlight>
         </motion.h2>
 
         <motion.p

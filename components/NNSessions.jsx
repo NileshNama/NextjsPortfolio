@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { typographyReveal, cardMotion, safeMotion, EASINGS } from '@/lib/animations'
+import { HandnoteHighlight } from '@/components/HandnoteHeading'
 
 const sessionCards = [
   {
@@ -52,7 +53,7 @@ const NNSessions = () => {
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold font-Ovo mb-3"
         >
-          Inside NN Sessions
+          <HandnoteHighlight>Inside NN Sessions</HandnoteHighlight>
         </motion.h2>
 
         <motion.p
