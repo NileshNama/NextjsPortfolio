@@ -1441,7 +1441,7 @@ export default function CohortsPage() {
               <span className="inline-block text-[#509187] dark:text-[#5A9B92] text-xs font-bold uppercase tracking-wider text-left">
                 Meet Your Coach
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white text-left leading-tight mt-1">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white text-left leading-tight mt-1 tracking-tight">
                 Learn Computer Science and Data Science From a BARC & GATE Topper
               </h2>
               <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed text-left mt-3">
@@ -1451,15 +1451,15 @@ export default function CohortsPage() {
 
             <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-left">
               <div>
-                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">SELECTED IN</h4>
+                <h4 className="text-xs sm:text-base lg:text-xl font-extrabold text-[#509187] dark:text-[#5A9B92] leading-tight tracking-tight">SELECTED IN</h4>
                 <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">BARC OCES Exam</p>
               </div>
               <div>
-                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">AIR 212</h4>
+                <h4 className="text-xs sm:text-base lg:text-xl font-extrabold text-[#509187] dark:text-[#5A9B92] leading-tight tracking-tight">AIR 212</h4>
                 <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">GATE CS Exam</p>
               </div>
               <div>
-                <h4 className="text-xs sm:text-base lg:text-xl font-bold text-[#509187] dark:text-[#5A9B92] leading-tight">99.9%</h4>
+                <h4 className="text-xs sm:text-base lg:text-xl font-extrabold text-[#509187] dark:text-[#5A9B92] leading-tight tracking-tight">99.9%</h4>
                 <p className="text-[8.5px] sm:text-[10px] text-slate-400 font-semibold truncate sm:whitespace-normal">CS Conceptual Index</p>
               </div>
             </div>
@@ -1950,13 +1950,13 @@ export default function CohortsPage() {
       {/* YOUTUBE LECTURES SECTION */}
       <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 max-w-5xl mx-auto text-center border-t border-slate-200 dark:border-slate-800">
         <div className="flex flex-col items-center justify-center mb-8 sm:mb-10">
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white flex items-center justify-center gap-2 sm:gap-2.5 flex-wrap tracking-tight leading-tight">
             <span className="inline-flex items-center justify-center text-red-600">
               <svg className="w-7 h-7 sm:w-10 sm:h-10 fill-current" viewBox="0 0 24 24">
                 <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
               </svg>
             </span>
-            <span>Watch Free <span className="text-red-600 font-extrabold">GATE CS & DA Lectures</span> on YouTube</span>
+            <span>Watch Free <span className="text-red-600 font-black">GATE CS & DA Lectures</span> on YouTube</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-lg mx-auto">
             Free lectures, strategies, and insights — subscribe to stay ahead!
@@ -2364,7 +2364,7 @@ export default function CohortsPage() {
       <section className="py-10 sm:py-14 px-4 sm:px-6 max-w-5xl mx-auto">
         <div className="rounded-2xl sm:rounded-[2.5rem] bg-gradient-to-r from-[#061d33] via-[#0d2744] to-[#12365c] text-white p-6 sm:p-10 lg:p-14 text-center relative overflow-hidden shadow-lg shadow-[#061d33]/15">
           <div className="absolute top-0 right-0 w-[20rem] h-[20rem] rounded-full bg-blue-400/10 blur-2xl -z-10" />
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Ready to Crack GATE CS & DA?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">Ready to Crack GATE CS & DA?</h2>
           <p className="text-xs sm:text-sm text-sky-100/90 mt-2 font-medium">Join NN Cohorts today. Learn from BARC & Gate Topper, train with toppers!</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mt-6 sm:mt-8">

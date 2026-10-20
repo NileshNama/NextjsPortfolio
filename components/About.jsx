@@ -30,7 +30,7 @@ const About = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-semibold font-Ovo"
+          className="text-4xl sm:text-5xl font-bold tracking-tight"
         >
           About Me
         </motion.h2>

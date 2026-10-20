@@ -96,7 +96,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
   }
 
   const navLinkClass =
-    'font-medium text-sm transition-opacity hover:opacity-70 cursor-pointer whitespace-nowrap'
+    'font-semibold text-sm tracking-tight transition-opacity hover:opacity-70 cursor-pointer whitespace-nowrap'
 
   return (
     <>

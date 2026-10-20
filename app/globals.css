@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.028em;
   line-height: 1.2;
 }
@@ -59,9 +59,15 @@ h3 {
 }
 
 h4 {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.018em;
   line-height: 1.35;
+}
+
+h5 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
 }
 
 p,
@@ -76,20 +82,35 @@ strong {
   font-weight: 700;
 }
 
-/* Linktree razor-sharp, bold professional typography */
+/* Linktree crisp, intentional neo-grotesque bold typography matching reference */
 .linktree-root,
 .linktree-root * {
   font-family: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-.linktree-root h1,
-.linktree-root h2,
-.linktree-root h3,
-.linktree-root h4 {
-  letter-spacing: -0.025em;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+.linktree-root h1 {
+  font-weight: 800 !important;
+  letter-spacing: -0.032em !important;
+  line-height: 1.1;
+}
+.linktree-root h2 {
+  font-weight: 800 !important;
+  letter-spacing: -0.026em !important;
+}
+.linktree-root h3 {
+  font-weight: 800 !important;
+  letter-spacing: -0.022em !important;
+}
+.linktree-root h4 {
+  font-weight: 700 !important;
+  letter-spacing: -0.018em !important;
+}
+.linktree-root button,
+.linktree-root a {
+  letter-spacing: -0.015em;
 }
 
 .soft-text {
@@ -197,21 +218,56 @@ strong {
   animation: marquee 35s linear infinite;
 }
 
-.cohorts-page, .cohorts-page * {
-  font-family: var(--font-inter), sans-serif !important;
+/* ========================================================
+   COHORTS PAGE TYPOGRAPHY (Intentional, Bold, High-Impact)
+   ======================================================== */
+.cohorts-page,
+.cohorts-page * {
+  font-family: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Responsive Typography for Cohort Page */
+/* Headings in Cohorts: Bold, authoritative, and intentionally tracked */
 .cohorts-page h1:not(.preloader-hero-text) {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.15;
 }
-@media (min-width: 768px) {
-  .cohorts-page h1:not(.preloader-hero-text) {
-    font-size: 32px;
-  }
+
+.cohorts-page h2 {
+  font-weight: 800 !important;
+  letter-spacing: -0.028em !important;
+  line-height: 1.2;
+}
+
+.cohorts-page h3 {
+  font-weight: 700 !important;
+  letter-spacing: -0.022em !important;
+  line-height: 1.28;
+}
+
+.cohorts-page h4 {
+  font-weight: 700 !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.35;
+}
+
+.cohorts-page h5 {
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.cohorts-page p,
+.cohorts-page li {
+  letter-spacing: -0.011em;
+}
+
+.cohorts-page strong,
+.cohorts-page b {
+  font-weight: 700 !important;
 }
 
 .preloader-hero-text {
@@ -228,41 +284,6 @@ strong {
   text-transform: uppercase !important;
   display: block !important;
   overflow: hidden !important;
-}
-
-.cohorts-page h2 {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
-}
-@media (min-width: 768px) {
-  .cohorts-page h2 {
-    font-size: 24px;
-  }
-}
-
-.cohorts-page h3 {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0;
-}
-@media (min-width: 768px) {
-  .cohorts-page h3 {
-    font-size: 20px;
-  }
-}
-
-.cohorts-page p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-@media (min-width: 768px) {
-  .cohorts-page p {
-    font-size: 16px;
-  }
 }
 
 .cohorts-page .text-secondary {

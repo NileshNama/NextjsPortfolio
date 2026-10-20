@@ -64,7 +64,7 @@ const Contact = () => {
 
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-4xl sm:text-5xl font-semibold mb-6 font-Ovo"
+          className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight"
         >
           Start a Conversation
         </motion.h2>

@@ -72,8 +72,7 @@ const Footer = ({ isDarkMode }) => {
             sm:text-5xl
             md:text-6xl
             lg:text-7xl
-            font-semibold
-            font-Ovo
+            font-bold
             leading-[1.08]
             tracking-tight
           ">

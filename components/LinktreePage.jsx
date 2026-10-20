@@ -1430,7 +1430,7 @@ export default function LinktreePage() {
 
                             {/* Title & Clean Subtitle with Bold Crisp Typography */}
                             <div className="min-w-0 flex-1 overflow-hidden">
-                              <h3 className="text-[13px] sm:text-[14px] font-bold text-slate-950 dark:text-white tracking-tight truncate group-hover:text-black dark:group-hover:text-[#FFD214] transition-colors leading-snug">
+                              <h3 className="text-[13px] sm:text-[14px] font-extrabold text-slate-950 dark:text-white tracking-tight truncate group-hover:text-black dark:group-hover:text-[#FFD214] transition-colors leading-snug">
                                 {item.title}
                               </h3>
 

@@ -118,7 +118,7 @@ const Services = () => {
       
         <motion.h2
           {...safeMotion(typographyReveal.heading, shouldReduceMotion)}
-          className="text-center text-4xl sm:text-5xl font-semibold font-Ovo"
+          className="text-center text-4xl sm:text-5xl font-bold tracking-tight"
         >
           Work
         </motion.h2>
