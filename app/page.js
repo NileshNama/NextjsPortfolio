@@ -19,6 +19,7 @@ import Philosophy from "../components/Philosophy"
 import Journey from "../components/Journey"
 import FeaturedPrograms from "../components/FeaturedPrograms"
 import WhatsAppBanner from "../components/WhatsAppBanner"
+import ScrollToTop from "../components/ScrollToTop"
 
 export default function Home() {
 
@@ -64,6 +65,7 @@ export default function Home() {
     <WhatsAppBanner isDarkMode={isDarkMode} />
     <Contact isDarkMode={isDarkMode} />
     <Footer isDarkMode={isDarkMode} />
+    <ScrollToTop />
     </>
   );
 }

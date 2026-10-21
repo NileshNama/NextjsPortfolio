@@ -1,6 +1,5 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 
@@ -280,107 +279,94 @@ const Navbar = ({ isDarkMode, setIsDarkMode, isHidden = false }) => {
             />
           </button>
         </div>
+      </nav>
 
-        {/* Backdrop Overlay for Mobile Drawer */}
-        {isMenuOpen && (
-          <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 touch-none"
-            onClick={() => setIsMenuOpen(false)}
-          />
-        )}
+      {/* Backdrop Overlay for Mobile Drawer */}
+      <div
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden transition-opacity duration-300 touch-none ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+        aria-hidden="true"
+      />
 
-        {/* Mobile Drawer */}
-        <div
-          className={`
-            fixed top-0 right-0 h-screen w-72 max-w-[85vw] z-50
-            bg-white/95 dark:bg-darkTheme/95 backdrop-blur-2xl
-            shadow-[-10px_0_30px_rgba(0,0,0,0.15)] dark:shadow-[-10px_0_30px_rgba(0,0,0,0.6)]
-            border-l border-gray-200/60 dark:border-white/10
-            transform transition-transform duration-300 ease-out
-            flex flex-col justify-between p-6 pt-20 overscroll-contain
-            ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-          `}
+      {/* Mobile Drawer */}
+      <div
+        className={`
+          fixed top-0 right-0 h-screen h-dvh w-72 max-w-[85vw] z-[60]
+          bg-white/95 dark:bg-darkTheme/95 backdrop-blur-2xl
+          shadow-[-10px_0_30px_rgba(0,0,0,0.25)] dark:shadow-[-10px_0_30px_rgba(0,0,0,0.7)]
+          border-l border-gray-200/60 dark:border-white/10
+          transform transition-transform duration-300 ease-out
+          flex flex-col justify-between p-6 pt-20 overscroll-contain
+          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'}
+        `}
+        aria-modal="true"
+        role="dialog"
+      >
+        <button
+          type="button"
+          className="absolute right-5 top-5 p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+          aria-label="Close menu"
         >
-          <div
-            className="absolute right-5 top-5 p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-            aria-label="Close menu"
-          >
-            <Image
-              src={isDarkMode ? assets.close_white : assets.close_black}
-              alt="Close"
-              className="w-5"
-            />
-          </div>
+          <Image
+            src={isDarkMode ? assets.close_white : assets.close_black}
+            alt="Close"
+            className="w-5"
+          />
+        </button>
 
-          <div className="flex flex-col gap-6 overflow-y-auto">
-            <ul className="flex flex-col gap-4 text-base">
-              {[
-                ['Home', 'home'],
-                ['About', 'about'],
-                ['Work', 'work'],
-                ['Books', 'books'],
-                ['Cohorts', 'cohorts'],
-                ['Writing', 'writing'],
-                ['Talks', 'talks'],
-                ['Contact', 'contact'],
-              ].map(([label, targetId]) => (
-                <li key={label}>
-                  <a
-                    href={`#${targetId}`}
-                    onClick={(e) => handleNavClick(e, targetId)}
-                    className="font-medium text-gray-800 dark:text-gray-100 hover:text-[#5A9B92] dark:hover:text-[#5A9B92] transition-colors cursor-pointer block py-1"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-col gap-6 overflow-y-auto">
+          <ul className="flex flex-col gap-4 text-base">
+            {[
+              ['Home', 'home'],
+              ['About', 'about'],
+              ['Work', 'work'],
+              ['Books', 'books'],
+              ['Cohorts', 'cohorts'],
+              ['Writing', 'writing'],
+              ['Talks', 'talks'],
+              ['Contact', 'contact'],
+            ].map(([label, targetId]) => (
+              <li key={label}>
+                <a
+                  href={`#${targetId}`}
+                  onClick={(e) => handleNavClick(e, targetId)}
+                  className="font-medium text-gray-800 dark:text-gray-100 hover:text-[#5A9B92] dark:hover:text-[#5A9B92] transition-colors cursor-pointer block py-1"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-            {/* External platforms */}
-            <div className="pt-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-2.5">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-400 dark:text-gray-500">
-                Platforms & Resources
-              </span>
-              <Link
-                href="/linktree"
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center justify-between px-3.5 py-2.5 rounded-full border border-[#509187] bg-[#509187]/20 text-[#2f665e] dark:text-[#80ded0] font-bold text-xs shadow-sm hover:bg-[#509187] hover:text-white transition-all"
-              >
-                <span>🌳 All Organizations Linktree</span>
-                <span className="text-xs">→</span>
-              </Link>
-              <a
-                href="https://cohorts.nileshnama.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3.5 py-2 rounded-full border border-[#5A9B92]/50 bg-[#5A9B92]/10 text-[#509187] dark:text-[#5A9B92] font-medium text-xs shadow-sm"
-              >
-                <span>NN Cohorts</span>
-                <span className="text-xs">↗</span>
-              </a>
-              <a
-                href="https://www.vebskills.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/20 text-gray-700 dark:text-gray-200 text-xs hover:border-[#5A9B92]"
-              >
-                <span>VebSkills</span>
-                <span className="text-xs">↗</span>
-              </a>
-              <a
-                href="https://nquestions.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/20 text-gray-700 dark:text-gray-200 text-xs hover:border-[#5A9B92]"
-              >
-                <span>NQuestions</span>
-                <span className="text-xs">↗</span>
-              </a>
-            </div>
+          {/* External platforms */}
+          <div className="pt-4 border-t border-gray-200 dark:border-white/10 flex flex-col gap-2.5">
+            <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-400 dark:text-gray-500">
+              Platforms & Resources
+            </span>
+            <a
+              href="https://cohorts.nileshnama.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between px-3.5 py-2 rounded-full border border-[#5A9B92]/50 bg-[#5A9B92]/10 text-[#509187] dark:text-[#5A9B92] font-medium text-xs shadow-sm hover:bg-[#5A9B92]/20 transition-all"
+            >
+              <span>NN Cohorts</span>
+              <span className="text-xs">↗</span>
+            </a>
+            <a
+              href="https://www.vebskills.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between px-3.5 py-2 rounded-full border border-gray-300 dark:border-white/20 text-gray-700 dark:text-gray-200 text-xs hover:border-[#5A9B92] transition-all"
+            >
+              <span>VebSkills</span>
+              <span className="text-xs">↗</span>
+            </a>
           </div>
         </div>
-      </nav>
+      </div>
     </>
   )
 }
