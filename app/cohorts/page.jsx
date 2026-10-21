@@ -410,9 +410,7 @@ const SIMULATED_ACTIVITY = [
 const KNOW_THE_WHY_VIDEO_ID = "sd2SX1wS5iM"
 
 const DUMMY_YOUTUBE_SESSIONS = [
-  { id: "sd2SX1wS5iM", title: "OS Paging & Virtual Memory" },
-  { id: "xG2e1c9m6Yw", title: "DBMS SQL & Transactions" },
-  { id: "6NtbCuU3TLy", title: "Compiler Syntax Analysis" }
+  { id: "sd2SX1wS5iM", title: "OS Paging & Virtual Memory" }
 ]
 
 const NQUESTIONS_FEATURES = [
@@ -695,7 +693,7 @@ export default function CohortsPage() {
       }
     }
     return {
-      title: <>India’s Systems-Driven <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> Preparation Platform</>,
+      title: <>India’s Systems-<br className="hidden sm:inline" />Driven <span className="text-[#509187] dark:text-[#5A9B92]">GATE CS & DA</span> <br className="hidden sm:inline" />Preparation Platform</>,
       sub: "Learn from BARC & GATE Topper",
       desc: "Master Operating Systems, DBMS, Compilers, and Core Computer Science with recorded + live classes, exam-tested roadmaps, and 1:1 mentorship."
     }
@@ -1049,7 +1047,7 @@ export default function CohortsPage() {
         <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* LEFT COLUMN: TEXT DATA */}
-          <div className="lg:col-span-6 xl:col-span-7 text-left space-y-4">
+          <div className="lg:col-span-7 xl:col-span-7 text-left space-y-4">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full border border-slate-200/80 bg-slate-100/60 dark:border-white/20 dark:bg-white/10 text-slate-600 dark:text-sky-200 text-[11px] sm:text-xs font-semibold tracking-wide">
               <GraduationIcon className="w-4 h-4" />
               <span>Founded by GATE Topper & Selected in BARC OCES</span>
@@ -1059,15 +1057,11 @@ export default function CohortsPage() {
               {heroContent.title}
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl font-bold text-[#061d33]/90 dark:text-sky-100 tracking-tight text-left">
-              {heroContent.sub}
-            </p>
-
             <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-sky-100/90 leading-relaxed font-normal text-left">
               {heroContent.desc}
             </p>
 
-            <div className="flex flex-col gap-3 pt-3 w-full">
+            <div className="flex flex-col gap-3 pt-2 w-full">
               <button
                 type="button"
                 onClick={() => setIsVideoModalOpen(true)}
@@ -1077,35 +1071,37 @@ export default function CohortsPage() {
                 <PlayIcon className="w-4 h-4 text-[#509187]" />
               </button>
 
-              <a
-                href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 flex items-center justify-center gap-2 text-center"
-              >
-                <span>Start PYQ Core Program</span>
-                <span className="text-base sm:text-lg">→</span>
-              </a>
+              <div className="flex flex-row gap-2.5 sm:gap-3 w-full">
+                <a
+                  href="https://cohorts.nileshnama.com/new-courses/5-gate-barc-pyq-core-program"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 w-1/2 bg-[#509187] hover:bg-[#3e6c65] text-white font-bold px-2.5 sm:px-4 py-3.5 rounded-xl text-xs sm:text-sm md:text-base tracking-wide transition-all duration-300 shadow-lg shadow-[#509187]/20 flex items-center justify-center gap-1.5 sm:gap-2 text-center"
+                >
+                  <span>Start PYQ Core Program</span>
+                  <span className="text-sm sm:text-lg shrink-0">→</span>
+                </a>
 
-              <a
-                href="https://vebskills.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-[#061d33] hover:bg-black text-white dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-[#061d33] dark:border-slate-700 font-bold px-6 py-3.5 rounded-xl text-sm sm:text-base tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-2 text-center"
-              >
-                <span>Explore VebSkills</span>
-                <span className="text-base sm:text-lg">→</span>
-              </a>
+                <a
+                  href="https://vebskills.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 w-1/2 bg-[#061d33] hover:bg-black text-white dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white border border-[#061d33] dark:border-slate-700 font-bold px-2.5 sm:px-4 py-3.5 rounded-xl text-xs sm:text-sm md:text-base tracking-wide transition-all duration-300 shadow-md flex items-center justify-center gap-1.5 sm:gap-2 text-center"
+                >
+                  <span>Explore VebSkills</span>
+                  <span className="text-sm sm:text-lg shrink-0">→</span>
+                </a>
+              </div>
             </div>
 
-            <div className="flex items-center justify-start gap-2 text-xs text-slate-400 dark:text-sky-200 pt-2 font-medium">
+            <div className="flex items-center justify-start gap-2 text-xs text-slate-400 dark:text-sky-200 pt-1 font-medium">
               <CheckIcon className="w-3.5 h-3.5 text-green-500" />
               <span>Trusted by Serious GATE Aspirants</span>
             </div>
           </div>
 
           {/* RIGHT COLUMN: YOUTUBE VIDEO PLAYER LAYOUT */}
-          <div className="lg:col-span-6 xl:col-span-5 w-full max-w-2xl mx-auto lg:max-w-none">
+          <div className="lg:col-span-5 xl:col-span-5 w-full max-w-2xl mx-auto lg:max-w-none">
             <div className="w-full rounded-2xl sm:rounded-3xl border border-slate-200/90 dark:border-slate-800 bg-white/90 dark:bg-[#0d1527]/90 backdrop-blur p-3 sm:p-4 shadow-2xl relative">
               {/* Header Bar */}
               <div className="flex items-center justify-between pb-3 px-1 border-b border-slate-200/60 dark:border-slate-800/80 mb-3">
@@ -1114,11 +1110,11 @@ export default function CohortsPage() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
                   </span>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-gray-300">
                     NN Sessions
                   </span>
                 </div>
-                <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92]">
+                <span className="text-[10px] sm:text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-[#509187]/15 text-[#509187] dark:text-[#5A9B92]">
                   YouTube
                 </span>
               </div>
@@ -1134,26 +1130,20 @@ export default function CohortsPage() {
                 />
               </div>
 
-              {/* Dummy Session Switcher */}
+              {/* Sessions (1 Video Display) */}
               <div className="mt-3.5 pt-2.5 border-t border-slate-200/60 dark:border-slate-800/80">
                 <p className="text-[11px] font-semibold text-slate-500 dark:text-gray-400 mb-2 text-left">
-                Sessions:
+                  Sessions:
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {DUMMY_YOUTUBE_SESSIONS.map((session) => (
-                    <button
-                      key={session.id}
-                      onClick={() => setHeroVideoId(session.id)}
-                      className={`text-[11px] font-medium px-3 py-1.5 rounded-lg border transition-all text-left flex items-center gap-1.5 ${
-                        heroVideoId === session.id
-                          ? 'bg-[#509187] text-white border-[#509187] shadow-sm'
-                          : 'bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-gray-300 border-slate-200 dark:border-slate-700/60 hover:bg-slate-200 dark:hover:bg-slate-700'
-                      }`}
-                    >
-                      <PlayIcon className="w-3 h-3 shrink-0" />
-                      <span>{session.title}</span>
-                    </button>
-                  ))}
+                  <button
+                    type="button"
+                    onClick={() => setHeroVideoId(DUMMY_YOUTUBE_SESSIONS[0].id)}
+                    className="text-[11px] font-medium px-3 py-1.5 rounded-lg border bg-[#509187] text-white border-[#509187] shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <PlayIcon className="w-3 h-3 shrink-0" />
+                    <span>{DUMMY_YOUTUBE_SESSIONS[0].title}</span>
+                  </button>
                 </div>
               </div>
             </div>
