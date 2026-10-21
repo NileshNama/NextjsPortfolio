@@ -53,162 +53,162 @@ import {
 // Brand & Social SVG Icons
 const YoutubeIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 )
 
 const LinkedinIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 )
 
 const GithubIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
   </svg>
 )
 
 const TwitterXIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
   </svg>
 )
 
 const TwitterVerifiedBadge = ({ className = "w-5 h-5" }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    aria-label="Verified account" 
+  <svg
+    viewBox="0 0 24 24"
+    aria-label="Verified account"
     className={`${className} shrink-0 inline-block`}
     fill="none"
   >
     <title>Verified account</title>
-    <path 
-      d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z" 
-      fill="#1D9BF0" 
+    <path
+      d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.67-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.67-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34z"
+      fill="#1D9BF0"
     />
-    <path 
-      d="M10.54 16.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z" 
-      fill="#FFFFFF" 
+    <path
+      d="M10.54 16.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"
+      fill="#FFFFFF"
     />
   </svg>
 )
 
 const TelegramIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.939z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.939z" />
   </svg>
 )
 
 const DiscordIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
   </svg>
 )
 
 const PlayStoreIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24">
-    <path fill="#00C1A6" d="M3.6 1.8L13.8 12 3.6 22.2c-.4-.4-.6-1-.6-1.7V3.5c0-.7.2-1.3.6-1.7z"/>
-    <path fill="#0086F9" d="M17.3 8.5L5.3 1.6C4.8 1.3 4.2 1.4 3.6 1.8l10.2 10.2 3.5-3.5z"/>
-    <path fill="#FF3A44" d="M17.3 15.5l-3.5-3.5-10.2 10.2c.6.4 1.2.5 1.7.2l12-6.9z"/>
-    <path fill="#FFC107" d="M21.2 10.8l-3.9-2.3-3.5 3.5 3.5 3.5 3.9-2.3c1.1-.6 1.1-1.8 0-2.4z"/>
+    <path fill="#00C1A6" d="M3.6 1.8L13.8 12 3.6 22.2c-.4-.4-.6-1-.6-1.7V3.5c0-.7.2-1.3.6-1.7z" />
+    <path fill="#0086F9" d="M17.3 8.5L5.3 1.6C4.8 1.3 4.2 1.4 3.6 1.8l10.2 10.2 3.5-3.5z" />
+    <path fill="#FF3A44" d="M17.3 15.5l-3.5-3.5-10.2 10.2c.6.4 1.2.5 1.7.2l12-6.9z" />
+    <path fill="#FFC107" d="M21.2 10.8l-3.9-2.3-3.5 3.5 3.5 3.5 3.9-2.3c1.1-.6 1.1-1.8 0-2.4z" />
   </svg>
 )
 
 const AppStoreIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.06 1.72-.93 2.74 1.01.08 2.01-.5 2.63-1.24z"/>
+    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.06 1.72-.93 2.74 1.01.08 2.01-.5 2.63-1.24z" />
   </svg>
 )
 
 const WhatsAppIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.06 6.88C8.86 6.88 8.53 6.95 8.25 7.25C7.97 7.56 7.18 8.3 7.18 9.79C7.18 11.28 8.27 12.72 8.42 12.92C8.58 13.12 10.53 16.14 13.54 17.43C16.03 18.5 16.54 18.28 17.08 18.23C17.62 18.18 18.83 17.51 19.08 16.81C19.33 16.11 19.33 15.51 19.25 15.38C19.17 15.26 18.97 15.19 18.67 15.04C18.37 14.89 16.9 14.17 16.62 14.07C16.35 13.97 16.15 13.92 15.95 14.22C15.75 14.52 15.18 15.19 15.01 15.39C14.84 15.58 14.67 15.61 14.37 15.46C14.07 15.31 13.1 15 11.95 13.97C11.06 13.17 10.46 12.18 10.29 11.88C10.12 11.58 10.27 11.42 10.42 11.27C10.55 11.14 10.71 10.92 10.86 10.75C11.01 10.58 11.06 10.46 11.16 10.26C11.26 10.06 11.21 9.89 11.14 9.74C11.06 9.59 10.46 8.11 10.21 7.5C9.97 6.92 9.72 7 9.54 6.99C9.38 6.88 9.22 6.88 9.06 6.88Z"/>
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.06 6.88C8.86 6.88 8.53 6.95 8.25 7.25C7.97 7.56 7.18 8.3 7.18 9.79C7.18 11.28 8.27 12.72 8.42 12.92C8.58 13.12 10.53 16.14 13.54 17.43C16.03 18.5 16.54 18.28 17.08 18.23C17.62 18.18 18.83 17.51 19.08 16.81C19.33 16.11 19.33 15.51 19.25 15.38C19.17 15.26 18.97 15.19 18.67 15.04C18.37 14.89 16.9 14.17 16.62 14.07C16.35 13.97 16.15 13.92 15.95 14.22C15.75 14.52 15.18 15.19 15.01 15.39C14.84 15.58 14.67 15.61 14.37 15.46C14.07 15.31 13.1 15 11.95 13.97C11.06 13.17 10.46 12.18 10.29 11.88C10.12 11.58 10.27 11.42 10.42 11.27C10.55 11.14 10.71 10.92 10.86 10.75C11.01 10.58 11.06 10.46 11.16 10.26C11.26 10.06 11.21 9.89 11.14 9.74C11.06 9.59 10.46 8.11 10.21 7.5C9.97 6.92 9.72 7 9.54 6.99C9.38 6.88 9.22 6.88 9.06 6.88Z" />
   </svg>
 )
 
 const FacebookIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
   </svg>
 )
 
 const InstagramIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
   </svg>
 )
 
 const ThreadsIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.186 24C5.467 24 0 18.533 0 11.814 0 5.094 5.467 0 12.186 0c6.643 0 11.968 5.234 12.072 11.814H21.57c-.105-5.187-4.275-9.314-9.384-9.314-5.176 0-9.384 4.208-9.384 9.314s4.208 9.314 9.384 9.314c3.486 0 6.541-1.928 8.165-4.787l2.25 1.455C20.395 21.657 16.536 24 12.186 24zm4.492-12.87c-.187-.042-.38-.073-.58-.093a6.83 6.83 0 0 0-4.098.814c-1.348.835-2.094 2.222-2.046 3.805.048 1.58.877 2.915 2.275 3.663a5.534 5.534 0 0 0 2.766.72c2.404 0 4.195-1.353 4.789-3.62.247-.942.302-1.999.302-3.149 0-.39-.014-.775-.04-1.15-.407-3.906-3.328-5.74-6.84-5.74-4.148 0-7.393 2.998-7.733 7.14-.374 4.549 2.96 8.549 7.447 8.932 2.378.204 4.708-.54 6.398-2.044l1.624 1.838c-2.146 1.91-5.097 2.853-8.118 2.595-5.69-.486-9.914-5.568-9.44-11.34.432-5.26 4.547-9.066 9.822-9.066 4.475 0 8.175 2.333 8.688 7.27.033.48.05 1.002.05 1.554 0 1.405-.074 2.744-.395 3.968-.823 3.141-3.385 5.01-6.721 5.01a7.994 7.994 0 0 1-3.993-1.042c-2.023-1.082-3.224-3.018-3.292-5.309-.07-2.316 1.026-4.349 3.007-5.576a9.324 9.324 0 0 1 5.59-1.116c.358.035.706.091 1.043.167v2.348zm-2.52 4.966c-.144 1.309-1.127 2.142-2.446 2.142-.676 0-1.314-.23-1.751-.632-.444-.407-.674-.984-.65-1.623.023-.623.293-1.171.74-1.503a4.57 4.57 0 0 1 2.53-.615c.575.02 1.096.117 1.577.291v1.94z"/>
+    <path d="M12.186 24C5.467 24 0 18.533 0 11.814 0 5.094 5.467 0 12.186 0c6.643 0 11.968 5.234 12.072 11.814H21.57c-.105-5.187-4.275-9.314-9.384-9.314-5.176 0-9.384 4.208-9.384 9.314s4.208 9.314 9.384 9.314c3.486 0 6.541-1.928 8.165-4.787l2.25 1.455C20.395 21.657 16.536 24 12.186 24zm4.492-12.87c-.187-.042-.38-.073-.58-.093a6.83 6.83 0 0 0-4.098.814c-1.348.835-2.094 2.222-2.046 3.805.048 1.58.877 2.915 2.275 3.663a5.534 5.534 0 0 0 2.766.72c2.404 0 4.195-1.353 4.789-3.62.247-.942.302-1.999.302-3.149 0-.39-.014-.775-.04-1.15-.407-3.906-3.328-5.74-6.84-5.74-4.148 0-7.393 2.998-7.733 7.14-.374 4.549 2.96 8.549 7.447 8.932 2.378.204 4.708-.54 6.398-2.044l1.624 1.838c-2.146 1.91-5.097 2.853-8.118 2.595-5.69-.486-9.914-5.568-9.44-11.34.432-5.26 4.547-9.066 9.822-9.066 4.475 0 8.175 2.333 8.688 7.27.033.48.05 1.002.05 1.554 0 1.405-.074 2.744-.395 3.968-.823 3.141-3.385 5.01-6.721 5.01a7.994 7.994 0 0 1-3.993-1.042c-2.023-1.082-3.224-3.018-3.292-5.309-.07-2.316 1.026-4.349 3.007-5.576a9.324 9.324 0 0 1 5.59-1.116c.358.035.706.091 1.043.167v2.348zm-2.52 4.966c-.144 1.309-1.127 2.142-2.446 2.142-.676 0-1.314-.23-1.751-.632-.444-.407-.674-.984-.65-1.623.023-.623.293-1.171.74-1.503a4.57 4.57 0 0 1 2.53-.615c.575.02 1.096.117 1.577.291v1.94z" />
   </svg>
 )
 
 const RedditIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.702zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+    <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.702zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z" />
   </svg>
 )
 
 const QuoraIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.73 18.73c-.56.63-1.25 1.1-2.07 1.37-.81.27-1.68.34-2.56.2a6.39 6.39 0 0 1-4.48-3.37 7.03 7.03 0 0 1-.77-3.3c0-1.92.65-3.56 1.94-4.85C6.07 7.49 7.7 6.84 9.62 6.84c1.92 0 3.55.65 4.84 1.94 1.29 1.29 1.94 2.93 1.94 4.85 0 1.34-.33 2.54-1 3.55-.66 1.02-1.55 1.76-2.67 2.22l1.6 2.06c.43-.37.81-.8 1.13-1.29l1.43 1.15c-.47.69-1.03 1.29-1.68 1.8-.65.51-1.37.89-2.16 1.14l-1.33-1.74a7.9 7.9 0 0 1-1.99.23 8.32 8.32 0 0 1-4.04-1.02 8.5 8.5 0 0 1-2.92-2.73A8.77 8.77 0 0 1 .4 13.63c0-2.45.85-4.52 2.53-6.17C4.6 5.8 6.66 4.96 9.1 4.96c2.44 0 4.5.84 6.18 2.5 1.68 1.65 2.52 3.72 2.52 6.17 0 1.97-.56 3.73-1.67 5.25a8.7 8.7 0 0 1-4.4 3.32l1 1.3a.62.62 0 0 1-.1.87.64.64 0 0 1-.87-.1l-1.03-1.34z"/>
+    <path d="M12.73 18.73c-.56.63-1.25 1.1-2.07 1.37-.81.27-1.68.34-2.56.2a6.39 6.39 0 0 1-4.48-3.37 7.03 7.03 0 0 1-.77-3.3c0-1.92.65-3.56 1.94-4.85C6.07 7.49 7.7 6.84 9.62 6.84c1.92 0 3.55.65 4.84 1.94 1.29 1.29 1.94 2.93 1.94 4.85 0 1.34-.33 2.54-1 3.55-.66 1.02-1.55 1.76-2.67 2.22l1.6 2.06c.43-.37.81-.8 1.13-1.29l1.43 1.15c-.47.69-1.03 1.29-1.68 1.8-.65.51-1.37.89-2.16 1.14l-1.33-1.74a7.9 7.9 0 0 1-1.99.23 8.32 8.32 0 0 1-4.04-1.02 8.5 8.5 0 0 1-2.92-2.73A8.77 8.77 0 0 1 .4 13.63c0-2.45.85-4.52 2.53-6.17C4.6 5.8 6.66 4.96 9.1 4.96c2.44 0 4.5.84 6.18 2.5 1.68 1.65 2.52 3.72 2.52 6.17 0 1.97-.56 3.73-1.67 5.25a8.7 8.7 0 0 1-4.4 3.32l1 1.3a.62.62 0 0 1-.1.87.64.64 0 0 1-.87-.1l-1.03-1.34z" />
   </svg>
 )
 
 const PinterestIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0a12 12 0 0 0-4.37 23.17c-.07-.95-.14-2.4.03-3.44l1.24-5.27s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.88 3.51-.25 1.05.53 1.91 1.56 1.91 1.88 0 3.32-1.98 3.32-4.84 0-2.53-1.82-4.3-4.42-4.3-3.01 0-4.78 2.26-4.78 4.6 0 .91.35 1.89.79 2.42.09.1.1.2.07.31l-.3 1.22c-.05.19-.16.23-.37.14-1.38-.64-2.24-2.65-2.24-4.27 0-3.47 2.53-6.67 7.29-6.67 3.83 0 6.8 2.73 6.8 6.37 0 3.8-2.4 6.86-5.73 6.86-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.9A12 12 0 1 0 12 0z"/>
+    <path d="M12 0a12 12 0 0 0-4.37 23.17c-.07-.95-.14-2.4.03-3.44l1.24-5.27s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.58 2.26-.88 3.51-.25 1.05.53 1.91 1.56 1.91 1.88 0 3.32-1.98 3.32-4.84 0-2.53-1.82-4.3-4.42-4.3-3.01 0-4.78 2.26-4.78 4.6 0 .91.35 1.89.79 2.42.09.1.1.2.07.31l-.3 1.22c-.05.19-.16.23-.37.14-1.38-.64-2.24-2.65-2.24-4.27 0-3.47 2.53-6.67 7.29-6.67 3.83 0 6.8 2.73 6.8 6.37 0 3.8-2.4 6.86-5.73 6.86-1.12 0-2.17-.58-2.53-1.27l-.69 2.63c-.25.96-.92 2.16-1.37 2.9A12 12 0 1 0 12 0z" />
   </svg>
 )
 
 const GmailIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24">
-    <path fill="#4285F4" d="M1.5 5.5v13a1 1 0 0 0 1 1h3.5v-9.5l6 4.5 6-4.5V19.5H21.5a1 1 0 0 0 1-1v-13l-10.5 8z"/>
-    <path fill="#34A853" d="M6 19.5h12v-8l-6 4.5-6-4.5z"/>
-    <path fill="#EA4335" d="M21.5 4.5h-19a1 1 0 0 0-1 1l10.5 8 10.5-8a1 1 0 0 0-1-1z"/>
-    <path fill="#FBBC04" d="M1.5 5.5l10.5 8V4.5z"/>
+    <path fill="#4285F4" d="M1.5 5.5v13a1 1 0 0 0 1 1h3.5v-9.5l6 4.5 6-4.5V19.5H21.5a1 1 0 0 0 1-1v-13l-10.5 8z" />
+    <path fill="#34A853" d="M6 19.5h12v-8l-6 4.5-6-4.5z" />
+    <path fill="#EA4335" d="M21.5 4.5h-19a1 1 0 0 0-1 1l10.5 8 10.5-8a1 1 0 0 0-1-1z" />
+    <path fill="#FBBC04" d="M1.5 5.5l10.5 8V4.5z" />
   </svg>
 )
 
 const HackerRankIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.075 16.5h-1.85v-9h1.85v3.255h4.15v-3.255h1.85v9h-1.85v-3.865h-4.15v3.865z"/>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2.075 16.5h-1.85v-9h1.85v3.255h4.15v-3.255h1.85v9h-1.85v-3.865h-4.15v3.865z" />
   </svg>
 )
 
 const CodeChefIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.93V18h-2v-1.07c-2.83-.48-5-2.94-5-5.93 0-3.31 2.69-6 6-6s6 2.69 6 6c0 2.99-2.17 5.45-5 5.93zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.93V18h-2v-1.07c-2.83-.48-5-2.94-5-5.93 0-3.31 2.69-6 6-6s6 2.69 6 6c0 2.99-2.17 5.45-5 5.93zM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
   </svg>
 )
 
 const CodeforcesIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24">
-    <rect x="1.5" y="9" width="4.5" height="12" rx="1.5" fill="#FFD700"/>
-    <rect x="9.75" y="3" width="4.5" height="18" rx="1.5" fill="#0000FF"/>
-    <rect x="18" y="6" width="4.5" height="15" rx="1.5" fill="#FF0000"/>
+    <rect x="1.5" y="9" width="4.5" height="12" rx="1.5" fill="#FFD700" />
+    <rect x="9.75" y="3" width="4.5" height="18" rx="1.5" fill="#0000FF" />
+    <rect x="18" y="6" width="4.5" height="15" rx="1.5" fill="#FF0000" />
   </svg>
 )
 
 const KaggleIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.246l-5.344-6.867-1.594 1.523v5.297c0 .188-.094.293-.281.293h-2.93c-.187 0-.281-.105-.281-.293V.293c0-.188.094-.293.281-.293h2.93c.187 0 .281.105.281.293v14.461L12.984 9.5c.141-.164.305-.246.492-.246h3.281c.141 0 .234.059.258.176.023.141-.023.246-.141.34L10.969 15l6.703 8.484c.094.117.117.223.153.375z"/>
+    <path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.246l-5.344-6.867-1.594 1.523v5.297c0 .188-.094.293-.281.293h-2.93c-.187 0-.281-.105-.281-.293V.293c0-.188.094-.293.281-.293h2.93c.187 0 .281.105.281.293v14.461L12.984 9.5c.141-.164.305-.246.492-.246h3.281c.141 0 .234.059.258.176.023.141-.023.246-.141.34L10.969 15l6.703 8.484c.094.117.117.223.153.375z" />
   </svg>
 )
 
 const CredlyIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-5zm-1 16.5l-4-4 1.41-1.41L11 13.67l6.59-6.59L19 8.5l-8 8z"/>
+    <path d="M12 0L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-5zm-1 16.5l-4-4 1.41-1.41L11 13.67l6.59-6.59L19 8.5l-8 8z" />
   </svg>
 )
 
 const UpiIcon = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none">
-    <rect width="24" height="24" rx="4" fill="#097939"/>
-    <path d="M6 14.5L10.5 7L13.5 12L18 7" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M10.5 17L14 17" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
+    <rect width="24" height="24" rx="4" fill="#097939" />
+    <path d="M6 14.5L10.5 7L13.5 12L18 7" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10.5 17L14 17" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
   </svg>
 )
 
@@ -308,100 +308,98 @@ const getFeaturedIcon = (iconName, className = "w-5 h-5") => {
 // Helper to build identical 5-category, 27-link skeleton across all organizations
 const buildOrgDirectory = ({
   website = { title: "Website", subtitle: "nileshnama.com", url: "https://nileshnama.com" },
-  projects = { title: "Projects", subtitle: "dev.nileshnama.com/projects", url: "/projects" },
+  projects = { title: "Projects", subtitle: "dev.nileshnama.com/projects", url: "https://dev.nileshnama.com" },
   blog = { title: "Blogs Site", subtitle: "cohorts.nileshnama.com/app-blog", url: "https://cohorts.nileshnama.com/app-blog" },
   playStore = { title: "Google Play Store", subtitle: "play.google.com/nileshnama", url: "https://play.google.com/store/apps/developer?id=Nilesh+Nama" },
-  appStore = { title: "Apple App Store", subtitle: "apps.apple.com/nileshnama", url: "https://apps.apple.com/developer/nilesh-nama" },
+  appStore = { title: "Apple App Store", subtitle: "apps.apple.com/nileshnama", url: "" },
 
   github = { title: "GitHub", subtitle: "github.com/NileshNama", url: "https://github.com/NileshNama" },
-  credly = { title: "Credly Badges", subtitle: "credly.com/nilesh-nama", url: "https://www.credly.com/users/nilesh-nama/badge" },
+  credly = { title: "Credly Badges", subtitle: "credly.com/nilesh-nama", url: "https://www.credly.com/users/nilesh-nama/badges/credly" },
   hackerRank = { title: "HackerRank", subtitle: "hackerrank.com/nileshnama", url: "https://www.hackerrank.com/nileshnama" },
-  harkirat = { title: "Harkirat (100xDevs)", subtitle: "100xdevs.com", url: "https://100xdevs.com" },
   codeChef = { title: "CodeChef", subtitle: "codechef.com/users/nileshnama", url: "https://www.codechef.com/users/nileshnama" },
   codeforces = { title: "Codeforces", subtitle: "codeforces.com/profile/nileshnama", url: "https://codeforces.com/profile/nileshnama" },
   kaggle = { title: "Kaggle", subtitle: "kaggle.com/nileshnama", url: "https://www.kaggle.com/nileshnama" },
 
-  whatsappChannel = { title: "WhatsApp Channel", subtitle: "whatsapp.com/channel", url: "https://whatsapp.com/channel/nileshnama" },
+  whatsappChannel = { title: "WhatsApp Channel", subtitle: "whatsapp.com/channel", url: "https://whatsapp.com/channel/0029VbE5LFeDZ4LUYUUFrJ29" },
   whatsappChat = { title: "WhatsApp Chat Support", subtitle: "+91 9509923340", url: "https://wa.me/919509923340" },
-  telegram = { title: "Telegram", subtitle: "t.me/nileshnama", url: "https://t.me/nileshnama" },
+  telegram = { title: "Telegram", subtitle: "t.me/iamnileshnama", url: "https://t.me/iamnileshnama" },
   discord = { title: "Discord", subtitle: "discord.gg/nileshnama", url: "https://discord.gg/nileshnama" },
 
   linkedin = { title: "LinkedIn", subtitle: "linkedin.com/in/nileshnama", url: "https://www.linkedin.com/in/nileshnama/" },
   youtube = { title: "YouTube Channel", subtitle: "youtube.com/@NileshNama", url: "https://www.youtube.com/@NileshNama" },
   twitter = { title: "Twitter / X", subtitle: "x.com/nileshnama", url: "https://x.com/nileshnama" },
   threads = { title: "Threads", subtitle: "threads.net/@nileshnama", url: "https://www.threads.net/@nileshnama" },
-  instagram = { title: "Instagram", subtitle: "instagram.com/nileshnama", url: "https://www.instagram.com/nileshnama", icon: "Instagram" },
+  instagram = { title: "Instagram", subtitle: "instagram.com/tsoneil", url: "https://www.instagram.com/tsoneil", icon: "Instagram" },
   facebook = { title: "Facebook Page", subtitle: "facebook.com/nileshnama", url: "https://www.facebook.com/nileshnama" },
   reddit = { title: "Reddit", subtitle: "reddit.com/u/nileshnama", url: "https://www.reddit.com/user/nileshnama" },
   quora = { title: "Quora", subtitle: "quora.com/Nilesh-Nama", url: "https://www.quora.com/profile/Nilesh-Nama" },
   pinterest = { title: "Pinterest", subtitle: "pinterest.com/nileshnama", url: "https://www.pinterest.com/nileshnama" },
 
-  gmail = { title: "Gmail Me", subtitle: "nileshnama@gmail.com", url: "mailto:nileshnama@gmail.com" },
-  webmail = { title: "WebMail", subtitle: "contact@nileshnama.com", url: "mailto:contact@nileshnama.com" },
+  gmail = { title: "Gmail Me", subtitle: "nileshnama1997@gmail.com", url: "mailto:nileshnama1997@gmail.com" },
+  webmail = { title: "WebMail", subtitle: "hello@nileshnama.com", url: "mailto:hello@nileshnama.com" },
 } = {}) => [
-  {
-    key: "websites",
-    title: "Websites & Applications",
-    categoryIcon: "Globe",
-    items: [
-      { title: website.title || "Website", subtitle: website.subtitle || "nileshnama.com", url: website.url || "https://nileshnama.com", icon: "Globe" },
-      { title: projects.title || "Projects", subtitle: projects.subtitle || "dev.nileshnama.com/projects", url: projects.url || "/projects", icon: "Projects" },
-      { title: blog.title || "Blogs Site", subtitle: blog.subtitle || "cohorts.nileshnama.com/app-blog", url: blog.url || "https://cohorts.nileshnama.com/app-blog", icon: "BookOpen" },
-      { title: playStore.title || "Google Play Store", subtitle: playStore.subtitle || "play.google.com/nileshnama", url: playStore.url || "https://play.google.com/store/apps/developer?id=Nilesh+Nama", icon: "PlayStore" },
-      { title: appStore.title || "Apple App Store", subtitle: appStore.subtitle || "apps.apple.com/nileshnama", url: appStore.url || "https://apps.apple.com/developer/nilesh-nama", icon: "AppStore" },
-    ]
-  },
-  {
-    key: "developer",
-    title: "Developer & Coding Profiles",
-    categoryIcon: "Terminal",
-    items: [
-      { title: github.title || "GitHub", subtitle: github.subtitle || "github.com/NileshNama", url: github.url || "https://github.com/NileshNama", icon: "GitHub" },
-      { title: credly.title || "Credly Badges", subtitle: credly.subtitle || "credly.com/nilesh-nama", url: credly.url || "https://www.credly.com/users/nilesh-nama/badge", icon: "Credly" },
-      { title: hackerRank.title || "HackerRank", subtitle: hackerRank.subtitle || "hackerrank.com/nileshnama", url: hackerRank.url || "https://www.hackerrank.com/nileshnama", icon: "HackerRank" },
-      { title: harkirat.title || "Harkirat (100xDevs)", subtitle: harkirat.subtitle || "100xdevs.com", url: harkirat.url || "https://100xdevs.com", icon: "Harkirat" },
-      { title: codeChef.title || "CodeChef", subtitle: codeChef.subtitle || "codechef.com/users/nileshnama", url: codeChef.url || "https://www.codechef.com/users/nileshnama", icon: "CodeChef" },
-      { title: codeforces.title || "Codeforces", subtitle: codeforces.subtitle || "codeforces.com/profile/nileshnama", url: codeforces.url || "https://codeforces.com/profile/nileshnama", icon: "Codeforces" },
-      { title: kaggle.title || "Kaggle", subtitle: kaggle.subtitle || "kaggle.com/nileshnama", url: kaggle.url || "https://www.kaggle.com/nileshnama", icon: "Kaggle" },
-    ]
-  },
-  {
-    key: "community",
-    title: "Community & Messaging Support",
-    categoryIcon: "MessageSquare",
-    items: [
-      { title: whatsappChannel.title || "WhatsApp Channel", subtitle: whatsappChannel.subtitle || "whatsapp.com/channel", url: whatsappChannel.url || "https://whatsapp.com/channel/nileshnama", icon: "WhatsApp" },
-      { title: whatsappChat.title || "WhatsApp Chat Support", subtitle: whatsappChat.subtitle || "+91 9509923340", url: whatsappChat.url || "https://wa.me/919509923340", icon: "WhatsApp" },
-      { title: telegram.title || "Telegram", subtitle: telegram.subtitle || "t.me/nileshnama", url: telegram.url || "https://t.me/nileshnama", icon: "Telegram" },
-      { title: discord.title || "Discord", subtitle: discord.subtitle || "discord.gg/nileshnama", url: discord.url || "https://discord.gg/nileshnama", icon: "Discord" },
-    ]
-  },
-  {
-    key: "social",
-    title: "Social & Content Networks",
-    categoryIcon: "Share2",
-    items: [
-      { title: linkedin.title || "LinkedIn", subtitle: linkedin.subtitle || "linkedin.com/in/nileshnama", url: linkedin.url || "https://www.linkedin.com/in/nileshnama/", icon: "LinkedIn" },
-      { title: youtube.title || "YouTube Channel", subtitle: youtube.subtitle || "youtube.com/@NileshNama", url: youtube.url || "https://www.youtube.com/@NileshNama", icon: "YouTube" },
-      { title: twitter.title || "Twitter / X", subtitle: twitter.subtitle || "x.com/nileshnama", url: twitter.url || "https://x.com/nileshnama", icon: "TwitterX" },
-      { title: threads.title || "Threads", subtitle: threads.subtitle || "threads.net/@nileshnama", url: threads.url || "https://www.threads.net/@nileshnama", icon: "Threads" },
-      { title: instagram.title || "Instagram", subtitle: instagram.subtitle || "instagram.com/nileshnama", url: instagram.url || "https://www.instagram.com/nileshnama", icon: "Instagram" },
-      { title: facebook.title || "Facebook Page", subtitle: facebook.subtitle || "facebook.com/nileshnama", url: facebook.url || "https://www.facebook.com/nileshnama", icon: "Facebook" },
-      { title: reddit.title || "Reddit", subtitle: reddit.subtitle || "reddit.com/u/nileshnama", url: reddit.url || "https://www.reddit.com/user/nileshnama", icon: "Reddit" },
-      { title: quora.title || "Quora", subtitle: quora.subtitle || "quora.com/Nilesh-Nama", url: quora.url || "https://www.quora.com/profile/Nilesh-Nama", icon: "Quora" },
-      { title: pinterest.title || "Pinterest", subtitle: pinterest.subtitle || "pinterest.com/nileshnama", url: pinterest.url || "https://www.pinterest.com/nileshnama", icon: "Pinterest" },
-    ]
-  },
-  {
-    key: "inquiries",
-    title: "Direct Email & Inquiries",
-    categoryIcon: "Mail",
-    items: [
-      { title: gmail.title || "Gmail Me", subtitle: gmail.subtitle || "nileshnama@gmail.com", url: gmail.url || "mailto:nileshnama@gmail.com", icon: "Gmail" },
-      { title: webmail.title || "WebMail", subtitle: webmail.subtitle || "contact@nileshnama.com", url: webmail.url || "mailto:contact@nileshnama.com", icon: "Mail" },
-    ]
-  }
-]
+    {
+      key: "websites",
+      title: "Websites & Applications",
+      categoryIcon: "Globe",
+      items: [
+        { title: website.title || "Website", subtitle: website.subtitle || "nileshnama.com", url: website.url || "https://nileshnama.com", icon: "Globe" },
+        { title: projects.title || "Projects", subtitle: projects.subtitle || "dev.nileshnama.com/projects", url: projects.url || "/projects", icon: "Projects" },
+        { title: blog.title || "Blogs Site", subtitle: blog.subtitle || "cohorts.nileshnama.com/app-blog", url: blog.url || "https://cohorts.nileshnama.com/app-blog", icon: "BookOpen" },
+        { title: playStore.title || "Google Play Store", subtitle: playStore.subtitle || "play.google.com/nileshnama", url: playStore.url || "https://play.google.com/store/apps/developer?id=Nilesh+Nama", icon: "PlayStore" },
+        { title: appStore.title || "Apple App Store", subtitle: appStore.subtitle || "apps.apple.com/nileshnama", url: appStore.url || "https://apps.apple.com/developer/nilesh-nama", icon: "AppStore" },
+      ]
+    },
+    {
+      key: "developer",
+      title: "Developer & Coding Profiles",
+      categoryIcon: "Terminal",
+      items: [
+        { title: github.title || "GitHub", subtitle: github.subtitle || "github.com/NileshNama", url: github.url || "https://github.com/NileshNama", icon: "GitHub" },
+        { title: credly.title || "Credly Badges", subtitle: credly.subtitle || "credly.com/nilesh-nama", url: credly.url || "https://www.credly.com/users/nilesh-nama/badge", icon: "Credly" },
+        { title: hackerRank.title || "HackerRank", subtitle: hackerRank.subtitle || "hackerrank.com/nileshnama", url: hackerRank.url || "https://www.hackerrank.com/nileshnama", icon: "HackerRank" },
+        { title: codeChef.title || "CodeChef", subtitle: codeChef.subtitle || "codechef.com/users/nileshnama", url: codeChef.url || "https://www.codechef.com/users/nileshnama", icon: "CodeChef" },
+        { title: codeforces.title || "Codeforces", subtitle: codeforces.subtitle || "codeforces.com/profile/nileshnama", url: codeforces.url || "https://codeforces.com/profile/nileshnama", icon: "Codeforces" },
+        { title: kaggle.title || "Kaggle", subtitle: kaggle.subtitle || "kaggle.com/nileshnama", url: kaggle.url || "https://www.kaggle.com/nileshnama", icon: "Kaggle" },
+      ]
+    },
+    {
+      key: "community",
+      title: "Community & Messaging Support",
+      categoryIcon: "MessageSquare",
+      items: [
+        { title: whatsappChannel.title || "WhatsApp Channel", subtitle: whatsappChannel.subtitle || "whatsapp.com/channel", url: whatsappChannel.url || "https://whatsapp.com/channel/nileshnama", icon: "WhatsApp" },
+        { title: whatsappChat.title || "WhatsApp Chat Support", subtitle: whatsappChat.subtitle || "+91 9509923340", url: whatsappChat.url || "https://wa.me/919509923340", icon: "WhatsApp" },
+        { title: telegram.title || "Telegram", subtitle: telegram.subtitle || "t.me/nileshnama", url: telegram.url || "https://t.me/nileshnama", icon: "Telegram" },
+        { title: discord.title || "Discord", subtitle: discord.subtitle || "discord.gg/nileshnama", url: discord.url || "https://discord.gg/nileshnama", icon: "Discord" },
+      ]
+    },
+    {
+      key: "social",
+      title: "Social & Content Networks",
+      categoryIcon: "Share2",
+      items: [
+        { title: linkedin.title || "LinkedIn", subtitle: linkedin.subtitle || "linkedin.com/in/nileshnama", url: linkedin.url || "https://www.linkedin.com/in/nileshnama/", icon: "LinkedIn" },
+        { title: youtube.title || "YouTube Channel", subtitle: youtube.subtitle || "youtube.com/@NileshNama", url: youtube.url || "https://www.youtube.com/@NileshNama", icon: "YouTube" },
+        { title: twitter.title || "Twitter / X", subtitle: twitter.subtitle || "x.com/nileshnama", url: twitter.url || "https://x.com/nileshnama", icon: "TwitterX" },
+        { title: threads.title || "Threads", subtitle: threads.subtitle || "threads.net/@nileshnama", url: threads.url || "https://www.threads.net/@nileshnama", icon: "Threads" },
+        { title: instagram.title || "Instagram", subtitle: instagram.subtitle || "instagram.com/nileshnama", url: instagram.url || "https://www.instagram.com/nileshnama", icon: "Instagram" },
+        { title: facebook.title || "Facebook Page", subtitle: facebook.subtitle || "facebook.com/nileshnama", url: facebook.url || "https://www.facebook.com/nileshnama", icon: "Facebook" },
+        { title: reddit.title || "Reddit", subtitle: reddit.subtitle || "reddit.com/u/nileshnama", url: reddit.url || "https://www.reddit.com/user/nileshnama", icon: "Reddit" },
+        { title: quora.title || "Quora", subtitle: quora.subtitle || "quora.com/Nilesh-Nama", url: quora.url || "https://www.quora.com/profile/Nilesh-Nama", icon: "Quora" },
+        { title: pinterest.title || "Pinterest", subtitle: pinterest.subtitle || "pinterest.com/nileshnama", url: pinterest.url || "https://www.pinterest.com/nileshnama", icon: "Pinterest" },
+      ]
+    },
+    {
+      key: "inquiries",
+      title: "Direct Email & Inquiries",
+      categoryIcon: "Mail",
+      items: [
+        { title: gmail.title || "Gmail Me", subtitle: gmail.subtitle || "nileshnama@gmail.com", url: gmail.url || "mailto:nileshnama@gmail.com", icon: "Gmail" },
+        { title: webmail.title || "WebMail", subtitle: webmail.subtitle || "contact@nileshnama.com", url: webmail.url || "mailto:contact@nileshnama.com", icon: "Mail" },
+      ]
+    }
+  ]
 
 // 6 Organizations Data (Grouped into Main & Products)
 export const ORGANIZATIONS_DATA = [
@@ -448,7 +446,7 @@ export const ORGANIZATIONS_DATA = [
       {
         title: "View My Resume",
         subtitle: "Professional background, qualifications, skills, and experience.",
-        url: "/NileshNama-Resume.pdf",
+        url: "https://dev.nileshnama.com/",
         icon: "FileText",
         type: "resume",
         actionLabel: "Resume",
@@ -488,12 +486,12 @@ export const ORGANIZATIONS_DATA = [
         actionLabel: "Visit",
       },
       {
-        title: "View Studio Projects",
+        title: "View Studio Products",
         subtitle: "Client platforms, production systems, and cloud-native architectures.",
-        url: "https://vebglitch.com/#work",
+        url: "https://www.vebglitch.com/products",
         icon: "Boxes",
         type: "products",
-        actionLabel: "Work",
+        actionLabel: "Products",
       },
       {
         title: "Read Engineering Blog",
@@ -504,17 +502,17 @@ export const ORGANIZATIONS_DATA = [
         actionLabel: "Blog",
       },
       {
-        title: "Studio Capabilities & Stack",
+        title: "About Studio Capabilities & Stack",
         subtitle: "High-performance digital systems for modern enterprises.",
-        url: "https://vebglitch.com/#services",
+        url: "https://www.vebglitch.com/about",
         icon: "FileText",
         type: "services",
-        actionLabel: "Services",
+        actionLabel: "About",
       },
       {
         title: "Start a Project With Us",
         subtitle: "Inquiries for bespoke software engineering and architectural consulting.",
-        url: "mailto:contact@vebglitch.com",
+        url: "https://www.vebglitch.com/contact",
         icon: "Send",
         type: "contact",
         actionLabel: "Contact",
@@ -576,7 +574,7 @@ export const ORGANIZATIONS_DATA = [
       {
         title: "Explore Programs & Courses",
         subtitle: "Conceptual depth and problem elimination frameworks for competitive exams.",
-        url: "https://cohorts.nileshnama.com/#courses",
+        url: "https://cohorts.nileshnama.com/new-courses?examId=1",
         icon: "Boxes",
         type: "products",
         actionLabel: "Courses",
@@ -590,20 +588,20 @@ export const ORGANIZATIONS_DATA = [
         actionLabel: "Articles",
       },
       {
-        title: "Student Reasoning Breakdowns",
-        subtitle: "First-principles breakdowns and trap elimination under time constraints.",
-        url: "https://cohorts.nileshnama.com/#breakdowns",
+        title: "Test System",
+        subtitle: "Tests for First-principles breakdowns and trap elimination under time constraints.",
+        url: "https://cohorts.nileshnama.com/test-series",
         icon: "FileText",
         type: "framework",
-        actionLabel: "Breakdowns",
+        actionLabel: "Tests Series",
       },
       {
-        title: "Enroll in Upcoming Cohort",
+        title: "Enroll in Upcoming Cohort in Track",
         subtitle: "Inquire about upcoming batches, mentorship slots, and cohort admissions.",
-        url: "mailto:cohorts@nileshnama.com",
+        url: "https://cohorts.nileshnama.com/new-courses?examId=6",
         icon: "Send",
         type: "contact",
-        actionLabel: "Enroll",
+        actionLabel: "Tracks",
       },
     ],
     sections: buildOrgDirectory({
@@ -678,7 +676,7 @@ export const ORGANIZATIONS_DATA = [
       {
         title: "Verified Skill Badges",
         subtitle: "Credly-backed verification of hands-on production engineering competency.",
-        url: "https://www.credly.com/organizations/vebskills/badges",
+        url: "https://www.vebskills.com/badges",
         icon: "FileText",
         type: "credentials",
         actionLabel: "Credly",
@@ -774,7 +772,7 @@ export const ORGANIZATIONS_DATA = [
       {
         title: "Book an Evaluation Session",
         subtitle: "Schedule a mock interview or technical evaluation with a senior mentor.",
-        url: "mailto:hello@interviewers.in",
+        url: "mailto:info@interviewers.in",
         icon: "Send",
         type: "contact",
         actionLabel: "Schedule",
@@ -860,7 +858,7 @@ export const ORGANIZATIONS_DATA = [
       {
         title: "Contact Question Team",
         subtitle: "Inquire about question sets, contributor openings, and platform access.",
-        url: "mailto:questions@nquestions.in",
+        url: "mailto:support@nquestions.in",
         icon: "Send",
         type: "contact",
         actionLabel: "Contact",
@@ -1027,7 +1025,7 @@ export default function LinktreePage() {
 
   return (
     <main className="linktree-root min-h-screen w-full font-inter bg-[#f0f2f5] dark:bg-[#0c121e] text-slate-900 dark:text-slate-100 flex items-center justify-center py-0 sm:py-6 md:py-10 lg:py-12 px-0 sm:px-4 md:px-6 transition-colors duration-300 relative selection:bg-[#509187] selection:text-white overflow-x-hidden">
-      
+
       {/* Toast Notification */}
       <AnimatePresence>
         {toastMessage && (
@@ -1045,31 +1043,30 @@ export default function LinktreePage() {
 
       {/* Centered Profile Card Gateway Wrapper (Fluid on Mobile, Elevated & Scaled on Tablet/Desktop) */}
       <div className="w-full sm:max-w-[580px] md:max-w-[680px] lg:max-w-[720px] min-h-screen sm:min-h-0 bg-white dark:bg-[#161f30] sm:rounded-[32px] md:rounded-[36px] shadow-[0_12px_45px_rgba(0,0,0,0.08)] dark:shadow-[0_12px_45px_rgba(0,0,0,0.5)] border-0 sm:border border-slate-200/80 dark:border-slate-800/80 flex flex-col justify-between overflow-hidden relative transition-all duration-300">
-        
+
         {/* Subtle Background Header Glow */}
-        <div 
+        <div
           className={`absolute top-0 inset-x-0 h-72 sm:h-80 bg-gradient-to-b ${activeOrg.bgTint} pointer-events-none opacity-60 dark:opacity-40 transition-colors duration-500`}
         />
 
         {/* Inner Content Area */}
         <div className="relative z-10 px-4 xs:px-5 sm:px-7 md:px-9 pt-5 sm:pt-7 md:pt-8 pb-7 sm:pb-9 md:pb-10 flex-1 flex flex-col">
-          
+
           {/* 🌟 TOP BAR: COMPACT & MODERN DROPDOWN SELECTOR (Full Width Symmetrical Alignment) */}
           <div className="w-full relative mb-5" ref={dropdownRef}>
             {/* Compact Modern Trigger Capsule Spanning Full Symmetric Width */}
             <button
               onClick={() => setIsDropdownOpen((prev) => !prev)}
               type="button"
-              className={`w-full flex items-center justify-between px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl bg-white/95 dark:bg-slate-900/95 border-2 ${
-                isDropdownOpen 
-                  ? 'border-black shadow-[3px_3px_0px_#1D4ED8]' 
-                  : 'border-black/20 dark:border-white/20 hover:border-black dark:hover:border-[#FFD214] hover:shadow-[2.5px_2.5px_0px_#1D4ED8]'
-              } transition-all duration-200 focus:outline-none`}
+              className={`w-full flex items-center justify-between px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl bg-white/95 dark:bg-slate-900/95 border-2 ${isDropdownOpen
+                ? 'border-black shadow-[3px_3px_0px_#1D4ED8]'
+                : 'border-black/20 dark:border-white/20 hover:border-black dark:hover:border-[#FFD214] hover:shadow-[2.5px_2.5px_0px_#1D4ED8]'
+                } transition-all duration-200 focus:outline-none`}
               aria-haspopup="listbox"
               aria-expanded={isDropdownOpen}
             >
               <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-1 overflow-hidden pr-2">
-                <div 
+                <div
                   className="w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden border-2 border-black shrink-0 bg-[#FFD214] flex items-center justify-center shadow-[1px_1px_0px_#1D4ED8]"
                 >
                   <Image
@@ -1080,7 +1077,7 @@ export default function LinktreePage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 <span className="text-xs sm:text-[13px] md:text-sm font-extrabold text-slate-950 dark:text-white tracking-tight truncate">
                   {activeOrg.number}. {activeOrg.name}
                 </span>
@@ -1140,17 +1137,15 @@ export default function LinktreePage() {
                                 type="button"
                                 role="option"
                                 aria-selected={isSelected}
-                                className={`w-full flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl text-left transition-all ${
-                                  isSelected 
-                                    ? 'bg-[#FFD214] text-black border-2 border-black font-black shadow-[2.5px_2.5px_0px_#1D4ED8]' 
-                                    : 'border-2 border-transparent hover:border-black/20 hover:bg-[#FFD214]/15 text-slate-800 dark:text-slate-200 font-bold'
-                                }`}
+                                className={`w-full flex items-center justify-between px-3 py-2 sm:py-2.5 rounded-xl text-left transition-all ${isSelected
+                                  ? 'bg-[#FFD214] text-black border-2 border-black font-black shadow-[2.5px_2.5px_0px_#1D4ED8]'
+                                  : 'border-2 border-transparent hover:border-black/20 hover:bg-[#FFD214]/15 text-slate-800 dark:text-slate-200 font-bold'
+                                  }`}
                               >
                                 <div className="flex items-center gap-2.5 min-w-0 flex-1 overflow-hidden">
-                                  <div 
-                                    className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden border-2 shrink-0 ${
-                                      isSelected ? 'border-black bg-white shadow-[1px_1px_0px_#1D4ED8]' : 'border-black/30 bg-white'
-                                    }`}
+                                  <div
+                                    className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden border-2 shrink-0 ${isSelected ? 'border-black bg-white shadow-[1px_1px_0px_#1D4ED8]' : 'border-black/30 bg-white'
+                                      }`}
                                   >
                                     <Image
                                       src={org.avatar}
@@ -1187,9 +1182,9 @@ export default function LinktreePage() {
 
           {/* Profile Header (2-Column Symmetrical Layout: Left-Aligned Avatar & Right-Side Details) */}
           <div className="w-full flex items-center gap-3.5 sm:gap-5 md:gap-6 mt-1 mb-6 sm:mb-7 text-left">
-            
+
             {/* Left Column: Avatar with Neo-Pop Yellow Ring + Black Border + Blue Shadow */}
-            <motion.div 
+            <motion.div
               key={activeOrg.id}
               initial={{ scale: 0.88, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -1197,7 +1192,7 @@ export default function LinktreePage() {
               className="relative shrink-0 group cursor-pointer"
               onClick={() => setIsDropdownOpen(prev => !prev)}
             >
-              <div 
+              <div
                 className="w-18 h-18 sm:w-22 sm:h-22 md:w-24 md:h-24 rounded-full p-1 bg-[#FFD214] border-2 border-black shadow-[3px_3.5px_0px_#1D4ED8] group-hover:shadow-[4px_4.5px_0px_#1D4ED8] group-hover:translate-x-[-1px] group-hover:translate-y-[-1px] transition-all duration-200 overflow-hidden"
               >
                 <Image
@@ -1211,7 +1206,7 @@ export default function LinktreePage() {
               </div>
 
               {/* Number Badge on Avatar: Neo-Pop Yellow pill with black border & blue shadow */}
-              <div 
+              <div
                 className="absolute -bottom-1 -right-1 w-6 h-6 sm:w-6.5 sm:h-6.5 rounded-full bg-[#FFD214] text-black text-[10.5px] sm:text-[11.5px] font-black flex items-center justify-center border-2 border-black shadow-[1.5px_1.5px_0px_#1D4ED8]"
               >
                 {activeOrg.number}
@@ -1252,7 +1247,7 @@ export default function LinktreePage() {
                     {activeOrg.id === 'nileshnama' ? 'EXPLORE MY WORK' : `EXPLORE ${activeOrg.name.toUpperCase()}`}
                   </h2>
                 </div>
-                <span 
+                <span
                   className="text-[10px] sm:text-[10.5px] font-black tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-[#FFD214] text-black border-2 border-black shadow-[1.5px_1.5px_0px_#1D4ED8] shrink-0"
                 >
                   Priority
@@ -1291,7 +1286,7 @@ export default function LinktreePage() {
                       className="group relative rounded-2xl bg-white/95 dark:bg-slate-900/85 backdrop-blur-md border-2 border-black/15 dark:border-white/15 p-3 sm:p-3.5 md:p-4 flex items-center justify-between gap-3 sm:gap-3.5 shadow-[0_2px_14px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_18px_rgba(0,0,0,0.28)] hover:shadow-[0_12px_28px_-4px_rgba(255,210,20,0.25),0_4px_12px_-2px_rgba(29,78,216,0.18)] hover:border-black dark:hover:border-[#FFD214] transition-all duration-300 overflow-hidden"
                     >
                       {/* Left Edge Accent Bar - Matches Button Neo-Pop Yellow */}
-                      <div 
+                      <div
                         className="absolute left-0 top-2.5 bottom-2.5 w-1.5 rounded-r-full bg-[#FFD214] border-r border-black/30 group-hover:w-2 group-hover:bg-[#FFD214] shadow-[1px_0px_4px_rgba(255,210,20,0.6)] transition-all duration-300"
                       />
 
@@ -1300,7 +1295,7 @@ export default function LinktreePage() {
 
                       <div className="relative z-10 flex items-center gap-3 sm:gap-3.5 min-w-0 flex-1 pl-1">
                         {/* Prominent Icon Capsule */}
-                        <div 
+                        <div
                           className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-2xl flex items-center justify-center shrink-0 border-2 border-black/20 group-hover:border-black bg-[#FFD214]/15 group-hover:bg-[#FFD214] text-slate-900 group-hover:text-black shadow-2xs group-hover:shadow-[2px_2px_0px_#1D4ED8] group-hover:scale-106 transition-all duration-300"
                         >
                           <span className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3 inline-flex">
@@ -1361,12 +1356,12 @@ export default function LinktreePage() {
               >
                 {activeOrg.sections.map((section, sIdx) => (
                   <div key={sIdx} className="space-y-3 sm:space-y-3.5">
-                    
+
                     {/* Category Title Header: Highlighted Modern Banner with Professional Vector Icon */}
                     <div className="flex items-center justify-between px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-2xl bg-gradient-to-r from-slate-100/95 via-slate-50/70 to-transparent dark:from-slate-800/85 dark:via-slate-800/45 dark:to-transparent border-2 border-black/15 dark:border-white/15 shadow-2xs backdrop-blur-xs">
                       <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                         {/* Professional Category Vector Icon Capsule */}
-                        <div 
+                        <div
                           className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center shrink-0 border-2 border-black bg-[#FFD214] text-black shadow-[2px_2px_0px_#1D4ED8]"
                         >
                           {getCategoryIcon(section.categoryIcon, "w-3.5 h-3.5 sm:w-4 sm:h-4 text-black stroke-[2.5]")}
@@ -1379,7 +1374,7 @@ export default function LinktreePage() {
                       </div>
 
                       {/* Link Count Badge */}
-                      <span 
+                      <span
                         className="text-[10px] sm:text-[10.5px] font-black px-2.5 py-0.5 rounded-full bg-[#FFD214] text-black border-2 border-black shadow-[1.5px_1.5px_0px_#1D4ED8] shrink-0"
                       >
                         {section.items.length} links
@@ -1408,12 +1403,12 @@ export default function LinktreePage() {
                           initial={{ opacity: 0, y: 14 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
-                          transition={{ 
-                            duration: 0.28, 
+                          transition={{
+                            duration: 0.28,
                             delay: (iIdx % 8) * 0.035,
-                            type: "spring", 
-                            stiffness: 420, 
-                            damping: 26 
+                            type: "spring",
+                            stiffness: 420,
+                            damping: 26
                           }}
                           className="group relative rounded-2xl bg-white/85 dark:bg-slate-900/80 backdrop-blur-md border-2 border-black/10 dark:border-white/10 p-3 sm:p-3.5 md:p-4 flex items-center justify-between gap-3 sm:gap-3.5 shadow-[0_2px_12px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:shadow-[0_12px_32px_-4px_rgba(255,210,20,0.25),0_4px_12px_-2px_rgba(29,78,216,0.18)] hover:border-black dark:hover:border-[#FFD214] transition-all duration-300 overflow-hidden"
                         >
