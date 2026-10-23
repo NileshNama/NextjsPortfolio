@@ -134,10 +134,7 @@ const About = ({ isDarkMode }) => {
           className="xl:pt-8"
         >
           <p className="max-w-2xl text-gray-600 dark:text-gray-300 leading-8 font-medium text-base sm:text-lg mb-12">
-            Engineer building systems for structured learning, reasoning clarity,
-            and high-pressure decision-making. My work sits at the intersection
-            of software engineering, systems thinking, and deep learning
-            infrastructure.
+            Software engineer building products and systems at the intersection of technology, structured learning, and human reasoning. Focused on turning complex problems into scalable systems that help people learn better, think clearly, and build with purpose.
           </p>
 
           <motion.ul
