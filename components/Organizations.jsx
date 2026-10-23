@@ -49,12 +49,12 @@ const organizations = [
 ]
 
 const skills = [
-  "Full Stack Development",
-  "Real-World Projects",
+  "AI-Powered Development",
+  "Startup & Product Thinking",
   "Open Source Contributions",
-  "Production Ready",
+  "Production & Deployment",
   "DevOps & Deployment",
-  "Job Ready Portfolio",
+  "AI & Modern Tech",
 ]
 
 const Organizations = ({ isDarkMode }) => {
@@ -163,11 +163,11 @@ const Organizations = ({ isDarkMode }) => {
 
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl md:text-[2rem] font-bold text-white tracking-tight leading-snug">
-                Job ready skills that matter
+                Build Skills. Build Products. Build Your Career.
               </h3>
 
               <p className="text-white/90 text-sm sm:text-base mt-2 mb-6 sm:mb-8 font-normal leading-relaxed">
-                Master development through real-world applications, not tutorials
+                Go beyond tutorials. Develop practical skills, build production-ready applications, and turn your ideas into working products.
               </p>
 
               {/* Skill Pills */}
