@@ -300,7 +300,7 @@ const Header = () => {
               className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-2 rounded-full bg-black text-white text-xs sm:text-sm font-medium shadow-[0_10px_25px_rgba(0,0,0,0.18)] border border-white/10"
             >
               <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#5A9B92] animate-pulse" />
-              Trusted by 10K+ Aspirants
+              Built for Serious Aspirants
             </motion.div>
 
             {/* Primary Identity (Above Nilesh Nama) */}
