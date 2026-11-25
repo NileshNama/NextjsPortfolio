@@ -21,7 +21,7 @@ const projects = [
   {
     id: 2,
     title: 'NQuestions',
-    category: 'QUESTION ANALYSIS & COGNITIVE ENGINE',
+    category: 'QUESTION ANALYSIS & ENGINE',
     file: 'nquestions/README.md',
     desc: 'Cognitive exam intelligence and question-decoding engine built to deconstruct examiner trap psychology, distractor elimination patterns, and multi-concept reasoning graphs for premier competitive examinations.',
     intent: 'To shift test preparation from brute-force question drilling to cognitive trap decoding — mapping how examiners design plausible distractors and training students on surgical elimination heuristics.',
